@@ -1,0 +1,12 @@
+http://case.example.org/core#ContentData
+http://case.example.org/core#DataRange
+http://case.example.org/core#Hash
+http://case.example.org/core#dataPayload
+http://case.example.org/core#hash
+http://case.example.org/core#hashMethod
+http://case.example.org/core#hashValue
+http://case.example.org/core#magicNumber
+http://case.example.org/core#mimeType
+http://case.example.org/core#rangeOffset
+http://case.example.org/core#rangeSize
+http://case.example.org/core#sizeInBytes

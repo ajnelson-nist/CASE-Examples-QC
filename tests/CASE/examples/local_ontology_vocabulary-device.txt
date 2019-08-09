@@ -1,0 +1,15 @@
+http://case.example.org/core#ComputerSpecification
+http://case.example.org/core#Device
+http://case.example.org/core#DomainName
+http://case.example.org/core#IPv4Address
+http://case.example.org/core#OperatingSystem
+http://case.example.org/core#biosVersion
+http://case.example.org/core#cpuFamily
+http://case.example.org/core#inventoryNumber
+http://case.example.org/core#manufacturer
+http://case.example.org/core#model
+http://case.example.org/core#name
+http://case.example.org/core#serialNumber
+http://case.example.org/core#totalRam
+http://case.example.org/core#value
+http://case.example.org/core#version

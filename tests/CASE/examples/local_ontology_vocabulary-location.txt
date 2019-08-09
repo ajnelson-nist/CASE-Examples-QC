@@ -1,0 +1,11 @@
+http://case.example.org/core#LatLongCoordinates
+http://case.example.org/core#SimpleAddress
+http://case.example.org/core#country
+http://case.example.org/core#floor
+http://case.example.org/core#latitude
+http://case.example.org/core#locality
+http://case.example.org/core#longitude
+http://case.example.org/core#postalCode
+http://case.example.org/core#region
+http://case.example.org/core#roomNumber
+http://case.example.org/core#street
