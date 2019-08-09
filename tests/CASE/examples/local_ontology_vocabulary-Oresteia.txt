@@ -1,5 +1,4 @@
 MobileExtractor:ToolArguments
-https://unifiedcyberontology.org/ontology/uco/observable#WiFiAddress
 urn:example:local:FacebookMessage
 urn:example:local:aquisitionType
 urn:example:local:content
