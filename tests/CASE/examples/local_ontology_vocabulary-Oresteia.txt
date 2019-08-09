@@ -3,10 +3,8 @@ urn:example:local:FacebookMessage
 urn:example:local:aquisitionType
 urn:example:local:content
 urn:example:local:iPhoneDevice
-urn:example:local:kindOfRealtionship
 urn:example:local:localeLanguage
 urn:example:local:method
-urn:example:local:objects
 urn:example:local:ownerName
 urn:example:local:uniqueID
 urn:example:local:value
