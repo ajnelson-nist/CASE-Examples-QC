@@ -1,0 +1,6 @@
+*.done.log
+*.pyc
+*.swp
+*_
+.DS_Store
+venv

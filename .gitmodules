@@ -1,0 +1,6 @@
+[submodule "deps/CASE"]
+	path = deps/CASE
+	url = https://github.com/casework/CASE.git
+[submodule "deps/UCO"]
+	path = deps/UCO
+	url = https://github.com/ucoProject/UCO.git

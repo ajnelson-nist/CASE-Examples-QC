@@ -1,0 +1,4 @@
+*.json
+*.sed
+*.ttl
+ontology_vocabulary.txt
