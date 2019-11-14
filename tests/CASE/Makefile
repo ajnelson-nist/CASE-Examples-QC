@@ -18,42 +18,28 @@ all: \
 
 .PHONY: \
   all-examples \
-  check-case-core \
-  check-case-master \
   check-examples \
+  check-ontology \
   normalize \
-  normalize-case-core \
-  normalize-case-master \
-  normalize-examples
+  normalize-examples \
+  normalize-ontology
 
 all-examples:
 	$(MAKE) \
 	  --directory examples
 
 check: \
-  check-case-core \
-  check-case-master \
-  check-examples
-
-check-case-core: \
-  src/normalize-ontology.mk
-	$(MAKE) \
-	  --directory case-core \
-	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=case-core/core.ttl \
-	  check
-
-check-case-master: \
-  src/normalize-ontology.mk
-	$(MAKE) \
-	  --directory case-master \
-	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=case-master/case.ttl \
-	  check
+  check-examples \
+  check-ontology
 
 check-examples:
 	$(MAKE) \
 	  --directory examples \
+	  check
+
+check-ontology:
+	$(MAKE) \
+	  --directory ontology \
 	  check
 
 clean:
@@ -62,27 +48,15 @@ clean:
 	  clean
 
 normalize: \
-  normalize-case-core \
-  normalize-case-master \
-  normalize-examples
-
-normalize-case-core: \
-  src/normalize-ontology.mk
-	$(MAKE) \
-	  --directory case-core \
-	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=case-core/core.ttl \
-	  normalize
-
-normalize-case-master: \
-  src/normalize-ontology.mk
-	$(MAKE) \
-	  --directory case-master \
-	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=case-master/case.ttl \
-	  normalize
+  normalize-examples \
+  normalize-ontology
 
 normalize-examples:
 	$(MAKE) \
 	  --directory examples \
+	  normalize
+
+normalize-ontology:
+	$(MAKE) \
+	  --directory ontology \
 	  normalize

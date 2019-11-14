@@ -21,15 +21,15 @@ ifeq ($(GREALPATH),)
 $(error GNU realpath not found)
 endif
 
-# E.g. case-master/case-master.ttl
+# E.g. master/master.ttl
 TARGET_TTL_RELPATH ?=
 ifeq ($(TARGET_TTL_RELPATH),)
-$(error Required parameter TARGET_TTL_RELPATH, as relative path from CASE repository root, not found)
+$(error Required parameter TARGET_TTL_RELPATH, as relative path from /ontology under the CASE repository root, not found)
 endif
 
 TARGET_TTL_BASENAME := $(shell basename $(TARGET_TTL_RELPATH))
 
-top_srcdir := $(shell $(GREALPATH) ../../..)
+top_srcdir := $(shell $(GREALPATH) ../../../..)
 
 all: \
   $(TARGET_TTL_BASENAME)
@@ -38,7 +38,7 @@ all: \
   normalize
 
 $(TARGET_TTL_BASENAME): \
-  $(top_srcdir)/deps/CASE/$(TARGET_TTL_RELPATH) \
+  $(top_srcdir)/deps/CASE/ontology/$(TARGET_TTL_RELPATH) \
   $(top_srcdir)/lib/rdf-toolkit.jar
 	java -jar $(top_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
@@ -57,7 +57,7 @@ $(top_srcdir)/lib/rdf-toolkit.jar:
 check: \
   $(TARGET_TTL_BASENAME)
 	diff \
-	  $(top_srcdir)/deps/CASE/$(TARGET_TTL_RELPATH) \
+	  $(top_srcdir)/deps/CASE/ontology/$(TARGET_TTL_RELPATH) \
 	  $(TARGET_TTL_BASENAME)
 
 normalize: \
