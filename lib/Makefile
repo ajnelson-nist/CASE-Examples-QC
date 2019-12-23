@@ -25,7 +25,7 @@ rdf-toolkit.jar: \
   rdf-toolkit.jar.sha512
 	wget \
 	  -O $@_ \
-	  https://jenkins.edmcouncil.org/view/all/job/rdf-toolkit-build/lastSuccessfulBuild/artifact/target/scala-2.12/rdf-toolkit.jar
+	  https://jenkins.edmcouncil.org/job/rdf-toolkit-build/lastSuccessfulBuild/artifact/target/scala-2.12/rdf-toolkit.jar
 	test \
 	  "x$$(openssl dgst -sha512 $@_ | awk '{print($$NF)}')" \
 	  == \
