@@ -117,7 +117,7 @@ download: \
 
 lib/rdf-toolkit.jar:
 	$(MAKE) \
-	  -C lib \
+	  --directory lib \
 	  rdf-toolkit.jar
 	test -r $@
 
@@ -125,5 +125,5 @@ normalize: \
   .venv.done.log \
   lib/rdf-toolkit.jar
 	$(MAKE) \
-	  -C tests/CASE \
+	  --directory tests/CASE \
 	  normalize
