@@ -49,9 +49,6 @@ SHELL = /bin/bash
 PYTHON3 ?= $(shell which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
 VIRTUALENV ?= $(shell which virtualenv-3.8 2>/dev/null || which virtualenv-3.7 2>/dev/null || which virtualenv-3.6 2>/dev/null || which virtualenv)
-ifeq ($(VIRTUALENV),)
-$(error virtualenv not found)
-endif
 
 all: \
   .git_submodule_init-CASE.done.log \
@@ -85,6 +82,8 @@ all: \
 
 .venv.done.log: \
   deps/requirements.txt
+	@test ! -z "$(VIRTUALENV)" \
+	  || (echo "ERROR:Makefile:virtualenv not found." >&2 ; exit 2)
 	rm -rf venv
 	$(VIRTUALENV) \
 	  --python=$(PYTHON3) \
