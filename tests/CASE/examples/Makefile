@@ -126,8 +126,8 @@ local_ontology_vocabulary-%.txt: \
 	rm $@___
 	$(COMM) \
 	  -13 \
-	  ontology_vocabulary.txt \
-	  $@__ \
+	  <($(SORT) ontology_vocabulary.txt) \
+	  <($(SORT) $@__) \
 	  > $@_
 	rm $@__
 	mv $@_ $@
