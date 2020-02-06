@@ -51,8 +51,7 @@ PYTHON3 ?= $(shell which python3.8 2>/dev/null || which python3.7 2>/dev/null ||
 VIRTUALENV ?= $(shell which virtualenv-3.8 2>/dev/null || which virtualenv-3.7 2>/dev/null || which virtualenv-3.6 2>/dev/null || which virtualenv)
 
 all: \
-  .git_submodule_init-CASE.done.log \
-  .git_submodule_init-UCO.done.log \
+  .git_submodule_init.done.log \
   .venv.done.log \
   lib/rdf-toolkit.jar
 	$(MAKE) \
@@ -61,6 +60,11 @@ all: \
 .PHONY: \
   download \
   normalize
+
+.git_submodule_init.done.log: \
+  .git_submodule_init-CASE.done.log \
+  .git_submodule_init-UCO.done.log
+	touch $@
 
 .git_submodule_init-CASE.done.log: \
   .gitmodules
@@ -107,8 +111,7 @@ clean:
 	  clean
 
 download: \
-  .git_submodule_init-CASE.done.log \
-  .git_submodule_init-UCO.done.log \
+  .git_submodule_init.done.log \
   .venv.done.log \
   lib/rdf-toolkit.jar
 
