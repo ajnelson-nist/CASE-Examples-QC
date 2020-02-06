@@ -65,6 +65,7 @@ http://example.org/local#SimpleName
 http://example.org/local#StarttimeRelation
 http://example.org/local#Tool
 http://example.org/local#WiFiAddress
+http://example.org/local#accessAction
 http://example.org/local#accessedAction
 http://example.org/local#accountIdentifier
 http://example.org/local#accountIssuer
@@ -93,6 +94,7 @@ http://example.org/local#contactName
 http://example.org/local#content
 http://example.org/local#country
 http://example.org/local#cpuFamily
+http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#createdBy
 http://example.org/local#createdTime
@@ -203,7 +205,3 @@ http://example.org/local#url
 http://example.org/local#value
 http://example.org/local#version
 http://example.org/local#visibility
-https://unifiedcyberontology.org/ontology/uco/observable#accessAction
-https://unifiedcyberontology.org/ontology/uco/observable#accessedAction
-https://unifiedcyberontology.org/ontology/uco/observable#createAction
-https://unifiedcyberontology.org/ontology/uco/observable#createdAction

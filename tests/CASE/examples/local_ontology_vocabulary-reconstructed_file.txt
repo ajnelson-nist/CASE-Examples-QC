@@ -6,7 +6,9 @@ http://example.org/local#Investigative
 http://example.org/local#InvestigativeAction
 http://example.org/local#ProvenanceRecord
 http://example.org/local#Relationship
+http://example.org/local#accessedAction
 http://example.org/local#byteOrder
+http://example.org/local#createdAction
 http://example.org/local#dataPayload
 http://example.org/local#description
 http://example.org/local#endTime
@@ -29,5 +31,3 @@ http://example.org/local#source
 http://example.org/local#startTime
 http://example.org/local#target
 http://example.org/local#totalFragments
-https://unifiedcyberontology.org/ontology/uco/observable#accessedAction
-https://unifiedcyberontology.org/ontology/uco/observable#createdAction

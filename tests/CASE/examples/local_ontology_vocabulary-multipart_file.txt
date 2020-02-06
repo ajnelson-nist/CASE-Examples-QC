@@ -1,7 +1,11 @@
 http://example.org/local#ContentData
 http://example.org/local#Fragment
 http://example.org/local#Relationship
+http://example.org/local#accessAction
+http://example.org/local#accessedAction
 http://example.org/local#byteOrder
+http://example.org/local#createAction
+http://example.org/local#createdAction
 http://example.org/local#dataPayload
 http://example.org/local#fragmentIndex
 http://example.org/local#isDirectional
@@ -9,7 +13,3 @@ http://example.org/local#kindOfRelationship
 http://example.org/local#source
 http://example.org/local#target
 http://example.org/local#totalFragments
-https://unifiedcyberontology.org/ontology/uco/observable#accessAction
-https://unifiedcyberontology.org/ontology/uco/observable#accessedAction
-https://unifiedcyberontology.org/ontology/uco/observable#createAction
-https://unifiedcyberontology.org/ontology/uco/observable#createdAction
