@@ -46,9 +46,9 @@
 
 SHELL = /bin/bash
 
-PYTHON ?= python3.7
+PYTHON3 ?= $(shell which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
-VIRTUALENV ?= $(shell which virtualenv-3.7 2>/dev/null || which virtualenv-3.6 2>/dev/null || which virtualenv)
+VIRTUALENV ?= $(shell which virtualenv-3.8 2>/dev/null || which virtualenv-3.7 2>/dev/null || which virtualenv-3.6 2>/dev/null || which virtualenv)
 ifeq ($(VIRTUALENV),)
 $(error virtualenv not found)
 endif
@@ -87,7 +87,7 @@ all: \
   deps/requirements.txt
 	rm -rf venv
 	$(VIRTUALENV) \
-	  --python=$(PYTHON) \
+	  --python=$(PYTHON3) \
 	  --system-site-packages \
 	  venv
 	source venv/bin/activate \
