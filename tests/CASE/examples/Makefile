@@ -140,7 +140,8 @@ ontology_vocabulary.txt: \
   $(top_srcdir)/src/ontology_classes_properties.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python $(top_srcdir)/src/ontology_classes_properties.py \
-	    $(top_srcdir)/deps/{CASE,UCO}/*/*ttl \
+	    $(top_srcdir)/deps/CASE/ontology/*/*ttl \
+	    $(top_srcdir)/deps/UCO/*/*ttl \
 	    > $@_
 	mv $@_ $@
 
