@@ -1,8 +1,8 @@
 MobileExtractor:ToolArguments
-urn:example:draft:FacebookMessage
-urn:example:draft:aquisitionType
-urn:example:draft:iPhoneDevice
-urn:example:draft:localeLanguage
-urn:example:draft:method
-urn:example:draft:ownerName
-urn:example:draft:uniqueID
+http://example.org/draft#FacebookMessage
+http://example.org/draft#aquisitionType
+http://example.org/draft#iPhoneDevice
+http://example.org/draft#localeLanguage
+http://example.org/draft#method
+http://example.org/draft#ownerName
+http://example.org/draft#uniqueID
