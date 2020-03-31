@@ -48,7 +48,6 @@ http://example.org/local#MobileDevice
 http://example.org/local#NetworkConnection
 http://example.org/local#OperatingSystem
 http://example.org/local#PhoneAccount
-http://example.org/local#PhoneCall
 http://example.org/local#Process
 http://example.org/local#ProvenanceRecord
 http://example.org/local#Relationship
@@ -77,7 +76,6 @@ http://example.org/local#authorizationType
 http://example.org/local#biosVersion
 http://example.org/local#birthdate
 http://example.org/local#byteOrder
-http://example.org/local#callType
 http://example.org/local#clockSetting
 http://example.org/local#compressionMethod
 http://example.org/local#configFile
@@ -100,7 +98,6 @@ http://example.org/local#destinationPort
 http://example.org/local#displayName
 http://example.org/local#display_name
 http://example.org/local#dst
-http://example.org/local#duration
 http://example.org/local#emailAddress
 http://example.org/local#endTime
 http://example.org/local#environment
