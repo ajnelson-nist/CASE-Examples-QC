@@ -26,7 +26,6 @@ http://example.org/local#name
 http://example.org/local#object
 http://example.org/local#performer
 http://example.org/local#result
-http://example.org/local#sizeInBytes
 http://example.org/local#source
 http://example.org/local#startTime
 http://example.org/local#target

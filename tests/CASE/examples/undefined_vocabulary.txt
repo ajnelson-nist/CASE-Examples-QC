@@ -139,7 +139,6 @@ http://example.org/local#rangeSize
 http://example.org/local#result
 http://example.org/local#sentTime
 http://example.org/local#serialNumber
-http://example.org/local#sizeInBytes
 http://example.org/local#source
 http://example.org/local#sourcePort
 http://example.org/local#src
