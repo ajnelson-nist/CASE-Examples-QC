@@ -56,8 +56,8 @@ CHECK_TARGETS := $(foreach filename,$(FILES),check-$(filename))
 LOCAL_ONTOLOGY_VOCABULARY_TARGETS := $(foreach filename,$(FILES),local_ontology_vocabulary-$(filename).txt)
 
 all: \
-  single_namespace_corrections.sed \
-  undefined_vocabulary.txt
+  README.md \
+  single_namespace_corrections.sed
 
 .PHONY: \
   normalize
@@ -86,6 +86,23 @@ $(top_srcdir)/lib/rdf-toolkit.jar:
 	  --target-format turtle
 	mv $@_ $@
 
+# BSD sed file replacements c/o:
+#   https://stackoverflow.com/a/34070185
+# This answer works if using GNU sed:
+#   https://stackoverflow.com/a/6790967
+README.md: \
+  .README.md.in \
+  wc_l_local_ontology_vocabulary.txt
+	rm -f _$@ __$@
+	cp .README.md.in __$@
+	sed \
+	  -e '/@WC_L_LOCAL_ONTOLOGY_VOCABULARY_TXT@/r wc_l_local_ontology_vocabulary.txt' \
+	  -e '/@WC_L_LOCAL_ONTOLOGY_VOCABULARY_TXT@/d' \
+	  __$@ \
+	  > _$@
+	rm __$@
+	mv _$@ $@
+
 # 'Check' enforces that normalization works and further is how the files are tracked.
 check: \
   $(CHECK_TARGETS)
@@ -106,6 +123,7 @@ clean:
 	  *.ttl \
 	  *.txt \
 	  *_
+	touch .README.md.in
 
 # The grep patterns confirm that:
 # * There is a namespace present (the colon - blank nodes were slipping by otherwise)
@@ -166,3 +184,12 @@ undefined_vocabulary.txt: \
 	    | uniq \
 	      > $@_
 	mv $@_ $@
+
+wc_l_local_ontology_vocabulary.txt: \
+  undefined_vocabulary.txt
+	wc -l \
+	  $(LOCAL_ONTOLOGY_VOCABULARY_TARGETS) \
+	  undefined_vocabulary.txt \
+	  | grep -v ' total' \
+	    > _$@
+	mv _$@ $@
