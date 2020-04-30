@@ -31,6 +31,7 @@ all:
   check-tool \
   check-types \
   check-victim \
+  check-vocabulary \
   normalize \
   normalize-action \
   normalize-core \
@@ -45,7 +46,8 @@ all:
   normalize-time \
   normalize-tool \
   normalize-types \
-  normalize-victim
+  normalize-victim \
+  normalize-vocabulary
 
 check: \
   check-action \
@@ -61,7 +63,8 @@ check: \
   check-time \
   check-tool \
   check-types \
-  check-victim
+  check-victim \
+  check-vocabulary
 
 check-action: \
   src/normalize-ontology.mk
@@ -176,6 +179,14 @@ check-victim: \
 	  TARGET_TTL_RELPATH=uco-victim/victim.ttl \
 	  check
 
+check-vocabulary: \
+  src/normalize-ontology.mk
+	$(MAKE) \
+	  --directory uco-vocabulary \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-vocabulary/vocabulary.ttl \
+	  check
+
 # This recipe intentionally left blank.
 clean:
 
@@ -193,7 +204,8 @@ normalize: \
   normalize-time \
   normalize-tool \
   normalize-types \
-  normalize-victim
+  normalize-victim \
+  normalize-vocabulary
 
 normalize-action: \
   src/normalize-ontology.mk
@@ -306,4 +318,12 @@ normalize-victim: \
 	  --directory uco-victim \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-victim/victim.ttl \
+	  normalize
+
+normalize-vocabulary: \
+  src/normalize-ontology.mk
+	$(MAKE) \
+	  --directory uco-vocabulary \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-vocabulary/vocabulary.ttl \
 	  normalize
