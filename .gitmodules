@@ -4,3 +4,5 @@
 [submodule "deps/UCO"]
 	path = deps/UCO
 	url = https://github.com/ucoProject/UCO.git
+	update = checkout
+	branch = develop
