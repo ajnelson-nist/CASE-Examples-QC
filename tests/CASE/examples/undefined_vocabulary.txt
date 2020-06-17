@@ -18,11 +18,9 @@ http://example.org/local#Authorization
 http://example.org/local#BluetoothAddress
 http://example.org/local#Bundle
 http://example.org/local#Carrier
-http://example.org/local#Compression
 http://example.org/local#ComputerSpecification
 http://example.org/local#Contact
 http://example.org/local#ContentData
-http://example.org/local#DataRange
 http://example.org/local#Device
 http://example.org/local#DomainName
 http://example.org/local#EmailAccount
@@ -67,7 +65,6 @@ http://example.org/local#authorizationType
 http://example.org/local#biosVersion
 http://example.org/local#byteOrder
 http://example.org/local#clockSetting
-http://example.org/local#compressionMethod
 http://example.org/local#configFile
 http://example.org/local#connectionState
 http://example.org/local#contactName
@@ -80,7 +77,6 @@ http://example.org/local#createdTime
 http://example.org/local#creator
 http://example.org/local#creatorUser
 http://example.org/local#currentWorkingDirectory
-http://example.org/local#data
 http://example.org/local#dataPayload
 http://example.org/local#dataPayloadReferenceURL
 http://example.org/local#description
@@ -115,12 +111,10 @@ http://example.org/local#keypadUnlockCode
 http://example.org/local#kindOfRelationship
 http://example.org/local#location
 http://example.org/local#logFile
-http://example.org/local#magicNumber
 http://example.org/local#manufacturer
 http://example.org/local#messageText
 http://example.org/local#messages
 http://example.org/local#method
-http://example.org/local#mimeType
 http://example.org/local#model
 http://example.org/local#name
 http://example.org/local#numberOfLaunches
@@ -134,8 +128,6 @@ http://example.org/local#phoneNumber
 http://example.org/local#pid
 http://example.org/local#protocols
 http://example.org/local#query
-http://example.org/local#rangeOffset
-http://example.org/local#rangeSize
 http://example.org/local#result
 http://example.org/local#sentTime
 http://example.org/local#serialNumber
