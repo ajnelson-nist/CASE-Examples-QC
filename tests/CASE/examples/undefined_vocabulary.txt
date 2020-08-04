@@ -151,3 +151,4 @@ http://example.org/local#url
 http://example.org/local#value
 http://example.org/local#version
 http://example.org/local#visibility
+https://unifiedcyberontology.org/ontology/uco/observable#picturetype
