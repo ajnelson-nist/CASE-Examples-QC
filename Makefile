@@ -62,26 +62,32 @@ all: \
   normalize
 
 .git_submodule_init.done.log: \
-  .git_submodule_init-CASE.done.log \
-  .git_submodule_init-UCO.done.log
+  .git_submodule_init-CASE.done.log
 	touch $@
 
+# UCO submodule tracked as a dependency to prevent .git lock contention issues.
 .git_submodule_init-CASE.done.log: \
-  .gitmodules
-	test -r deps/CASE/README.md \
-	  || (git submodule init deps/CASE && git submodule update deps/CASE)
-	@test -r deps/CASE/README.md \
-	  || (echo "ERROR:Makefile:CASE submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
+  .git_submodule_init-UCO.done.log
+	test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
+	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/CASE && git submodule update dependencies/CASE)
+	@test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
+	  || (echo "ERROR:Makefile:CASE sub-submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
 	touch $@
 
-# CASE submodule tracked as a dependency to prevent .git lock contention issues.
-.git_submodule_init-UCO.done.log: \
-  .git_submodule_init-CASE.done.log \
+.git_submodule_init-CASE-Examples.done.log: \
   .gitmodules
-	test -r deps/UCO/README.md \
-	  || (git submodule init deps/UCO && git submodule update deps/UCO)
-	@test -r deps/UCO/README.md \
-	  || (echo "ERROR:Makefile:UCO submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
+	test -r dependencies/CASE-Examples/README.md \
+	  || (git submodule init dependencies/CASE-Examples && git submodule update dependencies/CASE-Examples)
+	@test -r dependencies/CASE-Examples/README.md \
+	  || (echo "ERROR:Makefile:CASE-Examples submodule README.md file not found, even though CASE-Examples submodule initialized." >&2 ; exit 2)
+	touch $@
+
+.git_submodule_init-UCO.done.log: \
+  .git_submodule_init-CASE-Examples.done.log
+	test -r dependencies/CASE-Examples/dependencies/UCO/README.md \
+	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/UCO && git submodule update dependencies/UCO)
+	@test -r dependencies/CASE-Examples/dependencies/UCO/README.md \
+	  || (echo "ERROR:Makefile:UCO sub-submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
 	touch $@
 
 .venv.done.log: \
@@ -122,6 +128,7 @@ lib/rdf-toolkit.jar:
 	test -r $@
 
 normalize: \
+  .git_submodule_init-CASE.done.log \
   .venv.done.log \
   lib/rdf-toolkit.jar
 	$(MAKE) \

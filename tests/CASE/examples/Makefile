@@ -67,7 +67,7 @@ $(top_srcdir)/lib/rdf-toolkit.jar:
 	@exit 2
 
 %.json: \
-  $(top_srcdir)/deps/CASE/examples/%.json
+  $(top_srcdir)/dependencies/CASE-Examples/examples/%.json
 	source $(top_srcdir)/venv/bin/activate \
 	  && python -m json.tool \
 	    $< \
@@ -75,7 +75,7 @@ $(top_srcdir)/lib/rdf-toolkit.jar:
 	mv $@_ $@
 
 %.ttl: \
-  $(top_srcdir)/deps/CASE/examples/%.json \
+  $(top_srcdir)/dependencies/CASE-Examples/examples/%.json \
   $(top_srcdir)/lib/rdf-toolkit.jar
 	java -jar $(top_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
@@ -113,7 +113,7 @@ check-%: \
   %.json \
   %.ttl
 	diff \
-	  $(top_srcdir)/deps/CASE/examples/$< \
+	  $(top_srcdir)/dependencies/CASE-Examples/examples/$< \
 	  $<
 
 clean:
@@ -158,8 +158,8 @@ ontology_vocabulary.txt: \
   $(top_srcdir)/src/ontology_classes_properties.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python $(top_srcdir)/src/ontology_classes_properties.py \
-	    $(top_srcdir)/deps/CASE/ontology/*/*ttl \
-	    $(top_srcdir)/deps/UCO/*/*ttl \
+	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/*/*ttl \
+	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/*/*ttl \
 	    > $@_
 	mv $@_ $@
 

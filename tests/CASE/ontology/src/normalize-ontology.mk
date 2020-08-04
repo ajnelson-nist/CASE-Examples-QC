@@ -38,7 +38,7 @@ all: \
   normalize
 
 $(TARGET_TTL_BASENAME): \
-  $(top_srcdir)/deps/CASE/ontology/$(TARGET_TTL_RELPATH) \
+  $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/$(TARGET_TTL_RELPATH) \
   $(top_srcdir)/lib/rdf-toolkit.jar
 	java -jar $(top_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
@@ -57,7 +57,7 @@ $(top_srcdir)/lib/rdf-toolkit.jar:
 check: \
   $(TARGET_TTL_BASENAME)
 	diff \
-	  $(top_srcdir)/deps/CASE/ontology/$(TARGET_TTL_RELPATH) \
+	  $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/$(TARGET_TTL_RELPATH) \
 	  $(TARGET_TTL_BASENAME)
 
 normalize: \
