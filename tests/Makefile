@@ -13,25 +13,61 @@
 
 SHELL := /bin/bash
 
-top_srcdir := ../..
+top_srcdir := ..
 
 all:
+	$(MAKE) \
+	  --directory CASE-Examples
 
 .PHONY: \
-  normalize
+  check-CASE \
+  check-CASE-Examples \
+  clean-CASE \
+  clean-CASE-Examples \
+  normalize \
+  normalize-CASE \
+  normalize-CASE-Examples
 
-check:
+check: \
+  check-CASE \
+  check-CASE-Examples
+
+check-CASE:
 	$(MAKE) \
-	  --directory ontology \
+	  --directory CASE \
 	  check
 
-clean:
+check-CASE-Examples:
+	$(MAKE) \
+	  --directory CASE-Examples \
+	  check
+
+clean: \
+  clean-CASE \
+  clean-CASE-Examples
+
+clean-CASE:
 	@$(MAKE) \
-	  --directory ontology \
+	  --directory CASE \
+	  clean
+
+clean-CASE-Examples:
+	@$(MAKE) \
+	  --directory CASE-Examples \
 	  clean
 
 normalize: \
+  normalize-CASE \
+  normalize-CASE-Examples
+
+normalize-CASE: \
   $(top_srcdir)/lib/rdf-toolkit.jar
 	$(MAKE) \
-	  --directory ontology \
+	  --directory CASE \
+	  normalize
+
+normalize-CASE-Examples: \
+  $(top_srcdir)/lib/rdf-toolkit.jar
+	$(MAKE) \
+	  --directory CASE-Examples \
 	  normalize

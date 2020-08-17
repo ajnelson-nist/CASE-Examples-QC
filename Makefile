@@ -55,7 +55,7 @@ all: \
   .venv.done.log \
   lib/rdf-toolkit.jar
 	$(MAKE) \
-	  --directory tests/CASE
+	  --directory tests
 
 .PHONY: \
   download \
@@ -108,12 +108,12 @@ check: \
   .venv.done.log \
   lib/rdf-toolkit.jar
 	$(MAKE) \
-	  --directory tests/CASE \
+	  --directory tests \
 	  check
 
 clean:
 	@$(MAKE) \
-	  --directory tests/CASE \
+	  --directory tests \
 	  clean
 
 download: \
@@ -132,5 +132,5 @@ normalize: \
   .venv.done.log \
   lib/rdf-toolkit.jar
 	$(MAKE) \
-	  --directory tests/CASE \
+	  --directory tests \
 	  normalize

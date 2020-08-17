@@ -16,22 +16,24 @@ SHELL := /bin/bash
 top_srcdir := ../..
 
 all:
+	$(MAKE) \
+	  --directory examples
 
 .PHONY: \
   normalize
 
 check:
 	$(MAKE) \
-	  --directory ontology \
+	  --directory examples \
 	  check
 
 clean:
 	@$(MAKE) \
-	  --directory ontology \
+	  --directory examples \
 	  clean
 
 normalize: \
   $(top_srcdir)/lib/rdf-toolkit.jar
 	$(MAKE) \
-	  --directory ontology \
+	  --directory examples \
 	  normalize

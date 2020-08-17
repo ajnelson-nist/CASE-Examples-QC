@@ -123,7 +123,7 @@ clean:
 	  *.ttl \
 	  *.txt \
 	  *_
-	touch .README.md.in
+	@touch .README.md.in
 
 # The grep patterns confirm that:
 # * There is a namespace present (the colon - blank nodes were slipping by otherwise)
