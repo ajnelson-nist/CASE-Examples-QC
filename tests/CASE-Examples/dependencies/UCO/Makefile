@@ -176,8 +176,135 @@ check-victim: \
 	  TARGET_TTL_RELPATH=uco-victim/victim.ttl \
 	  check
 
-# This recipe intentionally left blank.
-clean:
+clean: \
+  clean-action \
+  clean-core \
+  clean-identity \
+  clean-investigation \
+  clean-location \
+  clean-marking \
+  clean-master \
+  clean-observable \
+  clean-pattern \
+  clean-role \
+  clean-time \
+  clean-tool \
+  clean-types \
+  clean-victim
+
+clean-action: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-action \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-action/action.ttl \
+	  clean
+
+clean-core: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-core \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-core/core.ttl \
+	  clean
+
+clean-identity: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-identity \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-identity/identity.ttl \
+	  clean
+
+clean-investigation: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-investigation \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-investigation/investigation.ttl \
+	  clean
+
+clean-location: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-location \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-location/location.ttl \
+	  clean
+
+clean-marking: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-marking \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-marking/marking.ttl \
+	  clean
+
+# NOTE - Does not fit remainder of file path pattern.
+clean-master: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-master \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-master/uco.ttl \
+	  clean
+
+clean-observable: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-observable \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-observable/observable.ttl \
+	  clean
+
+clean-pattern: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-pattern \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-pattern/pattern.ttl \
+	  clean
+
+clean-role: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-role \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-role/role.ttl \
+	  clean
+
+clean-time: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-time \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-time/time.ttl \
+	  clean
+
+clean-tool: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-tool \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-tool/tool.ttl \
+	  clean
+
+clean-types: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-types \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-types/types.ttl \
+	  clean
+
+clean-victim: \
+  src/normalize-ontology.mk
+	@$(MAKE) \
+	  --directory uco-victim \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-victim/victim.ttl \
+	  clean
+
 
 normalize: \
   normalize-action \

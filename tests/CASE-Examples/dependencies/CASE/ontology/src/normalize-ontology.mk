@@ -60,5 +60,8 @@ check: \
 	  $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/$(TARGET_TTL_RELPATH) \
 	  $(TARGET_TTL_BASENAME)
 
+clean:
+	@rm -f $(TARGET_TTL_BASENAME)
+
 normalize: \
   $(TARGET_TTL_BASENAME)

@@ -43,8 +43,23 @@ check-master: \
 	  TARGET_TTL_RELPATH=master/case.ttl \
 	  check
 
-# This recipe intentionally left blank.
-clean:
+clean: \
+  clean-core \
+  clean-master
+
+clean-core:
+	@$(MAKE) \
+	  --directory core \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=core/core.ttl \
+	  clean
+
+clean-master:
+	@$(MAKE) \
+	  --directory master \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=master/case.ttl \
+	  clean
 
 normalize: \
   normalize-core \
