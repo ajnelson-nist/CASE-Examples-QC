@@ -11,63 +11,79 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+# TODO: This Makefile can include additional rules to add UCO to the
+# unit test suite.  Unfortunately, at the time of this writing, UCO's
+# primary branch has normalization errors, so the tests are temporarily
+# omitted.
+
 SHELL := /bin/bash
 
-top_srcdir := ../..
+top_srcdir := ../../..
 
-all:
+all: \
+  all-CASE \
+  all-UCO
+
+all-CASE:
 	$(MAKE) \
-	  --directory examples
+	  --directory CASE
+
+all-UCO:
+	$(MAKE) \
+	  --directory UCO
 
 .PHONY: \
-  check-dependencies \
-  check-examples \
-  clean-dependencies \
-  clean-examples \
+  all-CASE \
+  all-UCO \
+  check-CASE \
+  check-UCO \
+  clean-CASE \
+  clean-UCO \
   normalize \
-  normalize-dependencies \
-  normalize-examples
+  normalize-CASE \
+  normalize-UCO
 
+# TODO: When UCO incorporates rdf-toolkit in its merge review process,
+# add check-UCO to this dependency list.
 check: \
-  check-dependencies \
-  check-examples
+  check-CASE
 
-check-dependencies:
+check-CASE:
 	$(MAKE) \
-	  --directory dependencies \
+	  --directory CASE \
 	  check
 
-check-examples:
+check-UCO:
 	$(MAKE) \
-	  --directory examples \
+	  --directory UCO \
 	  check
 
 clean: \
-  clean-dependencies \
-  clean-examples
+  clean-CASE \
+  clean-UCO
 
-clean-dependencies:
+clean-CASE:
 	@$(MAKE) \
-	  --directory dependencies \
+	  --directory CASE \
 	  clean
 
-clean-examples:
+clean-UCO:
 	@$(MAKE) \
-	  --directory examples \
+	  --directory UCO \
 	  clean
 
 normalize: \
-  normalize-dependencies \
-  normalize-examples
+  normalize-CASE \
+  normalize-UCO
 
-normalize-dependencies: \
+normalize-CASE: \
   $(top_srcdir)/lib/rdf-toolkit.jar
 	$(MAKE) \
-	  --directory dependencies \
+	  --directory CASE \
 	  normalize
 
-normalize-examples: \
+normalize-UCO: \
   $(top_srcdir)/lib/rdf-toolkit.jar
 	$(MAKE) \
-	  --directory examples \
+	  --directory UCO \
 	  normalize

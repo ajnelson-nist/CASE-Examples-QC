@@ -11,7 +11,7 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-# This Makefile is assumed to execute in a directory three directories
+# This Makefile is assumed to execute in a directory six directories
 # deep into the repository, as indicated by the variable top_srcdir.
 
 SHELL = /bin/bash
@@ -29,7 +29,7 @@ endif
 
 TARGET_TTL_BASENAME := $(shell basename $(TARGET_TTL_RELPATH))
 
-top_srcdir := $(shell $(GREALPATH) ../../../..)
+top_srcdir := $(shell $(GREALPATH) ../../../../../..)
 
 all: \
   $(TARGET_TTL_BASENAME)
