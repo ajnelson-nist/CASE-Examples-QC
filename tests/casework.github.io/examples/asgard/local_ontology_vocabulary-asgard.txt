@@ -6,14 +6,3 @@ http://example.org/ontology/local#iPhoneDevice
 http://example.org/ontology/local#localeLanguage
 http://example.org/ontology/local#ownerName
 http://example.org/ontology/local#uniqueID
-https://caseontology.org/ontology/case/core#Trace
-https://caseontology.org/ontology/case/core#hasPropertyBundle
-https://unifiedcyberontology.org/ontology/uco/observable#isDirectional
-uco-types:ControlledDictionary
-uco-types:ControlledDictionaryEntry
-uco-types:Hash
-uco-types:entry
-uco-types:hashMethod
-uco-types:hashValue
-uco-types:key
-uco-types:value
