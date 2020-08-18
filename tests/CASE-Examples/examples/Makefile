@@ -154,6 +154,7 @@ normalize: \
   $(NORMALIZED_JSON) \
   $(NORMALIZED_TTL)
 
+#TODO This file is also needed under the /tests/casework.github.io tree.  It could stand to be made once directly under /tests.
 ontology_vocabulary.txt: \
   $(top_srcdir)/src/ontology_classes_properties.py
 	source $(top_srcdir)/venv/bin/activate \
