@@ -19,7 +19,7 @@ The following table is the count of unknown terms yet used in each example file:
        5 local_ontology_vocabulary-multipart_file.txt
        0 local_ontology_vocabulary-network_connection.txt
        0 local_ontology_vocabulary-raw_data.txt
-      32 local_ontology_vocabulary-reconstructed_file.txt
+       2 local_ontology_vocabulary-reconstructed_file.txt
       28 local_ontology_vocabulary-sms_and_contacts.txt
-     136 undefined_vocabulary.txt
+     126 undefined_vocabulary.txt
 ```
