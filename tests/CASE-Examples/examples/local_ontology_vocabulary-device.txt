@@ -1,16 +1,1 @@
-http://example.org/local#ComputerSpecification
-http://example.org/local#Device
-http://example.org/local#DomainName
-http://example.org/local#IPv4Address
-http://example.org/local#OperatingSystem
-http://example.org/local#biosVersion
-http://example.org/local#cpuFamily
-http://example.org/local#inventoryNumber
 http://example.org/local#location
-http://example.org/local#manufacturer
-http://example.org/local#model
-http://example.org/local#name
-http://example.org/local#serialNumber
-http://example.org/local#totalRam
-http://example.org/local#value
-http://example.org/local#version

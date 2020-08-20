@@ -16,15 +16,12 @@ http://example.org/local#ApplicationAccount
 http://example.org/local#Attachment
 http://example.org/local#BluetoothAddress
 http://example.org/local#Carrier
-http://example.org/local#ComputerSpecification
 http://example.org/local#Contact
 http://example.org/local#Device
-http://example.org/local#DomainName
 http://example.org/local#EmailAccount
 http://example.org/local#ICCID
 http://example.org/local#IMEI
 http://example.org/local#IMSI
-http://example.org/local#IPv4Address
 http://example.org/local#Investigation
 http://example.org/local#InvestigativeAction
 http://example.org/local#MSISDN
@@ -51,11 +48,9 @@ http://example.org/local#applicationIdentifier
 http://example.org/local#aquisitionType
 http://example.org/local#arguments
 http://example.org/local#attachmentFile
-http://example.org/local#biosVersion
 http://example.org/local#clockSetting
 http://example.org/local#configFile
 http://example.org/local#contactName
-http://example.org/local#cpuFamily
 http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#createdTime
@@ -78,7 +73,6 @@ http://example.org/local#iPhoneDevice
 http://example.org/local#identifier
 http://example.org/local#input
 http://example.org/local#instrument
-http://example.org/local#inventoryNumber
 http://example.org/local#isActive
 http://example.org/local#isDirectional
 http://example.org/local#isHidden
@@ -117,7 +111,6 @@ http://example.org/local#text
 http://example.org/local#timezoneSetting
 http://example.org/local#to
 http://example.org/local#totalFragments
-http://example.org/local#totalRam
 http://example.org/local#uniqueID
 http://example.org/local#url
 http://example.org/local#value
