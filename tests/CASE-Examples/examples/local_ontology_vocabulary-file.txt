@@ -1,2 +1,4 @@
 http://example.org/local#accessedAction
 http://example.org/local#createdAction
+https://caseontology.org/ontology/case/core#Trace
+https://caseontology.org/ontology/case/core#hasPropertyBundle

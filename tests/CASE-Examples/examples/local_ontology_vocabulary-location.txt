@@ -1,0 +1,1 @@
+https://caseontology.org/ontology/case/core#hasPropertyBundle

@@ -28,3 +28,5 @@ http://example.org/local#storageCapacity
 http://example.org/local#timezoneSetting
 http://example.org/local#uniqueID
 http://example.org/local#version
+https://caseontology.org/ontology/case/core#Trace
+https://caseontology.org/ontology/case/core#hasPropertyBundle

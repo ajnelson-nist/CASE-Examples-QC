@@ -46,3 +46,4 @@ http://example.org/local#tags
 http://example.org/local#target
 http://example.org/local#text
 http://example.org/local#value
+https://caseontology.org/ontology/case/core#hasPropertyBundle

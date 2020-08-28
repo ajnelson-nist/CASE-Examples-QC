@@ -1,0 +1,2 @@
+https://caseontology.org/ontology/case/core#Trace
+https://caseontology.org/ontology/case/core#hasPropertyBundle

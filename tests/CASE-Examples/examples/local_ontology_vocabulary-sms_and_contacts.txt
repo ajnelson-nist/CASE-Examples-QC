@@ -26,3 +26,5 @@ http://example.org/local#source
 http://example.org/local#target
 http://example.org/local#to
 http://example.org/local#version
+https://caseontology.org/ontology/case/core#Trace
+https://caseontology.org/ontology/case/core#hasPropertyBundle

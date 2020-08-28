@@ -1,1 +1,3 @@
+https://caseontology.org/ontology/case/core#Trace
+https://caseontology.org/ontology/case/core#hasPropertyBundle
 https://unifiedcyberontology.org/ontology/uco/observable#picturetype

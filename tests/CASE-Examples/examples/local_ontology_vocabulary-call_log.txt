@@ -1,1 +1,3 @@
 http://example.org/local#identifier
+https://caseontology.org/ontology/case/core#Trace
+https://caseontology.org/ontology/case/core#hasPropertyBundle
