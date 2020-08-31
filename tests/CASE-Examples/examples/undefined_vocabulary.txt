@@ -6,14 +6,13 @@ http://example.org/draft#localeLanguage
 http://example.org/draft#method
 http://example.org/draft#ownerName
 http://example.org/draft#uniqueID
+http://example.org/draft#visibility
 http://example.org/local#Account
 http://example.org/local#Action
 http://example.org/local#ActionLifecycle
 http://example.org/local#ActionReferences
 http://example.org/local#Annotation
 http://example.org/local#Application
-http://example.org/local#ApplicationAccount
-http://example.org/local#Attachment
 http://example.org/local#BluetoothAddress
 http://example.org/local#Carrier
 http://example.org/local#Contact
@@ -26,7 +25,6 @@ http://example.org/local#Investigation
 http://example.org/local#InvestigativeAction
 http://example.org/local#MSISDN
 http://example.org/local#Message
-http://example.org/local#MessageThread
 http://example.org/local#MobileAccount
 http://example.org/local#MobileDevice
 http://example.org/local#OperatingSystem
@@ -57,8 +55,6 @@ http://example.org/local#createdTime
 http://example.org/local#creatorUser
 http://example.org/local#currentWorkingDirectory
 http://example.org/local#description
-http://example.org/local#displayName
-http://example.org/local#display_name
 http://example.org/local#emailAddress
 http://example.org/local#endTime
 http://example.org/local#environment
@@ -92,7 +88,6 @@ http://example.org/local#object
 http://example.org/local#operatingSystem
 http://example.org/local#ownerName
 http://example.org/local#parsedFile
-http://example.org/local#participant
 http://example.org/local#performer
 http://example.org/local#phoneNumber
 http://example.org/local#pid
@@ -112,9 +107,7 @@ http://example.org/local#timezoneSetting
 http://example.org/local#to
 http://example.org/local#totalFragments
 http://example.org/local#uniqueID
-http://example.org/local#url
 http://example.org/local#value
 http://example.org/local#version
-http://example.org/local#visibility
 https://caseontology.org/ontology/case/core#Trace
 https://caseontology.org/ontology/case/core#hasPropertyBundle
