@@ -6,5 +6,3 @@ http://example.org/draft#localeLanguage
 http://example.org/draft#method
 http://example.org/draft#ownerName
 http://example.org/draft#uniqueID
-https://caseontology.org/ontology/case/core#Trace
-https://caseontology.org/ontology/case/core#hasPropertyBundle

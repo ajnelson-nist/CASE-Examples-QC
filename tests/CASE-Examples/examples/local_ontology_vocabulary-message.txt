@@ -27,5 +27,3 @@ http://example.org/local#to
 http://example.org/local#url
 http://example.org/local#version
 http://example.org/local#visibility
-https://caseontology.org/ontology/case/core#Trace
-https://caseontology.org/ontology/case/core#hasPropertyBundle

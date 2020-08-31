@@ -3,5 +3,3 @@ http://example.org/local#accessedAction
 http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#totalFragments
-https://caseontology.org/ontology/case/core#Trace
-https://caseontology.org/ontology/case/core#hasPropertyBundle

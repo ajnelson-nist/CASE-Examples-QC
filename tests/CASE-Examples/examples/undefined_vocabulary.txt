@@ -118,4 +118,3 @@ http://example.org/local#version
 http://example.org/local#visibility
 https://caseontology.org/ontology/case/core#Trace
 https://caseontology.org/ontology/case/core#hasPropertyBundle
-https://unifiedcyberontology.org/ontology/uco/observable#picturetype
