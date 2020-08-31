@@ -15,11 +15,11 @@ The following table is the count of unknown terms yet used in each example file:
       49 local_ontology_vocabulary-forensic_lifecycle.txt
        0 local_ontology_vocabulary-location.txt
        3 local_ontology_vocabulary-message.txt
-      30 local_ontology_vocabulary-mobile_device_and_sim_card.txt
+       6 local_ontology_vocabulary-mobile_device_and_sim_card.txt
        5 local_ontology_vocabulary-multipart_file.txt
        0 local_ontology_vocabulary-network_connection.txt
        0 local_ontology_vocabulary-raw_data.txt
        2 local_ontology_vocabulary-reconstructed_file.txt
-      30 local_ontology_vocabulary-sms_and_contacts.txt
-     113 undefined_vocabulary.txt
+       1 local_ontology_vocabulary-sms_and_contacts.txt
+      72 undefined_vocabulary.txt
 ```
