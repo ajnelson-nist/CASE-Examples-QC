@@ -62,7 +62,7 @@ all: \
   normalize
 
 .git_submodule_init.done.log: \
-  .git_submodule_init-CASE.done.log
+  .git_submodule_init-casework.github.io.done.log
 	touch $@
 
 # UCO submodule tracked as a dependency to prevent .git lock contention issues.
@@ -88,6 +88,14 @@ all: \
 	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/UCO && git submodule update dependencies/UCO)
 	@test -r dependencies/CASE-Examples/dependencies/UCO/README.md \
 	  || (echo "ERROR:Makefile:UCO sub-submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
+	touch $@
+
+.git_submodule_init-casework.github.io.done.log: \
+  .git_submodule_init-CASE.done.log
+	test -r dependencies/casework.github.io/README.md \
+	  || (git submodule init dependencies/casework.github.io && git submodule update dependencies/casework.github.io)
+	@test -r dependencies/casework.github.io/README.md \
+	  || (echo "ERROR:Makefile:CASE website sub-submodule README.md file not found, even though website submodule initialized." >&2 ; exit 2)
 	touch $@
 
 .venv.done.log: \
