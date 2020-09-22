@@ -15,19 +15,43 @@ SHELL := /bin/bash
 
 top_srcdir := ..
 
-all:
+all: \
+  all-CASE-Examples \
+  all-casework.github.io
+
+all-CASE-Examples:
 	$(MAKE) \
 	  --directory CASE-Examples
 
+all-casework.github.io:
+	$(MAKE) \
+	  --directory casework.github.io
+
 .PHONY: \
+  all-CASE-Examples \
+  all-casework.github.io \
+  check-CASE-Examples \
+  check-casework.github.io \
   normalize
 
-check:
+check: \
+  check-CASE-Examples \
+  check-casework.github.io
+
+check-CASE-Examples:
 	$(MAKE) \
 	  --directory CASE-Examples \
 	  check
 
+check-casework.github.io:
+	$(MAKE) \
+	  --directory casework.github.io \
+	  check
+
 clean:
+	@$(MAKE) \
+	  --directory casework.github.io \
+	  clean
 	@$(MAKE) \
 	  --directory CASE-Examples \
 	  clean

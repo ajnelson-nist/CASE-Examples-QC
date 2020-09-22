@@ -17,7 +17,7 @@ This script emits a long series of sed commands to revise @type declarations and
 Only terms that appear in a single namespace are emitted.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 import os
 import logging
@@ -27,20 +27,21 @@ _logger = logging.getLogger(os.path.basename(__file__))
 
 def main():
     nsdict = {
-      "case-core":         "https://caseontology.org/ontology/case/core#",
-      "uco-action":        "https://unifiedcyberontology.org/ontology/uco/action#",
-      "uco-core":          "https://unifiedcyberontology.org/ontology/uco/core#",
-      "uco-identity":      "https://unifiedcyberontology.org/ontology/uco/identity#",
-      "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
-      "uco-location":      "https://unifiedcyberontology.org/ontology/uco/location#",
-      "uco-marking":       "https://unifiedcyberontology.org/ontology/uco/marking#",
-      "uco-observable":    "https://unifiedcyberontology.org/ontology/uco/observable#",
-      "uco-pattern":       "https://unifiedcyberontology.org/ontology/uco/pattern#",
-      "uco-role":          "https://unifiedcyberontology.org/ontology/uco/role#",
-      "uco-time":          "https://unifiedcyberontology.org/ontology/uco/time#",
-      "uco-tool":          "https://unifiedcyberontology.org/ontology/uco/tool#",
-      "uco-types":         "https://unifiedcyberontology.org/ontology/uco/types#",
-      "uco-victim":        "https://unifiedcyberontology.org/ontology/uco/victim#"
+      "case-investigation": "https://caseontology.org/ontology/case/investigation#",
+      "case-vocabulary":    "https://caseontology.org/ontology/case/vocabulary#",
+      "uco-action":         "https://unifiedcyberontology.org/ontology/uco/action#",
+      "uco-core":           "https://unifiedcyberontology.org/ontology/uco/core#",
+      "uco-identity":       "https://unifiedcyberontology.org/ontology/uco/identity#",
+      "uco-investigation":  "https://unifiedcyberontology.org/ontology/uco/investigation#",
+      "uco-location":       "https://unifiedcyberontology.org/ontology/uco/location#",
+      "uco-marking":        "https://unifiedcyberontology.org/ontology/uco/marking#",
+      "uco-observable":     "https://unifiedcyberontology.org/ontology/uco/observable#",
+      "uco-pattern":        "https://unifiedcyberontology.org/ontology/uco/pattern#",
+      "uco-role":           "https://unifiedcyberontology.org/ontology/uco/role#",
+      "uco-time":           "https://unifiedcyberontology.org/ontology/uco/time#",
+      "uco-tool":           "https://unifiedcyberontology.org/ontology/uco/tool#",
+      "uco-types":          "https://unifiedcyberontology.org/ontology/uco/types#",
+      "uco-victim":         "https://unifiedcyberontology.org/ontology/uco/victim#"
     }
 
     nsdict_inverse = {nsdict[k]:k for k in nsdict.keys()}

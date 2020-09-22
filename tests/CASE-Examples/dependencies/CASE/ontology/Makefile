@@ -17,22 +17,28 @@ SHELL = /bin/bash
 all:
 
 .PHONY: \
-  check-core \
+  check-investigation \
   check-master \
+  check-vocabulary \
+  clean-investigation \
+  clean-master \
+  clean-vocabulary \
   normalize \
-  normalize-core \
-  normalize-master
+  normalize-investigation \
+  normalize-master \
+  normalize-vocabulary
 
 check: \
-  check-core \
-  check-master
+  check-investigation \
+  check-master \
+  check-vocabulary
 
-check-core: \
+check-investigation: \
   src/normalize-ontology.mk
 	$(MAKE) \
-	  --directory core \
+	  --directory investigation \
 	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=core/core.ttl \
+	  TARGET_TTL_RELPATH=investigation/investigation.ttl \
 	  check
 
 check-master: \
@@ -43,15 +49,24 @@ check-master: \
 	  TARGET_TTL_RELPATH=master/case.ttl \
 	  check
 
-clean: \
-  clean-core \
-  clean-master
-
-clean-core:
-	@$(MAKE) \
-	  --directory core \
+check-vocabulary: \
+  src/normalize-ontology.mk
+	$(MAKE) \
+	  --directory vocabulary \
 	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=core/core.ttl \
+	  TARGET_TTL_RELPATH=vocabulary/vocabulary.ttl \
+	  check
+
+clean: \
+  clean-investigation \
+  clean-master \
+  clean-vocabulary
+
+clean-investigation:
+	@$(MAKE) \
+	  --directory investigation \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=investigation/investigation.ttl \
 	  clean
 
 clean-master:
@@ -61,16 +76,24 @@ clean-master:
 	  TARGET_TTL_RELPATH=master/case.ttl \
 	  clean
 
-normalize: \
-  normalize-core \
-  normalize-master
+clean-vocabulary:
+	@$(MAKE) \
+	  --directory vocabulary \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=vocabulary/vocabulary.ttl \
+	  clean
 
-normalize-core: \
+normalize: \
+  normalize-investigation \
+  normalize-master \
+  normalize-vocabulary
+
+normalize-investigation: \
   src/normalize-ontology.mk
 	$(MAKE) \
-	  --directory core \
+	  --directory investigation \
 	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=core/core.ttl \
+	  TARGET_TTL_RELPATH=investigation/investigation.ttl \
 	  normalize
 
 normalize-master: \
@@ -79,4 +102,12 @@ normalize-master: \
 	  --directory master \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=master/case.ttl \
+	  normalize
+
+normalize-vocabulary: \
+  src/normalize-ontology.mk
+	$(MAKE) \
+	  --directory vocabulary \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=vocabulary/vocabulary.ttl \
 	  normalize
