@@ -62,7 +62,7 @@ all: \
 .PHONY: \
   normalize
 
-$(top_srcdir)/lib/rdf-toolkit.jar:
+$(top_srcdir)/.lib.done.log:
 	@echo "ERROR:Makefile:rdf-toolkit.jar not downloaded; please run 'make download' from the top-level directory ($(top_srcdir))." >&2
 	@exit 2
 
@@ -76,7 +76,7 @@ $(top_srcdir)/lib/rdf-toolkit.jar:
 
 %.ttl: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/%.json \
-  $(top_srcdir)/lib/rdf-toolkit.jar
+  $(top_srcdir)/.lib.done.log
 	java -jar $(top_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
 	  --inline-blank-nodes \

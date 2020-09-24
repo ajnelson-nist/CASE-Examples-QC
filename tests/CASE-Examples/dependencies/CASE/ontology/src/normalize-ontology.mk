@@ -39,7 +39,7 @@ all: \
 
 $(TARGET_TTL_BASENAME): \
   $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/$(TARGET_TTL_RELPATH) \
-  $(top_srcdir)/lib/rdf-toolkit.jar
+  $(top_srcdir)/.lib.done.log
 	java -jar $(top_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
 	  --inline-blank-nodes \
@@ -49,7 +49,7 @@ $(TARGET_TTL_BASENAME): \
 	  --target-format turtle
 	mv $@_ $@
 
-$(top_srcdir)/lib/rdf-toolkit.jar:
+$(top_srcdir)/.lib.done.log:
 	@echo "ERROR:Makefile:rdf-toolkit.jar not downloaded; please run 'make download' from the top-level directory ($(top_srcdir))." >&2
 	@exit 2
 

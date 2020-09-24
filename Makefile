@@ -52,8 +52,8 @@ VIRTUALENV ?= $(shell which virtualenv-3.8 2>/dev/null || which virtualenv-3.7 2
 
 all: \
   .git_submodule_init.done.log \
-  .venv.done.log \
-  lib/rdf-toolkit.jar
+  .lib.done.log \
+  .venv.done.log
 	$(MAKE) \
 	  --directory tests
 
@@ -90,6 +90,11 @@ all: \
 	  || (echo "ERROR:Makefile:UCO sub-submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
 	touch $@
 
+.lib.done.log:
+	$(MAKE) \
+	  --directory lib
+	touch $@
+
 .venv.done.log: \
   deps/requirements.txt
 	@test ! -z "$(VIRTUALENV)" \
@@ -105,8 +110,8 @@ all: \
 
 check: \
   .git_submodule_init-CASE.done.log \
-  .venv.done.log \
-  lib/rdf-toolkit.jar
+  .lib.done.log \
+  .venv.done.log
 	$(MAKE) \
 	  --directory tests \
 	  check
@@ -118,19 +123,13 @@ clean:
 
 download: \
   .git_submodule_init.done.log \
-  .venv.done.log \
-  lib/rdf-toolkit.jar
-
-lib/rdf-toolkit.jar:
-	$(MAKE) \
-	  --directory lib \
-	  rdf-toolkit.jar
-	test -r $@
+  .lib.done.log \
+  .venv.done.log
 
 normalize: \
   .git_submodule_init-CASE.done.log \
-  .venv.done.log \
-  lib/rdf-toolkit.jar
+  .lib.done.log \
+  .venv.done.log
 	$(MAKE) \
 	  --directory tests \
 	  normalize

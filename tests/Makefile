@@ -57,7 +57,7 @@ clean:
 	  clean
 
 normalize: \
-  $(top_srcdir)/lib/rdf-toolkit.jar
+  $(top_srcdir)/.lib.done.log
 	$(MAKE) \
 	  --directory CASE-Examples \
 	  normalize

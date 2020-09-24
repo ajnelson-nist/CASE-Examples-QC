@@ -61,13 +61,13 @@ normalize: \
   normalize-examples
 
 normalize-dependencies: \
-  $(top_srcdir)/lib/rdf-toolkit.jar
+  $(top_srcdir)/.lib.done.log
 	$(MAKE) \
 	  --directory dependencies \
 	  normalize
 
 normalize-examples: \
-  $(top_srcdir)/lib/rdf-toolkit.jar
+  $(top_srcdir)/.lib.done.log
 	$(MAKE) \
 	  --directory examples \
 	  normalize

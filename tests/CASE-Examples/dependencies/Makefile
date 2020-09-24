@@ -77,13 +77,13 @@ normalize: \
   normalize-UCO
 
 normalize-CASE: \
-  $(top_srcdir)/lib/rdf-toolkit.jar
+  $(top_srcdir)/.lib.done.log
 	$(MAKE) \
 	  --directory CASE \
 	  normalize
 
 normalize-UCO: \
-  $(top_srcdir)/lib/rdf-toolkit.jar
+  $(top_srcdir)/.lib.done.log
 	$(MAKE) \
 	  --directory UCO \
 	  normalize
