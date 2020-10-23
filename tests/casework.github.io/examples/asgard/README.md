@@ -5,5 +5,5 @@ This directory contains text files that list terms not known to CASE or UCO, but
 The following table is the count of unknown terms yet used in each example file:
 
 ```
-       8 local_ontology_vocabulary-asgard.txt
+8 local_ontology_vocabulary-asgard.txt
 ```
