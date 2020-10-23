@@ -149,10 +149,10 @@ local_ontology_vocabulary-%.txt: \
 	    | grep -v '/kb#' \
 	      > $@__
 	rm $@___
-	$(COMM) \
+	LC_ALL=C $(COMM) \
 	  -13 \
-	  <($(SORT) ontology_vocabulary.txt) \
-	  <($(SORT) $@__) \
+	  <(LC_ALL=C $(SORT) ontology_vocabulary.txt) \
+	  <(LC_ALL=C $(SORT) $@__) \
 	  > $@_
 	rm $@__
 	mv $@_ $@
@@ -181,14 +181,14 @@ single_namespace_corrections.sed: \
 	  && python $(top_srcdir)/src/single_namespace_corrections_sed.py \
 	    ontology_vocabulary.txt \
 	    > $@__
-	$(SORT) $@__ > $@_
+	LC_ALL=C $(SORT) $@__ > $@_
 	rm $@__
 	mv $@_ $@
 
 undefined_vocabulary.txt: \
   $(LOCAL_ONTOLOGY_VOCABULARY_TARGETS)
 	cat $^ \
-	  | $(SORT) \
+	  | LC_ALL=C $(SORT) \
 	    | uniq \
 	      > $@_
 	mv $@_ $@

@@ -91,10 +91,10 @@ local_ontology_vocabulary-asgard.txt: \
 	    | grep -v '/kb#' \
 	      > $@__
 	rm $@___
-	$(COMM) \
+	LC_ALL=C $(COMM) \
 	  -13 \
-	  <($(SORT) ontology_vocabulary.txt) \
-	  <($(SORT) $@__) \
+	  <(LC_ALL=C $(SORT) ontology_vocabulary.txt) \
+	  <(LC_ALL=C $(SORT) $@__) \
 	  > $@_
 	rm $@__
 	mv $@_ $@
