@@ -13,6 +13,8 @@
 
 SHELL = /bin/bash
 
+# GNU versions of utilities, prefixed with "g", are used here where possible because of unimportant whitespace and sorting differences appearing when using default utility names in macOS (which calls up the BSD versions) and Linux (which calls up the GNU versions).
+
 COMM ?= $(shell which gcomm 2>/dev/null || which comm)
 ifeq ($(COMM),)
 $(error comm not found)
@@ -26,6 +28,11 @@ endif
 SORT ?= $(shell which gsort 2>/dev/null || which sort)
 ifeq ($(SORT),)
 $(error sort not found)
+endif
+
+WC ?= $(shell which gwc 2>/dev/null || which wc)
+ifeq ($(WC),)
+$(error wc not found)
 endif
 
 top_srcdir := $(shell $(REALPATH) ../../..)
@@ -188,7 +195,7 @@ undefined_vocabulary.txt: \
 
 wc_l_local_ontology_vocabulary.txt: \
   undefined_vocabulary.txt
-	wc -l \
+	$(WC) -l \
 	  $(LOCAL_ONTOLOGY_VOCABULARY_TARGETS) \
 	  undefined_vocabulary.txt \
 	  | grep -v ' total' \

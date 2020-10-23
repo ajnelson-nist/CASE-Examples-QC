@@ -17,6 +17,8 @@ top_srcdir := ../../../..
 
 asgard_srcdir := $(top_srcdir)/dependencies/casework.github.io/examples/asgard
 
+# GNU versions of utilities, prefixed with "g", are used here where possible because of unimportant whitespace and sorting differences appearing when using default utility names in macOS (which calls up the BSD versions) and Linux (which calls up the GNU versions).
+
 COMM ?= $(shell which gcomm 2>/dev/null || which comm)
 ifeq ($(COMM),)
 $(error comm not found)
@@ -27,12 +29,17 @@ ifeq ($(SORT),)
 $(error sort not found)
 endif
 
+WC ?= $(shell which gwc 2>/dev/null || which wc)
+ifeq ($(WC),)
+$(error wc not found)
+endif
+
 all: \
   README.md
 
 %.diff: \
   %
-	test 1 -eq $$(git ls-tree HEAD $< | wc -l)  # Confirm Markdown file is git-tracked.
+	test 1 -eq $$(git ls-tree HEAD $< | $(WC) -l)  # Confirm Markdown file is git-tracked.
 	git diff $< > _$@
 	@# Confirm patch file exists, but is empty.
 	test -e _$@ && test ! -s _$@ \
@@ -104,7 +111,7 @@ ontology_vocabulary.txt: \
 
 wc_l_local_ontology_vocabulary.txt: \
   local_ontology_vocabulary-asgard.txt
-	wc -l \
+	$(WC) -l \
 	  local_ontology_vocabulary-asgard.txt \
 	  | grep -v ' total' \
 	    > _$@
