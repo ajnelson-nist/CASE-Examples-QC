@@ -62,32 +62,27 @@ all: \
   normalize
 
 .git_submodule_init.done.log: \
-  .git_submodule_init-CASE.done.log
-	touch $@
-
-# UCO submodule tracked as a dependency to prevent .git lock contention issues.
-.git_submodule_init-CASE.done.log: \
-  .git_submodule_init-UCO.done.log
-	test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
-	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/CASE && git submodule update dependencies/CASE)
-	@test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
-	  || (echo "ERROR:Makefile:CASE sub-submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
-	touch $@
-
-.git_submodule_init-CASE-Examples.done.log: \
   .gitmodules
+	# CASE-Examples
 	test -r dependencies/CASE-Examples/README.md \
 	  || (git submodule init dependencies/CASE-Examples && git submodule update dependencies/CASE-Examples)
 	@test -r dependencies/CASE-Examples/README.md \
 	  || (echo "ERROR:Makefile:CASE-Examples submodule README.md file not found, even though CASE-Examples submodule initialized." >&2 ; exit 2)
-	touch $@
-
-.git_submodule_init-UCO.done.log: \
-  .git_submodule_init-CASE-Examples.done.log
+	# CASE-Examples / CASE
+	test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
+	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/CASE && git submodule update dependencies/CASE)
+	@test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
+	  || (echo "ERROR:Makefile:CASE sub-submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
+	# CASE-Examples / UCO
 	test -r dependencies/CASE-Examples/dependencies/UCO/README.md \
 	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/UCO && git submodule update dependencies/UCO)
 	@test -r dependencies/CASE-Examples/dependencies/UCO/README.md \
 	  || (echo "ERROR:Makefile:UCO sub-submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
+	# casework.github.io
+	test -r dependencies/casework.github.io/README.md \
+	  || (git submodule init dependencies/casework.github.io && git submodule update dependencies/casework.github.io)
+	@test -r dependencies/casework.github.io/README.md \
+	  || (echo "ERROR:Makefile:casework.github.io submodule README.md file not found, even though casework.gitub.io submodule initialized." >&2 ; exit 2)
 	touch $@
 
 .lib.done.log:
@@ -109,7 +104,7 @@ all: \
 	touch $@
 
 check: \
-  .git_submodule_init-CASE.done.log \
+  .git_submodule_init.done.log \
   .lib.done.log \
   .venv.done.log
 	$(MAKE) \
@@ -127,7 +122,7 @@ download: \
   .venv.done.log
 
 normalize: \
-  .git_submodule_init-CASE.done.log \
+  .git_submodule_init.done.log \
   .lib.done.log \
   .venv.done.log
 	$(MAKE) \
