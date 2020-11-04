@@ -1,2 +1,3 @@
+http://example.org/ontology/drafting#exhibitRecipient
+http://example.org/ontology/drafting#exhibitTransferrer
 http://example.org/ontology/drafting#roomId
-https://unifiedcyberontology.org/ontology/uco/action#actionReferences

@@ -5,5 +5,5 @@ This directory contains text files that list terms not known to CASE or UCO, but
 The following table is the count of unknown terms yet used in each example file:
 
 ```
-2 local_ontology_vocabulary-urgent_evidence.txt
+3 local_ontology_vocabulary-urgent_evidence.txt
 ```
