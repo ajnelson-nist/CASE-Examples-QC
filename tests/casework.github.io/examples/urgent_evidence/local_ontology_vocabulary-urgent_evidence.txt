@@ -1,0 +1,2 @@
+http://example.org/ontology/drafting#roomId
+https://unifiedcyberontology.org/ontology/uco/action#actionReferences

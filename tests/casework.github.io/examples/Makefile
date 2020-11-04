@@ -15,16 +15,42 @@ SHELL := /bin/bash
 
 top_srcdir := ../../..
 
-all:
+all: \
+  all-asgard \
+  all-urgent_evidence
+
+all-asgard:
 	$(MAKE) \
 	  --directory asgard
 
-check:
+all-urgent_evidence:
+	$(MAKE) \
+	  --directory urgent_evidence
+
+.PHONY: \
+  all-asgard \
+  all-urgent-evidence \
+  check-asgard \
+  check-urgent-evidence
+
+check: \
+  check-asgard \
+  check-urgent-evidence
+
+check-asgard:
 	$(MAKE) \
 	  --directory asgard \
+	  check
+
+check-urgent_evidence:
+	$(MAKE) \
+	  --directory urgent_evidence \
 	  check
 
 clean:
 	@$(MAKE) \
 	  --directory asgard \
+	  clean
+	@$(MAKE) \
+	  --directory urgent_evidence \
 	  clean
