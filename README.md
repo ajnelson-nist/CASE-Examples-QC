@@ -7,7 +7,7 @@ Practices implemented in this repository are not necessarily practices agreed to
 
 ## Output generated: ontology coverage gap
 
-Running just `make` will generate files listing what appear to be non-knowledge-base ontology terms that are not yet covered in CASE or UCO.  These files are tracked in this repository, following the pattern `tests/CASE-Examples/examples/local_ontology_vocabulary-*.txt` (the unknown terms contributed by each example file).  [`undefined_vocabulary.txt`](tests/CASE-Examples/examples/undefined_vocabulary.txt) in that same folder lists the uncovered vocabulary pooled from all the examples.
+Running just `make` will generate files listing what appear to be non-knowledge-base ontology terms that are not yet covered in CASE or UCO.  These files are tracked in this repository, following the pattern `tests/CASE-Examples/examples/local_ontology_vocabulary-*.txt` (the unknown terms contributed by each example file).  [`undefined_vocabulary.txt`](tests/CASE-Examples/examples/undefined_vocabulary.txt) in that same folder lists the uncovered vocabulary pooled from all the examples.  Examples on the website are tested similarly under [`tests/casework.github.io/examples/`](tests/casework.github.io/examples/).
 
 
 ## Tests implemented
