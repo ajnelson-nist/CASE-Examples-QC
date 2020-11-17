@@ -43,10 +43,9 @@ all-UCO:
   normalize-CASE \
   normalize-UCO
 
-# TODO: When UCO incorporates rdf-toolkit in its merge review process,
-# add check-UCO to this dependency list.
 check: \
-  check-CASE
+  check-CASE \
+  check-UCO
 
 check-CASE:
 	$(MAKE) \
