@@ -70,6 +70,11 @@ check-action: \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-action/action.ttl \
 	  check
+	$(MAKE) \
+	  --directory uco-action \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-action/action-da.ttl \
+	  check
 
 check-core: \
   src/normalize-ontology.mk
@@ -77,6 +82,11 @@ check-core: \
 	  --directory uco-core \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-core/core.ttl \
+	  check
+	$(MAKE) \
+	  --directory uco-core \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-core/core-da.ttl \
 	  check
 
 check-identity: \
@@ -86,6 +96,11 @@ check-identity: \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-identity/identity.ttl \
 	  check
+	$(MAKE) \
+	  --directory uco-identity \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-identity/identity-da.ttl \
+	  check
 
 check-location: \
   src/normalize-ontology.mk
@@ -94,6 +109,11 @@ check-location: \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-location/location.ttl \
 	  check
+	$(MAKE) \
+	  --directory uco-location \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-location/location-da.ttl \
+	  check
 
 check-marking: \
   src/normalize-ontology.mk
@@ -101,6 +121,11 @@ check-marking: \
 	  --directory uco-marking \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-marking/marking.ttl \
+	  check
+	$(MAKE) \
+	  --directory uco-marking \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-marking/marking-da.ttl \
 	  check
 
 # NOTE - Does not fit remainder of file path pattern.
@@ -119,6 +144,11 @@ check-observable: \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-observable/observable.ttl \
 	  check
+	$(MAKE) \
+	  --directory uco-observable \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-observable/observable-da.ttl \
+	  check
 
 check-pattern: \
   src/normalize-ontology.mk
@@ -126,6 +156,11 @@ check-pattern: \
 	  --directory uco-pattern \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-pattern/pattern.ttl \
+	  check
+	$(MAKE) \
+	  --directory uco-pattern \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-pattern/pattern-da.ttl \
 	  check
 
 check-role: \
@@ -151,6 +186,11 @@ check-tool: \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-tool/tool.ttl \
 	  check
+	$(MAKE) \
+	  --directory uco-tool \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-tool/tool-da.ttl \
+	  check
 
 check-types: \
   src/normalize-ontology.mk
@@ -158,6 +198,11 @@ check-types: \
 	  --directory uco-types \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-types/types.ttl \
+	  check
+	$(MAKE) \
+	  --directory uco-types \
+	  --file $$PWD/src/normalize-ontology.mk \
+	  TARGET_TTL_RELPATH=uco-types/types-da.ttl \
 	  check
 
 check-victim: \
