@@ -139,7 +139,7 @@ clean:
 local_ontology_vocabulary-%.txt: \
   %.ttl \
   $(top_srcdir)/src/vocabulary_used.py \
-  ontology_vocabulary.txt
+  $(top_srcdir)/tests/ontology_vocabulary.txt
 	source $(top_srcdir)/venv/bin/activate \
 	  && python $(top_srcdir)/src/vocabulary_used.py \
 	    $< \
@@ -149,11 +149,12 @@ local_ontology_vocabulary-%.txt: \
 	    | grep -v '/kb#' \
 	      > $@__
 	rm $@___
-	LC_ALL=C $(COMM) \
-	  -13 \
-	  <(LC_ALL=C $(SORT) ontology_vocabulary.txt) \
-	  <(LC_ALL=C $(SORT) $@__) \
-	  > $@_
+	LC_ALL=C \
+	  $(COMM) \
+	    -13 \
+	    $(top_srcdir)/tests/ontology_vocabulary.txt \
+	    <(LC_ALL=C $(SORT) $@__) \
+	    > $@_
 	rm $@__
 	mv $@_ $@
 
@@ -161,25 +162,15 @@ normalize: \
   $(NORMALIZED_JSON) \
   $(NORMALIZED_TTL)
 
-#TODO This file is also needed under the /tests/casework.github.io tree.  It could stand to be made once directly under /tests.
-ontology_vocabulary.txt: \
-  $(top_srcdir)/src/ontology_classes_properties.py
-	source $(top_srcdir)/venv/bin/activate \
-	  && python $(top_srcdir)/src/ontology_classes_properties.py \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/*/*ttl \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/*/*ttl \
-	    > $@_
-	mv $@_ $@
-
 # This sed script is to help with unambiguous mappings that are straightforward mechanical work.
 # To use it, run (e.g. for Oresteia):
 #   sed -f single_namespace_corrections.sed Oresteia.json > mapped-Oresteia.json
 single_namespace_corrections.sed: \
   $(top_srcdir)/src/single_namespace_corrections_sed.py \
-  ontology_vocabulary.txt
+  $(top_srcdir)/tests/ontology_vocabulary.txt
 	source $(top_srcdir)/venv/bin/activate \
 	  && python $(top_srcdir)/src/single_namespace_corrections_sed.py \
-	    ontology_vocabulary.txt \
+	    $(top_srcdir)/tests/ontology_vocabulary.txt \
 	    > $@__
 	LC_ALL=C $(SORT) $@__ > $@_
 	rm $@__

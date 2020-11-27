@@ -75,13 +75,12 @@ clean:
 	@rm -f \
 	  README.md \
 	  local_ontology_vocabulary-asgard.txt \
-	  ontology_vocabulary.txt \
 	  wc_l_local_ontology_vocabulary.txt
 
 local_ontology_vocabulary-asgard.txt: \
   $(asgard_srcdir)/asgard.json \
   $(top_srcdir)/src/vocabulary_used.py \
-  ontology_vocabulary.txt
+  $(top_srcdir)/tests/ontology_vocabulary.txt
 	source $(top_srcdir)/venv/bin/activate \
 	  && python $(top_srcdir)/src/vocabulary_used.py \
 	    $< \
@@ -91,22 +90,13 @@ local_ontology_vocabulary-asgard.txt: \
 	    | grep -v '/kb#' \
 	      > $@__
 	rm $@___
-	LC_ALL=C $(COMM) \
-	  -13 \
-	  <(LC_ALL=C $(SORT) ontology_vocabulary.txt) \
-	  <(LC_ALL=C $(SORT) $@__) \
-	  > $@_
-	rm $@__
-	mv $@_ $@
-
-#TODO This file is a copy of the file made in the /tests/CASE-Examples tree.  It could stand to be made once directly under /tests.
-ontology_vocabulary.txt: \
-  $(top_srcdir)/src/ontology_classes_properties.py
-	source $(top_srcdir)/venv/bin/activate \
-	  && python $(top_srcdir)/src/ontology_classes_properties.py \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/*/*ttl \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/*/*ttl \
+	LC_ALL=C \
+	  $(COMM) \
+	    -13 \
+	    $(top_srcdir)/tests/ontology_vocabulary.txt \
+	    <(LC_ALL=C $(SORT) $@__) \
 	    > $@_
+	rm $@__
 	mv $@_ $@
 
 wc_l_local_ontology_vocabulary.txt: \
