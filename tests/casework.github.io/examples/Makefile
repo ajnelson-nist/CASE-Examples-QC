@@ -17,11 +17,16 @@ top_srcdir := ../../..
 
 all: \
   all-asgard \
+  all-owl_trafficking \
   all-urgent_evidence
 
 all-asgard:
 	$(MAKE) \
 	  --directory asgard
+
+all-owl_trafficking:
+	$(MAKE) \
+	  --directory owl_trafficking
 
 all-urgent_evidence:
 	$(MAKE) \
@@ -29,17 +34,25 @@ all-urgent_evidence:
 
 .PHONY: \
   all-asgard \
+  all-owl_trafficking \
   all-urgent-evidence \
   check-asgard \
+  check-owl_trafficking \
   check-urgent-evidence
 
 check: \
   check-asgard \
+  check-owl_trafficking \
   check-urgent-evidence
 
 check-asgard:
 	$(MAKE) \
 	  --directory asgard \
+	  check
+
+check-owl_trafficking:
+	$(MAKE) \
+	  --directory owl_trafficking \
 	  check
 
 check-urgent_evidence:
@@ -50,6 +63,9 @@ check-urgent_evidence:
 clean:
 	@$(MAKE) \
 	  --directory asgard \
+	  clean
+	@$(MAKE) \
+	  --directory owl_trafficking \
 	  clean
 	@$(MAKE) \
 	  --directory urgent_evidence \

@@ -15,7 +15,7 @@ SHELL := /bin/bash
 
 top_srcdir := ../../../..
 
-urgent_evidence_srcdir := $(top_srcdir)/dependencies/casework.github.io/examples/urgent_evidence
+owl_trafficking_srcdir := $(top_srcdir)/dependencies/casework.github.io/examples/owl_trafficking
 
 # GNU versions of utilities, prefixed with "g", are used here where possible because of unimportant whitespace and sorting differences appearing when using default utility names in macOS (which calls up the BSD versions) and Linux (which calls up the GNU versions).
 
@@ -68,17 +68,17 @@ README.md: \
 # The .diff files should not be retained.  If any are found after calling 'make check', they illustrate a problem.
 check: \
   README.md.diff \
-  local_ontology_vocabulary-urgent_evidence.txt.diff
+  local_ontology_vocabulary-owl_trafficking.txt.diff
 	@rm -f $^
 
 clean:
 	@rm -f \
 	  README.md \
-	  local_ontology_vocabulary-urgent_evidence.txt \
+	  local_ontology_vocabulary-owl_trafficking.txt \
 	  wc_l_local_ontology_vocabulary.txt
 
-local_ontology_vocabulary-urgent_evidence.txt: \
-  $(urgent_evidence_srcdir)/urgent_evidence.json \
+local_ontology_vocabulary-owl_trafficking.txt: \
+  $(owl_trafficking_srcdir)/owl_trafficking.json \
   $(top_srcdir)/src/vocabulary_used.py \
   $(top_srcdir)/tests/ontology_vocabulary.txt
 	source $(top_srcdir)/venv/bin/activate \
@@ -90,18 +90,19 @@ local_ontology_vocabulary-urgent_evidence.txt: \
 	    | grep -v '/kb/' \
 	      > $@__
 	rm $@___
-	LC_ALL=C $(COMM) \
-	  -13 \
-	  $(top_srcdir)/tests/ontology_vocabulary.txt \
-	  <(LC_ALL=C $(SORT) $@__) \
-	  > $@_
+	LC_ALL=C \
+	  $(COMM) \
+	    -13 \
+	    $(top_srcdir)/tests/ontology_vocabulary.txt \
+	    <(LC_ALL=C $(SORT) $@__) \
+	    > $@_
 	rm $@__
 	mv $@_ $@
 
 wc_l_local_ontology_vocabulary.txt: \
-  local_ontology_vocabulary-urgent_evidence.txt
+  local_ontology_vocabulary-owl_trafficking.txt
 	$(WC) -l \
-	  local_ontology_vocabulary-urgent_evidence.txt \
+	  local_ontology_vocabulary-owl_trafficking.txt \
 	  | grep -v ' total' \
 	    > _$@
 	mv _$@ $@
