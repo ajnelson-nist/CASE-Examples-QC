@@ -16,19 +16,24 @@ SHELL = /bin/bash
 all: \
   rdf-toolkit.jar
 
-# Downloading rdf-toolkit is done here following the directions at:
+# Downloading rdf-toolkit was previously done following the directions
+# at:
 #   https://github.com/edmcouncil/rdf-toolkit
-# Checksum is confirmed before moving file into position.  (This
-# practice will probably require frequent updates, unless signed
-# checksum can be retrieved somehow.)
+# However, on the file becoming temporarily unavailable, CASE has placed
+# a verified copy at a custom location.
+# The checksum of the original file from EDM Council is confirmed before
+# moving file into position.  (This practice will probably require
+# frequent updates, unless a signed checksum for the jar can be
+# retrieved somehow.)
 rdf-toolkit.jar: \
   rdf-toolkit.jar.sha512
 	wget \
-	  -O $@_ \
-	  https://jenkins.edmcouncil.org/job/rdf-toolkit-build/lastSuccessfulBuild/artifact/target/scala-2.12/rdf-toolkit.jar
+	  --output-document $@_ \
+	  http://files.caseontology.org/rdf-toolkit.jar
 	test \
 	  "x$$(openssl dgst -sha512 $@_ | awk '{print($$NF)}')" \
 	  == \
 	  "x$$(head -n1 $<)"
+	# For Make, confirm timestamp of file is newer than clone of repository.
 	touch $@_
 	mv $@_ $@
