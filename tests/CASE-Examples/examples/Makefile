@@ -146,7 +146,7 @@ local_ontology_vocabulary-%.txt: \
 	    > $@___
 	grep ':' $@___ \
 	  | egrep -v '(acme.org|purl.org|w3.org)' \
-	    | grep -v '/kb#' \
+	    | grep -v '/kb/' \
 	      > $@__
 	rm $@___
 	LC_ALL=C \
