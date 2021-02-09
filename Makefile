@@ -100,7 +100,13 @@ all: \
 	  --system-site-packages \
 	  venv
 	source venv/bin/activate \
-	  ; pip install -r deps/requirements.txt
+	  && pip install \
+	    --upgrade \
+	    pip \
+	    setuptools
+	source venv/bin/activate \
+	  && pip install \
+	    --requirement deps/requirements.txt
 	touch $@
 
 check: \
