@@ -20,7 +20,6 @@ all:
   check-action \
   check-core \
   check-identity \
-  check-investigation \
   check-location \
   check-marking \
   check-master \
@@ -36,7 +35,6 @@ all:
   normalize-action \
   normalize-core \
   normalize-identity \
-  normalize-investigation \
   normalize-location \
   normalize-marking \
   normalize-master \
@@ -53,7 +51,6 @@ check: \
   check-action \
   check-core \
   check-identity \
-  check-investigation \
   check-location \
   check-marking \
   check-master \
@@ -88,14 +85,6 @@ check-identity: \
 	  --directory uco-identity \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-identity/identity.ttl \
-	  check
-
-check-investigation: \
-  src/normalize-ontology.mk
-	$(MAKE) \
-	  --directory uco-investigation \
-	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=uco-investigation/investigation.ttl \
 	  check
 
 check-location: \
@@ -191,7 +180,6 @@ clean: \
   clean-action \
   clean-core \
   clean-identity \
-  clean-investigation \
   clean-location \
   clean-marking \
   clean-master \
@@ -226,14 +214,6 @@ clean-identity: \
 	  --directory uco-identity \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-identity/identity.ttl \
-	  clean
-
-clean-investigation: \
-  src/normalize-ontology.mk
-	@$(MAKE) \
-	  --directory uco-investigation \
-	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=uco-investigation/investigation.ttl \
 	  clean
 
 clean-location: \
@@ -330,7 +310,6 @@ normalize: \
   normalize-action \
   normalize-core \
   normalize-identity \
-  normalize-investigation \
   normalize-location \
   normalize-marking \
   normalize-master \
@@ -365,14 +344,6 @@ normalize-identity: \
 	  --directory uco-identity \
 	  --file $$PWD/src/normalize-ontology.mk \
 	  TARGET_TTL_RELPATH=uco-identity/identity.ttl \
-	  normalize
-
-normalize-investigation: \
-  src/normalize-ontology.mk
-	$(MAKE) \
-	  --directory uco-investigation \
-	  --file $$PWD/src/normalize-ontology.mk \
-	  TARGET_TTL_RELPATH=uco-investigation/investigation.ttl \
 	  normalize
 
 normalize-location: \
