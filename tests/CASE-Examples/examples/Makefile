@@ -135,7 +135,7 @@ clean:
 # The grep patterns confirm that:
 # * There is a namespace present (the colon - blank nodes were slipping by otherwise)
 # * Expected namespaces like w3.org are ignored (egrep -v for acme, purl, w3)
-# * Example knowledge base items are ignored (grep -v ':kb:')
+# * Example knowledge base items are ignored (grep -v '/kb/')
 local_ontology_vocabulary-%.txt: \
   %.ttl \
   $(top_srcdir)/src/vocabulary_used.py \
