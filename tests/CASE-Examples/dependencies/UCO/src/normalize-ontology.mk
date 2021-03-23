@@ -31,6 +31,8 @@ TARGET_TTL_BASENAME := $(shell basename $(TARGET_TTL_RELPATH))
 
 top_srcdir := $(shell $(GREALPATH) ../../../../..)
 
+case_srcdir := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE
+
 all: \
   $(TARGET_TTL_BASENAME)
 
@@ -40,7 +42,7 @@ all: \
 $(TARGET_TTL_BASENAME): \
   $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/$(TARGET_TTL_RELPATH) \
   $(top_srcdir)/.lib.done.log
-	java -jar $(top_srcdir)/lib/rdf-toolkit.jar \
+	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
 	  --inline-blank-nodes \
 	  --source $< \

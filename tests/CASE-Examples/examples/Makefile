@@ -37,6 +37,8 @@ endif
 
 top_srcdir := $(shell $(REALPATH) ../../..)
 
+case_srcdir := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE
+
 FILES := \
   Oresteia \
   accounts \
@@ -84,7 +86,7 @@ $(top_srcdir)/.lib.done.log:
 %.ttl: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/%.json \
   $(top_srcdir)/.lib.done.log
-	java -jar $(top_srcdir)/lib/rdf-toolkit.jar \
+	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
 	  --inline-blank-nodes \
 	  --source $< \
