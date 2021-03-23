@@ -85,9 +85,12 @@ all: \
 	  || (echo "ERROR:Makefile:casework.github.io submodule README.md file not found, even though casework.gitub.io submodule initialized." >&2 ; exit 2)
 	touch $@
 
-.lib.done.log:
+.lib.done.log: \
+  .git_submodule_init.done.log
 	$(MAKE) \
-	  --directory lib
+	  --directory dependencies/CASE-Examples/dependencies/CASE \
+	  .lib.done.log
+	test -r dependencies/CASE-Examples/dependencies/CASE/lib/rdf-toolkit.jar
 	touch $@
 
 .venv.done.log: \

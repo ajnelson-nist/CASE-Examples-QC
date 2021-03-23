@@ -11,47 +11,26 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-# TODO: This Makefile can include additional rules to add UCO to the
-# unit test suite.  Unfortunately, at the time of this writing, UCO's
-# primary branch has normalization errors, so the tests are temporarily
-# omitted.
-
 SHELL := /bin/bash
 
 top_srcdir := ../../..
 
 all: \
-  all-CASE \
   all-UCO
-
-all-CASE:
-	$(MAKE) \
-	  --directory CASE
 
 all-UCO:
 	$(MAKE) \
 	  --directory UCO
 
 .PHONY: \
-  all-CASE \
   all-UCO \
-  check-CASE \
   check-UCO \
-  clean-CASE \
   clean-UCO \
   normalize \
-  normalize-CASE \
   normalize-UCO
 
-# TODO: When UCO incorporates rdf-toolkit in its merge review process,
-# add check-UCO to this dependency list.
 check: \
-  check-CASE
-
-check-CASE:
-	$(MAKE) \
-	  --directory CASE \
-	  check
+  check-UCO
 
 check-UCO:
 	$(MAKE) \
@@ -59,13 +38,7 @@ check-UCO:
 	  check
 
 clean: \
-  clean-CASE \
   clean-UCO
-
-clean-CASE:
-	@$(MAKE) \
-	  --directory CASE \
-	  clean
 
 clean-UCO:
 	@$(MAKE) \
@@ -73,14 +46,7 @@ clean-UCO:
 	  clean
 
 normalize: \
-  normalize-CASE \
   normalize-UCO
-
-normalize-CASE: \
-  $(top_srcdir)/.lib.done.log
-	$(MAKE) \
-	  --directory CASE \
-	  normalize
 
 normalize-UCO: \
   $(top_srcdir)/.lib.done.log
