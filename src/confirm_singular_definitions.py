@@ -15,7 +15,7 @@
 This script reviews all .ttl files in a directory for redundant rdfs:comment or rdfs:label statements, which are a sign of merge errors inducing redundant class definitions.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 import logging
 import os
@@ -23,6 +23,14 @@ import os
 import rdflib.plugins.sparql
 
 _logger = logging.getLogger(os.path.basename(__file__))
+
+# Some are known issues that predate the 0.6.0 merge-review cycle.
+# TODO - File UCO bugfix reports.
+CONCEPT_IRIS_WITH_KNOWN_ISSUES = {
+  "https://unifiedcyberontology.org/ontology/uco/core#object",
+  "https://unifiedcyberontology.org/ontology/uco/observable#owner",
+  "https://unifiedcyberontology.org/ontology/uco/observable#password"
+}
 
 def class_iris_with_redundant_definitions(filepath):
     graph = rdflib.Graph()
@@ -62,8 +70,10 @@ WHERE {
             class_iri = n_class.toPython()
             class_iris.add(class_iri)
 
+    class_iris -= CONCEPT_IRIS_WITH_KNOWN_ISSUES
+
     if len(class_iris) > 0:
-        _logger.error("File %s.", class_iri)
+        _logger.error("File %s.", filepath)
         for class_iri in sorted(class_iris):
             _logger.error("Class found - %s.", class_iri)
     return class_iris
