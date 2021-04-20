@@ -41,11 +41,13 @@ all-casework.github.io: \
   all-casework.github.io \
   check-CASE-Examples \
   check-casework.github.io \
+  check-rdfs \
   normalize
 
 check: \
   check-CASE-Examples \
-  check-casework.github.io
+  check-casework.github.io \
+  check-rdfs
 
 check-CASE-Examples: \
   ontology_vocabulary.txt
@@ -57,6 +59,11 @@ check-casework.github.io: \
   ontology_vocabulary.txt
 	$(MAKE) \
 	  --directory casework.github.io \
+	  check
+
+check-rdfs:
+	$(MAKE) \
+	  --directory rdfs \
 	  check
 
 clean:
