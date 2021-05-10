@@ -52,13 +52,13 @@ all: \
 #   https://stackoverflow.com/a/6790967
 README.md: \
   .README.md.in \
-  wc_l_local_ontology_relationships.txt \
+  wc_l_local_kindOfRelationships.txt \
   wc_l_local_ontology_vocabulary.txt
 	rm -f _$@ __$@
 	cp .README.md.in __$@
 	sed \
-	  -e '/@WC_L_LOCAL_ONTOLOGY_RELATIONSHIPS_TXT@/r wc_l_local_ontology_relationships.txt' \
-	  -e '/@WC_L_LOCAL_ONTOLOGY_RELATIONSHIPS_TXT@/d' \
+	  -e '/@WC_L_LOCAL_KINDOFRELATIONSHIPS_TXT@/r wc_l_local_kindOfRelationships.txt' \
+	  -e '/@WC_L_LOCAL_KINDOFRELATIONSHIPS_TXT@/d' \
 	  __$@ \
 	  > _$@
 	cp _$@ __$@
@@ -70,36 +70,39 @@ README.md: \
 	rm __$@
 	mv _$@ $@
 
+all_kindOfRelationships-asgard.tsv: \
+  $(asgard_srcdir)/asgard.json \
+  $(top_srcdir)/src/data_relationship_literals_tsv.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/data_relationship_literals_tsv.py \
+	    $< \
+	    > $@_
+	mv $@_ $@
+
 # Tests:
 # * The render of the README.md file and the local-ontology list that are tracked in Git are up-to-date.
 # The .diff files should not be retained.  If any are found after calling 'make check', they illustrate a problem.
 check: \
   README.md.diff \
-  local_ontology_relationships-asgard.tsv.diff \
+  local_kindOfRelationships-asgard.tsv.diff \
   local_ontology_vocabulary-asgard.txt.diff
 	@rm -f $^
 
 clean:
 	@rm -f \
+	  *kindOfRelationships* \
 	  README.md \
-	  local_ontology_relationships-asgard.tsv \
 	  local_ontology_vocabulary-asgard.txt \
 	  wc_l_local_ontology_vocabulary.txt
 
-local_ontology_relationships-asgard.tsv: \
-  $(asgard_srcdir)/asgard.json \
-  $(top_srcdir)/src/data_relationship_literals_tsv.py \
+local_kindOfRelationships-asgard.tsv: \
+  all_kindOfRelationships-asgard.tsv \
   $(top_srcdir)/tests/ontology_relationship_literals.tsv
-	source $(top_srcdir)/venv/bin/activate \
-	  && python3 $(top_srcdir)/src/data_relationship_literals_tsv.py \
-	    $< \
-	    > $@__
 	LC_ALL=C $(COMM) \
 	  -13 \
 	  $(top_srcdir)/tests/ontology_relationship_literals.tsv \
-	  <(LC_ALL=C $(SORT) $@__) \
+	  <(LC_ALL=C $(SORT) $<) \
 	  > $@_
-	rm $@__
 	mv $@_ $@
 
 local_ontology_vocabulary-asgard.txt: \
@@ -124,10 +127,10 @@ local_ontology_vocabulary-asgard.txt: \
 	rm $@__
 	mv $@_ $@
 
-wc_l_local_ontology_relationships.txt: \
-  local_ontology_relationships-asgard.tsv
+wc_l_local_kindOfRelationships.txt: \
+  local_kindOfRelationships-asgard.tsv
 	$(WC) -l \
-	  local_ontology_relationships-asgard.tsv \
+	  $< \
 	  | grep -v ' total' \
 	    > _$@
 	mv _$@ $@
