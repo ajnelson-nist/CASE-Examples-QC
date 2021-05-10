@@ -7,3 +7,9 @@ The following table is the count of unknown terms yet used in each example file:
 ```
 33 local_ontology_vocabulary-owl_trafficking.txt
 ```
+
+The following table is the count of unknown relationship literals used in each example file:
+
+```
+2 local_ontology_relationships-owl_trafficking.tsv
+```
