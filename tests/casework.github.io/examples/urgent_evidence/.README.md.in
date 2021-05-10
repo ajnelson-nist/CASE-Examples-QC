@@ -11,5 +11,5 @@ The following table is the count of unknown terms yet used in each example file:
 The following table is the count of unknown relationship literals used in each example file:
 
 ```
-@WC_L_LOCAL_ONTOLOGY_RELATIONSHIPS_TXT@
+@WC_L_LOCAL_KINDOFRELATIONSHIPS_TXT@
 ```
