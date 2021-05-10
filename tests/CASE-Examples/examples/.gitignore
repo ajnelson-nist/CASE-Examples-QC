@@ -1,4 +1,5 @@
 *.json
 *.sed
 *.ttl
+wc_l_local_ontology_relationships.txt
 wc_l_local_ontology_vocabulary.txt

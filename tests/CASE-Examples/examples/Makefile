@@ -62,6 +62,7 @@ NORMALIZED_TTL := $(foreach filename,$(FILES),$(filename).ttl)
 
 CHECK_TARGETS := $(foreach filename,$(FILES),check-$(filename))
 
+LOCAL_ONTOLOGY_RELATIONSHIPS_TARGETS := $(foreach filename,$(FILES),local_ontology_relationships-$(filename).tsv)
 LOCAL_ONTOLOGY_VOCABULARY_TARGETS := $(foreach filename,$(FILES),local_ontology_vocabulary-$(filename).txt)
 
 all: \
@@ -101,9 +102,16 @@ $(top_srcdir)/.lib.done.log:
 #   https://stackoverflow.com/a/6790967
 README.md: \
   .README.md.in \
+  wc_l_local_ontology_relationships.txt \
   wc_l_local_ontology_vocabulary.txt
 	rm -f _$@ __$@
 	cp .README.md.in __$@
+	sed \
+	  -e '/@WC_L_LOCAL_ONTOLOGY_RELATIONSHIPS_TXT@/r wc_l_local_ontology_relationships.txt' \
+	  -e '/@WC_L_LOCAL_ONTOLOGY_RELATIONSHIPS_TXT@/d' \
+	  __$@ \
+	  > _$@
+	cp _$@ __$@
 	sed \
 	  -e '/@WC_L_LOCAL_ONTOLOGY_VOCABULARY_TXT@/r wc_l_local_ontology_vocabulary.txt' \
 	  -e '/@WC_L_LOCAL_ONTOLOGY_VOCABULARY_TXT@/d' \
@@ -133,6 +141,22 @@ clean:
 	  *.txt \
 	  *_
 	@touch .README.md.in
+
+local_ontology_relationships-%.tsv: \
+  %.ttl \
+  $(top_srcdir)/src/data_relationship_literals_tsv.py \
+  $(top_srcdir)/tests/ontology_relationship_literals.tsv
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/data_relationship_literals_tsv.py \
+	    $< \
+	    > $@__
+	LC_ALL=C $(COMM) \
+	  -13 \
+	  $(top_srcdir)/tests/ontology_relationship_literals.tsv \
+	  <(LC_ALL=C $(SORT) $@__) \
+	  > $@_
+	rm $@__
+	mv $@_ $@
 
 # The grep patterns confirm that:
 # * There is a namespace present (the colon - blank nodes were slipping by otherwise)
@@ -178,6 +202,14 @@ single_namespace_corrections.sed: \
 	rm $@__
 	mv $@_ $@
 
+undefined_relationships.tsv: \
+  $(LOCAL_ONTOLOGY_RELATIONSHIPS_TARGETS)
+	cat $^ \
+	  | LC_ALL=C $(SORT) \
+	    | uniq \
+	      > $@_
+	mv $@_ $@
+
 undefined_vocabulary.txt: \
   $(LOCAL_ONTOLOGY_VOCABULARY_TARGETS)
 	cat $^ \
@@ -185,6 +217,15 @@ undefined_vocabulary.txt: \
 	    | uniq \
 	      > $@_
 	mv $@_ $@
+
+wc_l_local_ontology_relationships.txt: \
+  undefined_relationships.tsv
+	$(WC) -l \
+	  $(LOCAL_ONTOLOGY_RELATIONSHIPS_TARGETS) \
+	  undefined_relationships.tsv \
+	  | grep -v ' total' \
+	    > _$@
+	mv _$@ $@
 
 wc_l_local_ontology_vocabulary.txt: \
   undefined_vocabulary.txt
