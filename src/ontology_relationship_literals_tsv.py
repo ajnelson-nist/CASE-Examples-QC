@@ -12,7 +12,7 @@
 # We would appreciate acknowledgement if the software is used.
 
 """
-This script is for reporting the kindOfRelationship vocabulary literals used in instance-data files.
+This script is for reporting the kindOfRelationship vocabulary literals provided by UCO's vocabulary ontology.
 """
 
 __version__ = "0.1.0"
