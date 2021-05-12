@@ -1,2 +1,2 @@
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObjectRelationshipEnum	Contained_Within
-https://unifiedcyberontology.org/ontology/uco/vocabulary#ObservableObjectRelationshipVocab	Has_Fragment
+http://www.w3.org/2001/XMLSchema#string	Has_Fragment
+https://unifiedcyberontology.org/ontology/uco/vocabulary#ObservableObjectRelationshipVocab	Contained_Within

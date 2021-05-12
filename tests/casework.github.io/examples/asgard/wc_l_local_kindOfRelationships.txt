@@ -1,1 +1,1 @@
-1 local_kindOfRelationships-asgard.tsv
+0 local_kindOfRelationships-asgard.tsv
