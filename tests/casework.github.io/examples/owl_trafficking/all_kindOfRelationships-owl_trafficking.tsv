@@ -1,3 +1,3 @@
-https://unifiedcyberontology.org/ontology/uco/vocabulary#ObservableObjectRelationshipVocab	Associated_Account
+http://www.w3.org/2001/XMLSchema#string	Associated_Account
+http://www.w3.org/2001/XMLSchema#string	Has_Account
 https://unifiedcyberontology.org/ontology/uco/vocabulary#ObservableObjectRelationshipVocab	Contained_Within
-https://unifiedcyberontology.org/ontology/uco/vocabulary#ObservableObjectRelationshipVocab	Has_Account

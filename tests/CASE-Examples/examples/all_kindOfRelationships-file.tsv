@@ -2,4 +2,4 @@ http://www.w3.org/2001/XMLSchema#string	decoded-from
 http://www.w3.org/2001/XMLSchema#string	decrypted-from
 http://www.w3.org/2001/XMLSchema#string	forensic_image_of
 http://www.w3.org/2001/XMLSchema#string	stored-on
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObjectRelationshipEnum	Contained_Within
+https://unifiedcyberontology.org/ontology/uco/vocabulary#ObservableObjectRelationshipVocab	Contained_Within
