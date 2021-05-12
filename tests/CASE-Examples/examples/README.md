@@ -43,5 +43,5 @@ The following table is the count of unknown relationship literals used in each e
    0 local_kindOfRelationships-raw_data.tsv
    1 local_kindOfRelationships-reconstructed_file.tsv
    1 local_kindOfRelationships-sms_and_contacts.tsv
-  15 undefined_kindOfRelationships.tsv
+  12 undefined_kindOfRelationships.tsv
 ```

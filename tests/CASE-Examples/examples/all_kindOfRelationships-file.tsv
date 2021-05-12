@@ -1,5 +1,5 @@
-http://www.w3.org/2001/XMLSchema#string	decoded-from
-http://www.w3.org/2001/XMLSchema#string	decrypted-from
-http://www.w3.org/2001/XMLSchema#string	forensic_image_of
-http://www.w3.org/2001/XMLSchema#string	stored-on
+http://www.w3.org/2001/XMLSchema#string	Decoded_From
+http://www.w3.org/2001/XMLSchema#string	Decrypted_From
+http://www.w3.org/2001/XMLSchema#string	Forensic_Image_Of
+http://www.w3.org/2001/XMLSchema#string	Stored_On
 https://unifiedcyberontology.org/ontology/uco/vocabulary#ObservableObjectRelationshipVocab	Contained_Within
