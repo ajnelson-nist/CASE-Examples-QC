@@ -73,7 +73,8 @@ all: \
   normalize
 
 .PRECIOUS: \
-  all_kindOfRelationships-%.tsv
+  all_kindOfRelationships-%.tsv \
+  local_kindOfRelationships-%.tsv
 
 $(top_srcdir)/.lib.done.log:
 	@echo "ERROR:Makefile:rdf-toolkit.jar not downloaded; please run 'make download' from the top-level directory ($(top_srcdir))." >&2
