@@ -86,9 +86,8 @@ def test_ontology_paths_uco(ontology_paths_uco):
 def test_rdfs_term_names(rdfs_iris):
     assert len(rdfs_iris) > 0, "Failed to load closed set of RDFS IRIs."
 
-#TODO - Uncomment this xfail line on adoption of UCO 0.6.0.
 #TODO - Delete this xfail line on adoption of earliest UCO version that fixes the typos.
-#@pytest.mark.xfail
+@pytest.mark.xfail(strict=True)
 def test_rdfs_typos(ontology_paths_case, ontology_paths_uco, rdfs_iris):
     turtle_filepaths = ontology_paths_case | ontology_paths_uco
 
