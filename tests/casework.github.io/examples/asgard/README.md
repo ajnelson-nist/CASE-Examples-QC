@@ -7,3 +7,9 @@ The following table is the count of unknown terms yet used in each example file:
 ```
 8 local_ontology_vocabulary-asgard.txt
 ```
+
+The following table is the count of unknown relationship literals used in each example file:
+
+```
+0 local_kindOfRelationships-asgard.tsv
+```

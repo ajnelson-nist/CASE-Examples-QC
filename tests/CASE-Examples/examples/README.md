@@ -23,3 +23,25 @@ The following table is the count of unknown terms yet used in each example file:
    1 local_ontology_vocabulary-sms_and_contacts.txt
   24 undefined_vocabulary.txt
 ```
+
+The following table is the count of unknown relationship literals used in each example file:
+
+```
+   5 local_kindOfRelationships-Oresteia.tsv
+   2 local_kindOfRelationships-accounts.tsv
+   1 local_kindOfRelationships-bulk_extractor_forensic_path.tsv
+   0 local_kindOfRelationships-call_log.tsv
+   0 local_kindOfRelationships-device.tsv
+   0 local_kindOfRelationships-exif_data.tsv
+   4 local_kindOfRelationships-file.tsv
+   0 local_kindOfRelationships-forensic_lifecycle.tsv
+   0 local_kindOfRelationships-location.tsv
+   1 local_kindOfRelationships-message.tsv
+   0 local_kindOfRelationships-mobile_device_and_sim_card.tsv
+   1 local_kindOfRelationships-multipart_file.tsv
+   0 local_kindOfRelationships-network_connection.tsv
+   0 local_kindOfRelationships-raw_data.tsv
+   1 local_kindOfRelationships-reconstructed_file.tsv
+   1 local_kindOfRelationships-sms_and_contacts.tsv
+  12 undefined_kindOfRelationships.tsv
+```

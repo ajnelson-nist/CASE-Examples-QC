@@ -62,6 +62,7 @@ NORMALIZED_TTL := $(foreach filename,$(FILES),$(filename).ttl)
 
 CHECK_TARGETS := $(foreach filename,$(FILES),check-$(filename))
 
+LOCAL_ONTOLOGY_RELATIONSHIPS_TARGETS := $(foreach filename,$(FILES),local_kindOfRelationships-$(filename).tsv)
 LOCAL_ONTOLOGY_VOCABULARY_TARGETS := $(foreach filename,$(FILES),local_ontology_vocabulary-$(filename).txt)
 
 all: \
@@ -70,6 +71,10 @@ all: \
 
 .PHONY: \
   normalize
+
+.PRECIOUS: \
+  all_kindOfRelationships-%.tsv \
+  local_kindOfRelationships-%.tsv
 
 $(top_srcdir)/.lib.done.log:
 	@echo "ERROR:Makefile:rdf-toolkit.jar not downloaded; please run 'make download' from the top-level directory ($(top_srcdir))." >&2
@@ -101,9 +106,16 @@ $(top_srcdir)/.lib.done.log:
 #   https://stackoverflow.com/a/6790967
 README.md: \
   .README.md.in \
+  wc_l_local_kindOfRelationships.txt \
   wc_l_local_ontology_vocabulary.txt
 	rm -f _$@ __$@
 	cp .README.md.in __$@
+	sed \
+	  -e '/@WC_L_LOCAL_KINDOFRELATIONSHIPS_TXT@/r wc_l_local_kindOfRelationships.txt' \
+	  -e '/@WC_L_LOCAL_KINDOFRELATIONSHIPS_TXT@/d' \
+	  __$@ \
+	  > _$@
+	cp _$@ __$@
 	sed \
 	  -e '/@WC_L_LOCAL_ONTOLOGY_VOCABULARY_TXT@/r wc_l_local_ontology_vocabulary.txt' \
 	  -e '/@WC_L_LOCAL_ONTOLOGY_VOCABULARY_TXT@/d' \
@@ -111,6 +123,15 @@ README.md: \
 	  > _$@
 	rm __$@
 	mv _$@ $@
+
+all_kindOfRelationships-%.tsv: \
+  %.ttl \
+  $(top_srcdir)/src/data_relationship_literals_tsv.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/data_relationship_literals_tsv.py \
+	    $< \
+	    > $@_
+	mv $@_ $@
 
 # 'Check' enforces that normalization works and further is how the files are tracked.
 check: \
@@ -129,10 +150,21 @@ clean:
 	@rm -f \
 	  *.json \
 	  *.sed \
+	  *.tsv \
 	  *.ttl \
 	  *.txt \
 	  *_
 	@touch .README.md.in
+
+local_kindOfRelationships-%.tsv: \
+  all_kindOfRelationships-%.tsv \
+  $(top_srcdir)/tests/ontology_relationship_literals.tsv
+	LC_ALL=C $(COMM) \
+	  -13 \
+	  $(top_srcdir)/tests/ontology_relationship_literals.tsv \
+	  <(LC_ALL=C $(SORT) $<) \
+	  > $@_
+	mv $@_ $@
 
 # The grep patterns confirm that:
 # * There is a namespace present (the colon - blank nodes were slipping by otherwise)
@@ -178,6 +210,14 @@ single_namespace_corrections.sed: \
 	rm $@__
 	mv $@_ $@
 
+undefined_kindOfRelationships.tsv: \
+  $(LOCAL_ONTOLOGY_RELATIONSHIPS_TARGETS)
+	cat $^ \
+	  | LC_ALL=C $(SORT) \
+	    | uniq \
+	      > $@_
+	mv $@_ $@
+
 undefined_vocabulary.txt: \
   $(LOCAL_ONTOLOGY_VOCABULARY_TARGETS)
 	cat $^ \
@@ -185,6 +225,15 @@ undefined_vocabulary.txt: \
 	    | uniq \
 	      > $@_
 	mv $@_ $@
+
+wc_l_local_kindOfRelationships.txt: \
+  undefined_kindOfRelationships.tsv
+	$(WC) -l \
+	  $(LOCAL_ONTOLOGY_RELATIONSHIPS_TARGETS) \
+	  undefined_kindOfRelationships.tsv \
+	  | grep -v ' total' \
+	    > _$@
+	mv _$@ $@
 
 wc_l_local_ontology_vocabulary.txt: \
   undefined_vocabulary.txt

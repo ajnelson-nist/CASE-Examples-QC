@@ -1,0 +1,5 @@
+http://www.w3.org/2001/XMLSchema#string	Attachment_Of
+http://www.w3.org/2001/XMLSchema#string	Has_Account
+http://www.w3.org/2001/XMLSchema#string	Has_Device
+http://www.w3.org/2001/XMLSchema#string	Has_Role
+http://www.w3.org/2001/XMLSchema#string	Located_At

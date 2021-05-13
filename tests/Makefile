@@ -27,11 +27,13 @@ all: \
   all-casework.github.io
 
 all-CASE-Examples: \
+  ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
 	  --directory CASE-Examples
 
 all-casework.github.io: \
+  ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
 	  --directory casework.github.io
@@ -82,11 +84,24 @@ normalize: \
 	  --directory CASE-Examples \
 	  normalize
 
+ontology_relationship_literals.tsv: \
+  $(top_srcdir)/src/ontology_relationship_literals_tsv.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/ontology_relationship_literals_tsv.py \
+	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/uco-vocabulary/vocabulary.ttl \
+	    > $@__
+	LC_ALL=C \
+	  $(SORT) \
+	    $@__ \
+	    > $@_
+	rm $@__
+	mv $@_ $@
+
 #This file is needed to test examples in CASE-Examples and the website.
 ontology_vocabulary.txt: \
   $(top_srcdir)/src/ontology_classes_properties.py
 	source $(top_srcdir)/venv/bin/activate \
-	  && python $(top_srcdir)/src/ontology_classes_properties.py \
+	  && python3 $(top_srcdir)/src/ontology_classes_properties.py \
 	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/*/*ttl \
 	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/*/*ttl \
 	    > $@__
