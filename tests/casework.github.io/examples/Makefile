@@ -13,60 +13,44 @@
 
 SHELL := /bin/bash
 
-top_srcdir := ../../..
+exdirs := $(shell find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
+
+all_targets   := $(foreach exdir,$(exdirs),all-$(exdir))
+check_targets := $(foreach exdir,$(exdirs),check-$(exdir))
+clean_targets := $(foreach exdir,$(exdirs),clean-$(exdir))
 
 all: \
-  all-asgard \
-  all-owl_trafficking \
-  all-urgent_evidence
-
-all-asgard:
+  $(all_targets)
 	$(MAKE) \
-	  --directory asgard
+	  --file postvisit.mk
 
-all-owl_trafficking:
+all-%:
 	$(MAKE) \
-	  --directory owl_trafficking
-
-all-urgent_evidence:
+	  --directory $$(echo $@ | sed -e 's/^all-//') \
+	  --file $$PWD/src/review.mk
 	$(MAKE) \
-	  --directory urgent_evidence
-
-.PHONY: \
-  all-asgard \
-  all-owl_trafficking \
-  all-urgent-evidence \
-  check-asgard \
-  check-owl_trafficking \
-  check-urgent-evidence
+	  --directory $$(echo $@ | sed -e 's/^all-//')
 
 check: \
-  check-asgard \
-  check-owl_trafficking \
-  check-urgent-evidence
-
-check-asgard:
+  $(check_targets)
 	$(MAKE) \
-	  --directory asgard \
+	  --file postvisit.mk \
 	  check
 
-check-owl_trafficking:
+check-%:
 	$(MAKE) \
-	  --directory owl_trafficking \
+	  --directory $$(echo $@ | sed -e 's/^check-//') \
+	  --file $$PWD/src/review.mk \
 	  check
 
-check-urgent_evidence:
-	$(MAKE) \
-	  --directory urgent_evidence \
-	  check
-
-clean:
+clean: \
+  $(clean_targets)
 	@$(MAKE) \
-	  --directory asgard \
+	  --file postvisit.mk \
 	  clean
+
+clean-%:
 	@$(MAKE) \
-	  --directory owl_trafficking \
-	  clean
-	@$(MAKE) \
-	  --directory urgent_evidence \
+	  --directory $$(echo $@ | sed -e 's/^clean-//') \
+	  --file $$PWD/src/review.mk \
 	  clean
