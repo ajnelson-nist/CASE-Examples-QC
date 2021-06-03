@@ -28,8 +28,6 @@ all-%:
 	$(MAKE) \
 	  --directory $$(echo $@ | sed -e 's/^all-//') \
 	  --file $$PWD/src/review.mk
-	$(MAKE) \
-	  --directory $$(echo $@ | sed -e 's/^all-//')
 
 check: \
   $(check_targets)

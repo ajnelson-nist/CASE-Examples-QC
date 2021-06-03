@@ -1,4 +1,4 @@
 *.diff
 *.ttl
-wc_l_local_ontology_relationships.txt
-wc_l_local_ontology_vocabulary.txt
+wc_l_undefined_concepts.txt
+wc_l_undefined_kindOfRelationships.txt
