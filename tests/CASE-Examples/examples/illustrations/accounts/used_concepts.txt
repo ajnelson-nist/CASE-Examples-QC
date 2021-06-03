@@ -4,9 +4,9 @@ https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
-https://unifiedcyberontology.org/ontology/uco/identity#BirthInformation
+https://unifiedcyberontology.org/ontology/uco/identity#BirthInformationFacet
 https://unifiedcyberontology.org/ontology/uco/identity#Identity
-https://unifiedcyberontology.org/ontology/uco/identity#SimpleName
+https://unifiedcyberontology.org/ontology/uco/identity#SimpleNameFacet
 https://unifiedcyberontology.org/ontology/uco/identity#birthdate
 https://unifiedcyberontology.org/ontology/uco/identity#familyName
 https://unifiedcyberontology.org/ontology/uco/identity#givenName
@@ -22,11 +22,11 @@ https://unifiedcyberontology.org/ontology/uco/observable#accountIdentifier
 https://unifiedcyberontology.org/ontology/uco/observable#accountIssuer
 https://unifiedcyberontology.org/ontology/uco/observable#accountLogin
 https://unifiedcyberontology.org/ontology/uco/observable#application
-https://unifiedcyberontology.org/ontology/uco/observable#createdTime
 https://unifiedcyberontology.org/ontology/uco/observable#displayName
 https://unifiedcyberontology.org/ontology/uco/observable#emailAddress
 https://unifiedcyberontology.org/ontology/uco/observable#firstLoginTime
 https://unifiedcyberontology.org/ontology/uco/observable#lastLoginTime
+https://unifiedcyberontology.org/ontology/uco/observable#observableCreatedTime
 https://unifiedcyberontology.org/ontology/uco/observable#password
 https://unifiedcyberontology.org/ontology/uco/observable#passwordLastChanged
 https://unifiedcyberontology.org/ontology/uco/observable#value

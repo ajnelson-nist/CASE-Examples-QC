@@ -13,6 +13,8 @@
 
 SHELL := /bin/bash
 
+top_srcdir := $(shell cd ../../../../.. ; pwd)
+
 # This recipe intentionally left blank.
 all:
 
@@ -62,6 +64,8 @@ check: \
   check-types \
   check-victim \
   check-vocabulary
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/confirm_singular_definitions.py
 
 check-action: \
   src/normalize-ontology.mk

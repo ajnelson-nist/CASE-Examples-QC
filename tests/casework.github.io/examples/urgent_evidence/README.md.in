@@ -5,11 +5,11 @@ This directory contains text files that list terms not known to CASE or UCO, but
 The following table is the count of unknown terms yet used in each example file:
 
 ```
-@WC_L_LOCAL_ONTOLOGY_VOCABULARY_TXT@
+@WC_L_UNDEFINED_CONCEPTS_TXT@
 ```
 
 The following table is the count of unknown relationship literals used in each example file:
 
 ```
-@WC_L_LOCAL_KINDOFRELATIONSHIPS_TXT@
+@WC_L_UNDEFINED_KINDOFRELATIONSHIPS_TXT@
 ```

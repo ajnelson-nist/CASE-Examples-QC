@@ -34,7 +34,7 @@ check: \
 
 check-dependencies:
 	$(MAKE) \
-	  --directory dependencies/CASE-0.3.0 \
+	  --directory dependencies/CASE-0.4.0 \
 	  check
 
 check-examples:
@@ -48,7 +48,7 @@ clean: \
 
 clean-dependencies:
 	@$(MAKE) \
-	  --directory dependencies/CASE-0.3.0 \
+	  --directory dependencies/CASE-0.4.0 \
 	  clean
 
 clean-examples:
@@ -63,7 +63,7 @@ normalize: \
 normalize-dependencies: \
   $(top_srcdir)/.lib.done.log
 	$(MAKE) \
-	  --directory dependencies/CASE-0.3.0 \
+	  --directory dependencies/CASE-0.4.0 \
 	  normalize
 
 normalize-examples: \
