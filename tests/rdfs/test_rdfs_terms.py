@@ -52,7 +52,7 @@ def top_srcdir():
 @pytest.fixture
 def ontology_paths_case(top_srcdir):
     """NB: This hard-codes path assumptions."""
-    case_srcdir = os.path.join(top_srcdir, "dependencies", "CASE-Examples", "dependencies", "CASE-0.3.0", "CASE")
+    case_srcdir = os.path.join(top_srcdir, "dependencies", "CASE-Examples", "dependencies", "CASE-0.4.0", "CASE")
     _logger.debug("case_srcdir = %r.", case_srcdir)
     assert "CASE" == os.path.basename(case_srcdir)
     filepaths = set()
@@ -66,7 +66,7 @@ def ontology_paths_case(top_srcdir):
 @pytest.fixture
 def ontology_paths_uco(top_srcdir):
     """NB: This hard-codes path assumptions."""
-    uco_srcdir = os.path.join(top_srcdir, "dependencies", "CASE-Examples", "dependencies", "CASE-0.3.0", "UCO")
+    uco_srcdir = os.path.join(top_srcdir, "dependencies", "CASE-Examples", "dependencies", "CASE-0.4.0", "UCO")
     _logger.debug("uco_srcdir = %r.", uco_srcdir)
     assert "UCO" == os.path.basename(uco_srcdir)
     filepaths = set()

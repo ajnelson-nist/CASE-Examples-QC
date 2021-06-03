@@ -31,7 +31,7 @@ TARGET_TTL_BASENAME := $(shell basename $(TARGET_TTL_RELPATH))
 
 top_srcdir := $(shell $(GREALPATH) ../../../../../..)
 
-case_srcdir := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE
+rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE/lib/rdf-toolkit.jar
 
 all: \
   $(TARGET_TTL_BASENAME)
@@ -40,9 +40,9 @@ all: \
   normalize
 
 $(TARGET_TTL_BASENAME): \
-  $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/UCO/$(TARGET_TTL_RELPATH) \
+  $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.4.0/UCO/$(TARGET_TTL_RELPATH) \
   $(top_srcdir)/.lib.done.log
-	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
+	java -jar $(rdf_toolkit_jar) \
 	  --infer-base-iri \
 	  --inline-blank-nodes \
 	  --source $< \
@@ -59,7 +59,7 @@ $(top_srcdir)/.lib.done.log:
 check: \
   $(TARGET_TTL_BASENAME)
 	diff \
-	  $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/UCO/$(TARGET_TTL_RELPATH) \
+	  $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.4.0/UCO/$(TARGET_TTL_RELPATH) \
 	  $(TARGET_TTL_BASENAME)
 
 clean:
