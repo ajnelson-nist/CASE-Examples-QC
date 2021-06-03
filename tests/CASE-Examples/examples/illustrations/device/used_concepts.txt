@@ -1,0 +1,17 @@
+http://example.org/local#location
+https://unifiedcyberontology.org/ontology/uco/core#hasFacet
+https://unifiedcyberontology.org/ontology/uco/core#name
+https://unifiedcyberontology.org/ontology/uco/observable#ComputerSpecificationFacet
+https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
+https://unifiedcyberontology.org/ontology/uco/observable#DomainNameFacet
+https://unifiedcyberontology.org/ontology/uco/observable#IPv4AddressFacet
+https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
+https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystemFacet
+https://unifiedcyberontology.org/ontology/uco/observable#biosVersion
+https://unifiedcyberontology.org/ontology/uco/observable#cpuFamily
+https://unifiedcyberontology.org/ontology/uco/observable#manufacturer
+https://unifiedcyberontology.org/ontology/uco/observable#model
+https://unifiedcyberontology.org/ontology/uco/observable#serialNumber
+https://unifiedcyberontology.org/ontology/uco/observable#totalRam
+https://unifiedcyberontology.org/ontology/uco/observable#value
+https://unifiedcyberontology.org/ontology/uco/observable#version

@@ -88,7 +88,7 @@ ontology_relationship_literals.tsv: \
   $(top_srcdir)/src/ontology_relationship_literals_tsv.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_relationship_literals_tsv.py \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/uco-vocabulary/vocabulary.ttl \
+	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/*-vocabulary.ttl \
 	    > $@__
 	LC_ALL=C \
 	  $(SORT) \
@@ -102,8 +102,7 @@ ontology_vocabulary.txt: \
   $(top_srcdir)/src/ontology_classes_properties.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_classes_properties.py \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE/ontology/*/*ttl \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO/*/*ttl \
+	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/*.ttl \
 	    > $@__
 	LC_ALL=C \
 	  $(SORT) \

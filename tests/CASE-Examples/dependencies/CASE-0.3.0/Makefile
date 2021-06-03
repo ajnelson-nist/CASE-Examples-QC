@@ -13,7 +13,7 @@
 
 SHELL := /bin/bash
 
-top_srcdir := ../../..
+top_srcdir := ../../../..
 
 all: \
   all-UCO
