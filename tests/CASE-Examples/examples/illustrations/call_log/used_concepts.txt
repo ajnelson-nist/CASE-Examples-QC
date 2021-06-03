@@ -1,0 +1,15 @@
+http://example.org/local#identifier
+https://unifiedcyberontology.org/ontology/uco/core#hasFacet
+https://unifiedcyberontology.org/ontology/uco/observable#AccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
+https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#PhoneCallFacet
+https://unifiedcyberontology.org/ontology/uco/observable#accountIssuer
+https://unifiedcyberontology.org/ontology/uco/observable#callType
+https://unifiedcyberontology.org/ontology/uco/observable#duration
+https://unifiedcyberontology.org/ontology/uco/observable#endTime
+https://unifiedcyberontology.org/ontology/uco/observable#from
+https://unifiedcyberontology.org/ontology/uco/observable#isActive
+https://unifiedcyberontology.org/ontology/uco/observable#phoneNumber
+https://unifiedcyberontology.org/ontology/uco/observable#startTime
+https://unifiedcyberontology.org/ontology/uco/observable#to
