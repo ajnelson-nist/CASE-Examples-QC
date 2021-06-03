@@ -17,7 +17,7 @@ top_srcdir := ../..
 
 all:
 	$(MAKE) \
-	  --directory examples
+	  --directory examples/illustrations
 
 .PHONY: \
   check-dependencies \
@@ -34,12 +34,12 @@ check: \
 
 check-dependencies:
 	$(MAKE) \
-	  --directory dependencies \
+	  --directory dependencies/CASE-0.3.0 \
 	  check
 
 check-examples:
 	$(MAKE) \
-	  --directory examples \
+	  --directory examples/illustrations \
 	  check
 
 clean: \
@@ -48,12 +48,12 @@ clean: \
 
 clean-dependencies:
 	@$(MAKE) \
-	  --directory dependencies \
+	  --directory dependencies/CASE-0.3.0 \
 	  clean
 
 clean-examples:
 	@$(MAKE) \
-	  --directory examples \
+	  --directory examples/illustrations \
 	  clean
 
 normalize: \
@@ -63,11 +63,11 @@ normalize: \
 normalize-dependencies: \
   $(top_srcdir)/.lib.done.log
 	$(MAKE) \
-	  --directory dependencies \
+	  --directory dependencies/CASE-0.3.0 \
 	  normalize
 
 normalize-examples: \
   $(top_srcdir)/.lib.done.log
 	$(MAKE) \
-	  --directory examples \
+	  --directory examples/illustrations \
 	  normalize

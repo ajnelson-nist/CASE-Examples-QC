@@ -68,16 +68,9 @@ all: \
 	  || (git submodule init dependencies/CASE-Examples && git submodule update dependencies/CASE-Examples)
 	@test -r dependencies/CASE-Examples/README.md \
 	  || (echo "ERROR:Makefile:CASE-Examples submodule README.md file not found, even though CASE-Examples submodule initialized." >&2 ; exit 2)
-	# CASE-Examples / CASE
-	test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
-	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/CASE && git submodule update dependencies/CASE)
-	@test -r dependencies/CASE-Examples/dependencies/CASE/README.md \
-	  || (echo "ERROR:Makefile:CASE sub-submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
-	# CASE-Examples / UCO
-	test -r dependencies/CASE-Examples/dependencies/UCO/README.md \
-	  || (cd dependencies/CASE-Examples ; git submodule init dependencies/UCO && git submodule update dependencies/UCO)
-	@test -r dependencies/CASE-Examples/dependencies/UCO/README.md \
-	  || (echo "ERROR:Makefile:UCO sub-submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/CASE-Examples \
+	  .git_submodule_init.done.log
 	# casework.github.io
 	test -r dependencies/casework.github.io/README.md \
 	  || (git submodule init dependencies/casework.github.io && git submodule update dependencies/casework.github.io)
@@ -88,9 +81,9 @@ all: \
 .lib.done.log: \
   .git_submodule_init.done.log
 	$(MAKE) \
-	  --directory dependencies/CASE-Examples/dependencies/CASE \
+	  --directory dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE \
 	  .lib.done.log
-	test -r dependencies/CASE-Examples/dependencies/CASE/lib/rdf-toolkit.jar
+	test -r dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE/lib/rdf-toolkit.jar
 	touch $@
 
 .venv.done.log: \

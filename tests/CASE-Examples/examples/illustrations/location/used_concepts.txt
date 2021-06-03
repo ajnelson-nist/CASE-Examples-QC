@@ -1,0 +1,11 @@
+https://unifiedcyberontology.org/ontology/uco/core#hasFacet
+https://unifiedcyberontology.org/ontology/uco/location#LatLongCoordinates
+https://unifiedcyberontology.org/ontology/uco/location#Location
+https://unifiedcyberontology.org/ontology/uco/location#SimpleAddress
+https://unifiedcyberontology.org/ontology/uco/location#country
+https://unifiedcyberontology.org/ontology/uco/location#latitude
+https://unifiedcyberontology.org/ontology/uco/location#locality
+https://unifiedcyberontology.org/ontology/uco/location#longitude
+https://unifiedcyberontology.org/ontology/uco/location#postalCode
+https://unifiedcyberontology.org/ontology/uco/location#region
+https://unifiedcyberontology.org/ontology/uco/location#street
