@@ -52,12 +52,14 @@ check: \
   check-rdfs
 
 check-CASE-Examples: \
+  ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
 	  --directory CASE-Examples \
 	  check
 
 check-casework.github.io: \
+  ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
 	  --directory casework.github.io \
