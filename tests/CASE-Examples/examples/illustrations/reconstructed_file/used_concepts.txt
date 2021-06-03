@@ -1,9 +1,9 @@
 http://example.org/local#accessedAction
 http://example.org/local#createdAction
-https://caseontology.org/ontology/case/investigation#InvestigativeAction
-https://caseontology.org/ontology/case/investigation#ProvenanceRecord
-https://caseontology.org/ontology/case/investigation#exhibitNumber
-https://unifiedcyberontology.org/ontology/uco/action#ActionReferences
+https://ontology.caseontology.org/case/investigation/InvestigativeAction
+https://ontology.caseontology.org/case/investigation/ProvenanceRecord
+https://ontology.caseontology.org/case/investigation/exhibitNumber
+https://unifiedcyberontology.org/ontology/uco/action#ActionReferencesFacet
 https://unifiedcyberontology.org/ontology/uco/action#endTime
 https://unifiedcyberontology.org/ontology/uco/action#environment
 https://unifiedcyberontology.org/ontology/uco/action#instrument

@@ -1,7 +1,7 @@
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
-https://unifiedcyberontology.org/ontology/uco/location#LatLongCoordinates
+https://unifiedcyberontology.org/ontology/uco/location#LatLongCoordinatesFacet
 https://unifiedcyberontology.org/ontology/uco/location#Location
-https://unifiedcyberontology.org/ontology/uco/location#SimpleAddress
+https://unifiedcyberontology.org/ontology/uco/location#SimpleAddressFacet
 https://unifiedcyberontology.org/ontology/uco/location#country
 https://unifiedcyberontology.org/ontology/uco/location#latitude
 https://unifiedcyberontology.org/ontology/uco/location#locality

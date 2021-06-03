@@ -16,13 +16,14 @@ https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#accountType
 https://unifiedcyberontology.org/ontology/uco/observable#application
 https://unifiedcyberontology.org/ontology/uco/observable#applicationIdentifier
-https://unifiedcyberontology.org/ontology/uco/observable#contactName
+https://unifiedcyberontology.org/ontology/uco/observable#displayName
 https://unifiedcyberontology.org/ontology/uco/observable#emailAddress
 https://unifiedcyberontology.org/ontology/uco/observable#firstName
 https://unifiedcyberontology.org/ontology/uco/observable#from
 https://unifiedcyberontology.org/ontology/uco/observable#isActive
 https://unifiedcyberontology.org/ontology/uco/observable#lastName
 https://unifiedcyberontology.org/ontology/uco/observable#messageText
+https://unifiedcyberontology.org/ontology/uco/observable#nickname
 https://unifiedcyberontology.org/ontology/uco/observable#numberOfLaunches
 https://unifiedcyberontology.org/ontology/uco/observable#operatingSystem
 https://unifiedcyberontology.org/ontology/uco/observable#phoneNumber

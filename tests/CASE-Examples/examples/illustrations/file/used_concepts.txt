@@ -24,7 +24,6 @@ https://unifiedcyberontology.org/ontology/uco/observable#biosVersion
 https://unifiedcyberontology.org/ontology/uco/observable#byteOrder
 https://unifiedcyberontology.org/ontology/uco/observable#columnName
 https://unifiedcyberontology.org/ontology/uco/observable#cpuFamily
-https://unifiedcyberontology.org/ontology/uco/observable#createdTime
 https://unifiedcyberontology.org/ontology/uco/observable#dataPayload
 https://unifiedcyberontology.org/ontology/uco/observable#encodingMethod
 https://unifiedcyberontology.org/ontology/uco/observable#encryptionIV
@@ -45,6 +44,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#metadataChangeTime
 https://unifiedcyberontology.org/ontology/uco/observable#mimeType
 https://unifiedcyberontology.org/ontology/uco/observable#model
 https://unifiedcyberontology.org/ontology/uco/observable#modifiedTime
+https://unifiedcyberontology.org/ontology/uco/observable#observableCreatedTime
 https://unifiedcyberontology.org/ontology/uco/observable#partitionID
 https://unifiedcyberontology.org/ontology/uco/observable#path
 https://unifiedcyberontology.org/ontology/uco/observable#processorArchitecture
