@@ -27,13 +27,12 @@ endif
 
 top_srcdir := $(shell cd ../../../../.. ; pwd)
 
-case_srcdir := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE
+rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE/lib/rdf-toolkit.jar
 
 subjectdir_basename := $(shell basename $$PWD)
 
 all: \
   $(subjectdir_basename).json \
-  $(subjectdir_basename).ttl \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv
 
@@ -51,7 +50,7 @@ $(subjectdir_basename).json: \
 $(subjectdir_basename).ttl: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json \
   $(top_srcdir)/.lib.done.log
-	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
+	java -jar $(rdf_toolkit_jar) \
 	  --infer-base-iri \
 	  --inline-blank-nodes \
 	  --source $< \
