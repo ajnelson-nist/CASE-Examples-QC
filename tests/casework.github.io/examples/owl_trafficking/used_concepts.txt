@@ -92,6 +92,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#accountIdentifier
 https://unifiedcyberontology.org/ontology/uco/observable#accountIssuer
 https://unifiedcyberontology.org/ontology/uco/observable#accountLogin
 https://unifiedcyberontology.org/ontology/uco/observable#accountType
+https://unifiedcyberontology.org/ontology/uco/observable#addressValue
 https://unifiedcyberontology.org/ontology/uco/observable#allocationStatus
 https://unifiedcyberontology.org/ontology/uco/observable#application
 https://unifiedcyberontology.org/ontology/uco/observable#bluetoothDeviceName
