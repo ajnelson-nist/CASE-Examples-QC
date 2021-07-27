@@ -171,9 +171,11 @@ https://unifiedcyberontology.org/ontology/uco/observable#fragmentIndex
 https://unifiedcyberontology.org/ontology/uco/observable#from
 https://unifiedcyberontology.org/ontology/uco/observable#gpuFamily
 https://unifiedcyberontology.org/ontology/uco/observable#hash
+https://unifiedcyberontology.org/ontology/uco/observable#installDate
 https://unifiedcyberontology.org/ontology/uco/observable#isActive
 https://unifiedcyberontology.org/ontology/uco/observable#isDirectory
 https://unifiedcyberontology.org/ontology/uco/observable#isHidden
+https://unifiedcyberontology.org/ontology/uco/observable#isTLD
 https://unifiedcyberontology.org/ontology/uco/observable#keypadUnlockCode
 https://unifiedcyberontology.org/ontology/uco/observable#lastLoginTime
 https://unifiedcyberontology.org/ontology/uco/observable#lastName

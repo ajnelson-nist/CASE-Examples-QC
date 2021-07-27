@@ -7,8 +7,12 @@ https://unifiedcyberontology.org/ontology/uco/observable#DomainNameFacet
 https://unifiedcyberontology.org/ontology/uco/observable#IPv4AddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystemFacet
+https://unifiedcyberontology.org/ontology/uco/observable#addressValue
 https://unifiedcyberontology.org/ontology/uco/observable#biosVersion
 https://unifiedcyberontology.org/ontology/uco/observable#cpuFamily
+https://unifiedcyberontology.org/ontology/uco/observable#deviceType
+https://unifiedcyberontology.org/ontology/uco/observable#installDate
+https://unifiedcyberontology.org/ontology/uco/observable#isTLD
 https://unifiedcyberontology.org/ontology/uco/observable#manufacturer
 https://unifiedcyberontology.org/ontology/uco/observable#model
 https://unifiedcyberontology.org/ontology/uco/observable#serialNumber
