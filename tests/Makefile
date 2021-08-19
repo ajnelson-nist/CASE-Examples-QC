@@ -72,6 +72,7 @@ check-rdfs:
 
 clean:
 	@rm -f \
+	  ontology_relationship_literals.tsv \
 	  ontology_vocabulary.txt
 	@$(MAKE) \
 	  --directory casework.github.io \
