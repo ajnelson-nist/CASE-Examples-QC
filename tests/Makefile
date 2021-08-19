@@ -25,6 +25,8 @@ top_srcdir := ..
 all: \
   all-CASE-Examples \
   all-casework.github.io
+	$(MAKE) \
+	  --file postvisit.mk
 
 all-CASE-Examples: \
   ontology_relationship_literals.tsv \
@@ -50,6 +52,9 @@ check: \
   check-CASE-Examples \
   check-casework.github.io \
   check-rdfs
+	$(MAKE) \
+	  --file postvisit.mk \
+	  check
 
 check-CASE-Examples: \
   ontology_relationship_literals.tsv \
@@ -71,6 +76,9 @@ check-rdfs:
 	  check
 
 clean:
+	@$(MAKE) \
+	  --file postvisit.mk \
+	  clean
 	@rm -f \
 	  ontology_relationship_literals.tsv \
 	  ontology_vocabulary.txt
