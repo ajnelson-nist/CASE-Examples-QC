@@ -1,6 +1,1 @@
 http://example.org/local#IMSI
-http://example.org/local#MSISDN
-http://example.org/local#iPhoneDevice
-http://example.org/local#ownerName
-http://example.org/local#timezoneSetting
-http://example.org/local#uniqueID

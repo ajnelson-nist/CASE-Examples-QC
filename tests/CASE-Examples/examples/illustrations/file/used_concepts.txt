@@ -1,5 +1,6 @@
 http://example.org/local#accessedAction
 http://example.org/local#createdAction
+http://example.org/local#location
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
@@ -25,6 +26,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#byteOrder
 https://unifiedcyberontology.org/ontology/uco/observable#columnName
 https://unifiedcyberontology.org/ontology/uco/observable#cpuFamily
 https://unifiedcyberontology.org/ontology/uco/observable#dataPayload
+https://unifiedcyberontology.org/ontology/uco/observable#deviceType
 https://unifiedcyberontology.org/ontology/uco/observable#encodingMethod
 https://unifiedcyberontology.org/ontology/uco/observable#encryptionIV
 https://unifiedcyberontology.org/ontology/uco/observable#encryptionKey
@@ -37,7 +39,6 @@ https://unifiedcyberontology.org/ontology/uco/observable#fileSystemType
 https://unifiedcyberontology.org/ontology/uco/observable#gpuFamily
 https://unifiedcyberontology.org/ontology/uco/observable#hash
 https://unifiedcyberontology.org/ontology/uco/observable#isDirectory
-https://unifiedcyberontology.org/ontology/uco/observable#location
 https://unifiedcyberontology.org/ontology/uco/observable#magicNumber
 https://unifiedcyberontology.org/ontology/uco/observable#manufacturer
 https://unifiedcyberontology.org/ontology/uco/observable#metadataChangeTime
@@ -59,3 +60,4 @@ https://unifiedcyberontology.org/ontology/uco/observable#version
 https://unifiedcyberontology.org/ontology/uco/types#Hash
 https://unifiedcyberontology.org/ontology/uco/types#hashMethod
 https://unifiedcyberontology.org/ontology/uco/types#hashValue
+uco-location:Location

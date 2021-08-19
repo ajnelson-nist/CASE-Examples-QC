@@ -28,6 +28,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#RasterPictureFacet
 https://unifiedcyberontology.org/ontology/uco/observable#bitsPerPixel
 https://unifiedcyberontology.org/ontology/uco/observable#byteOrder
 https://unifiedcyberontology.org/ontology/uco/observable#dataPayload
+https://unifiedcyberontology.org/ontology/uco/observable#deviceType
 https://unifiedcyberontology.org/ontology/uco/observable#exifData
 https://unifiedcyberontology.org/ontology/uco/observable#extension
 https://unifiedcyberontology.org/ontology/uco/observable#fileName
@@ -42,6 +43,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#path
 https://unifiedcyberontology.org/ontology/uco/observable#pictureHeight
 https://unifiedcyberontology.org/ontology/uco/observable#pictureType
 https://unifiedcyberontology.org/ontology/uco/observable#pictureWidth
+https://unifiedcyberontology.org/ontology/uco/observable#serialNumber
 https://unifiedcyberontology.org/ontology/uco/observable#sizeInBytes
 https://unifiedcyberontology.org/ontology/uco/types#ControlledDictionary
 https://unifiedcyberontology.org/ontology/uco/types#ControlledDictionaryEntry

@@ -1,2 +1,4 @@
 http://example.org/local#accessedAction
 http://example.org/local#createdAction
+http://example.org/local#location
+uco-location:Location

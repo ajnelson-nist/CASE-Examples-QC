@@ -8,20 +8,15 @@ http://example.org/draft#ownerName
 http://example.org/draft#uniqueID
 http://example.org/draft#visibility
 http://example.org/local#IMSI
-http://example.org/local#MSISDN
 http://example.org/local#accessAction
 http://example.org/local#accessedAction
 http://example.org/local#createAction
 http://example.org/local#createdAction
-http://example.org/local#iPhoneDevice
 http://example.org/local#identifier
 http://example.org/local#location
 http://example.org/local#messages
-http://example.org/local#ownerName
 http://example.org/local#phoneNumber
-http://example.org/local#timezoneSetting
 http://example.org/local#totalFragments
-http://example.org/local#uniqueID
 https://ontology.caseontology.org/case/investigation/Authorization
 https://ontology.caseontology.org/case/investigation/Investigation
 https://ontology.caseontology.org/case/investigation/InvestigativeAction
@@ -179,7 +174,6 @@ https://unifiedcyberontology.org/ontology/uco/observable#isTLD
 https://unifiedcyberontology.org/ontology/uco/observable#keypadUnlockCode
 https://unifiedcyberontology.org/ontology/uco/observable#lastLoginTime
 https://unifiedcyberontology.org/ontology/uco/observable#lastName
-https://unifiedcyberontology.org/ontology/uco/observable#location
 https://unifiedcyberontology.org/ontology/uco/observable#magicNumber
 https://unifiedcyberontology.org/ontology/uco/observable#manufacturer
 https://unifiedcyberontology.org/ontology/uco/observable#message
@@ -247,3 +241,4 @@ https://unifiedcyberontology.org/ontology/uco/types#hashMethod
 https://unifiedcyberontology.org/ontology/uco/types#hashValue
 https://unifiedcyberontology.org/ontology/uco/types#key
 https://unifiedcyberontology.org/ontology/uco/types#value
+uco-location:Location

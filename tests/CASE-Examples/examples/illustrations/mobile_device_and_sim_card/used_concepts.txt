@@ -1,9 +1,4 @@
 http://example.org/local#IMSI
-http://example.org/local#MSISDN
-http://example.org/local#iPhoneDevice
-http://example.org/local#ownerName
-http://example.org/local#timezoneSetting
-http://example.org/local#uniqueID
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
@@ -30,6 +25,8 @@ https://unifiedcyberontology.org/ontology/uco/observable#accountType
 https://unifiedcyberontology.org/ontology/uco/observable#addressValue
 https://unifiedcyberontology.org/ontology/uco/observable#carrier
 https://unifiedcyberontology.org/ontology/uco/observable#clockSetting
+https://unifiedcyberontology.org/ontology/uco/observable#deviceType
+https://unifiedcyberontology.org/ontology/uco/observable#installDate
 https://unifiedcyberontology.org/ontology/uco/observable#isActive
 https://unifiedcyberontology.org/ontology/uco/observable#keypadUnlockCode
 https://unifiedcyberontology.org/ontology/uco/observable#manufacturer
