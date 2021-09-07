@@ -17,4 +17,3 @@ http://example.org/local#location
 http://example.org/local#messages
 http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
-uco-location:Location

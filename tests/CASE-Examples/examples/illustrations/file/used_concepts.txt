@@ -60,4 +60,3 @@ https://unifiedcyberontology.org/ontology/uco/observable#version
 https://unifiedcyberontology.org/ontology/uco/types#Hash
 https://unifiedcyberontology.org/ontology/uco/types#hashMethod
 https://unifiedcyberontology.org/ontology/uco/types#hashValue
-uco-location:Location

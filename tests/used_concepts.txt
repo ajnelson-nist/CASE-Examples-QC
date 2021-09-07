@@ -297,4 +297,3 @@ https://unifiedcyberontology.org/ontology/uco/types#hashMethod
 https://unifiedcyberontology.org/ontology/uco/types#hashValue
 https://unifiedcyberontology.org/ontology/uco/types#key
 https://unifiedcyberontology.org/ontology/uco/types#value
-uco-location:Location

@@ -51,4 +51,3 @@ http://example.org/ontology/local#iPhoneDevice
 http://example.org/ontology/local#localeLanguage
 http://example.org/ontology/local#ownerName
 http://example.org/ontology/local#uniqueID
-uco-location:Location
