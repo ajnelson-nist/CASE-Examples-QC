@@ -21,7 +21,7 @@ https://unifiedcyberontology.org/ontology/uco/core#name
 https://unifiedcyberontology.org/ontology/uco/core#object
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
-https://unifiedcyberontology.org/ontology/uco/identity#Identity
+https://unifiedcyberontology.org/ontology/uco/identity#Person
 https://unifiedcyberontology.org/ontology/uco/identity#SimpleNameFacet
 https://unifiedcyberontology.org/ontology/uco/identity#familyName
 https://unifiedcyberontology.org/ontology/uco/location#Location
