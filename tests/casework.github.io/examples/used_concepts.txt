@@ -62,8 +62,8 @@ https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#startTime
 https://unifiedcyberontology.org/ontology/uco/core#tag
 https://unifiedcyberontology.org/ontology/uco/core#target
-https://unifiedcyberontology.org/ontology/uco/identity#Identity
 https://unifiedcyberontology.org/ontology/uco/identity#Organization
+https://unifiedcyberontology.org/ontology/uco/identity#OrganizationDetailsFacet
 https://unifiedcyberontology.org/ontology/uco/identity#Person
 https://unifiedcyberontology.org/ontology/uco/identity#SimpleNameFacet
 https://unifiedcyberontology.org/ontology/uco/identity#familyName
