@@ -17,6 +17,7 @@ https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
 https://unifiedcyberontology.org/ontology/uco/core#name
+https://unifiedcyberontology.org/ontology/uco/core#object
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
