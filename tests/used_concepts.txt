@@ -59,6 +59,7 @@ https://ontology.caseontology.org/case/investigation/authorizationIdentifier
 https://ontology.caseontology.org/case/investigation/authorizationType
 https://ontology.caseontology.org/case/investigation/exhibitNumber
 https://ontology.caseontology.org/case/investigation/focus
+https://ontology.caseontology.org/case/investigation/rootExhibitNumber
 https://unifiedcyberontology.org/ontology/uco/action#Action
 https://unifiedcyberontology.org/ontology/uco/action#ActionLifecycle
 https://unifiedcyberontology.org/ontology/uco/action#ActionReferencesFacet
