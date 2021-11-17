@@ -27,7 +27,7 @@ endif
 
 top_srcdir := $(shell cd ../../../../.. ; pwd)
 
-rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE/lib/rdf-toolkit.jar
+rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-Utilities-Python/dependencies/CASE/lib/rdf-toolkit.jar
 
 subjectdir_basename := $(shell basename $$PWD)
 
@@ -39,6 +39,10 @@ all: \
 .PHONY: \
   normalize
 
+$(rdf_toolkit_jar):
+	@echo "ERROR:Makefile:rdf-toolkit.jar not downloaded; please run 'make download' from the top-level directory ($(top_srcdir))." >&2
+	@exit 2
+
 $(subjectdir_basename).json: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json
 	source $(top_srcdir)/venv/bin/activate \
@@ -49,7 +53,7 @@ $(subjectdir_basename).json: \
 
 $(subjectdir_basename).ttl: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json \
-  $(top_srcdir)/.lib.done.log
+  $(rdf_toolkit_jar)
 	java -jar $(rdf_toolkit_jar) \
 	  --infer-base-iri \
 	  --inline-blank-nodes \
@@ -58,10 +62,6 @@ $(subjectdir_basename).ttl: \
 	  --target $@_ \
 	  --target-format turtle
 	mv $@_ $@
-
-$(top_srcdir)/.lib.done.log:
-	@echo "ERROR:Makefile:rdf-toolkit.jar not downloaded; please run 'make download' from the top-level directory ($(top_srcdir))." >&2
-	@exit 2
 
 # 'Check' enforces that normalization works and further is how the files are tracked.
 # (Reminder: diff exits non-0 on finding any differences.)
