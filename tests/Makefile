@@ -22,6 +22,11 @@ endif
 
 top_srcdir := ..
 
+case_utils_top_srcdir := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-Utilities-Python
+
+# This command is repeated in recipes where the variable is a "soft" dependency.  The initial 'make clean' in CI will rightly complain that the script is not present, because submodules aren't yet initialized in initial cleanup.
+case_version := $(shell python3 $(case_utils_top_srcdir)/case_utils/ontology/version_info.py 2>/dev/null)
+
 all: \
   all-CASE-Examples \
   all-casework.github.io
@@ -32,7 +37,7 @@ all-CASE-Examples: \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
-	  --directory CASE-Examples
+	  --directory CASE-Examples/examples/illustrations
 
 all-casework.github.io: \
   ontology_relationship_literals.tsv \
@@ -60,7 +65,7 @@ check-CASE-Examples: \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
-	  --directory CASE-Examples \
+	  --directory CASE-Examples/examples/illustrations \
 	  check
 
 check-casework.github.io: \
@@ -86,20 +91,24 @@ clean:
 	  --directory casework.github.io \
 	  clean
 	@$(MAKE) \
-	  --directory CASE-Examples \
+	  --directory CASE-Examples/examples/illustrations \
 	  clean
 
 normalize: \
-  $(top_srcdir)/.lib.done.log
+  $(top_srcdir)/.git_submodule_init.done.log
 	$(MAKE) \
-	  --directory CASE-Examples \
+	  --directory CASE-Examples/examples/illustrations \
 	  normalize
 
 ontology_relationship_literals.tsv: \
+  $(top_srcdir)/.git_submodule_init.done.log \
   $(top_srcdir)/src/ontology_relationship_literals_tsv.py
+	# Confirm CASE version is defined; or, have Make fail explaining why the variable is undefined.
+	test ! -z "$(case_version)" \
+	  || python3 $(case_utils_top_srcdir)/case_utils/ontology/version_info.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_relationship_literals_tsv.py \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.4.0/*-vocabulary.ttl \
+	    $(case_utils_top_srcdir)/case_utils/ontology/case-$(case_version).ttl \
 	    > $@__
 	LC_ALL=C \
 	  $(SORT) \
@@ -110,10 +119,14 @@ ontology_relationship_literals.tsv: \
 
 #This file is needed to test examples in CASE-Examples and the website.
 ontology_vocabulary.txt: \
+  $(top_srcdir)/.git_submodule_init.done.log \
   $(top_srcdir)/src/ontology_classes_properties.py
+	# Confirm CASE version is defined; or, have Make fail explaining why the variable is undefined.
+	test ! -z "$(case_version)" \
+	  || python3 $(case_utils_top_srcdir)/case_utils/ontology/version_info.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_classes_properties.py \
-	    $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.4.0/*.ttl \
+	    $(case_utils_top_srcdir)/case_utils/ontology/case-$(case_version).ttl \
 	    > $@__
 	LC_ALL=C \
 	  $(SORT) \

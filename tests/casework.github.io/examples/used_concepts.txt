@@ -52,6 +52,7 @@ https://unifiedcyberontology.org/ontology/uco/action#result
 https://unifiedcyberontology.org/ontology/uco/action#startTime
 https://unifiedcyberontology.org/ontology/uco/core#Bundle
 https://unifiedcyberontology.org/ontology/uco/core#Relationship
+https://unifiedcyberontology.org/ontology/uco/core#UcoObject
 https://unifiedcyberontology.org/ontology/uco/core#description
 https://unifiedcyberontology.org/ontology/uco/core#endTime
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet

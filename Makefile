@@ -49,8 +49,6 @@ SHELL = /bin/bash
 PYTHON3 ?= $(shell which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
 all: \
-  .git_submodule_init.done.log \
-  .lib.done.log \
   .venv.done.log
 	$(MAKE) \
 	  --directory tests
@@ -76,15 +74,8 @@ all: \
 	  || (echo "ERROR:Makefile:casework.github.io submodule README.md file not found, even though casework.gitub.io submodule initialized." >&2 ; exit 2)
 	touch $@
 
-.lib.done.log: \
-  .git_submodule_init.done.log
-	$(MAKE) \
-	  --directory dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE \
-	  .lib.done.log
-	test -r dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE/lib/rdf-toolkit.jar
-	touch $@
-
 .venv.done.log: \
+  .git_submodule_init.done.log \
   deps/requirements.txt
 	rm -rf venv
 	$(PYTHON3) -m venv \
@@ -93,15 +84,17 @@ all: \
 	  && pip install \
 	    --upgrade \
 	    pip \
-	    setuptools
+	    setuptools \
+	    wheel
+	source venv/bin/activate \
+	  && pip install \
+	    dependencies/CASE-Examples/dependencies/CASE-Utilities-Python
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement deps/requirements.txt
 	touch $@
 
 check: \
-  .git_submodule_init.done.log \
-  .lib.done.log \
   .venv.done.log
 	$(MAKE) \
 	  --directory tests \
@@ -113,13 +106,9 @@ clean:
 	  clean
 
 download: \
-  .git_submodule_init.done.log \
-  .lib.done.log \
   .venv.done.log
 
 normalize: \
-  .git_submodule_init.done.log \
-  .lib.done.log \
   .venv.done.log
 	$(MAKE) \
 	  --directory tests \
