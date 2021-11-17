@@ -75,6 +75,7 @@ https://unifiedcyberontology.org/ontology/uco/core#Annotation
 https://unifiedcyberontology.org/ontology/uco/core#Bundle
 https://unifiedcyberontology.org/ontology/uco/core#ConfidenceFacet
 https://unifiedcyberontology.org/ontology/uco/core#Relationship
+https://unifiedcyberontology.org/ontology/uco/core#UcoObject
 https://unifiedcyberontology.org/ontology/uco/core#confidence
 https://unifiedcyberontology.org/ontology/uco/core#createdBy
 https://unifiedcyberontology.org/ontology/uco/core#description

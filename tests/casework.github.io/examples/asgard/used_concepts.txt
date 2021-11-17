@@ -23,6 +23,7 @@ https://unifiedcyberontology.org/ontology/uco/action#performer
 https://unifiedcyberontology.org/ontology/uco/action#result
 https://unifiedcyberontology.org/ontology/uco/action#startTime
 https://unifiedcyberontology.org/ontology/uco/core#Bundle
+https://unifiedcyberontology.org/ontology/uco/core#UcoObject
 https://unifiedcyberontology.org/ontology/uco/core#description
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
@@ -31,6 +32,7 @@ https://unifiedcyberontology.org/ontology/uco/core#name
 https://unifiedcyberontology.org/ontology/uco/core#object
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
+https://unifiedcyberontology.org/ontology/uco/location#Location
 https://unifiedcyberontology.org/ontology/uco/observable#BluetoothAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
