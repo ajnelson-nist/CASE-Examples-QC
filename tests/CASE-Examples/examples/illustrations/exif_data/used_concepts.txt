@@ -18,10 +18,11 @@ https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#tag
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Device
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EXIFFacet
+https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
 https://unifiedcyberontology.org/ontology/uco/observable#PathRelationFacet
 https://unifiedcyberontology.org/ontology/uco/observable#RasterPictureFacet

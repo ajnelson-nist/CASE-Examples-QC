@@ -81,6 +81,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#ComputerSpecificationFa
 https://unifiedcyberontology.org/ontology/uco/observable#ContactFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DataRangeFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Device
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DigitalAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DiskPartitionFacet
@@ -91,6 +92,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#EmailAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EmailMessageFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EncodedStreamFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EncryptedStreamFacet
+https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
 https://unifiedcyberontology.org/ontology/uco/observable#FileSystemFacet
 https://unifiedcyberontology.org/ontology/uco/observable#FragmentFacet
