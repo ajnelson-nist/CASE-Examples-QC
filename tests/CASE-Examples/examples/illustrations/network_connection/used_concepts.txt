@@ -23,6 +23,7 @@ https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DomainNameFacet
+https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
 https://unifiedcyberontology.org/ontology/uco/observable#IPv4AddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#NetworkConnectionFacet
