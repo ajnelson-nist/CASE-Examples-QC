@@ -18,8 +18,11 @@ http://example.org/local#messages
 http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
 http://example.org/ontology/drafting#AndroidDevice
+http://example.org/ontology/drafting#AndroidDeviceFacet
+http://example.org/ontology/drafting#ApplicationFacet
 http://example.org/ontology/drafting#BootLoader
 http://example.org/ontology/drafting#TableRelation
+http://example.org/ontology/drafting#TableRelationFacet
 http://example.org/ontology/drafting#UnallocatedRecoverability
 http://example.org/ontology/drafting#advertisingID
 http://example.org/ontology/drafting#allocationStatus
@@ -41,8 +44,10 @@ http://example.org/ontology/drafting#metadataStatus
 http://example.org/ontology/drafting#name
 http://example.org/ontology/drafting#nameStatus
 http://example.org/ontology/drafting#orgName
+http://example.org/ontology/drafting#path
 http://example.org/ontology/drafting#roomId
 http://example.org/ontology/drafting#tableName
+http://example.org/ontology/drafting#toolIdentifier
 http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#authorizationAuthority
 http://example.org/ontology/local#authorizationIssuedDate
@@ -91,6 +96,7 @@ https://unifiedcyberontology.org/ontology/uco/core#startTime
 https://unifiedcyberontology.org/ontology/uco/core#tag
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/identity#BirthInformationFacet
+https://unifiedcyberontology.org/ontology/uco/identity#Identity
 https://unifiedcyberontology.org/ontology/uco/identity#Organization
 https://unifiedcyberontology.org/ontology/uco/identity#OrganizationDetailsFacet
 https://unifiedcyberontology.org/ontology/uco/identity#Person
@@ -157,10 +163,12 @@ https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneCallFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ProcessFacet
 https://unifiedcyberontology.org/ontology/uco/observable#RasterPictureFacet
+https://unifiedcyberontology.org/ontology/uco/observable#SIMCard
 https://unifiedcyberontology.org/ontology/uco/observable#SIMCardFacet
 https://unifiedcyberontology.org/ontology/uco/observable#SIMForm
 https://unifiedcyberontology.org/ontology/uco/observable#SIMType
 https://unifiedcyberontology.org/ontology/uco/observable#SQLiteBlobFacet
+https://unifiedcyberontology.org/ontology/uco/observable#URL
 https://unifiedcyberontology.org/ontology/uco/observable#URLFacet
 https://unifiedcyberontology.org/ontology/uco/observable#URLHistoryFacet
 https://unifiedcyberontology.org/ontology/uco/observable#WifiAddressFacet
@@ -178,6 +186,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#biosVersion
 https://unifiedcyberontology.org/ontology/uco/observable#bitsPerPixel
 https://unifiedcyberontology.org/ontology/uco/observable#bluetoothDeviceName
 https://unifiedcyberontology.org/ontology/uco/observable#body
+https://unifiedcyberontology.org/ontology/uco/observable#bodyRaw
 https://unifiedcyberontology.org/ontology/uco/observable#browserInformation
 https://unifiedcyberontology.org/ontology/uco/observable#browserUserProfile
 https://unifiedcyberontology.org/ontology/uco/observable#byteOrder
@@ -206,6 +215,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#encryptionMode
 https://unifiedcyberontology.org/ontology/uco/observable#endTime
 https://unifiedcyberontology.org/ontology/uco/observable#environmentVariables
 https://unifiedcyberontology.org/ontology/uco/observable#exifData
+https://unifiedcyberontology.org/ontology/uco/observable#expirationTime
 https://unifiedcyberontology.org/ontology/uco/observable#extHardLinkCount
 https://unifiedcyberontology.org/ontology/uco/observable#extInodeChangeTime
 https://unifiedcyberontology.org/ontology/uco/observable#extInodeID
@@ -267,7 +277,9 @@ https://unifiedcyberontology.org/ontology/uco/observable#protocols
 https://unifiedcyberontology.org/ontology/uco/observable#rangeOffset
 https://unifiedcyberontology.org/ontology/uco/observable#rangeSize
 https://unifiedcyberontology.org/ontology/uco/observable#receivedTime
+https://unifiedcyberontology.org/ontology/uco/observable#referrerUrl
 https://unifiedcyberontology.org/ontology/uco/observable#rowCondition
+https://unifiedcyberontology.org/ontology/uco/observable#sender
 https://unifiedcyberontology.org/ontology/uco/observable#sentTime
 https://unifiedcyberontology.org/ontology/uco/observable#serialNumber
 https://unifiedcyberontology.org/ontology/uco/observable#sizeInBytes

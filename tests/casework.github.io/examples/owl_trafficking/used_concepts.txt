@@ -70,11 +70,13 @@ https://unifiedcyberontology.org/ontology/uco/observable#DiskPartitionFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EmailAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EmailAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ExtInodeFacet
+https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
 https://unifiedcyberontology.org/ontology/uco/observable#FileSystemFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ICCID
 https://unifiedcyberontology.org/ontology/uco/observable#IMEI
 https://unifiedcyberontology.org/ontology/uco/observable#IMSI
+https://unifiedcyberontology.org/ontology/uco/observable#Image
 https://unifiedcyberontology.org/ontology/uco/observable#MSISDN
 https://unifiedcyberontology.org/ontology/uco/observable#MessageFacet
 https://unifiedcyberontology.org/ontology/uco/observable#MobileAccountFacet
@@ -85,6 +87,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystemFacet
 https://unifiedcyberontology.org/ontology/uco/observable#PathRelationFacet
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#SIMCardFacet
+https://unifiedcyberontology.org/ontology/uco/observable#URL
 https://unifiedcyberontology.org/ontology/uco/observable#URLFacet
 https://unifiedcyberontology.org/ontology/uco/observable#URLHistoryFacet
 https://unifiedcyberontology.org/ontology/uco/observable#WifiAddressFacet
