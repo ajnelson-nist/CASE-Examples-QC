@@ -35,9 +35,12 @@ https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/location#Location
 https://unifiedcyberontology.org/ontology/uco/observable#BluetoothAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Device
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
+https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
 https://unifiedcyberontology.org/ontology/uco/observable#IMEI
+https://unifiedcyberontology.org/ontology/uco/observable#Image
 https://unifiedcyberontology.org/ontology/uco/observable#MSISDN
 https://unifiedcyberontology.org/ontology/uco/observable#MessageFacet
 https://unifiedcyberontology.org/ontology/uco/observable#MobileDeviceFacet

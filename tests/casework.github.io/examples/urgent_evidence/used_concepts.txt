@@ -30,10 +30,11 @@ https://unifiedcyberontology.org/ontology/uco/location#SimpleAddressFacet
 https://unifiedcyberontology.org/ontology/uco/location#country
 https://unifiedcyberontology.org/ontology/uco/location#locality
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Device
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EXIFFacet
+https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#PathRelationFacet
 https://unifiedcyberontology.org/ontology/uco/observable#RasterPictureFacet
 https://unifiedcyberontology.org/ontology/uco/observable#deviceType
