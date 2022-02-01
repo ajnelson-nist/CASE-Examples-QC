@@ -1,10 +1,14 @@
-http://example.org/local#identifier
+https://unifiedcyberontology.org/ontology/uco/core#description
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
+https://unifiedcyberontology.org/ontology/uco/identity#Organization
 https://unifiedcyberontology.org/ontology/uco/observable#AccountFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
+https://unifiedcyberontology.org/ontology/uco/observable#Application
+https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccount
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#PhoneCall
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneCallFacet
 https://unifiedcyberontology.org/ontology/uco/observable#accountIssuer
+https://unifiedcyberontology.org/ontology/uco/observable#application
 https://unifiedcyberontology.org/ontology/uco/observable#callType
 https://unifiedcyberontology.org/ontology/uco/observable#duration
 https://unifiedcyberontology.org/ontology/uco/observable#endTime

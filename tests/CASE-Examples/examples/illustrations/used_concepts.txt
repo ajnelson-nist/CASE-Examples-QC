@@ -55,6 +55,7 @@ https://unifiedcyberontology.org/ontology/uco/core#startTime
 https://unifiedcyberontology.org/ontology/uco/core#tag
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/identity#BirthInformationFacet
+https://unifiedcyberontology.org/ontology/uco/identity#Organization
 https://unifiedcyberontology.org/ontology/uco/identity#Person
 https://unifiedcyberontology.org/ontology/uco/identity#SimpleNameFacet
 https://unifiedcyberontology.org/ontology/uco/identity#birthdate
@@ -72,6 +73,7 @@ https://unifiedcyberontology.org/ontology/uco/location#region
 https://unifiedcyberontology.org/ontology/uco/location#street
 https://unifiedcyberontology.org/ontology/uco/observable#AccountAuthenticationFacet
 https://unifiedcyberontology.org/ontology/uco/observable#AccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Application
 https://unifiedcyberontology.org/ontology/uco/observable#ApplicationAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ApplicationFacet
 https://unifiedcyberontology.org/ontology/uco/observable#AttachmentFacet
@@ -114,7 +116,9 @@ https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
 https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystemFacet
 https://unifiedcyberontology.org/ontology/uco/observable#PathRelationFacet
+https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccount
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#PhoneCall
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneCallFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ProcessFacet
 https://unifiedcyberontology.org/ontology/uco/observable#RasterPictureFacet

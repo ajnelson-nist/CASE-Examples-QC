@@ -8,7 +8,7 @@ The following table is the count of undefined concepts used in each example file
    8 Oresteia/undefined_concepts.txt
    0 accounts/undefined_concepts.txt
    0 bulk_extractor_forensic_path/undefined_concepts.txt
-   1 call_log/undefined_concepts.txt
+   0 call_log/undefined_concepts.txt
    1 device/undefined_concepts.txt
    0 exif_data/undefined_concepts.txt
    3 file/undefined_concepts.txt
