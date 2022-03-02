@@ -1,7 +1,6 @@
-MobileExtractor:ToolArguments
-http://example.org/draft#FacebookMessage
+http://example.org/draft#FacebookMessageFacet
 http://example.org/draft#aquisitionType
-http://example.org/draft#iPhoneDevice
+http://example.org/draft#iPhoneDeviceFacet
 http://example.org/draft#localeLanguage
 http://example.org/draft#method
 http://example.org/draft#ownerName
@@ -17,3 +16,6 @@ http://example.org/local#location
 http://example.org/local#messages
 http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
+https://unifiedcyberontology.atlassian.net/browse/OC-222
+uco-location:Location
+urn:example:MobileExtractorToolArgumentsFacet

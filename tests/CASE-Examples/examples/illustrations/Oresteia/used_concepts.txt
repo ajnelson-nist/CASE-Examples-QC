@@ -1,7 +1,6 @@
-MobileExtractor:ToolArguments
-http://example.org/draft#FacebookMessage
+http://example.org/draft#FacebookMessageFacet
 http://example.org/draft#aquisitionType
-http://example.org/draft#iPhoneDevice
+http://example.org/draft#iPhoneDeviceFacet
 http://example.org/draft#localeLanguage
 http://example.org/draft#method
 http://example.org/draft#ownerName
@@ -14,6 +13,7 @@ https://ontology.caseontology.org/case/investigation/authorizationIdentifier
 https://ontology.caseontology.org/case/investigation/authorizationType
 https://ontology.caseontology.org/case/investigation/exhibitNumber
 https://ontology.caseontology.org/case/investigation/focus
+https://ontology.caseontology.org/case/investigation/relevantAuthorization
 https://unifiedcyberontology.org/ontology/uco/action#ActionReferencesFacet
 https://unifiedcyberontology.org/ontology/uco/action#endTime
 https://unifiedcyberontology.org/ontology/uco/action#environment
@@ -26,7 +26,9 @@ https://unifiedcyberontology.org/ontology/uco/action#startTime
 https://unifiedcyberontology.org/ontology/uco/core#Annotation
 https://unifiedcyberontology.org/ontology/uco/core#Bundle
 https://unifiedcyberontology.org/ontology/uco/core#ConfidenceFacet
+https://unifiedcyberontology.org/ontology/uco/core#Facet
 https://unifiedcyberontology.org/ontology/uco/core#Relationship
+https://unifiedcyberontology.org/ontology/uco/core#UcoObject
 https://unifiedcyberontology.org/ontology/uco/core#confidence
 https://unifiedcyberontology.org/ontology/uco/core#createdBy
 https://unifiedcyberontology.org/ontology/uco/core#description
@@ -42,6 +44,7 @@ https://unifiedcyberontology.org/ontology/uco/core#startTime
 https://unifiedcyberontology.org/ontology/uco/core#tag
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/identity#BirthInformationFacet
+https://unifiedcyberontology.org/ontology/uco/identity#Organization
 https://unifiedcyberontology.org/ontology/uco/identity#Person
 https://unifiedcyberontology.org/ontology/uco/identity#SimpleNameFacet
 https://unifiedcyberontology.org/ontology/uco/identity#birthdate
@@ -57,6 +60,7 @@ https://unifiedcyberontology.org/ontology/uco/location#postalCode
 https://unifiedcyberontology.org/ontology/uco/location#region
 https://unifiedcyberontology.org/ontology/uco/location#street
 https://unifiedcyberontology.org/ontology/uco/observable#AccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Application
 https://unifiedcyberontology.org/ontology/uco/observable#AttachmentFacet
 https://unifiedcyberontology.org/ontology/uco/observable#BluetoothAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
@@ -64,7 +68,11 @@ https://unifiedcyberontology.org/ontology/uco/observable#DataRangeFacet
 https://unifiedcyberontology.org/ontology/uco/observable#Device
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DiskPartitionFacet
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAccount
 https://unifiedcyberontology.org/ontology/uco/observable#EmailAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAddress
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAddressFacet
+https://unifiedcyberontology.org/ontology/uco/observable#EmailMessage
 https://unifiedcyberontology.org/ontology/uco/observable#EmailMessageFacet
 https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
@@ -73,18 +81,24 @@ https://unifiedcyberontology.org/ontology/uco/observable#FileSystemFacet
 https://unifiedcyberontology.org/ontology/uco/observable#IMEI
 https://unifiedcyberontology.org/ontology/uco/observable#Image
 https://unifiedcyberontology.org/ontology/uco/observable#MSISDN
+https://unifiedcyberontology.org/ontology/uco/observable#Message
 https://unifiedcyberontology.org/ontology/uco/observable#MessageFacet
 https://unifiedcyberontology.org/ontology/uco/observable#MobileAccount
 https://unifiedcyberontology.org/ontology/uco/observable#MobileAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#MobileDeviceFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
 https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystemFacet
 https://unifiedcyberontology.org/ontology/uco/observable#PathRelationFacet
+https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccount
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#RasterPicture
+https://unifiedcyberontology.org/ontology/uco/observable#SMSMessage
+https://unifiedcyberontology.org/ontology/uco/observable#URL
+https://unifiedcyberontology.org/ontology/uco/observable#URLFacet
 https://unifiedcyberontology.org/ontology/uco/observable#WifiAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#accountIssuer
 https://unifiedcyberontology.org/ontology/uco/observable#accountType
+https://unifiedcyberontology.org/ontology/uco/observable#addressValue
 https://unifiedcyberontology.org/ontology/uco/observable#application
 https://unifiedcyberontology.org/ontology/uco/observable#body
 https://unifiedcyberontology.org/ontology/uco/observable#clockSetting
@@ -96,6 +110,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#fileName
 https://unifiedcyberontology.org/ontology/uco/observable#filePath
 https://unifiedcyberontology.org/ontology/uco/observable#fileSystemType
 https://unifiedcyberontology.org/ontology/uco/observable#from
+https://unifiedcyberontology.org/ontology/uco/observable#fullValue
 https://unifiedcyberontology.org/ontology/uco/observable#hash
 https://unifiedcyberontology.org/ontology/uco/observable#isActive
 https://unifiedcyberontology.org/ontology/uco/observable#isDirectory
@@ -122,7 +137,6 @@ https://unifiedcyberontology.org/ontology/uco/observable#storageCapacityInBytes
 https://unifiedcyberontology.org/ontology/uco/observable#subject
 https://unifiedcyberontology.org/ontology/uco/observable#to
 https://unifiedcyberontology.org/ontology/uco/observable#url
-https://unifiedcyberontology.org/ontology/uco/observable#value
 https://unifiedcyberontology.org/ontology/uco/observable#version
 https://unifiedcyberontology.org/ontology/uco/role#Role
 https://unifiedcyberontology.org/ontology/uco/tool#ConfigurationSettingType
@@ -137,3 +151,4 @@ https://unifiedcyberontology.org/ontology/uco/tool#version
 https://unifiedcyberontology.org/ontology/uco/types#Hash
 https://unifiedcyberontology.org/ontology/uco/types#hashMethod
 https://unifiedcyberontology.org/ontology/uco/types#hashValue
+urn:example:MobileExtractorToolArgumentsFacet

@@ -5,6 +5,7 @@ https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
 https://unifiedcyberontology.org/ontology/uco/core#name
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
+https://unifiedcyberontology.org/ontology/uco/identity#Organization
 https://unifiedcyberontology.org/ontology/uco/observable#AccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#BluetoothAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
@@ -12,11 +13,13 @@ https://unifiedcyberontology.org/ontology/uco/observable#ICCID
 https://unifiedcyberontology.org/ontology/uco/observable#IMEI
 https://unifiedcyberontology.org/ontology/uco/observable#IMSI
 https://unifiedcyberontology.org/ontology/uco/observable#MSISDN
+https://unifiedcyberontology.org/ontology/uco/observable#MobileAccount
 https://unifiedcyberontology.org/ontology/uco/observable#MobileAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#MobileDevice
 https://unifiedcyberontology.org/ontology/uco/observable#MobileDeviceFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
 https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystemFacet
+https://unifiedcyberontology.org/ontology/uco/observable#SIMCard
 https://unifiedcyberontology.org/ontology/uco/observable#SIMCardFacet
 https://unifiedcyberontology.org/ontology/uco/observable#SIMForm
 https://unifiedcyberontology.org/ontology/uco/observable#SIMType

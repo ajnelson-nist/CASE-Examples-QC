@@ -1,12 +1,14 @@
+https://unifiedcyberontology.atlassian.net/browse/OC-222
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
+https://unifiedcyberontology.org/ontology/uco/observable#ContentData
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DataRangeFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
+https://unifiedcyberontology.org/ontology/uco/observable#RasterPicture
 https://unifiedcyberontology.org/ontology/uco/observable#dataPayload
 https://unifiedcyberontology.org/ontology/uco/observable#hash
 https://unifiedcyberontology.org/ontology/uco/observable#magicNumber
