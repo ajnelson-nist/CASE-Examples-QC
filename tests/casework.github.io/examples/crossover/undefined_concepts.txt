@@ -1,6 +1,4 @@
 http://example.org/ontology/drafting#AndroidDeviceFacet
-http://example.org/ontology/drafting#ApplicationFacet
-http://example.org/ontology/drafting#TableRelation
 http://example.org/ontology/drafting#TableRelationFacet
 http://example.org/ontology/drafting#advertisingID
 http://example.org/ontology/drafting#allocationStatus
@@ -15,3 +13,4 @@ http://example.org/ontology/drafting#orgName
 http://example.org/ontology/drafting#path
 http://example.org/ontology/drafting#tableName
 http://example.org/ontology/drafting#toolIdentifier
+https://unifiedcyberontology.org/ontology/uco/observable#hasFacet
