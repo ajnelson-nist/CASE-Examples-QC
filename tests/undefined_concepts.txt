@@ -56,5 +56,4 @@ http://example.org/ontology/local#localeLanguage
 http://example.org/ontology/local#ownerName
 http://example.org/ontology/local#uniqueID
 https://unifiedcyberontology.atlassian.net/browse/OC-222
-uco-location:Location
 urn:example:MobileExtractorToolArgumentsFacet

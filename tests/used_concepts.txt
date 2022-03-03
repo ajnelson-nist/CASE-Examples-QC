@@ -340,5 +340,4 @@ https://unifiedcyberontology.org/ontology/uco/types#hashValue
 https://unifiedcyberontology.org/ontology/uco/types#key
 https://unifiedcyberontology.org/ontology/uco/types#value
 https://unifiedcyberontology.org/ontology/uco/victim#Victim
-uco-location:Location
 urn:example:MobileExtractorToolArgumentsFacet

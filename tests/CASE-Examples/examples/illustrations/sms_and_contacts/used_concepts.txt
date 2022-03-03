@@ -12,6 +12,8 @@ https://unifiedcyberontology.org/ontology/uco/observable#Contact
 https://unifiedcyberontology.org/ontology/uco/observable#ContactFacet
 https://unifiedcyberontology.org/ontology/uco/observable#EmailAccount
 https://unifiedcyberontology.org/ontology/uco/observable#EmailAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAddress
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAddressFacet
 https://unifiedcyberontology.org/ontology/uco/observable#MessageFacet
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
 https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystem
@@ -19,6 +21,7 @@ https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccount
 https://unifiedcyberontology.org/ontology/uco/observable#PhoneAccountFacet
 https://unifiedcyberontology.org/ontology/uco/observable#SMSMessage
 https://unifiedcyberontology.org/ontology/uco/observable#accountType
+https://unifiedcyberontology.org/ontology/uco/observable#addressValue
 https://unifiedcyberontology.org/ontology/uco/observable#application
 https://unifiedcyberontology.org/ontology/uco/observable#applicationIdentifier
 https://unifiedcyberontology.org/ontology/uco/observable#displayName
@@ -34,5 +37,4 @@ https://unifiedcyberontology.org/ontology/uco/observable#operatingSystem
 https://unifiedcyberontology.org/ontology/uco/observable#phoneNumber
 https://unifiedcyberontology.org/ontology/uco/observable#sentTime
 https://unifiedcyberontology.org/ontology/uco/observable#to
-https://unifiedcyberontology.org/ontology/uco/observable#value
 https://unifiedcyberontology.org/ontology/uco/observable#version
