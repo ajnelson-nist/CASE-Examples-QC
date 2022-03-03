@@ -16,5 +16,4 @@ http://example.org/local#location
 http://example.org/local#messages
 http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
-https://unifiedcyberontology.atlassian.net/browse/OC-222
 urn:example:MobileExtractorToolArgumentsFacet

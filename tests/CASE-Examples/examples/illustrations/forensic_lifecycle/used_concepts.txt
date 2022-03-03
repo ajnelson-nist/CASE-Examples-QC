@@ -4,7 +4,6 @@ https://ontology.caseontology.org/case/investigation/ProvenanceRecord
 https://ontology.caseontology.org/case/investigation/Subject
 https://ontology.caseontology.org/case/investigation/exhibitNumber
 https://ontology.caseontology.org/case/investigation/focus
-https://unifiedcyberontology.atlassian.net/browse/OC-222
 https://unifiedcyberontology.org/ontology/uco/action#Action
 https://unifiedcyberontology.org/ontology/uco/action#ActionLifecycle
 https://unifiedcyberontology.org/ontology/uco/action#ActionReferencesFacet

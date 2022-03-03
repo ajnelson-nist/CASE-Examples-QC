@@ -1,4 +1,3 @@
-https://unifiedcyberontology.atlassian.net/browse/OC-222
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
