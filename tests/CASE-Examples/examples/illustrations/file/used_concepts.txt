@@ -1,6 +1,7 @@
 http://example.org/local#accessedAction
 http://example.org/local#createdAction
 http://example.org/local#location
+https://unifiedcyberontology.org/ontology/uco/core#Facet
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship

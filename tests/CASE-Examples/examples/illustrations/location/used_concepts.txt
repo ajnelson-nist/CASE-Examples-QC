@@ -1,3 +1,4 @@
+https://unifiedcyberontology.org/ontology/uco/core#Facet
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/location#LatLongCoordinatesFacet
 https://unifiedcyberontology.org/ontology/uco/location#Location

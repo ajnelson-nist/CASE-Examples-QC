@@ -1,11 +1,12 @@
 http://example.org/local#location
+https://unifiedcyberontology.org/ontology/uco/core#Facet
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#name
 https://unifiedcyberontology.org/ontology/uco/observable#ComputerSpecificationFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Device
 https://unifiedcyberontology.org/ontology/uco/observable#DeviceFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DomainNameFacet
 https://unifiedcyberontology.org/ontology/uco/observable#IPv4AddressFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#OperatingSystemFacet
 https://unifiedcyberontology.org/ontology/uco/observable#addressValue
 https://unifiedcyberontology.org/ontology/uco/observable#biosVersion

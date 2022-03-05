@@ -20,9 +20,11 @@ https://unifiedcyberontology.org/ontology/uco/core#name
 https://unifiedcyberontology.org/ontology/uco/core#object
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
+https://unifiedcyberontology.org/ontology/uco/location#Location
 https://unifiedcyberontology.org/ontology/uco/observable#ContentData
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DataRangeFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Device
 https://unifiedcyberontology.org/ontology/uco/observable#File
 https://unifiedcyberontology.org/ontology/uco/observable#FileFacet
 https://unifiedcyberontology.org/ontology/uco/observable#FragmentFacet
@@ -43,6 +45,8 @@ https://unifiedcyberontology.org/ontology/uco/observable#rangeOffset
 https://unifiedcyberontology.org/ontology/uco/observable#rangeSize
 https://unifiedcyberontology.org/ontology/uco/observable#sizeInBytes
 https://unifiedcyberontology.org/ontology/uco/observable#totalFragments
+https://unifiedcyberontology.org/ontology/uco/role#Role
+https://unifiedcyberontology.org/ontology/uco/tool#AnalyticTool
 https://unifiedcyberontology.org/ontology/uco/types#Hash
 https://unifiedcyberontology.org/ontology/uco/types#hashMethod
 https://unifiedcyberontology.org/ontology/uco/types#hashValue

@@ -118,7 +118,7 @@ used_concepts.txt: \
 	    $< \
 	    > $@___
 	grep ':' $@___ \
-	  | egrep -v '(acme.org|purl.org|w3.org)' \
+	  | egrep -v '(acme.org|atlassian.net|purl.org|w3.org)' \
 	    | grep -v '/kb/' \
 	      > $@__
 	rm $@___

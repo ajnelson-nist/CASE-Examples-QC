@@ -4,9 +4,12 @@ https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/observable#CompressedStreamFacet
+https://unifiedcyberontology.org/ontology/uco/observable#ContentData
 https://unifiedcyberontology.org/ontology/uco/observable#ContentDataFacet
 https://unifiedcyberontology.org/ontology/uco/observable#DataRangeFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAddress
+https://unifiedcyberontology.org/ontology/uco/observable#File
+https://unifiedcyberontology.org/ontology/uco/observable#Image
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
 https://unifiedcyberontology.org/ontology/uco/observable#byteOrder
 https://unifiedcyberontology.org/ontology/uco/observable#compressionMethod

@@ -2,9 +2,11 @@ https://unifiedcyberontology.org/ontology/uco/core#Relationship
 https://unifiedcyberontology.org/ontology/uco/core#hasFacet
 https://unifiedcyberontology.org/ontology/uco/core#isDirectional
 https://unifiedcyberontology.org/ontology/uco/core#kindOfRelationship
+https://unifiedcyberontology.org/ontology/uco/core#name
 https://unifiedcyberontology.org/ontology/uco/core#source
 https://unifiedcyberontology.org/ontology/uco/core#target
 https://unifiedcyberontology.org/ontology/uco/identity#BirthInformationFacet
+https://unifiedcyberontology.org/ontology/uco/identity#Organization
 https://unifiedcyberontology.org/ontology/uco/identity#Person
 https://unifiedcyberontology.org/ontology/uco/identity#SimpleNameFacet
 https://unifiedcyberontology.org/ontology/uco/identity#birthdate
@@ -12,15 +14,19 @@ https://unifiedcyberontology.org/ontology/uco/identity#familyName
 https://unifiedcyberontology.org/ontology/uco/identity#givenName
 https://unifiedcyberontology.org/ontology/uco/observable#AccountAuthenticationFacet
 https://unifiedcyberontology.org/ontology/uco/observable#AccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#Application
 https://unifiedcyberontology.org/ontology/uco/observable#ApplicationAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#DigitalAccount
 https://unifiedcyberontology.org/ontology/uco/observable#DigitalAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAccount
 https://unifiedcyberontology.org/ontology/uco/observable#EmailAccountFacet
+https://unifiedcyberontology.org/ontology/uco/observable#EmailAddress
 https://unifiedcyberontology.org/ontology/uco/observable#EmailAddressFacet
-https://unifiedcyberontology.org/ontology/uco/observable#ObservableObject
 https://unifiedcyberontology.org/ontology/uco/observable#ObservableRelationship
 https://unifiedcyberontology.org/ontology/uco/observable#accountIdentifier
 https://unifiedcyberontology.org/ontology/uco/observable#accountIssuer
 https://unifiedcyberontology.org/ontology/uco/observable#accountLogin
+https://unifiedcyberontology.org/ontology/uco/observable#addressValue
 https://unifiedcyberontology.org/ontology/uco/observable#application
 https://unifiedcyberontology.org/ontology/uco/observable#displayName
 https://unifiedcyberontology.org/ontology/uco/observable#emailAddress
@@ -29,4 +35,3 @@ https://unifiedcyberontology.org/ontology/uco/observable#lastLoginTime
 https://unifiedcyberontology.org/ontology/uco/observable#observableCreatedTime
 https://unifiedcyberontology.org/ontology/uco/observable#password
 https://unifiedcyberontology.org/ontology/uco/observable#passwordLastChanged
-https://unifiedcyberontology.org/ontology/uco/observable#value
