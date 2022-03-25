@@ -27,21 +27,21 @@ The following table is the count of undefined concepts used in each example file
 The following table is the count of undefined relationship literals used in each example file:
 
 ```
-   5 Oresteia/undefined_kindOfRelationships.tsv
+   6 Oresteia/undefined_kindOfRelationships.tsv
    2 accounts/undefined_kindOfRelationships.tsv
-   1 bulk_extractor_forensic_path/undefined_kindOfRelationships.tsv
+   2 bulk_extractor_forensic_path/undefined_kindOfRelationships.tsv
    0 call_log/undefined_kindOfRelationships.tsv
    0 device/undefined_kindOfRelationships.tsv
-   0 exif_data/undefined_kindOfRelationships.tsv
-   4 file/undefined_kindOfRelationships.tsv
-   0 forensic_lifecycle/undefined_kindOfRelationships.tsv
+   1 exif_data/undefined_kindOfRelationships.tsv
+   5 file/undefined_kindOfRelationships.tsv
+   1 forensic_lifecycle/undefined_kindOfRelationships.tsv
    0 location/undefined_kindOfRelationships.tsv
    1 message/undefined_kindOfRelationships.tsv
-   0 mobile_device_and_sim_card/undefined_kindOfRelationships.tsv
-   1 multipart_file/undefined_kindOfRelationships.tsv
-   0 network_connection/undefined_kindOfRelationships.tsv
-   0 raw_data/undefined_kindOfRelationships.tsv
-   1 reconstructed_file/undefined_kindOfRelationships.tsv
+   1 mobile_device_and_sim_card/undefined_kindOfRelationships.tsv
+   2 multipart_file/undefined_kindOfRelationships.tsv
+   1 network_connection/undefined_kindOfRelationships.tsv
+   1 raw_data/undefined_kindOfRelationships.tsv
+   2 reconstructed_file/undefined_kindOfRelationships.tsv
    1 sms_and_contacts/undefined_kindOfRelationships.tsv
-  12 undefined_kindOfRelationships.tsv
+  14 undefined_kindOfRelationships.tsv
 ```

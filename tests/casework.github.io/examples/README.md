@@ -6,18 +6,18 @@ The following table is the count of undefined concepts used in each example file
 
 ```
    8 asgard/undefined_concepts.txt
-  16 crossover/undefined_concepts.txt
-  24 owl_trafficking/undefined_concepts.txt
+  11 crossover/undefined_concepts.txt
+  20 owl_trafficking/undefined_concepts.txt
    3 urgent_evidence/undefined_concepts.txt
-  38 undefined_concepts.txt
+  33 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
 
 ```
-  0 asgard/undefined_kindOfRelationships.tsv
-  3 crossover/undefined_kindOfRelationships.tsv
-  2 owl_trafficking/undefined_kindOfRelationships.tsv
-  0 urgent_evidence/undefined_kindOfRelationships.tsv
-  3 undefined_kindOfRelationships.tsv
+  1 asgard/undefined_kindOfRelationships.tsv
+  4 crossover/undefined_kindOfRelationships.tsv
+  3 owl_trafficking/undefined_kindOfRelationships.tsv
+  1 urgent_evidence/undefined_kindOfRelationships.tsv
+  4 undefined_kindOfRelationships.tsv
 ```
