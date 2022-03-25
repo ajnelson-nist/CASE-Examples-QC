@@ -24,13 +24,7 @@ import rdflib.plugins.sparql
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-# Some are known issues that predate the 0.6.0 merge-review cycle.
-# TODO - Clear this set once UCO OC-104 is resolved.
-CONCEPT_IRIS_WITH_KNOWN_ISSUES = {
-  "https://unifiedcyberontology.org/ontology/uco/core#object",
-  "https://unifiedcyberontology.org/ontology/uco/observable#owner",
-  "https://unifiedcyberontology.org/ontology/uco/observable#password"
-}
+CONCEPT_IRIS_WITH_KNOWN_ISSUES = set()
 
 def class_iris_with_redundant_definitions(filepath):
     graph = rdflib.Graph()
