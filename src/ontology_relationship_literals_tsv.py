@@ -25,7 +25,7 @@ import rdflib.plugins.sparql
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_UCO_VOCABULARY = rdflib.Namespace("https://unifiedcyberontology.org/ontology/uco/vocabulary#")
+NS_UCO_VOCABULARY = rdflib.Namespace("https://ontology.unifiedcyberontology.org/uco/vocabulary/")
 
 def main():
     #_logger.info("sys.getrecursionlimit() = %d." % sys.getrecursionlimit())

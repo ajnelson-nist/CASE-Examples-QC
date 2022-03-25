@@ -1,12 +1,8 @@
-http://example.org/ontology/drafting#AndroidDeviceFacet
 http://example.org/ontology/drafting#BootLoaderFacet
 http://example.org/ontology/drafting#TableRelation
 http://example.org/ontology/drafting#TableRelationFacet
 http://example.org/ontology/drafting#UnallocatedRecoverabilityFacet
-http://example.org/ontology/drafting#advertisingID
 http://example.org/ontology/drafting#allocationStatus
-http://example.org/ontology/drafting#androidFingerprint
-http://example.org/ontology/drafting#androidID
 http://example.org/ontology/drafting#appName
 http://example.org/ontology/drafting#brand
 http://example.org/ontology/drafting#buildDate
@@ -35,4 +31,3 @@ http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#authorizationAuthority
 http://example.org/ontology/local#authorizationIssuedDate
 http://example.org/ontology/local#connectionState
-https://unifiedcyberontology.org/ontology/uco/observable#hasFacet

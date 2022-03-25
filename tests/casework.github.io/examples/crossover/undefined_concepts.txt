@@ -1,9 +1,5 @@
-http://example.org/ontology/drafting#AndroidDeviceFacet
 http://example.org/ontology/drafting#TableRelationFacet
-http://example.org/ontology/drafting#advertisingID
 http://example.org/ontology/drafting#allocationStatus
-http://example.org/ontology/drafting#androidFingerprint
-http://example.org/ontology/drafting#androidID
 http://example.org/ontology/drafting#appName
 http://example.org/ontology/drafting#deviceActivationTime
 http://example.org/ontology/drafting#fileLocalPath
@@ -13,4 +9,3 @@ http://example.org/ontology/drafting#orgName
 http://example.org/ontology/drafting#path
 http://example.org/ontology/drafting#tableName
 http://example.org/ontology/drafting#toolIdentifier
-https://unifiedcyberontology.org/ontology/uco/observable#hasFacet
