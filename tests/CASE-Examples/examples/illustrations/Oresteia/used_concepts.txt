@@ -60,8 +60,8 @@ https://ontology.unifiedcyberontology.org/uco/location/region
 https://ontology.unifiedcyberontology.org/uco/location/street
 https://ontology.unifiedcyberontology.org/uco/observable/AccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Application
-https://ontology.unifiedcyberontology.org/uco/observable/AttachmentFacet
 https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddressFacet
+https://ontology.unifiedcyberontology.org/uco/observable/ContentData
 https://ontology.unifiedcyberontology.org/uco/observable/ContentDataFacet
 https://ontology.unifiedcyberontology.org/uco/observable/DataRangeFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Device
@@ -101,6 +101,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/addressValue
 https://ontology.unifiedcyberontology.org/uco/observable/application
 https://ontology.unifiedcyberontology.org/uco/observable/body
 https://ontology.unifiedcyberontology.org/uco/observable/clockSetting
+https://ontology.unifiedcyberontology.org/uco/observable/dataPayloadReferenceURL
 https://ontology.unifiedcyberontology.org/uco/observable/deviceType
 https://ontology.unifiedcyberontology.org/uco/observable/diskPartitionType
 https://ontology.unifiedcyberontology.org/uco/observable/emailAddress
@@ -135,7 +136,6 @@ https://ontology.unifiedcyberontology.org/uco/observable/sizeInBytes
 https://ontology.unifiedcyberontology.org/uco/observable/storageCapacityInBytes
 https://ontology.unifiedcyberontology.org/uco/observable/subject
 https://ontology.unifiedcyberontology.org/uco/observable/to
-https://ontology.unifiedcyberontology.org/uco/observable/url
 https://ontology.unifiedcyberontology.org/uco/observable/version
 https://ontology.unifiedcyberontology.org/uco/role/Role
 https://ontology.unifiedcyberontology.org/uco/tool/ConfigurationSettingType

@@ -81,7 +81,6 @@ https://ontology.unifiedcyberontology.org/uco/observable/Application
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccount
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationFacet
-https://ontology.unifiedcyberontology.org/uco/observable/AttachmentFacet
 https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Call
 https://ontology.unifiedcyberontology.org/uco/observable/CallFacet
@@ -129,7 +128,6 @@ https://ontology.unifiedcyberontology.org/uco/observable/MobileDevice
 https://ontology.unifiedcyberontology.org/uco/observable/MobileDeviceFacet
 https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnection
 https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnectionFacet
-https://ontology.unifiedcyberontology.org/uco/observable/ObservableObject
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
@@ -249,7 +247,6 @@ https://ontology.unifiedcyberontology.org/uco/observable/tableName
 https://ontology.unifiedcyberontology.org/uco/observable/to
 https://ontology.unifiedcyberontology.org/uco/observable/totalFragments
 https://ontology.unifiedcyberontology.org/uco/observable/totalRam
-https://ontology.unifiedcyberontology.org/uco/observable/url
 https://ontology.unifiedcyberontology.org/uco/observable/value
 https://ontology.unifiedcyberontology.org/uco/observable/version
 https://ontology.unifiedcyberontology.org/uco/role/Role

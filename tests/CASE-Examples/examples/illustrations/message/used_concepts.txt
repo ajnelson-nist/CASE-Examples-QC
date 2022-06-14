@@ -1,6 +1,7 @@
 http://example.org/draft#visibility
 http://example.org/local#identifier
 http://example.org/local#messages
+https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
 https://ontology.unifiedcyberontology.org/uco/core/kindOfRelationship
@@ -13,12 +14,12 @@ https://ontology.unifiedcyberontology.org/uco/observable/Application
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccount
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationFacet
-https://ontology.unifiedcyberontology.org/uco/observable/AttachmentFacet
+https://ontology.unifiedcyberontology.org/uco/observable/ContentData
+https://ontology.unifiedcyberontology.org/uco/observable/ContentDataFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Message
 https://ontology.unifiedcyberontology.org/uco/observable/MessageFacet
 https://ontology.unifiedcyberontology.org/uco/observable/MessageThread
 https://ontology.unifiedcyberontology.org/uco/observable/MessageThreadFacet
-https://ontology.unifiedcyberontology.org/uco/observable/ObservableObject
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
@@ -26,6 +27,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/application
 https://ontology.unifiedcyberontology.org/uco/observable/applicationIdentifier
+https://ontology.unifiedcyberontology.org/uco/observable/dataPayloadReferenceURL
 https://ontology.unifiedcyberontology.org/uco/observable/displayName
 https://ontology.unifiedcyberontology.org/uco/observable/from
 https://ontology.unifiedcyberontology.org/uco/observable/fullValue
@@ -37,5 +39,4 @@ https://ontology.unifiedcyberontology.org/uco/observable/operatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/participant
 https://ontology.unifiedcyberontology.org/uco/observable/sentTime
 https://ontology.unifiedcyberontology.org/uco/observable/to
-https://ontology.unifiedcyberontology.org/uco/observable/url
 https://ontology.unifiedcyberontology.org/uco/observable/version

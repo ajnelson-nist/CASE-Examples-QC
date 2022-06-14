@@ -117,7 +117,6 @@ https://ontology.unifiedcyberontology.org/uco/observable/Application
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccount
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationFacet
-https://ontology.unifiedcyberontology.org/uco/observable/AttachmentFacet
 https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Call
 https://ontology.unifiedcyberontology.org/uco/observable/CallFacet

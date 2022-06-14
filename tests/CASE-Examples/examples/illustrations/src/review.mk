@@ -27,7 +27,7 @@ endif
 
 top_srcdir := $(shell cd ../../../../.. ; pwd)
 
-rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-Utilities-Python/dependencies/CASE/lib/rdf-toolkit.jar
+rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-unstable/dependencies/UCO/lib/rdf-toolkit.jar
 
 subjectdir_basename := $(shell basename $$PWD)
 
