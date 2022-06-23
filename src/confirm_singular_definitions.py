@@ -17,6 +17,7 @@ This script reviews all .ttl files in a directory for redundant rdfs:comment or 
 
 __version__ = "0.1.1"
 
+import argparse
 import logging
 import os
 
@@ -26,10 +27,11 @@ _logger = logging.getLogger(os.path.basename(__file__))
 
 CONCEPT_IRIS_WITH_KNOWN_ISSUES = set()
 
+
 def class_iris_with_redundant_definitions(filepath):
     graph = rdflib.Graph()
     graph.parse(filepath, format="turtle")
-    nsdict = {k:v for (k,v) in graph.namespace_manager.namespaces()}
+    nsdict = {k: v for (k, v) in graph.namespace_manager.namespaces()}
 
     query_comments_text = """
 SELECT ?nClass
@@ -42,7 +44,9 @@ WHERE {
   FILTER (?lComment1 != ?lComment2)
 }
 """
-    query_comments_object = rdflib.plugins.sparql.prepareQuery(query_comments_text, initNs=nsdict)
+    query_comments_object = rdflib.plugins.sparql.prepareQuery(
+        query_comments_text, initNs=nsdict
+    )
 
     query_labels_text = """
 SELECT ?nClass
@@ -55,7 +59,9 @@ WHERE {
   FILTER (?lLabel1 != ?lLabel2)
 }
 """
-    query_labels_object = rdflib.plugins.sparql.prepareQuery(query_labels_text, initNs=nsdict)
+    query_labels_object = rdflib.plugins.sparql.prepareQuery(
+        query_labels_text, initNs=nsdict
+    )
 
     class_iris = set()
     for query_object in [query_comments_object, query_labels_object]:
@@ -72,10 +78,10 @@ WHERE {
             _logger.error("Class found - %s.", class_iri)
     return class_iris
 
+
 def main():
-    import argparse
     parser = argparse.ArgumentParser()
-    args = parser.parse_args()
+    parser.parse_args()
     logging.basicConfig(level=logging.INFO)
 
     class_iris = set()
@@ -87,6 +93,7 @@ def main():
             for class_iri in class_iris_with_redundant_definitions(filepath):
                 class_iris.add(class_iri)
     assert len(class_iris) == 0, "Redundant definitions found"
+
 
 if __name__ == "__main__":
     main()
