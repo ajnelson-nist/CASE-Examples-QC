@@ -19,32 +19,33 @@ Only terms that appear in a single namespace are emitted.
 
 __version__ = "0.2.0"
 
-import os
-import logging
 import collections
+import logging
+import os
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
+
 def main():
     nsdict = {
-      "case-investigation": "https://caseontology.org/ontology/case/investigation#",
-      "case-vocabulary":    "https://caseontology.org/ontology/case/vocabulary#",
-      "uco-action":         "https://unifiedcyberontology.org/ontology/uco/action#",
-      "uco-core":           "https://unifiedcyberontology.org/ontology/uco/core#",
-      "uco-identity":       "https://unifiedcyberontology.org/ontology/uco/identity#",
-      "uco-investigation":  "https://unifiedcyberontology.org/ontology/uco/investigation#",
-      "uco-location":       "https://unifiedcyberontology.org/ontology/uco/location#",
-      "uco-marking":        "https://unifiedcyberontology.org/ontology/uco/marking#",
-      "uco-observable":     "https://unifiedcyberontology.org/ontology/uco/observable#",
-      "uco-pattern":        "https://unifiedcyberontology.org/ontology/uco/pattern#",
-      "uco-role":           "https://unifiedcyberontology.org/ontology/uco/role#",
-      "uco-time":           "https://unifiedcyberontology.org/ontology/uco/time#",
-      "uco-tool":           "https://unifiedcyberontology.org/ontology/uco/tool#",
-      "uco-types":          "https://unifiedcyberontology.org/ontology/uco/types#",
-      "uco-victim":         "https://unifiedcyberontology.org/ontology/uco/victim#"
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
+        "case-vocabulary": "https://caseontology.org/ontology/case/vocabulary#",
+        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
+        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
+        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
+        "uco-marking": "https://unifiedcyberontology.org/ontology/uco/marking#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-pattern": "https://unifiedcyberontology.org/ontology/uco/pattern#",
+        "uco-role": "https://unifiedcyberontology.org/ontology/uco/role#",
+        "uco-time": "https://unifiedcyberontology.org/ontology/uco/time#",
+        "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
+        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
+        "uco-victim": "https://unifiedcyberontology.org/ontology/uco/victim#",
     }
 
-    nsdict_inverse = {nsdict[k]:k for k in nsdict.keys()}
+    nsdict_inverse = {nsdict[k]: k for k in nsdict.keys()}
 
     # Key: concept
     # Value: set of prefixes (the KEYS of nsdict above)
@@ -67,15 +68,23 @@ def main():
             # Concept appears in multiple namespaces.  Skip, as sed would make erroneous assignments.
             continue
         prefix = [x for x in prefixes][0]
-        print("""\
+        print(
+            """\
 s/"@type": "%s"/"@type": "%s:%s"/\
-""" % (concept, prefix, concept))
-        print("""\
+"""
+            % (concept, prefix, concept)
+        )
+        print(
+            """\
 s/"%s": /"%s:%s": /\
-""" % (concept, prefix, concept))
+"""
+            % (concept, prefix, concept)
+        )
+
 
 if __name__ == "__main__":
     import argparse
+
     parser = argparse.ArgumentParser()
     parser.add_argument("in_file")
     args = parser.parse_args()

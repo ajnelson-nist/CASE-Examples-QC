@@ -17,9 +17,9 @@ This script is for reporting the kindOfRelationship vocabulary literals used in 
 
 __version__ = "0.1.0"
 
-import os
-import sys
+import argparse
 import logging
+import os
 
 import rdflib.plugins.sparql
 
@@ -27,8 +27,9 @@ _logger = logging.getLogger(os.path.basename(__file__))
 
 NS_XSD_STRING_IRI = rdflib.XSD.string.toPython()
 
+
 def main():
-    #_logger.info("sys.getrecursionlimit() = %d." % sys.getrecursionlimit())
+    # _logger.info("sys.getrecursionlimit() = %d." % sys.getrecursionlimit())
 
     # Pairs: datatype, value
     vocabset = set()
@@ -39,13 +40,16 @@ def main():
         graph.parse(arg, format="json-ld" if arg.endswith("json") else "turtle")
         _logger.info("len(graph)=%d" % len(graph))
 
-        nsdict = {k:v for (k,v) in graph.namespace_manager.namespaces()}
+        nsdict = {k: v for (k, v) in graph.namespace_manager.namespaces()}
 
-        query = rdflib.plugins.sparql.prepareQuery("""\
+        query = rdflib.plugins.sparql.prepareQuery(
+            """\
 SELECT ?lKindOfRelationship
 WHERE {
   ?nRelationship uco-core:kindOfRelationship ?lKindOfRelationship .
-}""", initNs=nsdict)
+}""",
+            initNs=nsdict,
+        )
         for (result_no, result) in enumerate(graph.query(query)):
             (l_value,) = result
             if l_value.datatype is None:
@@ -57,14 +61,10 @@ WHERE {
         del graph
 
     for record in sorted(vocabset):
-        try:
-            print("\t".join(record))
-        except:
-            _logger.error(record)
-            raise
+        print("\t".join(record))
+
 
 if __name__ == "__main__":
-    import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("in_file", nargs="+")
     args = parser.parse_args()

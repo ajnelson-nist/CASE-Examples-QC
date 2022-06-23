@@ -17,13 +17,14 @@ This script emits all classes and properties in the supplied ontology files.
 
 __version__ = "0.1.0"
 
+import logging
 import os
 import sys
-import logging
 
 import rdflib.plugins.sparql
 
 _logger = logging.getLogger(os.path.basename(__file__))
+
 
 def main():
     # This is necessary to parse UCO 0.3.0's observable.ttl.
@@ -38,15 +39,17 @@ def main():
         graph.parse(arg, format="json-ld" if arg.endswith("json") else "ttl")
         _logger.info("len(graph)=%d" % len(graph))
 
-        query = rdflib.plugins.sparql.prepareQuery("""\
+        query = rdflib.plugins.sparql.prepareQuery(
+            """\
 SELECT ?s
 WHERE {
-	{ ?s a <http://www.w3.org/2002/07/owl#Class> . }
-	UNION
-	{ ?s a <http://www.w3.org/2002/07/owl#DatatypeProperty> . }
-	UNION
-	{ ?s a <http://www.w3.org/2002/07/owl#ObjectProperty> . }
-}""")
+  { ?s a <http://www.w3.org/2002/07/owl#Class> . }
+  UNION
+  { ?s a <http://www.w3.org/2002/07/owl#DatatypeProperty> . }
+  UNION
+  { ?s a <http://www.w3.org/2002/07/owl#ObjectProperty> . }
+}"""
+        )
         for (result_no, result) in enumerate(graph.query(query)):
             vocabset.add(result[0])
         del graph
@@ -54,8 +57,10 @@ WHERE {
     for term in sorted(vocabset):
         print(term)
 
+
 if __name__ == "__main__":
     import argparse
+
     parser = argparse.ArgumentParser()
     parser.add_argument("in_file", nargs="+")
     args = parser.parse_args()
