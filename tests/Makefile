@@ -103,12 +103,8 @@ normalize: \
 ontology_relationship_literals.tsv: \
   $(top_srcdir)/.git_submodule_init.done.log \
   $(top_srcdir)/src/ontology_relationship_literals_tsv.py
-	# Confirm CASE version is defined; or, have Make fail explaining why the variable is undefined.
-	test ! -z "$(case_version)" \
-	  || python3 $(case_utils_top_srcdir)/case_utils/ontology/version_info.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_relationship_literals_tsv.py \
-	    $(case_utils_top_srcdir)/case_utils/ontology/case-$(case_version).ttl \
 	    > $@__
 	LC_ALL=C \
 	  $(SORT) \
@@ -121,12 +117,8 @@ ontology_relationship_literals.tsv: \
 ontology_vocabulary.txt: \
   $(top_srcdir)/.git_submodule_init.done.log \
   $(top_srcdir)/src/ontology_classes_properties.py
-	# Confirm CASE version is defined; or, have Make fail explaining why the variable is undefined.
-	test ! -z "$(case_version)" \
-	  || python3 $(case_utils_top_srcdir)/case_utils/ontology/version_info.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_classes_properties.py \
-	    $(case_utils_top_srcdir)/case_utils/ontology/case-$(case_version).ttl \
 	    > $@__
 	LC_ALL=C \
 	  $(SORT) \

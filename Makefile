@@ -76,8 +76,7 @@ all: \
 	touch $@
 
 .venv.done.log: \
-  .git_submodule_init.done.log \
-  deps/requirements.txt
+  dependencies/CASE-Examples/requirements.txt
 	rm -rf venv
 	$(PYTHON3) -m venv \
 	  venv
@@ -89,10 +88,7 @@ all: \
 	    wheel
 	source venv/bin/activate \
 	  && pip install \
-	    dependencies/CASE-Examples/dependencies/CASE-Utilities-Python
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement deps/requirements.txt
+	    --requirement dependencies/CASE-Examples/requirements.txt
 	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
@@ -129,6 +125,12 @@ clean:
 	@$(MAKE) \
 	  --directory tests \
 	  clean
+
+# This recipe guarantees a timestamp update order, and is otherwise a nop.
+dependencies/CASE-Examples/requirements.txt: \
+  .git_submodule_init.done.log
+	test -r $@
+	touch $@
 
 download: \
   .venv.done.log
