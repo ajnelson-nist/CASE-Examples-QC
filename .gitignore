@@ -3,4 +3,5 @@
 *.swp
 *_
 .DS_Store
+.venv-pre-commit
 venv
