@@ -55,7 +55,6 @@ http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#authorizationAuthority
 http://example.org/ontology/local#authorizationIssuedDate
 http://example.org/ontology/local#connectionState
-https://ontology.caseontology.org/case/case
 https://ontology.unifiedcyberontology.org/uco/observable/messageThread
 https://ontology.unifiedcyberontology.org/uco/types/Thread
 https://ontology.unifiedcyberontology.org/uco/types/ThreadItem
