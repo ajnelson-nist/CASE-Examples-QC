@@ -26,6 +26,7 @@ $(error wc not found)
 endif
 
 exdirs := \
+  CASE-Corpora/catalog \
   CASE-Examples/examples/illustrations \
   casework.github.io/examples
 

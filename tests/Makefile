@@ -29,9 +29,16 @@ case_version := $(shell python3 $(case_utils_top_srcdir)/case_utils/ontology/ver
 
 all: \
   all-CASE-Examples \
-  all-casework.github.io
+  all-casework.github.io \
+  all-CASE-Corpora
 	$(MAKE) \
 	  --file postvisit.mk
+
+all-CASE-Corpora: \
+  ontology_relationship_literals.tsv \
+  ontology_vocabulary.txt
+	$(MAKE) \
+	  --directory CASE-Corpora/catalog
 
 all-CASE-Examples: \
   ontology_relationship_literals.tsv \
@@ -46,8 +53,10 @@ all-casework.github.io: \
 	  --directory casework.github.io
 
 .PHONY: \
+  all-CASE-Corpora \
   all-CASE-Examples \
   all-casework.github.io \
+  check-CASE-Corpora \
   check-CASE-Examples \
   check-casework.github.io \
   check-rdfs \
@@ -56,9 +65,17 @@ all-casework.github.io: \
 check: \
   check-CASE-Examples \
   check-casework.github.io \
+  check-CASE-Corpora \
   check-rdfs
 	$(MAKE) \
 	  --file postvisit.mk \
+	  check
+
+check-CASE-Corpora: \
+  ontology_relationship_literals.tsv \
+  ontology_vocabulary.txt
+	$(MAKE) \
+	  --directory CASE-Corpora/catalog \
 	  check
 
 check-CASE-Examples: \
@@ -87,6 +104,9 @@ clean:
 	@rm -f \
 	  ontology_relationship_literals.tsv \
 	  ontology_vocabulary.txt
+	@$(MAKE) \
+	  --directory CASE-Corpora/catalog \
+	  clean
 	@$(MAKE) \
 	  --directory casework.github.io \
 	  clean
