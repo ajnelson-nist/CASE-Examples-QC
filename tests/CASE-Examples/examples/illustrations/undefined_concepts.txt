@@ -13,7 +13,10 @@ http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#identifier
 http://example.org/local#location
-http://example.org/local#messages
 http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
+https://ontology.unifiedcyberontology.org/uco/observable/messageThread
+https://ontology.unifiedcyberontology.org/uco/types/Thread
+https://ontology.unifiedcyberontology.org/uco/types/ThreadItem
+https://ontology.unifiedcyberontology.org/uco/types/threadNextItem
 urn:example:MobileExtractorToolArgumentsFacet

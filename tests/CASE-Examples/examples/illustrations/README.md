@@ -14,20 +14,20 @@ The following table is the count of undefined concepts used in each example file
    3 file/undefined_concepts.txt
    0 forensic_lifecycle/undefined_concepts.txt
    0 location/undefined_concepts.txt
-   3 message/undefined_concepts.txt
+   6 message/undefined_concepts.txt
    1 mobile_device_and_sim_card/undefined_concepts.txt
    5 multipart_file/undefined_concepts.txt
    0 network_connection/undefined_concepts.txt
    0 raw_data/undefined_concepts.txt
    2 reconstructed_file/undefined_concepts.txt
    1 sms_and_contacts/undefined_concepts.txt
-  19 undefined_concepts.txt
+  22 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
 
 ```
-   6 Oresteia/undefined_kindOfRelationships.tsv
+   7 Oresteia/undefined_kindOfRelationships.tsv
    2 accounts/undefined_kindOfRelationships.tsv
    2 bulk_extractor_forensic_path/undefined_kindOfRelationships.tsv
    0 call_log/undefined_kindOfRelationships.tsv
@@ -43,5 +43,5 @@ The following table is the count of undefined relationship literals used in each
    1 raw_data/undefined_kindOfRelationships.tsv
    2 reconstructed_file/undefined_kindOfRelationships.tsv
    1 sms_and_contacts/undefined_kindOfRelationships.tsv
-  14 undefined_kindOfRelationships.tsv
+  15 undefined_kindOfRelationships.tsv
 ```

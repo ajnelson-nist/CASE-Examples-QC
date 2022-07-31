@@ -13,7 +13,6 @@ http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#identifier
 http://example.org/local#location
-http://example.org/local#messages
 http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
 https://ontology.caseontology.org/case/investigation/Authorization
@@ -208,6 +207,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/manufacturer
 https://ontology.unifiedcyberontology.org/uco/observable/message
 https://ontology.unifiedcyberontology.org/uco/observable/messageID
 https://ontology.unifiedcyberontology.org/uco/observable/messageText
+https://ontology.unifiedcyberontology.org/uco/observable/messageThread
 https://ontology.unifiedcyberontology.org/uco/observable/metadataChangeTime
 https://ontology.unifiedcyberontology.org/uco/observable/mimeType
 https://ontology.unifiedcyberontology.org/uco/observable/model
@@ -265,10 +265,13 @@ https://ontology.unifiedcyberontology.org/uco/types/ControlledDictionaryEntry
 https://ontology.unifiedcyberontology.org/uco/types/Dictionary
 https://ontology.unifiedcyberontology.org/uco/types/DictionaryEntry
 https://ontology.unifiedcyberontology.org/uco/types/Hash
+https://ontology.unifiedcyberontology.org/uco/types/Thread
+https://ontology.unifiedcyberontology.org/uco/types/ThreadItem
 https://ontology.unifiedcyberontology.org/uco/types/entry
 https://ontology.unifiedcyberontology.org/uco/types/hashMethod
 https://ontology.unifiedcyberontology.org/uco/types/hashValue
 https://ontology.unifiedcyberontology.org/uco/types/key
+https://ontology.unifiedcyberontology.org/uco/types/threadNextItem
 https://ontology.unifiedcyberontology.org/uco/types/value
 https://ontology.unifiedcyberontology.org/uco/victim/Victim
 urn:example:MobileExtractorToolArgumentsFacet

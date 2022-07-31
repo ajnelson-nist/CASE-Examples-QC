@@ -1,6 +1,5 @@
 http://example.org/draft#visibility
 http://example.org/local#identifier
-http://example.org/local#messages
 https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
@@ -34,9 +33,13 @@ https://ontology.unifiedcyberontology.org/uco/observable/fullValue
 https://ontology.unifiedcyberontology.org/uco/observable/manufacturer
 https://ontology.unifiedcyberontology.org/uco/observable/message
 https://ontology.unifiedcyberontology.org/uco/observable/messageText
+https://ontology.unifiedcyberontology.org/uco/observable/messageThread
 https://ontology.unifiedcyberontology.org/uco/observable/numberOfLaunches
 https://ontology.unifiedcyberontology.org/uco/observable/operatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/participant
 https://ontology.unifiedcyberontology.org/uco/observable/sentTime
 https://ontology.unifiedcyberontology.org/uco/observable/to
 https://ontology.unifiedcyberontology.org/uco/observable/version
+https://ontology.unifiedcyberontology.org/uco/types/Thread
+https://ontology.unifiedcyberontology.org/uco/types/ThreadItem
+https://ontology.unifiedcyberontology.org/uco/types/threadNextItem

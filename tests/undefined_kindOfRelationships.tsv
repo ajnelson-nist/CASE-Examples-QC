@@ -9,6 +9,7 @@ http://www.w3.org/2001/XMLSchema#string	Has_Account
 http://www.w3.org/2001/XMLSchema#string	Has_Device
 http://www.w3.org/2001/XMLSchema#string	Has_Fragment
 http://www.w3.org/2001/XMLSchema#string	Has_Role
+http://www.w3.org/2001/XMLSchema#string	Initiated
 http://www.w3.org/2001/XMLSchema#string	Located_At
 http://www.w3.org/2001/XMLSchema#string	Mapped_Into
 http://www.w3.org/2001/XMLSchema#string	Stored_On
