@@ -40,6 +40,13 @@ http://example.org/ontology/drafting#path
 http://example.org/ontology/drafting#roomId
 http://example.org/ontology/drafting#tableName
 http://example.org/ontology/drafting#toolIdentifier
+http://example.org/ontology/drafting/AndroidPhone
+http://example.org/ontology/drafting/CellPhone
+http://example.org/ontology/drafting/MobilePhone
+http://example.org/ontology/drafting/SmartDevice
+http://example.org/ontology/drafting/SmartPhone
+http://example.org/ontology/drafting/device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
+http://example.org/ontology/drafting/device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 http://example.org/ontology/drafting/iPhoneDeviceFacet
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/ownerName

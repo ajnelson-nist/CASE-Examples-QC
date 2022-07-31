@@ -4,3 +4,6 @@
 [submodule "dependencies/casework.github.io"]
 	path = dependencies/casework.github.io
 	url = https://github.com/casework/casework.github.io.git
+[submodule "dependencies/CASE-Corpora"]
+	path = dependencies/CASE-Corpora
+	url = https://github.com/casework/CASE-Corpora.git
