@@ -111,6 +111,7 @@ defined_abox_concepts.txt:
 	mv _$@ $@
 
 defined_concepts.txt: \
+  $(top_srcdir)/tests/ontologies.txt \
   $(top_srcdir)/tests/ontology_vocabulary.txt \
   defined_abox_concepts.txt \
   defined_tbox_concepts.txt

@@ -35,18 +35,21 @@ all: \
 	  --file postvisit.mk
 
 all-CASE-Corpora: \
+  ontologies.txt \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
 	  --directory CASE-Corpora/catalog
 
 all-CASE-Examples: \
+  ontologies.txt \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
 	  --directory CASE-Examples/examples/illustrations
 
 all-casework.github.io: \
+  ontologies.txt \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
@@ -72,6 +75,7 @@ check: \
 	  check
 
 check-CASE-Corpora: \
+  ontologies.txt \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
@@ -79,6 +83,7 @@ check-CASE-Corpora: \
 	  check
 
 check-CASE-Examples: \
+  ontologies.txt \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
@@ -86,6 +91,7 @@ check-CASE-Examples: \
 	  check
 
 check-casework.github.io: \
+  ontologies.txt \
   ontology_relationship_literals.tsv \
   ontology_vocabulary.txt
 	$(MAKE) \
@@ -102,6 +108,7 @@ clean:
 	  --file postvisit.mk \
 	  clean
 	@rm -f \
+	  ontologies.txt \
 	  ontology_relationship_literals.tsv \
 	  ontology_vocabulary.txt
 	@$(MAKE) \
@@ -120,6 +127,19 @@ normalize: \
 	  --directory CASE-Examples/examples/illustrations \
 	  normalize
 
+ontologies.txt: \
+  $(top_srcdir)/.git_submodule_init.done.log \
+  $(top_srcdir)/src/ontologies.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/ontologies.py \
+	    > $@__
+	LC_ALL=C \
+	  $(SORT) \
+	    $@__ \
+	    > $@_
+	rm $@__
+	mv $@_ $@
+  
 ontology_relationship_literals.tsv: \
   $(top_srcdir)/.git_submodule_init.done.log \
   $(top_srcdir)/src/ontology_relationship_literals_tsv.py
