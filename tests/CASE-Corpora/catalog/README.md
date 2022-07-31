@@ -5,7 +5,7 @@ This directory contains text files that list terms not known to CASE or UCO, but
 The following table is the count of undefined concepts used in each example file:
 
 ```
-44 undefined_concepts.txt
+8 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
