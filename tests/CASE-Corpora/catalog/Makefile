@@ -102,13 +102,40 @@ clean:
 	  wc_l_undefined_concepts.txt \
 	  wc_l_undefined_kindOfRelationships.txt
 
-undefined_concepts.txt: \
+# TODO: Generate from script 'case_corpora_tbox_concepts.py', consuming at least $(kb_all_ttl).
+defined_abox_concepts.txt:
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 case_corpora_defined_concepts.py \
+	    _$@ \
+	    $(kb_all_ttl)
+	mv _$@ $@
+
+defined_concepts.txt: \
   $(top_srcdir)/tests/ontology_vocabulary.txt \
+  defined_abox_concepts.txt \
+  defined_tbox_concepts.txt
+	LC_ALL=C \
+	  $(SORT) \
+	    $^ \
+	    | uniq \
+	      > _$@
+	mv _$@ $@
+
+#TODO: Generate from script 'case_corpora_tbox_concepts.py', consuming at least $(top_srcdir)/dependencies/CASE-Corpora/shapes/case-corpora.ttl, MIME taxonomy, and device types taxonomy.
+defined_tbox_concepts.txt:
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 case_corpora_defined_concepts.py \
+	    _$@ \
+	    $(top_srcdir)/dependencies/CASE-Corpora/shapes/case-corpora.ttl
+	mv _$@ $@
+
+undefined_concepts.txt: \
+  defined_concepts.txt \
   used_concepts.txt
 	LC_ALL=C \
 	  $(COMM) \
 	    -13 \
-	    $(top_srcdir)/tests/ontology_vocabulary.txt \
+	    defined_concepts.txt \
 	    used_concepts.txt \
 	    > $@_
 	mv $@_ $@

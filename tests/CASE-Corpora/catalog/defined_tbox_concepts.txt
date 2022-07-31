@@ -1,0 +1,14 @@
+http://example.org/ontology/case/corpora/Dataset
+http://example.org/ontology/case/corpora/Distribution
+http://example.org/ontology/case/corpora/contact-00000000-0000-0000-0000-000000000000
+http://example.org/ontology/case/corpora/hasDatasetDirectory
+http://example.org/ontology/case/corpora/hasDistribution
+http://example.org/ontology/case/corpora/hasDownloadURL
+http://xmlns.com/foaf/0.1/Document
+https://project-open-data.cio.gov/v1.1/schema
+https://project-open-data.cio.gov/v1.1/schema#accessLevel
+https://www.iana.org/assignments/media-types/application/octet-stream
+https://www.iana.org/assignments/media-types/application/pdf
+https://www.iana.org/assignments/media-types/application/vnd.ms-excel
+https://www.iana.org/assignments/media-types/application/zip
+https://www.iana.org/assignments/media-types/text/plain
