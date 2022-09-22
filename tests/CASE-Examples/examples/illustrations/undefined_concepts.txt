@@ -15,8 +15,10 @@ http://example.org/local#identifier
 http://example.org/local#location
 http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
-https://ontology.unifiedcyberontology.org/uco/observable/messageThread
-https://ontology.unifiedcyberontology.org/uco/types/Thread
-https://ontology.unifiedcyberontology.org/uco/types/ThreadItem
-https://ontology.unifiedcyberontology.org/uco/types/threadNextItem
+http://example.org/ontology/drafting/RecoveredObject
+http://example.org/ontology/drafting/RecoveredObjectFacet
+http://example.org/ontology/drafting/contentRecoveredStatus
+http://example.org/ontology/drafting/metadataRecoveredStatus
+http://example.org/ontology/drafting/nameRecoveredStatus
+https://ontology.unifiedcyberontology.org/uco/observable/message
 urn:example:MobileExtractorToolArgumentsFacet

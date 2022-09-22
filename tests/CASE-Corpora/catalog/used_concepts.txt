@@ -32,7 +32,7 @@ https://github.com/dfrws/dfrws2017-challenge
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip
-https://ontology.caseontology.org/case/case
+https://ontology.caseontology.org/case/case/1.0.0
 https://ontology.unifiedcyberontology.org/uco/core/description
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/observable/AndroidDevice

@@ -1,4 +1,5 @@
 http://example.org/local#IMSI
+https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
 https://ontology.unifiedcyberontology.org/uco/core/kindOfRelationship
