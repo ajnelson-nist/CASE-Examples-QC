@@ -22,6 +22,12 @@ https://ontology.unifiedcyberontology.org/uco/action/object
 https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
+https://ontology.unifiedcyberontology.org/uco/configuration/Configuration
+https://ontology.unifiedcyberontology.org/uco/configuration/ConfigurationEntry
+https://ontology.unifiedcyberontology.org/uco/configuration/configurationEntry
+https://ontology.unifiedcyberontology.org/uco/configuration/itemName
+https://ontology.unifiedcyberontology.org/uco/configuration/itemValue
+https://ontology.unifiedcyberontology.org/uco/configuration/usesConfiguration
 https://ontology.unifiedcyberontology.org/uco/core/Annotation
 https://ontology.unifiedcyberontology.org/uco/core/Bundle
 https://ontology.unifiedcyberontology.org/uco/core/ConfidenceFacet
@@ -138,13 +144,9 @@ https://ontology.unifiedcyberontology.org/uco/observable/subject
 https://ontology.unifiedcyberontology.org/uco/observable/to
 https://ontology.unifiedcyberontology.org/uco/observable/version
 https://ontology.unifiedcyberontology.org/uco/role/Role
-https://ontology.unifiedcyberontology.org/uco/tool/ConfigurationSettingType
+https://ontology.unifiedcyberontology.org/uco/tool/ConfiguredTool
 https://ontology.unifiedcyberontology.org/uco/tool/Tool
-https://ontology.unifiedcyberontology.org/uco/tool/ToolConfigurationTypeFacet
-https://ontology.unifiedcyberontology.org/uco/tool/configurationSettings
 https://ontology.unifiedcyberontology.org/uco/tool/creator
-https://ontology.unifiedcyberontology.org/uco/tool/itemName
-https://ontology.unifiedcyberontology.org/uco/tool/itemValue
 https://ontology.unifiedcyberontology.org/uco/tool/toolType
 https://ontology.unifiedcyberontology.org/uco/tool/version
 https://ontology.unifiedcyberontology.org/uco/types/Hash

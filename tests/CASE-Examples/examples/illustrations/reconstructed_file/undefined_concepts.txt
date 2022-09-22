@@ -1,2 +1,5 @@
-http://example.org/local#accessedAction
-http://example.org/local#createdAction
+http://example.org/ontology/drafting/RecoveredObject
+http://example.org/ontology/drafting/RecoveredObjectFacet
+http://example.org/ontology/drafting/contentRecoveredStatus
+http://example.org/ontology/drafting/metadataRecoveredStatus
+http://example.org/ontology/drafting/nameRecoveredStatus

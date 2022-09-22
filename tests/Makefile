@@ -128,7 +128,7 @@ normalize: \
 	  normalize
 
 ontologies.txt: \
-  $(top_srcdir)/.git_submodule_init.done.log \
+  $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/src/ontologies.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontologies.py \
@@ -141,7 +141,7 @@ ontologies.txt: \
 	mv $@_ $@
   
 ontology_relationship_literals.tsv: \
-  $(top_srcdir)/.git_submodule_init.done.log \
+  $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/src/ontology_relationship_literals_tsv.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_relationship_literals_tsv.py \
@@ -155,7 +155,7 @@ ontology_relationship_literals.tsv: \
 
 #This file is needed to test examples in CASE-Examples and the website.
 ontology_vocabulary.txt: \
-  $(top_srcdir)/.git_submodule_init.done.log \
+  $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/src/ontology_classes_properties.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/ontology_classes_properties.py \

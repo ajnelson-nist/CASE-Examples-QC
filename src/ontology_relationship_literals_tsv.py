@@ -55,6 +55,8 @@ SELECT ?lKindOfRelationship
 WHERE {
   ?nDataType
     a rdfs:Datatype ;
+    owl:equivalentClass ?nLexicalSpace .
+  ?nLexicalSpace
     owl:oneOf/rdf:rest*/rdf:first ?lKindOfRelationship .
 }""",
         initNs=nsdict,

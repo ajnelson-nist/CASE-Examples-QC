@@ -11,5 +11,5 @@ The following table is the count of unknown terms yet used in each example file:
 The following table is the count of unknown relationship literals used in each example file:
 
 ```
-4 undefined_kindOfRelationships.tsv
+5 undefined_kindOfRelationships.tsv
 ```

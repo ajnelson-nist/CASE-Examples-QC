@@ -1,6 +1,3 @@
 http://example.org/draft#visibility
 http://example.org/local#identifier
-https://ontology.unifiedcyberontology.org/uco/observable/messageThread
-https://ontology.unifiedcyberontology.org/uco/types/Thread
-https://ontology.unifiedcyberontology.org/uco/types/ThreadItem
-https://ontology.unifiedcyberontology.org/uco/types/threadNextItem
+https://ontology.unifiedcyberontology.org/uco/observable/message

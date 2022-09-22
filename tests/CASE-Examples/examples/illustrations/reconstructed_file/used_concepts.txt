@@ -1,5 +1,8 @@
-http://example.org/local#accessedAction
-http://example.org/local#createdAction
+http://example.org/ontology/drafting/RecoveredObject
+http://example.org/ontology/drafting/RecoveredObjectFacet
+http://example.org/ontology/drafting/contentRecoveredStatus
+http://example.org/ontology/drafting/metadataRecoveredStatus
+http://example.org/ontology/drafting/nameRecoveredStatus
 https://ontology.caseontology.org/case/investigation/InvestigativeAction
 https://ontology.caseontology.org/case/investigation/ProvenanceRecord
 https://ontology.caseontology.org/case/investigation/exhibitNumber
@@ -11,6 +14,7 @@ https://ontology.unifiedcyberontology.org/uco/action/object
 https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
+https://ontology.unifiedcyberontology.org/uco/core/Facet
 https://ontology.unifiedcyberontology.org/uco/core/description
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
@@ -38,8 +42,9 @@ https://ontology.unifiedcyberontology.org/uco/observable/fileSystemType
 https://ontology.unifiedcyberontology.org/uco/observable/fragmentIndex
 https://ontology.unifiedcyberontology.org/uco/observable/hash
 https://ontology.unifiedcyberontology.org/uco/observable/isDirectory
-https://ontology.unifiedcyberontology.org/uco/observable/metadataChangeTime
+https://ontology.unifiedcyberontology.org/uco/observable/mimeType
 https://ontology.unifiedcyberontology.org/uco/observable/modifiedTime
+https://ontology.unifiedcyberontology.org/uco/observable/observableCreatedTime
 https://ontology.unifiedcyberontology.org/uco/observable/rangeOffset
 https://ontology.unifiedcyberontology.org/uco/observable/rangeSize
 https://ontology.unifiedcyberontology.org/uco/observable/sizeInBytes

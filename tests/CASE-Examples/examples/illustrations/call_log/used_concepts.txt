@@ -7,6 +7,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/Call
 https://ontology.unifiedcyberontology.org/uco/observable/CallFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccountFacet
+https://ontology.unifiedcyberontology.org/uco/observable/accountIdentifier
 https://ontology.unifiedcyberontology.org/uco/observable/accountIssuer
 https://ontology.unifiedcyberontology.org/uco/observable/application
 https://ontology.unifiedcyberontology.org/uco/observable/callType
