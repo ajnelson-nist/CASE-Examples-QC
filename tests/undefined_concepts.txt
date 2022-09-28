@@ -60,6 +60,5 @@ http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#authorizationAuthority
 http://example.org/ontology/local#authorizationIssuedDate
 http://example.org/ontology/local#connectionState
-https://ontology.unifiedcyberontology.org/uco/identity/Role
 https://ontology.unifiedcyberontology.org/uco/observable/message
 urn:example:MobileExtractorToolArgumentsFacet

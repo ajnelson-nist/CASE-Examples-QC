@@ -34,6 +34,7 @@ http://example.org/ontology/local#connectionState
 https://ontology.caseontology.org/case/investigation/Authorization
 https://ontology.caseontology.org/case/investigation/Investigation
 https://ontology.caseontology.org/case/investigation/InvestigativeAction
+https://ontology.caseontology.org/case/investigation/Investigator
 https://ontology.caseontology.org/case/investigation/ProvenanceRecord
 https://ontology.caseontology.org/case/investigation/authorizationIdentifier
 https://ontology.caseontology.org/case/investigation/authorizationType
@@ -76,7 +77,6 @@ https://ontology.unifiedcyberontology.org/uco/identity/Identity
 https://ontology.unifiedcyberontology.org/uco/identity/Organization
 https://ontology.unifiedcyberontology.org/uco/identity/OrganizationDetailsFacet
 https://ontology.unifiedcyberontology.org/uco/identity/Person
-https://ontology.unifiedcyberontology.org/uco/identity/Role
 https://ontology.unifiedcyberontology.org/uco/identity/SimpleNameFacet
 https://ontology.unifiedcyberontology.org/uco/identity/familyName
 https://ontology.unifiedcyberontology.org/uco/identity/givenName
