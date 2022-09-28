@@ -25,6 +25,8 @@ ifeq ($(WC),)
 $(error wc not found)
 endif
 
+rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/UCO-develop/lib/rdf-toolkit.jar
+
 exdirs := \
   CASE-Corpora/catalog \
   CASE-Examples/examples/illustrations \
@@ -36,12 +38,14 @@ used_concepts_dependencies                 := $(foreach exdir,$(exdirs),$(exdir)
 used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)/used_kindOfRelationships.tsv)
 
 all: \
+  kb.ttl \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
   used_kindOfRelationships.tsv
 
 check: \
+  kb.ttl \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
@@ -56,6 +60,24 @@ clean:
 	  undefined_kindOfRelationships.tsv \
 	  used_concepts.txt \
 	  used_kindOfRelationships.tsv
+
+kb.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
+  CASE-Examples/examples/illustrations/kb.ttl \
+  casework.github.io/examples/kb.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $^ \
+	    > __$@
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
 
 undefined_concepts.txt: \
   $(undefined_concepts_dependencies)

@@ -27,6 +27,7 @@ endif
 
 exdirs := $(shell find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
 
+kb_ttl_dependencies            := $(foreach exdir,$(exdirs),$(top_srcdir)/dependencies/casework.github.io/examples/$(exdir)/$(exdir).json)
 undefined_concepts_dependencies            := $(foreach exdir,$(exdirs),$(exdir)/undefined_concepts.txt)
 undefined_kindOfRelationships_dependencies := $(foreach exdir,$(exdirs),$(exdir)/undefined_kindOfRelationships.tsv)
 used_concepts_dependencies                 := $(foreach exdir,$(exdirs),$(exdir)/used_concepts.txt)
@@ -34,6 +35,7 @@ used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)
 
 all: \
   README.md \
+  kb.ttl \
   used_concepts.txt \
   used_kindOfRelationships.tsv
 
@@ -82,6 +84,15 @@ clean:
 	  used_kindOfRelationships.tsv \
 	  wc_l_undefined_concepts.txt \
 	  wc_l_undefined_kindOfRelationships.txt
+
+kb.ttl: \
+  $(kb_ttl_dependencies)
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $^ \
+	    > _$@
+	mv _$@ $@
 
 undefined_concepts.txt: \
   $(undefined_concepts_dependencies)
