@@ -1,3 +1,1 @@
-http://example.org/draft#visibility
-http://example.org/local#identifier
-https://ontology.unifiedcyberontology.org/uco/observable/message
+http://example.org/ontology/drafting/visibility

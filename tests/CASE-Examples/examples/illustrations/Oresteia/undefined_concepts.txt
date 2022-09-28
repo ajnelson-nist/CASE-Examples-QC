@@ -1,8 +1,8 @@
-http://example.org/draft#FacebookMessageFacet
-http://example.org/draft#aquisitionType
-http://example.org/draft#iPhoneDeviceFacet
-http://example.org/draft#localeLanguage
-http://example.org/draft#method
-http://example.org/draft#ownerName
-http://example.org/draft#uniqueID
+http://example.org/ontology/drafting/FacebookMessageFacet
+http://example.org/ontology/drafting/aquisitionType
+http://example.org/ontology/drafting/iPhoneDeviceFacet
+http://example.org/ontology/drafting/localeLanguage
+http://example.org/ontology/drafting/method
+http://example.org/ontology/drafting/ownerName
+http://example.org/ontology/drafting/uniqueID
 urn:example:MobileExtractorToolArgumentsFacet
