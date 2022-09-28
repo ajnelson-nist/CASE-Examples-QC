@@ -5,11 +5,11 @@ This directory contains text files that list terms not known to CASE or UCO, but
 The following table is the count of undefined concepts used in each example file:
 
 ```
-   9 asgard/undefined_concepts.txt
+   8 asgard/undefined_concepts.txt
   11 crossover_wmd/undefined_concepts.txt
   20 owl_trafficking/undefined_concepts.txt
    3 urgent_evidence/undefined_concepts.txt
-  34 undefined_concepts.txt
+  33 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:

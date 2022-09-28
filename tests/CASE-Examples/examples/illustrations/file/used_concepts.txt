@@ -1,6 +1,5 @@
-http://example.org/local#accessedAction
-http://example.org/local#createdAction
-http://example.org/local#location
+http://example.org/ontology/drafting/accessedAction
+http://example.org/ontology/drafting/createdAction
 https://ontology.unifiedcyberontology.org/uco/core/Facet
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
