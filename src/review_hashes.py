@@ -56,7 +56,7 @@ RX_UUID = re.compile(
 
 def hash_node_to_iri_summary(
     graph: Graph, n_hash: IdentifiedNode
-) -> Optional[Tuple[str, str, str]]:
+) -> Optional[Tuple[Literal, str, str]]:
     l_hash_method: Optional[Literal] = None
     for triple in graph.triples((n_hash, NS_UCO_TYPES.hashMethod, None)):
         assert isinstance(triple[2], Literal)
@@ -70,8 +70,8 @@ def hash_node_to_iri_summary(
     assert l_hash_value is not None
 
     if l_hash_method not in CASTED_METHODS:
-        warnings.warn("Unimplemented hash method: %r.", l_hash_method)
-        return
+        warnings.warn("Unimplemented hash method: %s." % str(l_hash_method))
+        return None
 
     hash_method_str = CASTED_METHODS[l_hash_method]
     hash_value_str: str = binascii.hexlify(l_hash_value.toPython()).decode().lower()
@@ -80,7 +80,7 @@ def hash_node_to_iri_summary(
     urn_populated = urn_template % (hash_method_str, hash_value_str)
 
     return (
-        hash_method_str,
+        l_hash_method,
         hash_value_str,
         str(uuid.uuid5(uuid.NAMESPACE_URL, urn_populated)),
     )
@@ -115,15 +115,18 @@ WHERE {
                 continue
             recorded_hash_uuid = n_hash_str[-36:]
 
+        iri_summary = hash_node_to_iri_summary(graph, n_hash)
+        if iri_summary is None:
+            continue
         (
-            hash_method_str,
+            l_hash_method,
             hash_value_str,
             expected_hash_uuid,
-        ) = hash_node_to_iri_summary(graph, n_hash)
+        ) = iri_summary
         if recorded_hash_uuid != expected_hash_uuid:
             retval.add(
                 (
-                    hash_method_str,
+                    l_hash_method,
                     hash_value_str,
                     expected_hash_uuid,
                     recorded_hash_uuid,
