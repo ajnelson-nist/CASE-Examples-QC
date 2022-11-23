@@ -14,4 +14,5 @@
    0 raw_data/undefined_concepts.txt
    5 reconstructed_file/undefined_concepts.txt
    1 sms_and_contacts/undefined_concepts.txt
-  24 undefined_concepts.txt
+  19 spear_phishing/undefined_concepts.txt
+  43 undefined_concepts.txt

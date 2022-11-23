@@ -14,4 +14,5 @@
    1 raw_data/undefined_kindOfRelationships.tsv
    2 reconstructed_file/undefined_kindOfRelationships.tsv
    1 sms_and_contacts/undefined_kindOfRelationships.tsv
-  15 undefined_kindOfRelationships.tsv
+   5 spear_phishing/undefined_kindOfRelationships.tsv
+  18 undefined_kindOfRelationships.tsv

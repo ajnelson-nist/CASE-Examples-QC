@@ -1,0 +1,15 @@
+http://example.org/ontology/drafting/orgName
+https://ontology.unifiedcyberontology.org/uco/core/Role
+https://ontology.unifiedcyberontology.org/uco/core/focus
+https://ontology.unifiedcyberontology.org/uco/identity/Organisation
+https://ontology.unifiedcyberontology.org/uco/observable/capacity
+https://ontology.unifiedcyberontology.org/uco/observable/createdTime
+https://ontology.unifiedcyberontology.org/uco/observable/diskpartitionType
+uco-case:Bundle
+uco-configuration:Configuration
+uco-configuration:ConfigurationEntry
+uco-configuration:configurationEntry
+uco-configuration:itemName
+uco-configuration:itemValue
+uco-configuration:usesConfiguration
+uco-tool_NOT_EXISTS:toolIdentifier
