@@ -38,6 +38,7 @@ https://ontology.unifiedcyberontology.org/uco/action/environment
 https://ontology.unifiedcyberontology.org/uco/action/instrument
 https://ontology.unifiedcyberontology.org/uco/action/location
 https://ontology.unifiedcyberontology.org/uco/action/object
+https://ontology.unifiedcyberontology.org/uco/action/participant
 https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
@@ -53,6 +54,7 @@ https://ontology.unifiedcyberontology.org/uco/core/ConfidenceFacet
 https://ontology.unifiedcyberontology.org/uco/core/Facet
 https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/UcoObject
+https://ontology.unifiedcyberontology.org/uco/core/UcoThing
 https://ontology.unifiedcyberontology.org/uco/core/confidence
 https://ontology.unifiedcyberontology.org/uco/core/createdBy
 https://ontology.unifiedcyberontology.org/uco/core/description
@@ -88,6 +90,7 @@ https://ontology.unifiedcyberontology.org/uco/location/street
 https://ontology.unifiedcyberontology.org/uco/observable/Account
 https://ontology.unifiedcyberontology.org/uco/observable/AccountAuthenticationFacet
 https://ontology.unifiedcyberontology.org/uco/observable/AccountFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Appliance
 https://ontology.unifiedcyberontology.org/uco/observable/Application
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccount
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccountFacet
@@ -96,6 +99,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Call
 https://ontology.unifiedcyberontology.org/uco/observable/CallFacet
 https://ontology.unifiedcyberontology.org/uco/observable/CompressedStreamFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Computer
 https://ontology.unifiedcyberontology.org/uco/observable/ComputerSpecificationFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Contact
 https://ontology.unifiedcyberontology.org/uco/observable/ContactFacet
@@ -118,6 +122,9 @@ https://ontology.unifiedcyberontology.org/uco/observable/EmailMessage
 https://ontology.unifiedcyberontology.org/uco/observable/EmailMessageFacet
 https://ontology.unifiedcyberontology.org/uco/observable/EncodedStreamFacet
 https://ontology.unifiedcyberontology.org/uco/observable/EncryptedStreamFacet
+https://ontology.unifiedcyberontology.org/uco/observable/EventLog
+https://ontology.unifiedcyberontology.org/uco/observable/EventRecord
+https://ontology.unifiedcyberontology.org/uco/observable/EventRecordFacet
 https://ontology.unifiedcyberontology.org/uco/observable/File
 https://ontology.unifiedcyberontology.org/uco/observable/FileFacet
 https://ontology.unifiedcyberontology.org/uco/observable/FileSystem
@@ -126,6 +133,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/FragmentFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ICCID
 https://ontology.unifiedcyberontology.org/uco/observable/IMEI
 https://ontology.unifiedcyberontology.org/uco/observable/IMSI
+https://ontology.unifiedcyberontology.org/uco/observable/IPv4Address
 https://ontology.unifiedcyberontology.org/uco/observable/IPv4AddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Image
 https://ontology.unifiedcyberontology.org/uco/observable/MSISDN
@@ -139,6 +147,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/MobileDevice
 https://ontology.unifiedcyberontology.org/uco/observable/MobileDeviceFacet
 https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnection
 https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnectionFacet
+https://ontology.unifiedcyberontology.org/uco/observable/ObservableAction
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
@@ -154,9 +163,14 @@ https://ontology.unifiedcyberontology.org/uco/observable/SIMForm
 https://ontology.unifiedcyberontology.org/uco/observable/SIMType
 https://ontology.unifiedcyberontology.org/uco/observable/SMSMessage
 https://ontology.unifiedcyberontology.org/uco/observable/SQLiteBlobFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
+https://ontology.unifiedcyberontology.org/uco/observable/UserAccount
+https://ontology.unifiedcyberontology.org/uco/observable/WebPage
 https://ontology.unifiedcyberontology.org/uco/observable/WifiAddressFacet
+https://ontology.unifiedcyberontology.org/uco/observable/WindowsProcess
+https://ontology.unifiedcyberontology.org/uco/observable/WindowsProcessFacet
 https://ontology.unifiedcyberontology.org/uco/observable/accessedTime
 https://ontology.unifiedcyberontology.org/uco/observable/accountIdentifier
 https://ontology.unifiedcyberontology.org/uco/observable/accountIssuer
@@ -166,7 +180,9 @@ https://ontology.unifiedcyberontology.org/uco/observable/addressValue
 https://ontology.unifiedcyberontology.org/uco/observable/application
 https://ontology.unifiedcyberontology.org/uco/observable/applicationIdentifier
 https://ontology.unifiedcyberontology.org/uco/observable/arguments
+https://ontology.unifiedcyberontology.org/uco/observable/binary
 https://ontology.unifiedcyberontology.org/uco/observable/biosVersion
+https://ontology.unifiedcyberontology.org/uco/observable/bitness
 https://ontology.unifiedcyberontology.org/uco/observable/bitsPerPixel
 https://ontology.unifiedcyberontology.org/uco/observable/body
 https://ontology.unifiedcyberontology.org/uco/observable/byteOrder
@@ -178,6 +194,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/compressionMethod
 https://ontology.unifiedcyberontology.org/uco/observable/cpuFamily
 https://ontology.unifiedcyberontology.org/uco/observable/creatorUser
 https://ontology.unifiedcyberontology.org/uco/observable/currentWorkingDirectory
+https://ontology.unifiedcyberontology.org/uco/observable/cyberAction
 https://ontology.unifiedcyberontology.org/uco/observable/dataPayload
 https://ontology.unifiedcyberontology.org/uco/observable/dataPayloadReferenceURL
 https://ontology.unifiedcyberontology.org/uco/observable/destinationPort
@@ -194,6 +211,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/encryptionMethod
 https://ontology.unifiedcyberontology.org/uco/observable/encryptionMode
 https://ontology.unifiedcyberontology.org/uco/observable/endTime
 https://ontology.unifiedcyberontology.org/uco/observable/environmentVariables
+https://ontology.unifiedcyberontology.org/uco/observable/eventRecordDevice
 https://ontology.unifiedcyberontology.org/uco/observable/exifData
 https://ontology.unifiedcyberontology.org/uco/observable/extension
 https://ontology.unifiedcyberontology.org/uco/observable/fileName
@@ -206,6 +224,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/from
 https://ontology.unifiedcyberontology.org/uco/observable/fullValue
 https://ontology.unifiedcyberontology.org/uco/observable/gpuFamily
 https://ontology.unifiedcyberontology.org/uco/observable/hash
+https://ontology.unifiedcyberontology.org/uco/observable/host
 https://ontology.unifiedcyberontology.org/uco/observable/installDate
 https://ontology.unifiedcyberontology.org/uco/observable/isActive
 https://ontology.unifiedcyberontology.org/uco/observable/isDirectory
@@ -227,6 +246,8 @@ https://ontology.unifiedcyberontology.org/uco/observable/nickname
 https://ontology.unifiedcyberontology.org/uco/observable/numberOfLaunches
 https://ontology.unifiedcyberontology.org/uco/observable/observableCreatedTime
 https://ontology.unifiedcyberontology.org/uco/observable/operatingSystem
+https://ontology.unifiedcyberontology.org/uco/observable/ownerSID
+https://ontology.unifiedcyberontology.org/uco/observable/parent
 https://ontology.unifiedcyberontology.org/uco/observable/participant
 https://ontology.unifiedcyberontology.org/uco/observable/partitionID
 https://ontology.unifiedcyberontology.org/uco/observable/partitionLength
@@ -240,6 +261,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/pictureHeight
 https://ontology.unifiedcyberontology.org/uco/observable/pictureType
 https://ontology.unifiedcyberontology.org/uco/observable/pictureWidth
 https://ontology.unifiedcyberontology.org/uco/observable/pid
+https://ontology.unifiedcyberontology.org/uco/observable/port
 https://ontology.unifiedcyberontology.org/uco/observable/processorArchitecture
 https://ontology.unifiedcyberontology.org/uco/observable/protocols
 https://ontology.unifiedcyberontology.org/uco/observable/rangeOffset
@@ -260,9 +282,12 @@ https://ontology.unifiedcyberontology.org/uco/observable/totalFragments
 https://ontology.unifiedcyberontology.org/uco/observable/totalRam
 https://ontology.unifiedcyberontology.org/uco/observable/value
 https://ontology.unifiedcyberontology.org/uco/observable/version
+https://ontology.unifiedcyberontology.org/uco/role/MaliciousRole
+https://ontology.unifiedcyberontology.org/uco/role/NeutralRole
 https://ontology.unifiedcyberontology.org/uco/role/Role
 https://ontology.unifiedcyberontology.org/uco/tool/AnalyticTool
 https://ontology.unifiedcyberontology.org/uco/tool/ConfiguredTool
+https://ontology.unifiedcyberontology.org/uco/tool/MaliciousTool
 https://ontology.unifiedcyberontology.org/uco/tool/Tool
 https://ontology.unifiedcyberontology.org/uco/tool/creator
 https://ontology.unifiedcyberontology.org/uco/tool/toolType
@@ -282,3 +307,22 @@ https://ontology.unifiedcyberontology.org/uco/types/threadNextItem
 https://ontology.unifiedcyberontology.org/uco/types/value
 https://ontology.unifiedcyberontology.org/uco/victim/Victim
 urn:example:MobileExtractorToolArgumentsFacet
+urn:example:unmapped
+urn:example:unmapped/bearerOf
+urn:example:unmapped/contains
+urn:example:unmapped/controls
+urn:example:unmapped/designatedBy
+urn:example:unmapped/endpointId
+urn:example:unmapped/hasOccurrentPart
+urn:example:unmapped/hasOutput
+urn:example:unmapped/hasPart
+urn:example:unmapped/hasRecipient
+urn:example:unmapped/hasRole
+urn:example:unmapped/intervalIn
+urn:example:unmapped/isCarrierOf
+urn:example:unmapped/operates
+urn:example:unmapped/participatesIn
+urn:example:unmapped/precedes
+urn:example:unmapped/realizedIn
+urn:example:unmapped/unknown01
+urn:example:unmapped/uses

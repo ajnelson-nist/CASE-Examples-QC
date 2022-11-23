@@ -120,7 +120,8 @@ used_concepts.txt: \
 	grep ':' $@___ \
 	  | egrep -v '(acme.org|atlassian.net|purl.org|w3.org)' \
 	    | grep -v '/kb/' \
-	      > $@__
+	      | grep -v '/www.semanticweb.org/' \
+	        > $@__
 	rm $@___
 	LC_ALL=C \
 	  $(SORT) \

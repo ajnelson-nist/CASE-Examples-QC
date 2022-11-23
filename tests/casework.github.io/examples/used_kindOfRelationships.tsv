@@ -1,5 +1,7 @@
 http://www.w3.org/2001/XMLSchema#string	Associated_Account
+http://www.w3.org/2001/XMLSchema#string	Contained-Within
 http://www.w3.org/2001/XMLSchema#string	Contained_Within
 http://www.w3.org/2001/XMLSchema#string	Has_Account
 http://www.w3.org/2001/XMLSchema#string	Has_Role
 http://www.w3.org/2001/XMLSchema#string	Referenced_Within
+http://www.w3.org/2001/XMLSchema#string	contained-within

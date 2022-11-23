@@ -21,7 +21,8 @@ The following table is the count of undefined concepts used in each example file
    0 raw_data/undefined_concepts.txt
    5 reconstructed_file/undefined_concepts.txt
    1 sms_and_contacts/undefined_concepts.txt
-  24 undefined_concepts.txt
+  19 spear_phishing/undefined_concepts.txt
+  43 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
@@ -43,5 +44,6 @@ The following table is the count of undefined relationship literals used in each
    1 raw_data/undefined_kindOfRelationships.tsv
    2 reconstructed_file/undefined_kindOfRelationships.tsv
    1 sms_and_contacts/undefined_kindOfRelationships.tsv
-  15 undefined_kindOfRelationships.tsv
+   5 spear_phishing/undefined_kindOfRelationships.tsv
+  18 undefined_kindOfRelationships.tsv
 ```
