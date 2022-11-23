@@ -56,7 +56,7 @@ RX_UUID = re.compile(
 
 def hash_node_to_iri_summary(
     graph: Graph, n_hash: IdentifiedNode
-) -> Optional[Tuple[Literal, str, str]]:
+) -> Optional[Tuple[str, str, str]]:
     l_hash_method: Optional[Literal] = None
     for triple in graph.triples((n_hash, NS_UCO_TYPES.hashMethod, None)):
         assert isinstance(triple[2], Literal)
@@ -80,14 +80,14 @@ def hash_node_to_iri_summary(
     urn_populated = urn_template % (hash_method_str, hash_value_str)
 
     return (
-        l_hash_method,
+        hash_method_str,
         hash_value_str,
         str(uuid.uuid5(uuid.NAMESPACE_URL, urn_populated)),
     )
 
 
-def unexpected(graph: Graph) -> Set[Tuple[Literal, str, str, Optional[str]]]:
-    retval: Set[Tuple[Literal, str, str, Optional[str]]] = set()
+def unexpected(graph: Graph) -> Set[Tuple[str, str, str, Optional[str]]]:
+    retval: Set[Tuple[str, str, str, Optional[str]]] = set()
     nsdict: Dict[str, URIRef] = {"uco-types": URIRef(str(NS_UCO_TYPES))}
     for result in graph.query(
         """\
@@ -119,14 +119,14 @@ WHERE {
         if iri_summary is None:
             continue
         (
-            l_hash_method,
+            hash_method_str,
             hash_value_str,
             expected_hash_uuid,
         ) = iri_summary
         if recorded_hash_uuid != expected_hash_uuid:
             retval.add(
                 (
-                    l_hash_method,
+                    hash_method_str,
                     hash_value_str,
                     expected_hash_uuid,
                     recorded_hash_uuid,
