@@ -1,3 +1,4 @@
+drafting:isAutomated
 http://example.org/local#IMSI
 http://example.org/local#accessAction
 http://example.org/local#accessedAction
@@ -97,6 +98,7 @@ uco-configuration:itemValue
 uco-configuration:usesConfiguration
 uco-tool_NOT_EXISTS:toolIdentifier
 urn:example:MobileExtractorToolArgumentsFacet
+urn:example:cell-site-kb:cell-cite-204-16-1014-13399
 urn:example:unmapped
 urn:example:unmapped/bearerOf
 urn:example:unmapped/contains

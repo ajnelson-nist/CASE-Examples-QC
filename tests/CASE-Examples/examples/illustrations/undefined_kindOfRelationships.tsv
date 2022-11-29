@@ -1,9 +1,11 @@
 http://www.w3.org/2001/XMLSchema#string	Associated_Account
 http://www.w3.org/2001/XMLSchema#string	Attachment_Of
+http://www.w3.org/2001/XMLSchema#string	Connected_To
 http://www.w3.org/2001/XMLSchema#string	Contained_Within
 http://www.w3.org/2001/XMLSchema#string	Decoded_From
 http://www.w3.org/2001/XMLSchema#string	Decompressed_From
 http://www.w3.org/2001/XMLSchema#string	Decrypted_From
+http://www.w3.org/2001/XMLSchema#string	Derived_From
 http://www.w3.org/2001/XMLSchema#string	Employee_Of
 http://www.w3.org/2001/XMLSchema#string	Forensic_Image_Of
 http://www.w3.org/2001/XMLSchema#string	Has_Account
@@ -14,5 +16,6 @@ http://www.w3.org/2001/XMLSchema#string	Initiated
 http://www.w3.org/2001/XMLSchema#string	Located_At
 http://www.w3.org/2001/XMLSchema#string	Mapped_Into
 http://www.w3.org/2001/XMLSchema#string	Member_Of
+http://www.w3.org/2001/XMLSchema#string	Related_To
 http://www.w3.org/2001/XMLSchema#string	Stored_On
 http://www.w3.org/2001/XMLSchema#string	Used
