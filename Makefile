@@ -81,7 +81,6 @@ all: \
 	touch $@
 
 .venv.done.log: \
-  dependencies/CASE-Corpora/requirements.txt \
   dependencies/CASE-Examples/requirements.txt
 	rm -rf venv
 	$(PYTHON3) -m venv \
@@ -95,9 +94,6 @@ all: \
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement dependencies/CASE-Examples/requirements.txt
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement dependencies/CASE-Corpora/requirements.txt
 	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
