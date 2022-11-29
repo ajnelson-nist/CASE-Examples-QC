@@ -78,7 +78,6 @@ http://example.org/ontology/local#isDirectory
 http://example.org/ontology/local#modifiedTime
 http://example.org/ontology/local#sizeInBytes
 http://example.org/ontology/local#value
-https://ontology.caseontology.org/case/case/1.0.0
 https://ontology.unifiedcyberontology.org/uco/action/ActionReferences
 https://ontology.unifiedcyberontology.org/uco/core/Role
 https://ontology.unifiedcyberontology.org/uco/core/focus
