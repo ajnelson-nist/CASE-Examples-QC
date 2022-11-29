@@ -34,20 +34,23 @@ def graph_file_to_vocabset(
     filename: typing.Optional[str] = None,
 ) -> typing.Set[rdflib.URIRef]:
     vocabset: typing.Set[rdflib.URIRef] = set()
-    graph = rdflib.Graph()
     if filename is None:
-        ttl_filename = (
-            case_utils.ontology.version_info.built_version_choices_list[-1] + ".ttl"
+        iri_data = importlib.resources.read_text(
+            case_utils.ontology, "ontology_and_version_iris.txt"
         )
-        ttl_data = importlib.resources.read_text(case_utils.ontology, ttl_filename)
-        graph.parse(data=ttl_data, format="turtle")
+        for line in iri_data.split("\n"):
+            cleaned_line = line.strip()
+            if cleaned_line == "":
+                continue
+            vocabset.add(rdflib.URIRef(cleaned_line))
     else:
+        graph = rdflib.Graph()
         graph.parse(
             filename, format="json-ld" if filename.endswith("json") else "turtle"
         )
 
-    query = rdflib.plugins.sparql.processor.prepareQuery(
-        """\
+        query = rdflib.plugins.sparql.processor.prepareQuery(
+            """\
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT ?s
 WHERE {
@@ -57,10 +60,10 @@ WHERE {
   UNION
   { ?y owl:versionIRI ?s }
 }"""
-    )  # type: ignore
-    for (result_no, result) in enumerate(graph.query(query)):
-        vocabset.add(result[0])
-    del graph
+        )  # type: ignore
+        for (result_no, result) in enumerate(graph.query(query)):
+            vocabset.add(result[0])
+        del graph
 
     return vocabset
 
