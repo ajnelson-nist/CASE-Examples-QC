@@ -13,6 +13,7 @@ https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
 https://ontology.unifiedcyberontology.org/uco/core/Relationship
+https://ontology.unifiedcyberontology.org/uco/core/UcoObject
 https://ontology.unifiedcyberontology.org/uco/core/description
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
