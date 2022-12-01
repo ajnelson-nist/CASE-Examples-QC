@@ -1,8 +1,8 @@
+http://example.org/ontology/drafting/authorizationAuthority
+http://example.org/ontology/drafting/authorizationIssuedDate
 http://example.org/ontology/drafting/iPhoneDeviceFacet
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/ownerName
 http://example.org/ontology/drafting/uniqueID
 http://example.org/ontology/local#__CASE__
-http://example.org/ontology/local#authorizationAuthority
-http://example.org/ontology/local#authorizationIssuedDate
 http://example.org/ontology/local#connectionState

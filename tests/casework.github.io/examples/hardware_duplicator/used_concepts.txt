@@ -1,8 +1,10 @@
-http://example.org/ontology/drafting/orgName
+http://example.org/ontology/drafting/notProvidedByReport
+http://example.org/ontology/drafting/toolIdentifier
 https://ontology.caseontology.org/case/investigation/Investigation
 https://ontology.caseontology.org/case/investigation/InvestigativeAction
 https://ontology.caseontology.org/case/investigation/ProvenanceRecord
 https://ontology.caseontology.org/case/investigation/exhibitNumber
+https://ontology.caseontology.org/case/investigation/focus
 https://ontology.unifiedcyberontology.org/uco/action/endTime
 https://ontology.unifiedcyberontology.org/uco/action/instrument
 https://ontology.unifiedcyberontology.org/uco/action/location
@@ -10,9 +12,7 @@ https://ontology.unifiedcyberontology.org/uco/action/object
 https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
-https://ontology.unifiedcyberontology.org/uco/core/Role
 https://ontology.unifiedcyberontology.org/uco/core/description
-https://ontology.unifiedcyberontology.org/uco/core/focus
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
 https://ontology.unifiedcyberontology.org/uco/core/kindOfRelationship
@@ -20,8 +20,7 @@ https://ontology.unifiedcyberontology.org/uco/core/name
 https://ontology.unifiedcyberontology.org/uco/core/object
 https://ontology.unifiedcyberontology.org/uco/core/source
 https://ontology.unifiedcyberontology.org/uco/core/target
-https://ontology.unifiedcyberontology.org/uco/identity/Identity
-https://ontology.unifiedcyberontology.org/uco/identity/Organisation
+https://ontology.unifiedcyberontology.org/uco/identity/Organization
 https://ontology.unifiedcyberontology.org/uco/observable/ContentDataFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Disk
 https://ontology.unifiedcyberontology.org/uco/observable/DiskFacet
@@ -30,10 +29,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/DiskPartitionFacet
 https://ontology.unifiedcyberontology.org/uco/observable/File
 https://ontology.unifiedcyberontology.org/uco/observable/FileFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
-https://ontology.unifiedcyberontology.org/uco/observable/capacity
-https://ontology.unifiedcyberontology.org/uco/observable/createdTime
 https://ontology.unifiedcyberontology.org/uco/observable/diskPartitionType
-https://ontology.unifiedcyberontology.org/uco/observable/diskpartitionType
 https://ontology.unifiedcyberontology.org/uco/observable/extension
 https://ontology.unifiedcyberontology.org/uco/observable/fileName
 https://ontology.unifiedcyberontology.org/uco/observable/filePath
@@ -41,11 +37,14 @@ https://ontology.unifiedcyberontology.org/uco/observable/fileSystemType
 https://ontology.unifiedcyberontology.org/uco/observable/hash
 https://ontology.unifiedcyberontology.org/uco/observable/isDirectory
 https://ontology.unifiedcyberontology.org/uco/observable/model
+https://ontology.unifiedcyberontology.org/uco/observable/observableCreatedTime
 https://ontology.unifiedcyberontology.org/uco/observable/partitionID
 https://ontology.unifiedcyberontology.org/uco/observable/partitionLength
 https://ontology.unifiedcyberontology.org/uco/observable/partitionOffset
 https://ontology.unifiedcyberontology.org/uco/observable/serialNumber
 https://ontology.unifiedcyberontology.org/uco/observable/sizeInBytes
+https://ontology.unifiedcyberontology.org/uco/observable/storageCapacityInBytes
+https://ontology.unifiedcyberontology.org/uco/role/Role
 https://ontology.unifiedcyberontology.org/uco/tool/ConfiguredTool
 https://ontology.unifiedcyberontology.org/uco/tool/creator
 https://ontology.unifiedcyberontology.org/uco/tool/toolType
@@ -60,4 +59,3 @@ uco-configuration:configurationEntry
 uco-configuration:itemName
 uco-configuration:itemValue
 uco-configuration:usesConfiguration
-uco-tool_NOT_EXISTS:toolIdentifier
