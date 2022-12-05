@@ -8,7 +8,6 @@ https://ontology.unifiedcyberontology.org/uco/core/name
 https://ontology.unifiedcyberontology.org/uco/core/objectCreatedTime
 https://ontology.unifiedcyberontology.org/uco/core/source
 https://ontology.unifiedcyberontology.org/uco/core/target
-https://ontology.unifiedcyberontology.org/uco/identity/Identity
 https://ontology.unifiedcyberontology.org/uco/identity/Organization
 https://ontology.unifiedcyberontology.org/uco/location/LatLongCoordinatesFacet
 https://ontology.unifiedcyberontology.org/uco/location/Location

@@ -6,7 +6,6 @@ http://example.org/local#accessedAction
 http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#location
-http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
 http://example.org/ontology/case/corpora/Dataset
 http://example.org/ontology/case/corpora/Distribution
@@ -20,8 +19,6 @@ http://example.org/ontology/drafting#roomId
 http://example.org/ontology/drafting/BootLoaderFacet
 http://example.org/ontology/drafting/CellPhone
 http://example.org/ontology/drafting/FacebookMessageFacet
-http://example.org/ontology/drafting/RecoveredObject
-http://example.org/ontology/drafting/RecoveredObjectFacet
 http://example.org/ontology/drafting/TableRelationFacet
 http://example.org/ontology/drafting/USBSerialNumber
 http://example.org/ontology/drafting/accessedAction
@@ -34,7 +31,6 @@ http://example.org/ontology/drafting/brand
 http://example.org/ontology/drafting/browserUserProfileAccount
 http://example.org/ontology/drafting/buildDate
 http://example.org/ontology/drafting/buildIdentifier
-http://example.org/ontology/drafting/contentRecoveredStatus
 http://example.org/ontology/drafting/createdAction
 http://example.org/ontology/drafting/device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
 http://example.org/ontology/drafting/device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
@@ -45,10 +41,8 @@ http://example.org/ontology/drafting/iPhoneDeviceFacet
 http://example.org/ontology/drafting/label
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/locationsServicesEnabled
-http://example.org/ontology/drafting/metadataRecoveredStatus
 http://example.org/ontology/drafting/method
 http://example.org/ontology/drafting/name
-http://example.org/ontology/drafting/nameRecoveredStatus
 http://example.org/ontology/drafting/notProvided
 http://example.org/ontology/drafting/notProvidedByReport
 http://example.org/ontology/drafting/ownerName
@@ -96,6 +90,8 @@ https://ontology.caseontology.org/case/investigation/rootExhibitNumber
 https://ontology.caseontology.org/case/investigation/wasDerivedFrom
 https://ontology.unifiedcyberontology.org/uco/action/Action
 https://ontology.unifiedcyberontology.org/uco/action/ActionLifecycle
+https://ontology.unifiedcyberontology.org/uco/action/ArrayOfAction
+https://ontology.unifiedcyberontology.org/uco/action/action
 https://ontology.unifiedcyberontology.org/uco/action/endTime
 https://ontology.unifiedcyberontology.org/uco/action/environment
 https://ontology.unifiedcyberontology.org/uco/action/instrument
@@ -103,6 +99,7 @@ https://ontology.unifiedcyberontology.org/uco/action/location
 https://ontology.unifiedcyberontology.org/uco/action/object
 https://ontology.unifiedcyberontology.org/uco/action/participant
 https://ontology.unifiedcyberontology.org/uco/action/performer
+https://ontology.unifiedcyberontology.org/uco/action/phase
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
 https://ontology.unifiedcyberontology.org/uco/analysis/Analysis
@@ -127,6 +124,7 @@ https://ontology.unifiedcyberontology.org/uco/core/Bundle
 https://ontology.unifiedcyberontology.org/uco/core/ConfidenceFacet
 https://ontology.unifiedcyberontology.org/uco/core/Facet
 https://ontology.unifiedcyberontology.org/uco/core/Relationship
+https://ontology.unifiedcyberontology.org/uco/core/UcoInherentCharacterizationThing
 https://ontology.unifiedcyberontology.org/uco/core/UcoObject
 https://ontology.unifiedcyberontology.org/uco/core/UcoThing
 https://ontology.unifiedcyberontology.org/uco/core/confidence
