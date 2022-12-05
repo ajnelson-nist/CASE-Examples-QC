@@ -5,7 +5,6 @@ http://example.org/local#accessedAction
 http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#location
-http://example.org/local#phoneNumber
 http://example.org/local#totalFragments
 http://example.org/ontology/drafting#exhibitRecipient
 http://example.org/ontology/drafting#exhibitTransferrer
@@ -13,8 +12,6 @@ http://example.org/ontology/drafting#roomId
 http://example.org/ontology/drafting/BootLoaderFacet
 http://example.org/ontology/drafting/CellPhone
 http://example.org/ontology/drafting/FacebookMessageFacet
-http://example.org/ontology/drafting/RecoveredObject
-http://example.org/ontology/drafting/RecoveredObjectFacet
 http://example.org/ontology/drafting/TableRelationFacet
 http://example.org/ontology/drafting/USBSerialNumber
 http://example.org/ontology/drafting/accessedAction
@@ -27,7 +24,6 @@ http://example.org/ontology/drafting/brand
 http://example.org/ontology/drafting/browserUserProfileAccount
 http://example.org/ontology/drafting/buildDate
 http://example.org/ontology/drafting/buildIdentifier
-http://example.org/ontology/drafting/contentRecoveredStatus
 http://example.org/ontology/drafting/createdAction
 http://example.org/ontology/drafting/device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
 http://example.org/ontology/drafting/device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
@@ -38,10 +34,8 @@ http://example.org/ontology/drafting/iPhoneDeviceFacet
 http://example.org/ontology/drafting/label
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/locationsServicesEnabled
-http://example.org/ontology/drafting/metadataRecoveredStatus
 http://example.org/ontology/drafting/method
 http://example.org/ontology/drafting/name
-http://example.org/ontology/drafting/nameRecoveredStatus
 http://example.org/ontology/drafting/notProvided
 http://example.org/ontology/drafting/notProvidedByReport
 http://example.org/ontology/drafting/ownerName

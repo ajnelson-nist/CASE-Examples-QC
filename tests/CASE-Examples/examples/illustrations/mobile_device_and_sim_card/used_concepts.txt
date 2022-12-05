@@ -20,12 +20,12 @@ https://ontology.unifiedcyberontology.org/uco/observable/MobileDevice
 https://ontology.unifiedcyberontology.org/uco/observable/MobileDeviceFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
+https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCard
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCardFacet
 https://ontology.unifiedcyberontology.org/uco/observable/SIMForm
 https://ontology.unifiedcyberontology.org/uco/observable/SIMType
 https://ontology.unifiedcyberontology.org/uco/observable/WifiAddressFacet
-https://ontology.unifiedcyberontology.org/uco/observable/accountType
 https://ontology.unifiedcyberontology.org/uco/observable/addressValue
 https://ontology.unifiedcyberontology.org/uco/observable/carrier
 https://ontology.unifiedcyberontology.org/uco/observable/clockSetting
