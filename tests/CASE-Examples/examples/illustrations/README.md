@@ -44,7 +44,7 @@ The following table is the count of undefined relationship literals used in each
    0 device/undefined_kindOfRelationships.tsv
    1 exif_data/undefined_kindOfRelationships.tsv
    5 file/undefined_kindOfRelationships.tsv
-   1 forensic_lifecycle/undefined_kindOfRelationships.tsv
+   2 forensic_lifecycle/undefined_kindOfRelationships.tsv
    0 location/undefined_kindOfRelationships.tsv
    1 message/undefined_kindOfRelationships.tsv
    2 mobile_device_and_sim_card/undefined_kindOfRelationships.tsv
