@@ -1,3 +1,4 @@
+http://example.org/ontology/case/corpora
 http://example.org/ontology/drafting/CellPhone
 http://example.org/ontology/drafting/device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
 http://example.org/ontology/drafting/device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e

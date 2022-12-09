@@ -6,6 +6,7 @@ http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#location
 http://example.org/local#totalFragments
+http://example.org/ontology/case/corpora
 http://example.org/ontology/drafting#exhibitRecipient
 http://example.org/ontology/drafting#exhibitTransferrer
 http://example.org/ontology/drafting#roomId
