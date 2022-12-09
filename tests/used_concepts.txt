@@ -7,6 +7,7 @@ http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#location
 http://example.org/local#totalFragments
+http://example.org/ontology/case/corpora
 http://example.org/ontology/case/corpora/Dataset
 http://example.org/ontology/case/corpora/Distribution
 http://example.org/ontology/case/corpora/contact-00000000-0000-0000-0000-000000000000
@@ -74,7 +75,6 @@ https://github.com/dfrws/dfrws2017-challenge
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip
-https://ontology.caseontology.org/case/case/1.0.0
 https://ontology.caseontology.org/case/investigation/Authorization
 https://ontology.caseontology.org/case/investigation/Investigation
 https://ontology.caseontology.org/case/investigation/InvestigativeAction
