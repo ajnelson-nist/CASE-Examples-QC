@@ -6,7 +6,15 @@ http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#location
 http://example.org/local#totalFragments
-http://example.org/ontology/case/corpora
+http://example.org/ontology/case-corpora/Catalog
+http://example.org/ontology/case-corpora/Dataset
+http://example.org/ontology/case-corpora/Distribution
+http://example.org/ontology/case-corpora/IANAMediaType
+http://example.org/ontology/case-corpora/WebPage
+http://example.org/ontology/case-corpora/contact-00000000-0000-0000-0000-000000000000
+http://example.org/ontology/case-corpora/hasDatasetDirectory
+http://example.org/ontology/case-corpora/hasDistribution
+http://example.org/ontology/case-corpora/hasDownloadURL
 http://example.org/ontology/drafting#exhibitRecipient
 http://example.org/ontology/drafting#exhibitTransferrer
 http://example.org/ontology/drafting#roomId
@@ -48,6 +56,9 @@ http://example.org/ontology/drafting/uniqueID
 http://example.org/ontology/drafting/visibility
 http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#connectionState
+http://example.org/shapes/case-corpora-local
+https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl
+https://www.iana.org/assignments/media-types/text/turtle
 uco-case:Bundle
 uco-configuration:Configuration
 uco-configuration:ConfigurationEntry
