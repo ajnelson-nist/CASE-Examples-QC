@@ -66,7 +66,7 @@ WHERE {
         NS_UCO_VOCABULARY.ObservableObjectRelationshipVocab,
     ]:
         datatype = n_datatype.toPython()
-        for (result_no, result) in enumerate(
+        for result_no, result in enumerate(
             graph.query(query, initBindings={"nDataType": n_datatype})
         ):
             (l_value,) = result

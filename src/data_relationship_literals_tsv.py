@@ -50,7 +50,7 @@ WHERE {
 }""",
             initNs=nsdict,
         )
-        for (result_no, result) in enumerate(graph.query(query)):
+        for result_no, result in enumerate(graph.query(query)):
             (l_value,) = result
             if l_value.datatype is None:
                 datatype = NS_XSD_STRING_IRI

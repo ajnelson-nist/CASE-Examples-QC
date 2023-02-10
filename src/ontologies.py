@@ -61,7 +61,7 @@ WHERE {
   { ?y owl:versionIRI ?s }
 }"""
         )  # type: ignore
-        for (result_no, result) in enumerate(graph.query(query)):
+        for result_no, result in enumerate(graph.query(query)):
             vocabset.add(result[0])
         del graph
 
@@ -81,7 +81,7 @@ def main() -> None:
     vocabset: typing.Set[rdflib.URIRef] = set()
 
     max_arg_no: int = -1
-    for (arg_no, arg) in enumerate(args.in_file):
+    for arg_no, arg in enumerate(args.in_file):
         max_arg_no = arg_no
         _logger.info("arg=%r" % arg)
         tmp_vocabset = graph_file_to_vocabset(args.in_file)

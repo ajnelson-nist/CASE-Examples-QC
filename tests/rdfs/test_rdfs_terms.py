@@ -70,7 +70,7 @@ def test_rdfs_typos(rdfs_iris):
     # RDFS concept IRI, as a string.
     rdfs_iris_found = set()
 
-    for (triple_no, triple) in enumerate(ontology_graph.triples((None, None, None))):
+    for triple_no, triple in enumerate(ontology_graph.triples((None, None, None))):
         if 0 == triple_no:
             _logger.debug("triple0 = %r.", (triple,))
         for term in triple:

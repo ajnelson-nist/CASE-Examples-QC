@@ -85,7 +85,7 @@ def main():
     logging.basicConfig(level=logging.INFO)
 
     class_iris = set()
-    for (dirpath, dirnames, filenames) in os.walk(os.getcwd()):
+    for dirpath, dirnames, filenames in os.walk(os.getcwd()):
         for filename in sorted(filenames):
             if not filename.endswith(".ttl"):
                 continue

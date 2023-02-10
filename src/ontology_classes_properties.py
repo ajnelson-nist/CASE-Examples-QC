@@ -57,7 +57,7 @@ WHERE {
   { ?s a <http://www.w3.org/2002/07/owl#ObjectProperty> . }
 }"""
     )  # type: ignore
-    for (result_no, result) in enumerate(graph.query(query)):
+    for result_no, result in enumerate(graph.query(query)):
         # Skip anonymous classes (such as might be used in OWL complement definitions).
         if isinstance(result[0], rdflib.URIRef):
             vocabset.add(result[0])
@@ -79,7 +79,7 @@ def main() -> None:
     vocabset: typing.Set[rdflib.URIRef] = set()
 
     max_arg_no: int = -1
-    for (arg_no, arg) in enumerate(args.in_file):
+    for arg_no, arg in enumerate(args.in_file):
         max_arg_no = arg_no
         _logger.info("arg=%r" % arg)
         tmp_vocabset = graph_file_to_vocabset(args.in_file)

@@ -114,7 +114,7 @@ def main() -> None:
     new_uuids = sorted(new_uuids_set)
 
     substitution: typing.Dict[rdflib.URIRef, rdflib.URIRef] = dict()
-    for (kb_subject_no, kb_subject) in enumerate(sorted(kb_subjects_to_convert)):
+    for kb_subject_no, kb_subject in enumerate(sorted(kb_subjects_to_convert)):
         substitution[kb_subject] = rdflib.URIRef(
             str(kb_subject) + "-" + new_uuids[kb_subject_no]
         )

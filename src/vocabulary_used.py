@@ -39,7 +39,7 @@ def main():
         _logger.info("len(graph)=%d" % len(graph))
 
         query = rdflib.plugins.sparql.prepareQuery("SELECT ?s ?p ?o WHERE {?s ?p ?o}")
-        for (result_no, result) in enumerate(graph.query(query)):
+        for result_no, result in enumerate(graph.query(query)):
             # if result_no == 0:
             #    _logger.info(dir(result[0]))
             vocabset.add(result[0])
