@@ -21,4 +21,5 @@ http://www.w3.org/2001/XMLSchema#string	Referenced_Within
 http://www.w3.org/2001/XMLSchema#string	Related_To
 http://www.w3.org/2001/XMLSchema#string	Stored_On
 http://www.w3.org/2001/XMLSchema#string	Used
+http://www.w3.org/2001/XMLSchema#string	Used_Operating_System
 http://www.w3.org/2001/XMLSchema#string	contained-within

@@ -11,6 +11,7 @@ http://example.org/ontology/case-corpora/Catalog
 http://example.org/ontology/case-corpora/Dataset
 http://example.org/ontology/case-corpora/Distribution
 http://example.org/ontology/case-corpora/IANAMediaType
+http://example.org/ontology/case-corpora/SeedingAction
 http://example.org/ontology/case-corpora/WebPage
 http://example.org/ontology/case-corpora/contact-00000000-0000-0000-0000-000000000000
 http://example.org/ontology/case-corpora/hasDatasetDirectory
@@ -22,6 +23,7 @@ http://example.org/ontology/drafting#roomId
 http://example.org/ontology/drafting/BootLoaderFacet
 http://example.org/ontology/drafting/CellPhone
 http://example.org/ontology/drafting/FacebookMessageFacet
+http://example.org/ontology/drafting/FileHashQuality
 http://example.org/ontology/drafting/TableRelationFacet
 http://example.org/ontology/drafting/USBSerialNumber
 http://example.org/ontology/drafting/accessedAction
@@ -36,11 +38,14 @@ http://example.org/ontology/drafting/buildDate
 http://example.org/ontology/drafting/buildIdentifier
 http://example.org/ontology/drafting/createdAction
 http://example.org/ontology/drafting/device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
+http://example.org/ontology/drafting/device-class-8ccd9a51-6106-4afa-a127-24803ed58631
 http://example.org/ontology/drafting/device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 http://example.org/ontology/drafting/deviceActivationTime
 http://example.org/ontology/drafting/encryptionEnabled
 http://example.org/ontology/drafting/fileLocalPath
+http://example.org/ontology/drafting/hasQuality
 http://example.org/ontology/drafting/iPhoneDeviceFacet
+http://example.org/ontology/drafting/isAutomated
 http://example.org/ontology/drafting/label
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/locationsServicesEnabled
@@ -58,11 +63,15 @@ http://example.org/ontology/drafting/visibility
 http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#connectionState
 http://example.org/shapes/case-corpora-local
+http://www.wikidata.org/entity/Q162345
 http://www.wikidata.org/entity/Q20716
+http://www.wikidata.org/entity/Q5058279
 http://www.wikidata.org/entity/Q7295195
 http://www.wikidata.org/entity/Q95
 https://caseontology.org/examples/crossover/
+https://digitalcorpora.org/corpora/cell-phones/android-7/
 https://digitalcorpora.org/corpora/disk-images/real-data-corpus
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz
 https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5
 https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256
 https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip
@@ -104,6 +113,7 @@ https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/phase
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
+https://ontology.unifiedcyberontology.org/uco/action/subaction
 https://ontology.unifiedcyberontology.org/uco/analysis/Analysis
 https://ontology.unifiedcyberontology.org/uco/analysis/AnalyticResult
 https://ontology.unifiedcyberontology.org/uco/analysis/ArtifactClassification
@@ -173,6 +183,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/Application
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccount
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationFacet
+https://ontology.unifiedcyberontology.org/uco/observable/ArchiveFile
 https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Call
 https://ontology.unifiedcyberontology.org/uco/observable/CallFacet
@@ -236,6 +247,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnectionFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableAction
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableObject
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
+https://ontology.unifiedcyberontology.org/uco/observable/Observation
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PathRelationFacet
@@ -451,10 +463,12 @@ https://ontology.unifiedcyberontology.org/uco/types/key
 https://ontology.unifiedcyberontology.org/uco/types/threadNextItem
 https://ontology.unifiedcyberontology.org/uco/types/value
 https://ontology.unifiedcyberontology.org/uco/victim/Victim
+https://orcid.org/0000-0002-3771-570X
 https://project-open-data.cio.gov/v1.1/schema
 https://project-open-data.cio.gov/v1.1/schema#accessLevel
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl
 https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0
+https://www.iana.org/assignments/media-types/application/gzip
 https://www.iana.org/assignments/media-types/application/octet-stream
 https://www.iana.org/assignments/media-types/application/pdf
 https://www.iana.org/assignments/media-types/application/vnd.ms-excel

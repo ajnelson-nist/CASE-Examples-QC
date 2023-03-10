@@ -10,6 +10,7 @@ http://example.org/ontology/case-corpora/Catalog
 http://example.org/ontology/case-corpora/Dataset
 http://example.org/ontology/case-corpora/Distribution
 http://example.org/ontology/case-corpora/IANAMediaType
+http://example.org/ontology/case-corpora/SeedingAction
 http://example.org/ontology/case-corpora/WebPage
 http://example.org/ontology/case-corpora/contact-00000000-0000-0000-0000-000000000000
 http://example.org/ontology/case-corpora/hasDatasetDirectory
@@ -21,6 +22,7 @@ http://example.org/ontology/drafting#roomId
 http://example.org/ontology/drafting/BootLoaderFacet
 http://example.org/ontology/drafting/CellPhone
 http://example.org/ontology/drafting/FacebookMessageFacet
+http://example.org/ontology/drafting/FileHashQuality
 http://example.org/ontology/drafting/TableRelationFacet
 http://example.org/ontology/drafting/USBSerialNumber
 http://example.org/ontology/drafting/accessedAction
@@ -35,11 +37,14 @@ http://example.org/ontology/drafting/buildDate
 http://example.org/ontology/drafting/buildIdentifier
 http://example.org/ontology/drafting/createdAction
 http://example.org/ontology/drafting/device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
+http://example.org/ontology/drafting/device-class-8ccd9a51-6106-4afa-a127-24803ed58631
 http://example.org/ontology/drafting/device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 http://example.org/ontology/drafting/deviceActivationTime
 http://example.org/ontology/drafting/encryptionEnabled
 http://example.org/ontology/drafting/fileLocalPath
+http://example.org/ontology/drafting/hasQuality
 http://example.org/ontology/drafting/iPhoneDeviceFacet
+http://example.org/ontology/drafting/isAutomated
 http://example.org/ontology/drafting/label
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/locationsServicesEnabled
@@ -57,7 +62,13 @@ http://example.org/ontology/drafting/visibility
 http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#connectionState
 http://example.org/shapes/case-corpora-local
+http://www.wikidata.org/entity/Q162345
+http://www.wikidata.org/entity/Q5058279
+https://digitalcorpora.org/corpora/cell-phones/android-7/
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz
+https://orcid.org/0000-0002-3771-570X
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl
+https://www.iana.org/assignments/media-types/application/gzip
 https://www.iana.org/assignments/media-types/text/turtle
 uco-case:Bundle
 uco-configuration:Configuration
