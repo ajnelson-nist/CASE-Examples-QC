@@ -6,12 +6,12 @@ The following table is the count of undefined concepts used in each example file
 
 ```
    8 asgard/undefined_concepts.txt
-  10 crossover_heist/undefined_concepts.txt
+   4 crossover_heist/undefined_concepts.txt
   13 crossover_wmd/undefined_concepts.txt
-   9 hardware_duplicator/undefined_concepts.txt
+   2 hardware_duplicator/undefined_concepts.txt
   16 owl_trafficking/undefined_concepts.txt
    3 urgent_evidence/undefined_concepts.txt
-  39 undefined_concepts.txt
+  32 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:

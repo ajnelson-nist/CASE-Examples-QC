@@ -30,10 +30,3 @@ http://example.org/ontology/drafting/toolIdentifier
 http://example.org/ontology/drafting/uniqueID
 http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#connectionState
-uco-case:Bundle
-uco-configuration:Configuration
-uco-configuration:ConfigurationEntry
-uco-configuration:configurationEntry
-uco-configuration:itemName
-uco-configuration:itemValue
-uco-configuration:usesConfiguration

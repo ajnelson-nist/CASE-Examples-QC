@@ -267,10 +267,3 @@ https://ontology.unifiedcyberontology.org/uco/types/hashMethod
 https://ontology.unifiedcyberontology.org/uco/types/hashValue
 https://ontology.unifiedcyberontology.org/uco/types/key
 https://ontology.unifiedcyberontology.org/uco/types/value
-uco-case:Bundle
-uco-configuration:Configuration
-uco-configuration:ConfigurationEntry
-uco-configuration:configurationEntry
-uco-configuration:itemName
-uco-configuration:itemValue
-uco-configuration:usesConfiguration

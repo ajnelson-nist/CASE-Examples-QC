@@ -1,9 +1,2 @@
 http://example.org/ontology/drafting/notProvidedByReport
 http://example.org/ontology/drafting/toolIdentifier
-uco-case:Bundle
-uco-configuration:Configuration
-uco-configuration:ConfigurationEntry
-uco-configuration:configurationEntry
-uco-configuration:itemName
-uco-configuration:itemValue
-uco-configuration:usesConfiguration

@@ -476,13 +476,6 @@ https://www.iana.org/assignments/media-types/application/zip
 https://www.iana.org/assignments/media-types/text/plain
 https://www.iana.org/assignments/media-types/text/turtle
 https://www.samsung.com/us/smart-home/smartthings/hubs/samsung-smartthings-hub-f-hub-us-2/
-uco-case:Bundle
-uco-configuration:Configuration
-uco-configuration:ConfigurationEntry
-uco-configuration:configurationEntry
-uco-configuration:itemName
-uco-configuration:itemValue
-uco-configuration:usesConfiguration
 urn:example:MobileExtractorToolArgumentsFacet
 urn:example:cell-site-kb:cell-cite-204-16-1014-13399
 urn:example:unmapped
