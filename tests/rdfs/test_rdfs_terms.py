@@ -19,6 +19,7 @@ It was written on discovery of typos in concept names in UCO 0.6.0.
 import importlib.resources
 import logging
 import os
+from typing import Generator, Set
 
 import case_utils.ontology
 import pytest
@@ -28,7 +29,7 @@ _logger = logging.getLogger(os.path.basename(__file__))
 
 
 @pytest.fixture
-def rdfs_iris():
+def rdfs_iris() -> Generator[Set[str], None, None]:
     NS_RDFS = rdflib.RDFS
     # _logger.debug(dir(rdflib.RDFS))
     iris = set()
@@ -57,11 +58,11 @@ def rdfs_iris():
     yield iris
 
 
-def test_rdfs_term_names(rdfs_iris):
+def test_rdfs_term_names(rdfs_iris: Set[str]) -> None:
     assert len(rdfs_iris) > 0, "Failed to load closed set of RDFS IRIs."
 
 
-def test_rdfs_typos(rdfs_iris):
+def test_rdfs_typos(rdfs_iris: Set[str]) -> None:
     ttl_data = importlib.resources.read_text(case_utils.ontology, "case-0.5.0.ttl")
     ontology_graph = rdflib.Graph()
     ontology_graph.parse(data=ttl_data, format="turtle")

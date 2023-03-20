@@ -23,11 +23,12 @@ import logging
 import os
 
 import rdflib.plugins.sparql
+from rdflib.query import ResultRow
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
 
-def main():
+def main() -> None:
     # _logger.info("sys.getrecursionlimit() = %d." % sys.getrecursionlimit())
 
     vocabset = set()
@@ -42,6 +43,7 @@ def main():
         for result_no, result in enumerate(graph.query(query)):
             # if result_no == 0:
             #    _logger.info(dir(result[0]))
+            assert isinstance(result, ResultRow)
             vocabset.add(result[0])
             vocabset.add(result[1])
             # _logger.info("type(result[2])=%r" % type(result[2]))

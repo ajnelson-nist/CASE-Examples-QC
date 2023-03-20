@@ -26,6 +26,8 @@ import typing
 
 import case_utils.ontology.version_info
 import rdflib.plugins.sparql
+from rdflib import URIRef
+from rdflib.query import ResultRow
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
@@ -60,8 +62,10 @@ WHERE {
   UNION
   { ?y owl:versionIRI ?s }
 }"""
-        )  # type: ignore
+        )
         for result_no, result in enumerate(graph.query(query)):
+            assert isinstance(result, ResultRow)
+            assert isinstance(result[0], URIRef)
             vocabset.add(result[0])
         del graph
 

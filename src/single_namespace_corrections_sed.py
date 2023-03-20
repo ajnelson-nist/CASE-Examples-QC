@@ -26,7 +26,7 @@ import os
 _logger = logging.getLogger(os.path.basename(__file__))
 
 
-def main():
+def main() -> None:
     nsdict = {
         "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "case-vocabulary": "https://caseontology.org/ontology/case/vocabulary#",

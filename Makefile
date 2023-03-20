@@ -81,6 +81,7 @@ all: \
 	touch $@
 
 .venv.done.log: \
+  dependencies/CASE-Corpora/requirements.txt \
   dependencies/CASE-Examples/requirements.txt
 	rm -rf venv
 	$(PYTHON3) -m venv \
@@ -91,6 +92,9 @@ all: \
 	    pip \
 	    setuptools \
 	    wheel
+	source venv/bin/activate \
+	  && pip install \
+	    --requirement dependencies/CASE-Corpora/requirements.txt
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement dependencies/CASE-Examples/requirements.txt
@@ -120,11 +124,18 @@ all: \
 	touch $@
 
 check: \
-  .venv.done.log \
+  check-mypy \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
 	  --directory tests \
 	  check
+
+check-mypy: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && mypy --strict \
+	    src \
+	    tests
 
 clean:
 	@$(MAKE) \

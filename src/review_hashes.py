@@ -34,6 +34,7 @@ from typing import Dict, Optional, Set, Tuple
 
 from case_utils.namespace import NS_UCO_TYPES, NS_UCO_VOCABULARY
 from rdflib import Graph, IdentifiedNode, Literal, URIRef
+from rdflib.query import ResultRow
 
 L_MD5 = Literal("MD5", datatype=NS_UCO_VOCABULARY.HashNameVocab)
 L_SHA1 = Literal("SHA1", datatype=NS_UCO_VOCABULARY.HashNameVocab)
@@ -98,6 +99,7 @@ WHERE {
 """,
         initNs=nsdict,
     ):
+        assert isinstance(result, ResultRow)
         assert isinstance(result[0], IdentifiedNode)
         n_hash: IdentifiedNode = result[0]
 

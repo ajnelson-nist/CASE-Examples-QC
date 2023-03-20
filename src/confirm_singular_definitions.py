@@ -20,15 +20,18 @@ __version__ = "0.1.1"
 import argparse
 import logging
 import os
+from typing import Set
 
 import rdflib.plugins.sparql
+from rdflib import URIRef
+from rdflib.query import ResultRow
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-CONCEPT_IRIS_WITH_KNOWN_ISSUES = set()
+CONCEPT_IRIS_WITH_KNOWN_ISSUES: Set[str] = set()
 
 
-def class_iris_with_redundant_definitions(filepath):
+def class_iris_with_redundant_definitions(filepath: str) -> Set[str]:
     graph = rdflib.Graph()
     graph.parse(filepath, format="turtle")
     nsdict = {k: v for (k, v) in graph.namespace_manager.namespaces()}
@@ -63,10 +66,12 @@ WHERE {
         query_labels_text, initNs=nsdict
     )
 
-    class_iris = set()
+    class_iris: Set[str] = set()
     for query_object in [query_comments_object, query_labels_object]:
         for result in graph.query(query_object):
-            (n_class,) = result
+            assert isinstance(result, ResultRow)
+            assert isinstance(result[0], URIRef)
+            n_class = result[0]
             class_iri = n_class.toPython()
             class_iris.add(class_iri)
 
@@ -79,7 +84,7 @@ WHERE {
     return class_iris
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.parse_args()
     logging.basicConfig(level=logging.INFO)

@@ -25,6 +25,8 @@ import os
 import case_utils.ontology
 import rdflib.plugins.sparql
 from case_utils.namespace import NS_UCO_VOCABULARY
+from rdflib import Literal
+from rdflib.query import ResultRow
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
@@ -60,7 +62,7 @@ WHERE {
     owl:oneOf/rdf:rest*/rdf:first ?lKindOfRelationship .
 }""",
         initNs=nsdict,
-    )  # type: ignore
+    )
     for n_datatype in [
         NS_UCO_VOCABULARY.ActionRelationshipTypeVocab,
         NS_UCO_VOCABULARY.ObservableObjectRelationshipVocab,
@@ -69,7 +71,9 @@ WHERE {
         for result_no, result in enumerate(
             graph.query(query, initBindings={"nDataType": n_datatype})
         ):
-            (l_value,) = result
+            assert isinstance(result, ResultRow)
+            assert isinstance(result[0], Literal)
+            l_value = result[0]
             value = l_value.toPython()
             vocabset.add((datatype, value))
     del graph

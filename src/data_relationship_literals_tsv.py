@@ -22,13 +22,15 @@ import logging
 import os
 
 import rdflib.plugins.sparql
+from rdflib import Literal
+from rdflib.query import ResultRow
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
 NS_XSD_STRING_IRI = rdflib.XSD.string.toPython()
 
 
-def main():
+def main() -> None:
     # _logger.info("sys.getrecursionlimit() = %d." % sys.getrecursionlimit())
 
     # Pairs: datatype, value
@@ -51,7 +53,9 @@ WHERE {
             initNs=nsdict,
         )
         for result_no, result in enumerate(graph.query(query)):
-            (l_value,) = result
+            assert isinstance(result, ResultRow)
+            assert isinstance(result[0], Literal)
+            l_value = result[0]
             if l_value.datatype is None:
                 datatype = NS_XSD_STRING_IRI
             else:

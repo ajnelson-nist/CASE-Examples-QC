@@ -26,6 +26,7 @@ import typing
 
 import case_utils.ontology.version_info
 import rdflib.plugins.sparql
+from rdflib.query import ResultRow
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
@@ -56,9 +57,10 @@ WHERE {
   UNION
   { ?s a <http://www.w3.org/2002/07/owl#ObjectProperty> . }
 }"""
-    )  # type: ignore
+    )
     for result_no, result in enumerate(graph.query(query)):
         # Skip anonymous classes (such as might be used in OWL complement definitions).
+        assert isinstance(result, ResultRow)
         if isinstance(result[0], rdflib.URIRef):
             vocabset.add(result[0])
     del graph
