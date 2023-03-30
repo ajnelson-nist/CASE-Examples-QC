@@ -10,6 +10,7 @@ http://example.org/local#totalFragments
 http://example.org/ontology/case-corpora/Catalog
 http://example.org/ontology/case-corpora/Dataset
 http://example.org/ontology/case-corpora/Distribution
+http://example.org/ontology/case-corpora/DownloadableFile
 http://example.org/ontology/case-corpora/IANAMediaType
 http://example.org/ontology/case-corpora/SeedingAction
 http://example.org/ontology/case-corpora/WebPage
@@ -69,8 +70,24 @@ http://www.wikidata.org/entity/Q5058279
 http://www.wikidata.org/entity/Q7295195
 http://www.wikidata.org/entity/Q95
 https://caseontology.org/examples/crossover/
+https://digitalcorpora.org/corpora/cell-phones/android-10/
 https://digitalcorpora.org/corpora/cell-phones/android-7/
 https://digitalcorpora.org/corpora/disk-images/real-data-corpus
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android10-ImageCreation.pdf
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.ufd
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z01
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z02
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z03
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z04
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z05
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z06
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z07
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z08
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.zip
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx
 https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz
 https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5
 https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256
@@ -146,6 +163,7 @@ https://ontology.unifiedcyberontology.org/uco/core/endTime
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
 https://ontology.unifiedcyberontology.org/uco/core/kindOfRelationship
+https://ontology.unifiedcyberontology.org/uco/core/modifiedTime
 https://ontology.unifiedcyberontology.org/uco/core/name
 https://ontology.unifiedcyberontology.org/uco/core/object
 https://ontology.unifiedcyberontology.org/uco/core/objectCreatedTime
@@ -184,6 +202,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccount
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ApplicationFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ArchiveFile
+https://ontology.unifiedcyberontology.org/uco/observable/ArchiveFileFacet
 https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Call
 https://ontology.unifiedcyberontology.org/uco/observable/CallFacet
@@ -250,6 +269,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/Observation
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
+https://ontology.unifiedcyberontology.org/uco/observable/PDFFile
 https://ontology.unifiedcyberontology.org/uco/observable/PathRelationFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccountFacet
@@ -293,6 +313,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/androidID
 https://ontology.unifiedcyberontology.org/uco/observable/antennaHeight
 https://ontology.unifiedcyberontology.org/uco/observable/application
 https://ontology.unifiedcyberontology.org/uco/observable/applicationIdentifier
+https://ontology.unifiedcyberontology.org/uco/observable/archiveType
 https://ontology.unifiedcyberontology.org/uco/observable/arguments
 https://ontology.unifiedcyberontology.org/uco/observable/azimuth
 https://ontology.unifiedcyberontology.org/uco/observable/binary
