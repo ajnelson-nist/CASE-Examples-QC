@@ -9,16 +9,14 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-# This workflow uses Make to confirm ontology files have been
-# normalized according to the procedures in NORMALIZE.md.
+# This workflow uses Make to review direct dependencies of this
+# repository.
 
 name: Continuous Integration
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  schedule:
+    - cron: '15 5 * * 1,2,3,4,5'
 
 jobs:
   build:
@@ -26,29 +24,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.11]
+        python-version:
+          - '3.8'
+          - '3.11'
 
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '11'
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Pre-commit Checks
-      run: |
-        pip -q install pre-commit
-        pre-commit run --all-files
-    - name: Start from clean state
-      run: make clean
-    - name: Normalize example files
-      run: make normalize
-    - name: Regenerate static files
-      run: make
-    - name: Report any differences
-      run: git diff --stat tests/
-    - name: Run tests
-      run: make check
+    - name: Review dependencies
+      run: make check-supply-chain
