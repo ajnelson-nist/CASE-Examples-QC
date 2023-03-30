@@ -44,6 +44,8 @@ jobs:
         pre-commit run --all-files
     - name: Start from clean state
       run: make clean
+    - name: Review dependencies
+      run: make check-supply-chain
     - name: Normalize example files
       run: make normalize
     - name: Regenerate static files
