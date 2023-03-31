@@ -1,6 +1,6 @@
-http://example.org/ontology/drafting#exhibitRecipient
-http://example.org/ontology/drafting#exhibitTransferrer
-http://example.org/ontology/drafting#roomId
+http://example.org/ontology/drafting/exhibitRecipient
+http://example.org/ontology/drafting/exhibitTransferrer
+http://example.org/ontology/drafting/roomId
 https://ontology.caseontology.org/case/investigation/InvestigativeAction
 https://ontology.caseontology.org/case/investigation/ProvenanceRecord
 https://ontology.caseontology.org/case/investigation/exhibitNumber

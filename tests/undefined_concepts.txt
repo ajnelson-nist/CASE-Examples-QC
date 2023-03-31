@@ -17,9 +17,6 @@ http://example.org/ontology/case-corpora/contact-00000000-0000-0000-0000-0000000
 http://example.org/ontology/case-corpora/hasDatasetDirectory
 http://example.org/ontology/case-corpora/hasDistribution
 http://example.org/ontology/case-corpora/hasDownloadURL
-http://example.org/ontology/drafting#exhibitRecipient
-http://example.org/ontology/drafting#exhibitTransferrer
-http://example.org/ontology/drafting#roomId
 http://example.org/ontology/drafting/BootLoaderFacet
 http://example.org/ontology/drafting/CellPhone
 http://example.org/ontology/drafting/FacebookMessageFacet
@@ -42,6 +39,8 @@ http://example.org/ontology/drafting/device-class-8ccd9a51-6106-4afa-a127-24803e
 http://example.org/ontology/drafting/device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 http://example.org/ontology/drafting/deviceActivationTime
 http://example.org/ontology/drafting/encryptionEnabled
+http://example.org/ontology/drafting/exhibitRecipient
+http://example.org/ontology/drafting/exhibitTransferrer
 http://example.org/ontology/drafting/fileLocalPath
 http://example.org/ontology/drafting/hasQuality
 http://example.org/ontology/drafting/iPhoneDeviceFacet
@@ -56,6 +55,7 @@ http://example.org/ontology/drafting/notProvidedByReport
 http://example.org/ontology/drafting/ownerName
 http://example.org/ontology/drafting/path
 http://example.org/ontology/drafting/propertyIsNull
+http://example.org/ontology/drafting/roomId
 http://example.org/ontology/drafting/tableName
 http://example.org/ontology/drafting/toolIdentifier
 http://example.org/ontology/drafting/uniqueID
