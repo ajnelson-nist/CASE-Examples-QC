@@ -22,7 +22,7 @@ Note that at the time of this writing, that memo was expired (expiration
 date 2004-03-04) and did not have a linked superseding document.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 import argparse
 import binascii
@@ -39,6 +39,8 @@ from rdflib.query import ResultRow
 L_MD5 = Literal("MD5", datatype=NS_UCO_VOCABULARY.HashNameVocab)
 L_SHA1 = Literal("SHA1", datatype=NS_UCO_VOCABULARY.HashNameVocab)
 L_SHA256 = Literal("SHA256", datatype=NS_UCO_VOCABULARY.HashNameVocab)
+L_SHA3_256 = Literal("SHA3-256", datatype=NS_UCO_VOCABULARY.HashNameVocab)
+L_SHA3_512 = Literal("SHA3-512", datatype=NS_UCO_VOCABULARY.HashNameVocab)
 L_SHA384 = Literal("SHA384", datatype=NS_UCO_VOCABULARY.HashNameVocab)
 L_SHA512 = Literal("SHA512", datatype=NS_UCO_VOCABULARY.HashNameVocab)
 
@@ -48,6 +50,8 @@ CASTED_METHODS: Dict[Literal, str] = {
     L_SHA256: "sha256",
     L_SHA384: "sha384",
     L_SHA512: "sha512",
+    L_SHA3_256: "sha3-256",
+    L_SHA3_512: "sha3-512",
 }
 
 RX_UUID = re.compile(
