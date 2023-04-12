@@ -142,6 +142,7 @@ check-mypy: \
 
 # This target's dependencies potentially modify the working directory's Git state, so it is intentionally not a dependency of check.
 check-supply-chain: \
+  check-mypy \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules
 
