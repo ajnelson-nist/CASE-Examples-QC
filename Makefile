@@ -55,6 +55,7 @@ all: \
 	  --directory tests
 
 .PHONY: \
+  check-mypy \
   check-supply-chain \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules \
