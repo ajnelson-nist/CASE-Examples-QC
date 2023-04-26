@@ -1,4 +1,3 @@
-drafting:isAutomated
 http://example.org/kb
 http://example.org/local#IMSI
 http://example.org/local#accessAction

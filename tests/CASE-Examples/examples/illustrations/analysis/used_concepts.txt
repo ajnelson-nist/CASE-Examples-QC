@@ -1,4 +1,4 @@
-drafting:isAutomated
+http://example.org/ontology/drafting/isAutomated
 https://ontology.caseontology.org/case/investigation/ProvenanceRecord
 https://ontology.unifiedcyberontology.org/uco/action/environment
 https://ontology.unifiedcyberontology.org/uco/action/instrument

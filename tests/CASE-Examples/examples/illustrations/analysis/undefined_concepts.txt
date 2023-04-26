@@ -1,1 +1,1 @@
-drafting:isAutomated
+http://example.org/ontology/drafting/isAutomated

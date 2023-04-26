@@ -1,4 +1,3 @@
-drafting:isAutomated
 http://example.org/local#IMSI
 http://example.org/local#accessAction
 http://example.org/local#accessedAction
@@ -11,6 +10,7 @@ http://example.org/ontology/drafting/accessedAction
 http://example.org/ontology/drafting/aquisitionType
 http://example.org/ontology/drafting/createdAction
 http://example.org/ontology/drafting/iPhoneDeviceFacet
+http://example.org/ontology/drafting/isAutomated
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/method
 http://example.org/ontology/drafting/ownerName
