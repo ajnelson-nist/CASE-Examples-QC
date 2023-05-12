@@ -1,3 +1,0 @@
-pytest
-rdflib >= 6.0.0
-requests
