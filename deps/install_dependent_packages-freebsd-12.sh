@@ -18,6 +18,7 @@ sudo pkg install --yes \
   coreutils \
   gmake \
   openjdk11-jre \
+  py39-sqlite3 \
   wget
 
 # Guarantee /bin/bash.
