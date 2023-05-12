@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This software was developed at the National Institute of Standards
 # and Technology by employees of the Federal Government in the course
@@ -14,20 +14,5 @@
 set -x
 set -e
 
-sudo pkg install --yes \
-  coreutils \
-  gmake \
-  openjdk11-jre \
-  py37-virtualenv \
-  wget
-
-# Guarantee /bin/bash.
-if [ ! -x /bin/bash ]; then
-  cd /bin
-    test -x /usr/local/bin/bash
-    sudo ln -s \
-      /usr/local/bin/bash \
-      bash
-  cd -
-fi
-test -x /bin/bash
+sudo port install \
+  coreutils
