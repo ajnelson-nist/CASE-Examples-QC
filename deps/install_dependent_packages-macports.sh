@@ -15,5 +15,4 @@ set -x
 set -e
 
 sudo port install \
-  coreutils \
-  py37-virtualenv
+  coreutils

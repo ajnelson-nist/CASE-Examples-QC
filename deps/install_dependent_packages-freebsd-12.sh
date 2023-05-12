@@ -18,7 +18,6 @@ sudo pkg install --yes \
   coreutils \
   gmake \
   openjdk11-jre \
-  py37-virtualenv \
   wget
 
 # Guarantee /bin/bash.
