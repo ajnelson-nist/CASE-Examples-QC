@@ -7,6 +7,7 @@ http://www.w3.org/2001/XMLSchema#string	Decoded_From
 http://www.w3.org/2001/XMLSchema#string	Decompressed_From
 http://www.w3.org/2001/XMLSchema#string	Decrypted_From
 http://www.w3.org/2001/XMLSchema#string	Derived_From
+http://www.w3.org/2001/XMLSchema#string	Downloadable_From
 http://www.w3.org/2001/XMLSchema#string	Employee_Of
 http://www.w3.org/2001/XMLSchema#string	Forensic_Image_Of
 http://www.w3.org/2001/XMLSchema#string	Has_Account
