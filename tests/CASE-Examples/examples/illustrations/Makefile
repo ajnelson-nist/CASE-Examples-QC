@@ -13,7 +13,11 @@
 
 SHELL := /bin/bash
 
-illdirs := $(shell find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
+top_srcdir := $(shell cd ../../../.. ; pwd)
+
+illustrations_dir := $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations
+
+illdirs := $(shell cd $(illustrations_dir) ; find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
 
 all_targets       := $(foreach illdir,$(illdirs),all-$(illdir))
 check_targets     := $(foreach illdir,$(illdirs),check-$(illdir))
