@@ -5,10 +5,14 @@ http://example.org/local#createAction
 http://example.org/local#createdAction
 http://example.org/local#location
 http://example.org/local#totalFragments
+http://example.org/ontology/drafting/Event
 http://example.org/ontology/drafting/FacebookMessageFacet
 http://example.org/ontology/drafting/accessedAction
 http://example.org/ontology/drafting/aquisitionType
 http://example.org/ontology/drafting/createdAction
+http://example.org/ontology/drafting/eventAttribute
+http://example.org/ontology/drafting/eventContext
+http://example.org/ontology/drafting/eventType
 http://example.org/ontology/drafting/iPhoneDeviceFacet
 http://example.org/ontology/drafting/isAutomated
 http://example.org/ontology/drafting/localeLanguage
@@ -167,6 +171,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnectionFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableAction
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableObject
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
+https://ontology.unifiedcyberontology.org/uco/observable/OnlineService
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PathRelationFacet
