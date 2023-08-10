@@ -2,6 +2,7 @@ http://example.org/ontology/case-corpora/Catalog
 http://example.org/ontology/case-corpora/Dataset
 http://example.org/ontology/case-corpora/Distribution
 http://example.org/ontology/case-corpora/IANAMediaType
+http://example.org/ontology/case-corpora/Organization
 http://example.org/ontology/case-corpora/SeedingAction
 http://example.org/ontology/case-corpora/WebPage
 http://example.org/ontology/case-corpora/contact-00000000-0000-0000-0000-000000000000
