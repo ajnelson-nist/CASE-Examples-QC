@@ -1,4 +1,5 @@
 .check_README.md
+kb-entailment.ttl
 ontologies.txt
 ontology_relationship_literals.tsv
 ontology_vocabulary.txt
