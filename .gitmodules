@@ -6,6 +6,10 @@
 	path = dependencies/CASE-Examples
 	url = https://github.com/casework/CASE-Examples.git
 	branch = master
+[submodule "dependencies/UCO-Profile-FOAF"]
+	path = dependencies/UCO-Profile-FOAF
+	url = https://github.com/ucoProject/UCO-Profile-FOAF.git
+	branch = main
 [submodule "dependencies/casework.github.io"]
 	path = dependencies/casework.github.io
 	url = https://github.com/casework/casework.github.io.git
