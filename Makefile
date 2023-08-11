@@ -49,16 +49,17 @@ SHELL = /bin/bash
 PYTHON3 ?= $(shell which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
 all: \
-  .venv.done.log \
-  .venv-pre-commit/var/.pre-commit-built.log
-	$(MAKE) \
-	  --directory tests
+  .venv-pre-commit/var/.pre-commit-built.log \
+  all-tests
 
 .PHONY: \
+  all-dependencies \
+  all-tests \
   check-mypy \
   check-supply-chain \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules \
+  check-tests \
   download \
   normalize
 
@@ -127,6 +128,16 @@ all: \
 	  .venv-pre-commit/var
 	touch $@
 
+all-dependencies: \
+  .venv.done.log
+	$(MAKE) \
+	  --directory dependencies
+
+all-tests: \
+  all-dependencies
+	$(MAKE) \
+	  --directory tests
+
 check: \
   check-mypy \
   .venv-pre-commit/var/.pre-commit-built.log
@@ -163,6 +174,12 @@ check-supply-chain-submodules: \
 	  --exit-code \
 	  --ignore-submodules=dirty \
 	  dependencies
+
+check-tests: \
+  all-tests
+	$(MAKE) \
+	  --directory tests \
+	  check
 
 clean:
 	@$(MAKE) \

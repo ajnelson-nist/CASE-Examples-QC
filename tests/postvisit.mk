@@ -63,13 +63,28 @@ clean:
 
 kb.ttl: \
   $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
+  $(top_srcdir)/dependencies/imports-transitive.ttl \
+  $(top_srcdir)/src/entail.py \
   CASE-Examples/examples/illustrations/kb.ttl \
   casework.github.io/examples/kb.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \
-	    $^ \
+	    $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
+	    CASE-Examples/examples/illustrations/kb.ttl \
+	    casework.github.io/examples/kb.ttl \
 	    > __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/entail.py \
+	    kb-entailment.ttl \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb-entailment.ttl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source __$@ \
