@@ -78,6 +78,13 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-Examples \
 	  .git_submodule_init.done.log
+	# UCO-Profile-BFO
+	test -r dependencies/UCO-Profile-BFO/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/UCO-Profile-BFO
+	@test -r dependencies/UCO-Profile-BFO/README.md \
+	  || (echo "ERROR:Makefile:UCO-Profile-BFO submodule README.md file not found, even though UCO-Profile-BFO submodule initialized." >&2 ; exit 2)
 	# UCO-Profile-FOAF
 	test -r dependencies/UCO-Profile-FOAF/README.md \
 	  || git submodule update \
