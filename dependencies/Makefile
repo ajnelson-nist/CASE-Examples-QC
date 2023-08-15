@@ -50,6 +50,8 @@ imports-transitive.ttl: \
   CASE-Examples/examples/illustrations/event/drafting.ttl \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
   CASE-Examples/examples/illustrations/spear_phishing/drafting.ttl \
+  UCO-Profile-BFO/dependencies/imports-transitive.ttl \
+  UCO-Profile-BFO/ontology/uco-bfo.ttl \
   UCO-Profile-FOAF/dependencies/imports-transitive.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl
 	source $(top_srcdir)/venv/bin/activate \
