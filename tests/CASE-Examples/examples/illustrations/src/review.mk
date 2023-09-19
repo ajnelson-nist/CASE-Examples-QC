@@ -32,16 +32,59 @@ rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE-Examples/dependencies/CASE-de
 subjectdir_basename := $(shell basename $$PWD)
 
 all: \
-  $(subjectdir_basename).json \
+  $(subjectdir_basename)-prov-originals.svg \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv
 
 .PHONY: \
   normalize
 
+%.svg: \
+  %.dot
+	dot \
+	  -o _$@ \
+	  -T svg \
+	  $<
+	mv _$@ $@
+
 $(rdf_toolkit_jar):
 	@echo "ERROR:Makefile:rdf-toolkit.jar not downloaded; please run 'make download' from the top-level directory ($(top_srcdir))." >&2
 	@exit 2
+
+$(subjectdir_basename)-prov-originals.dot: \
+  $(subjectdir_basename)-prov.ttl
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_prov_dot \
+	    --dash-unqualified \
+	    --debug \
+	    --from-empty-set \
+	    --use-deterministic-uuids \
+	    _$@ \
+	    $<
+	mv _$@ $@
+
+$(subjectdir_basename)-prov.ttl: \
+  $(subjectdir_basename).json \
+  $(top_srcdir)/.venv.done.log
+	rm -f __$@ _$@
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_rdf \
+	      --allow-empty-results \
+	      --debug \
+	      --use-deterministic-uuids \
+	      __$@ \
+	      $<
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
 
 $(subjectdir_basename).json: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json

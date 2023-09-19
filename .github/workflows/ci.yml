@@ -27,6 +27,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Install Graphviz
+      run: sudo apt-get install --yes graphviz
     - uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
