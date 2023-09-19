@@ -31,8 +31,7 @@ all: \
 
 all-%:
 	$(MAKE) \
-	  --directory $$(echo $@ | sed -e 's/^all-//') \
-	  --file $$PWD/src/review.mk
+	  --directory $$(echo $@ | sed -e 's/^all-//')
 
 check: \
   $(check_targets)
@@ -43,7 +42,6 @@ check: \
 check-%:
 	$(MAKE) \
 	  --directory $$(echo $@ | sed -e 's/^check-//') \
-	  --file $$PWD/src/review.mk \
 	  check
 
 clean: \
@@ -55,7 +53,6 @@ clean: \
 clean-%:
 	@$(MAKE) \
 	  --directory $$(echo $@ | sed -e 's/^clean-//') \
-	  --file $$PWD/src/review.mk \
 	  clean
 
 normalize: \
@@ -64,5 +61,4 @@ normalize: \
 normalize-%:
 	$(MAKE) \
 	  --directory $$(echo $@ | sed -e 's/^normalize-//') \
-	  --file $$PWD/src/review.mk \
 	  normalize
