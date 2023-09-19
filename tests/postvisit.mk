@@ -44,13 +44,21 @@ all: \
   used_concepts.txt \
   used_kindOfRelationships.tsv
 
+.PHONY: \
+  check-prov-constraints
+
 check: \
-  prov-constraints.log \
+  check-prov-constraints \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
   used_kindOfRelationships.tsv
 	#TODO - Test git-tracked state
+
+check-prov-constraints: \
+  prov-constraints.log
+	@test 1 -eq $$(tail -n1 $< | grep 'True' | wc -l) \
+	  || (echo "ERROR:illustration.mk:prov-constraints reported a constraint error." >&2 ; exit 1)
 
 clean:
 	@rm -f \
