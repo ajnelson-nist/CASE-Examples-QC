@@ -18,3 +18,7 @@
 	path = dependencies/casework.github.io
 	url = https://github.com/casework/casework.github.io.git
 	branch = master
+[submodule "dependencies/prov-check"]
+	path = dependencies/prov-check
+	url = https://github.com/ajnelson-nist/prov-check.git
+	branch = adjust_reporting

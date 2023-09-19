@@ -97,6 +97,11 @@ all: \
 	  || (git submodule init dependencies/casework.github.io && git submodule update dependencies/casework.github.io)
 	@test -r dependencies/casework.github.io/README.md \
 	  || (echo "ERROR:Makefile:casework.github.io submodule README.md file not found, even though casework.gitub.io submodule initialized." >&2 ; exit 2)
+	# prov-check
+	test -r dependencies/prov-check/README.md \
+	  || (git submodule update --init dependencies/prov-check)
+	@test -r dependencies/prov-check/README.md \
+	  || (echo "ERROR:Makefile:prov-check submodule README.md file not found, even though prov-check submodule initialized." >&2 ; exit 2)
 	touch $@
 
 .venv.done.log: \

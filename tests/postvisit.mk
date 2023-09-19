@@ -38,14 +38,14 @@ used_concepts_dependencies                 := $(foreach exdir,$(exdirs),$(exdir)
 used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)/used_kindOfRelationships.tsv)
 
 all: \
-  kb.ttl \
+  prov-constraints.log \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
   used_kindOfRelationships.tsv
 
 check: \
-  kb.ttl \
+  prov-constraints.log \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
@@ -60,6 +60,24 @@ clean:
 	  undefined_kindOfRelationships.tsv \
 	  used_concepts.txt \
 	  used_kindOfRelationships.tsv
+
+kb-prov-time.ttl: \
+  kb.ttl
+	rm -f __$@ _$@
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_rdf \
+	      --use-deterministic-uuids \
+	      __$@ \
+	      $<
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
 
 kb.ttl: \
   $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
@@ -92,6 +110,17 @@ kb.ttl: \
 	  --target _$@ \
 	  --target-format turtle
 	rm __$@
+	mv _$@ $@
+
+prov-constraints.log: \
+  $(top_srcdir)/dependencies/prov-check/provcheck/provconstraints.py \
+  kb-prov-time.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/dependencies/prov-check/provcheck/provconstraints.py \
+	    --debug \
+	    kb-prov-time.ttl \
+	    > _$@ \
+	    2>&1
 	mv _$@ $@
 
 undefined_concepts.txt: \

@@ -1,5 +1,6 @@
 .check_README.md
 kb-entailment.ttl
+kb-prov-time.ttl
 ontologies.txt
 ontology_relationship_literals.tsv
 ontology_vocabulary.txt
