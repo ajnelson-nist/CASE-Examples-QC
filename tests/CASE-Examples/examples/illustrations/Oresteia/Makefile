@@ -15,3 +15,28 @@
 # We would appreciate acknowledgement if the software is used.
 
 include ../src/review.mk
+
+# Augment 'all' with extra figures for Oresteia.
+all: \
+  $(subjectdir_basename)-prov-focus-sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6.svg \
+  $(subjectdir_basename)-prov-focus-sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba.svg
+
+$(subjectdir_basename)-prov-focus-sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6.dot: \
+  $(subjectdir_basename)-prov.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_prov_dot \
+	    --debug \
+	    --entity-ancestry http://example.org/kb/sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6 \
+	    _$@ \
+	    $<
+	mv _$@ $@
+
+$(subjectdir_basename)-prov-focus-sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba.dot: \
+  $(subjectdir_basename)-prov.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_prov_dot \
+	    --debug \
+	    --entity-ancestry http://example.org/kb/sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba \
+	    _$@ \
+	    $<
+	mv _$@ $@
