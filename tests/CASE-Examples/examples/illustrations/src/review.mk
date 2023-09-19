@@ -117,7 +117,9 @@ check: \
 
 clean:
 	@rm -f \
+	  *.dot \
 	  *.json \
+	  *.svg \
 	  *.tsv \
 	  *.ttl \
 	  *.txt \
