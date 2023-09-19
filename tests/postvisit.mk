@@ -49,6 +49,7 @@ all: \
 
 check: \
   check-prov-constraints \
+  kb-case_prov_check.ttl \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
@@ -68,6 +69,26 @@ clean:
 	  undefined_kindOfRelationships.tsv \
 	  used_concepts.txt \
 	  used_kindOfRelationships.tsv
+
+# TODO - Update all examples to the point where the --allow-warnings flag can be removed.
+kb-case_prov_check.ttl: \
+  kb-prov-time.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_prov_check \
+	    --allow-warnings \
+	    --format turtle \
+	    kb-prov-time.ttl \
+	    kb.ttl \
+	    > __$@
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
 
 kb-prov-time.ttl: \
   kb.ttl
