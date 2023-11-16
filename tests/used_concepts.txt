@@ -9,6 +9,9 @@ http://example.org/local#totalFragments
 http://example.org/ontology/case-corpora/Catalog
 http://example.org/ontology/case-corpora/Dataset
 http://example.org/ontology/case-corpora/Distribution
+http://example.org/ontology/case-corpora/DownloadableFile
+http://example.org/ontology/case-corpora/DownloadableObject
+http://example.org/ontology/case-corpora/DownloadableRelation
 http://example.org/ontology/case-corpora/IANAMediaType
 http://example.org/ontology/case-corpora/Organization
 http://example.org/ontology/case-corpora/SeedingAction
