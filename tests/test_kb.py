@@ -21,6 +21,10 @@ def test_uuid_unique_usage() -> None:
             return
         try:
             thing_uuid = UUID(thing_iri[-36:])
+            # Skip UUIDv5's, in case they were derived from node
+            # characteristics (e.g. with Hash objects).
+            if str(thing_uuid)[14] == "5":
+                return
         except ValueError:
             return
         uuid_to_urirefs[thing_uuid].add(n_thing)
