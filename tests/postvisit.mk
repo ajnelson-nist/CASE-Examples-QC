@@ -39,6 +39,7 @@ used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)
 
 all: \
   prov-constraints.log \
+  relationship_type_statistics.md \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
@@ -150,6 +151,15 @@ prov-constraints.log: \
 	    kb-prov-time.ttl \
 	    > _$@ \
 	    2>&1
+	mv _$@ $@
+
+relationship_type_statistics.md: \
+  kb.ttl \
+  $(top_srcdir)/src/relationship_type_statistics_md.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/relationship_type_statistics_md.py \
+	    kb.ttl \
+	    > _$@
 	mv _$@ $@
 
 undefined_concepts.txt: \
