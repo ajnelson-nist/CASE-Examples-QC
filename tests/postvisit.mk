@@ -39,6 +39,7 @@ used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)
 
 all: \
   prov-constraints.log \
+  action_name_statistics.md \
   relationship_type_statistics.md \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
@@ -47,6 +48,15 @@ all: \
 
 .PHONY: \
   check-prov-constraints
+
+action_name_statistics.md: \
+  kb.ttl \
+  $(top_srcdir)/src/action_name_statistics_md.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/action_name_statistics_md.py \
+	    kb.ttl \
+	    > _$@
+	mv _$@ $@
 
 check: \
   check-prov-constraints \
