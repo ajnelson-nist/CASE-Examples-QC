@@ -102,9 +102,9 @@ Count | `uco-core:kindOfRelationship` | `rdf:type`s of Relationship object | `uc
 1 | `Has_Device` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-role:Role`</li></ul> | <ul><li>`uco-observable:Device`</li></ul> | <ul></ul>
 3 | `Has_Fragment` | <ul><li>`uco-observable:ObservableRelationship`</li></ul> | `True` | <ul><li>`uco-observable:ContentData`</li></ul> | <ul><li>`uco-observable:File`</li></ul> | <ul><li>`uco-observable:FragmentFacet`</li></ul>
 3 | `Has_Fragment` | <ul><li>`uco-observable:ObservableRelationship`</li></ul> | `True` | <ul><li>`uco-observable:ContentData`</li><li>`uco-observable:RecoveredObject`</li></ul> | <ul><li>`uco-observable:ContentData`</li></ul> | <ul><li>`uco-observable:FragmentFacet`</li></ul>
+1 | `Has_Role` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-identity:Identity`</li></ul> | <ul><li>`uco-role:Role`</li></ul> | <ul></ul>
+2 | `Has_Role` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-identity:Organization`</li></ul> | <ul><li>`uco-role:Role`</li></ul> | <ul></ul>
 6 | `Has_Role` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-identity:Person`</li></ul> | <ul><li>`uco-role:Role`</li></ul> | <ul></ul>
-1 | `Has_Role` | <ul><li>`uco-observable:ObservableRelationship`</li></ul> | `True` | <ul><li>`uco-identity:Identity`</li></ul> | <ul><li>`uco-role:Role`</li></ul> | <ul></ul>
-2 | `Has_Role` | <ul><li>`uco-observable:ObservableRelationship`</li></ul> | `True` | <ul><li>`uco-identity:Organization`</li></ul> | <ul><li>`uco-role:Role`</li></ul> | <ul></ul>
 2 | `Initiated` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`case-investigation:InvestigativeAction`</li></ul> | <ul><li>`case-investigation:InvestigativeAction`</li></ul> | <ul></ul>
 1 | `Located_At` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-observable:Device`</li></ul> | <ul><li>`uco-location:Location`</li></ul> | <ul><li>`uco-core:ConfidenceFacet`</li></ul>
 2 | `Located_At` | <ul><li>`uco-observable:ObservableRelationship`</li></ul> | `True` | <ul><li>`uco-observable:CellSite`</li></ul> | <ul><li>`uco-location:Location`</li></ul> | <ul></ul>

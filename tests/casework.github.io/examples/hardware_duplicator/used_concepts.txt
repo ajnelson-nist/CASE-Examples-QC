@@ -19,6 +19,7 @@ https://ontology.unifiedcyberontology.org/uco/configuration/itemName
 https://ontology.unifiedcyberontology.org/uco/configuration/itemValue
 https://ontology.unifiedcyberontology.org/uco/configuration/usesConfiguration
 https://ontology.unifiedcyberontology.org/uco/core/Bundle
+https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/description
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional

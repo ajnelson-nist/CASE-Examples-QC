@@ -5550,7 +5550,7 @@ kb:Relationship-e6d52185-c570-409c-ae35-ceaf3e01080b
 	.
 
 kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28 ;
@@ -17962,7 +17962,7 @@ kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357
 	.
 
 kb:investigatorrole-e9a01d66-fff4-4fa8-88d4-8e445f3369aa
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb:identity-0108480e-1e7a-4341-8b1d-558877c4cc39 ;
@@ -21836,7 +21836,7 @@ kb:relationship-d348200b-e180-40b8-8617-2319f5fe6ffa
 	.
 
 kb:relationship-d5b4a1e1-0e25-4257-81f7-19febc86ded1
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb:identity-c5bb09c3-3612-4bf2-b165-6f12d0e3c6af ;

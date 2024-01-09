@@ -31,6 +31,7 @@ https://ontology.unifiedcyberontology.org/uco/configuration/usesConfiguration
 https://ontology.unifiedcyberontology.org/uco/core/Bundle
 https://ontology.unifiedcyberontology.org/uco/core/ConfidenceFacet
 https://ontology.unifiedcyberontology.org/uco/core/Facet
+https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/confidence
 https://ontology.unifiedcyberontology.org/uco/core/description
 https://ontology.unifiedcyberontology.org/uco/core/endTime
