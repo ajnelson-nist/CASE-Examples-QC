@@ -49,6 +49,7 @@ imports-transitive.ttl: \
   CASE-Corpora/taxonomy/devices/drafting.ttl \
   CASE-Examples/examples/illustrations/event/drafting.ttl \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
+  CASE-Examples/examples/illustrations/partitions/drafting.ttl \
   CASE-Examples/examples/illustrations/spear_phishing/drafting.ttl \
   UCO-Profile-BFO/dependencies/imports-transitive.ttl \
   UCO-Profile-BFO/ontology/uco-bfo.ttl \
