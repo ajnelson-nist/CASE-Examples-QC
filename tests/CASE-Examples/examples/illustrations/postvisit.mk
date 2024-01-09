@@ -27,7 +27,7 @@ endif
 
 illdirs := $(shell find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
 
-kb_ttl_dependencies            := $(foreach illdir,$(illdirs),$(illdir)/$(illdir).json)
+kb_ttl_dependencies            := $(foreach illdir,$(illdirs),$(illdir)/$(illdir).ttl)
 undefined_concepts_dependencies            := $(foreach illdir,$(illdirs),$(illdir)/undefined_concepts.txt)
 undefined_kindOfRelationships_dependencies := $(foreach illdir,$(illdirs),$(illdir)/undefined_kindOfRelationships.tsv)
 used_concepts_dependencies                 := $(foreach illdir,$(illdirs),$(illdir)/used_concepts.txt)

@@ -36,9 +36,6 @@ all: \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv
 
-.PHONY: \
-  normalize
-
 %.svg: \
   %.dot
 	dot \
@@ -65,7 +62,7 @@ $(subjectdir_basename)-prov-originals.dot: \
 	mv _$@ $@
 
 $(subjectdir_basename)-prov.ttl: \
-  $(subjectdir_basename).json \
+  $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@ _$@
 	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
@@ -86,14 +83,6 @@ $(subjectdir_basename)-prov.ttl: \
 	mv _$@ $@
 
 
-$(subjectdir_basename).json: \
-  $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json
-	source $(top_srcdir)/venv/bin/activate \
-	  && python -m json.tool \
-	    $< \
-	    $@_
-	mv $@_ $@
-
 $(subjectdir_basename).ttl: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json \
   $(rdf_toolkit_jar)
@@ -106,28 +95,17 @@ $(subjectdir_basename).ttl: \
 	  --target-format turtle
 	mv $@_ $@
 
-# 'Check' enforces that normalization works and further is how the files are tracked.
-# (Reminder: diff exits non-0 on finding any differences.)
 check: \
-  $(subjectdir_basename).json \
   $(subjectdir_basename).ttl
-	diff \
-	  $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$< \
-	  $<
 
 clean:
 	@rm -f \
 	  *.dot \
-	  *.json \
 	  *.svg \
 	  *.tsv \
 	  *.ttl \
 	  *.txt \
 	  *_
-
-normalize: \
-  $(subjectdir_basename).json \
-  $(subjectdir_basename).ttl
 
 undefined_concepts.txt: \
   $(top_srcdir)/tests/ontology_vocabulary.txt \

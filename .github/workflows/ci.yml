@@ -43,8 +43,6 @@ jobs:
         pre-commit run --all-files
     - name: Start from clean state
       run: make clean
-    - name: Normalize example files
-      run: make normalize
     - name: Regenerate static files
       run: make
     - name: Report any differences

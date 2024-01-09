@@ -62,8 +62,7 @@ all-casework.github.io: \
   check-CASE-Corpora \
   check-CASE-Examples \
   check-casework.github.io \
-  check-rdfs \
-  normalize
+  check-rdfs
 
 check: \
   check-CASE-Examples \
@@ -120,12 +119,6 @@ clean:
 	@$(MAKE) \
 	  --directory CASE-Examples/examples/illustrations \
 	  clean
-
-normalize: \
-  $(top_srcdir)/.git_submodule_init.done.log
-	$(MAKE) \
-	  --directory CASE-Examples/examples/illustrations \
-	  normalize
 
 ontologies.txt: \
   $(top_srcdir)/.venv.done.log \

@@ -60,8 +60,7 @@ all: \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules \
   check-tests \
-  download \
-  normalize
+  download
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -223,9 +222,3 @@ dependencies/CASE-Examples/requirements.txt: \
 
 download: \
   .venv.done.log
-
-normalize: \
-  .venv.done.log
-	$(MAKE) \
-	  --directory tests \
-	  normalize
