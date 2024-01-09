@@ -1,6 +1,6 @@
 # imports: http://example.org/shapes/case-corpora-local
 
-@prefix : <http://example.org/local#> .
+@prefix : <http://example.org/ontology/local#> .
 @prefix acme: <http://custompb.acme.org/core#> .
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
@@ -8,11 +8,10 @@
 @prefix co: <http://purl.org/co/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix default1: <http://example.org/ontology/local#> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix kb1: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
-@prefix ns1: <rdfs:> .
+@prefix ns1: <http://example.org/local#> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
@@ -10414,11 +10413,11 @@ kb:associated-account-40d3bfa5-b808-4cf3-8f3e-4c8ea2d79686
 
 kb:associated-account-419252da-6d0b-4f93-b070-75b9a5bc1cc2
 	a uco-core:Relationship ;
+	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Associated_Account" ;
 	uco-core:source kb:facebook_account-c188af2d-9651-44a8-8d4c-07a1f5f1aa20 ;
 	uco-core:target kb:email_account-e798e18c-0bef-4883-83df-e2710c4bc7e4 ;
-	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	.
 
 kb:associated-account-6620a818-7584-4760-a2cf-ff91aa742205
@@ -10431,11 +10430,11 @@ kb:associated-account-6620a818-7584-4760-a2cf-ff91aa742205
 
 kb:associated-account-8222be1c-1e4a-4c1d-a631-bb3aa9743971
 	a uco-observable:ObservableRelationship ;
+	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Associated_Account" ;
 	uco-core:source kb:google_account-f514a133-bca6-488c-a0a3-44c40f9ac766 ;
 	uco-core:target kb:email_account-e798e18c-0bef-4883-83df-e2710c4bc7e4 ;
-	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	.
 
 kb:associated-account-b7748cb7-304f-4706-9d88-fef49dc94981
@@ -10840,7 +10839,7 @@ kb:bundle-5db141fc-597b-4771-bea5-b9605292d2ed
 
 kb:bundle-616a3d68-eb5e-4b0b-86e4-acd062c8022e
 	a uco-core:Bundle ;
-	default1:__CASE__ "ASGARD_2019_00162" ;
+	:__CASE__ "ASGARD_2019_00162" ;
 	uco-core:description "Initial evidence seizure in cross border investigation into disruption of public transportation service" ;
 	uco-core:object
 		kb:application1-8538c226-1ba5-473b-8342-96150a4ab4ed ,
@@ -15767,8 +15766,8 @@ kb:file-facet-33d40dab-c65f-4204-985d-204c381069e0
 
 kb:file-facet-36334066-5d9f-4cc0-8ebe-d905832896ff
 	a uco-observable:FileFacet ;
-	:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	uco-observable:filePath "/data/data/multipart_file.002" ;
 	uco-observable:fileSystemType "EXT4" ;
 	uco-observable:modifiedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
@@ -16038,8 +16037,8 @@ kb:file-facet-65c90c48-5c9c-4196-8329-63ccda9157dd
 
 kb:file-facet-6600c140-c71e-4e9c-9f99-2671655d66e1
 	a uco-observable:FileFacet ;
-	:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	uco-observable:filePath "/data/data/multipart_file.003" ;
 	uco-observable:fileSystemType "EXT4" ;
 	uco-observable:modifiedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
@@ -16353,8 +16352,8 @@ kb:file-facet-9c8c3ff9-0ae8-4bd1-b6bb-010047b747a3
 
 kb:file-facet-9d8fe5e6-a4c0-4e56-bcee-5835049a5959
 	a uco-observable:FileFacet ;
-	:accessedAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	:createdAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:accessedAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:createdAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	uco-observable:filePath "/data/data/multipart_file.001" ;
 	uco-observable:fileSystemType "EXT4" ;
 	uco-observable:modifiedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
@@ -17041,7 +17040,7 @@ kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013
 
 kb:forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d
 	a uco-observable:Device ;
-	:location kb:forensic_lab-2514fffb-affc-43be-a3bb-be1dd606eff0 ;
+	ns1:location kb:forensic_lab-2514fffb-affc-43be-a3bb-be1dd606eff0 ;
 	uco-core:hasFacet
 		kb:acme-inventory-computer-facet-f34d5828-7f40-44b2-8531-6ce3a8d34467 ,
 		kb:computer-specification-facet-d02adab1-cbaa-4ec5-b98c-4fe128e7281f ,
@@ -17100,13 +17099,13 @@ kb:fragment-facet-1f681316-2991-4231-b702-9aeb222f3099
 
 kb:fragment-facet-3a3220f1-e434-4f21-b462-acff3f8b91c4
 	a uco-observable:FragmentFacet ;
-	:totalFragments "3"^^xsd:integer ;
+	ns1:totalFragments "3"^^xsd:integer ;
 	uco-observable:fragmentIndex "1"^^xsd:integer ;
 	.
 
 kb:fragment-facet-5d237f35-8496-4b87-9053-08725d0b2d7d
 	a uco-observable:FragmentFacet ;
-	:totalFragments "3"^^xsd:integer ;
+	ns1:totalFragments "3"^^xsd:integer ;
 	uco-observable:fragmentIndex "2"^^xsd:integer ;
 	.
 
@@ -17118,7 +17117,7 @@ kb:fragment-facet-9adbdf33-c7a8-43d6-953a-a576c097f2b5
 
 kb:fragment-facet-a703a10c-e18b-4388-9702-a8b251522553
 	a uco-observable:FragmentFacet ;
-	:totalFragments "3"^^xsd:integer ;
+	ns1:totalFragments "3"^^xsd:integer ;
 	uco-observable:fragmentIndex "0"^^xsd:integer ;
 	.
 
@@ -19934,7 +19933,7 @@ kb:mobile-device-facet-b03b6c7e-85f8-4a07-8069-e40e2f1a06fe
 kb:mobile-extractor-tool-arguments-facet-273f1bdd-e01d-4557-8f44-ee49fb1c4205
 	a
 		uco-core:Facet ,
-		<mobileextractor:ToolArgumentsFacet>
+		<urn:example:MobileExtractorToolArgumentsFacet>
 		;
 	drafting:aquisitionType "Physical Extraction" ;
 	drafting:method "Boot Loader" ;
@@ -20059,7 +20058,7 @@ kb:network-connection-facet-9b6f6ebd-5262-44e7-a011-6f616e751322
 
 kb:network-connection-facet-a9497bfe-6857-45ac-933d-365a48285f9b
 	a uco-observable:NetworkConnectionFacet ;
-	default1:connectionState "APSF" ;
+	:connectionState "APSF" ;
 	uco-observable:destinationPort "139"^^xsd:integer ;
 	uco-observable:dst kb:destination-host-7f441a17-1c72-4caf-b5e2-f1a08f5dfa82 ;
 	uco-observable:endTime "2009-04-03T02:29:25.636551+00:00"^^xsd:dateTime ;
@@ -23973,7 +23972,7 @@ kb:sim-card-facet-15765152-c1d9-40f2-91d9-c10885fdf077
 
 kb:sim-card-facet-1d69df5c-1fb1-42e2-a2bd-7cb6892d3bca
 	a uco-observable:SIMCardFacet ;
-	:IMSI kb:mobile-account-05328472-66de-4290-8c95-0984504e7279 ;
+	ns1:IMSI kb:mobile-account-05328472-66de-4290-8c95-0984504e7279 ;
 	uco-observable:ICCID "456673345673436xxx" ;
 	uco-observable:SIMForm "micro" ;
 	uco-observable:SIMType "USIM" ;
