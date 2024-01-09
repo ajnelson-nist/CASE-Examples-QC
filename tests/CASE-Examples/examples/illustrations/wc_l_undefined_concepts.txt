@@ -1,4 +1,4 @@
-   8 Oresteia/undefined_concepts.txt
+   9 Oresteia/undefined_concepts.txt
    0 accounts/undefined_concepts.txt
    1 analysis/undefined_concepts.txt
    0 bulk_extractor_forensic_path/undefined_concepts.txt
@@ -16,9 +16,10 @@
    1 mobile_device_and_sim_card/undefined_concepts.txt
    5 multipart_file/undefined_concepts.txt
    0 network_connection/undefined_concepts.txt
+  13 partitions/undefined_concepts.txt
    0 raw_data/undefined_concepts.txt
    0 reconstructed_file/undefined_concepts.txt
    0 recoverability/undefined_concepts.txt
    0 sms_and_contacts/undefined_concepts.txt
   19 spear_phishing/undefined_concepts.txt
-  43 undefined_concepts.txt
+  56 undefined_concepts.txt

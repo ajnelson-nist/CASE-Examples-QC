@@ -16,9 +16,10 @@
    2 mobile_device_and_sim_card/undefined_kindOfRelationships.tsv
    2 multipart_file/undefined_kindOfRelationships.tsv
    1 network_connection/undefined_kindOfRelationships.tsv
+   4 partitions/undefined_kindOfRelationships.tsv
    1 raw_data/undefined_kindOfRelationships.tsv
    2 reconstructed_file/undefined_kindOfRelationships.tsv
    0 recoverability/undefined_kindOfRelationships.tsv
    1 sms_and_contacts/undefined_kindOfRelationships.tsv
    5 spear_phishing/undefined_kindOfRelationships.tsv
-  21 undefined_kindOfRelationships.tsv
+  23 undefined_kindOfRelationships.tsv

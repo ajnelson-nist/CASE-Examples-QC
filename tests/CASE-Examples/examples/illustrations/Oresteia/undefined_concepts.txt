@@ -1,5 +1,6 @@
 http://example.org/ontology/drafting/FacebookMessageFacet
 http://example.org/ontology/drafting/aquisitionType
+http://example.org/ontology/drafting/diskPartitionName
 http://example.org/ontology/drafting/iPhoneDeviceFacet
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/method
