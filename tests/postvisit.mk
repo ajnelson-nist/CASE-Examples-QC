@@ -73,6 +73,8 @@ check-prov-constraints: \
 	  || (echo "ERROR:illustration.mk:prov-constraints reported a constraint error." >&2 ; exit 1)
 
 clean:
+	@rm -rf \
+	  __pycache__
 	@rm -f \
 	  *_ \
 	  _* \

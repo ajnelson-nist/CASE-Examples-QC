@@ -91,6 +91,8 @@ check: \
 	@rm -f $^
 
 clean:
+	@rm -rf \
+	  __pycache__
 	@rm -f \
 	  *_ \
 	  _* \
