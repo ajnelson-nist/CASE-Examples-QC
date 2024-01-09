@@ -204,6 +204,10 @@ clean:
 	@$(MAKE) \
 	  --directory tests \
 	  clean
+	@rm -f \
+	  .venv.done.log
+	@rm -rf \
+	  venv
 
 # This recipe guarantees a timestamp update order, and is otherwise a nop.
 dependencies/CASE-Corpora/requirements.txt: \
