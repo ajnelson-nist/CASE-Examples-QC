@@ -1,4 +1,0 @@
-http://example.org/ontology/drafting/Event
-http://example.org/ontology/drafting/eventAttribute
-http://example.org/ontology/drafting/eventContext
-http://example.org/ontology/drafting/eventType

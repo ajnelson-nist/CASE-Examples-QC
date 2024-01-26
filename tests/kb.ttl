@@ -4048,44 +4048,44 @@ kb:End-d1d333d7-fe44-5b9d-8fff-34b593a6e748
 
 kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e
 	a
-		drafting:Event ,
 		time:Instant ,
-		prov:Generation
+		prov:Generation ,
+		uco-core:Event
 		;
 	.
 
 kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444
 	a
-		drafting:Event ,
 		time:Instant ,
-		prov:Generation
+		prov:Generation ,
+		uco-core:Event
 		;
 	time:after kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e ;
 	.
 
 kb:Event-26aaae20-6d00-445a-b102-d080753986d2
 	a
-		drafting:Event ,
 		time:Instant ,
-		prov:Generation
+		prov:Generation ,
+		uco-core:Event
 		;
 	time:after kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444 ;
 	.
 
 kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779
 	a
-		drafting:Event ,
 		time:Instant ,
-		prov:Generation
+		prov:Generation ,
+		uco-core:Event
 		;
 	time:after kb:Event-26aaae20-6d00-445a-b102-d080753986d2 ;
 	.
 
 kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c
 	a
-		drafting:Event ,
 		time:Instant ,
-		prov:Generation
+		prov:Generation ,
+		uco-core:Event
 		;
 	rdfs:comment "This event was the generation of the extended partition table and its contained partition." ;
 	time:after kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779 ;
@@ -4093,10 +4093,10 @@ kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c
 
 kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348
 	a
-		drafting:Event ,
 		time:Instant ,
 		prov:Generation ,
-		prov:Invalidation
+		prov:Invalidation ,
+		uco-core:Event
 		;
 	rdfs:comment "The precise timestamp of this file deletion event was not recorded, but it is known to have occurred.  This event invalidates (ends) a Relationship FIRST.TXT had with its file system, leaving FIRST.TXT in a marked-unallocated state apparent from a superseding Relationship." ;
 	.
@@ -4567,9 +4567,9 @@ kb:Generation-68f741b5-ab9b-5790-a8fd-7a08c576344e
 
 kb:Generation-6a6274a8-a82b-45ca-b570-dea8789560af
 	a
-		drafting:Event ,
 		time:Instant ,
-		prov:Generation
+		prov:Generation ,
+		uco-core:Event
 		;
 	rdfs:comment "The precise timestamp of this file creation event was not recorded, but it is known to have occurred after FIRST.TXT's deletion." ;
 	time:after kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348 ;
@@ -14302,14 +14302,14 @@ kb:euripides-3696c710-161f-47af-9ae8-61b178611773
 	.
 
 kb:event-d4a5a009-7b4d-445d-8d06-9dc85f263b3e
-	a drafting:Event ;
-	drafting:eventAttribute kb:dictionary-b222a5f4-e7eb-442a-8aab-c22c89734b9e ;
-	drafting:eventContext
+	a uco-core:Event ;
+	uco-core:endTime "2023-07-15T17:59:45.330000+00:00"^^xsd:dateTime ;
+	uco-core:eventAttribute kb:dictionary-b222a5f4-e7eb-442a-8aab-c22c89734b9e ;
+	uco-core:eventContext
 		kb:action-7377c5e6-6b28-4bc7-ad21-6763c070bfcc ,
 		kb:action-a86738e7-c890-4615-b3ab-deaccd3bafbb
 		;
-	drafting:eventType "Authentication" ;
-	uco-core:endTime "2023-07-15T17:59:45.330000+00:00"^^xsd:dateTime ;
+	uco-core:eventType "Authentication" ;
 	uco-core:name "user logged in" ;
 	uco-core:startTime "2023-07-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	.
@@ -25270,7 +25270,7 @@ kb1:CorporateLoggingTool01
 	.
 
 kb1:DetectionEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb1:ActOfEndpointScan01 ,
 		kb1:ActOfFileFlagging01 ,
@@ -25319,7 +25319,7 @@ kb1:EndpointProtectionSoftware01
 	.
 
 kb1:InfectionEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb1:ActOfMalwareDelivery01 ,
 		kb1:ActOfMalwareInstallation01
@@ -25373,7 +25373,7 @@ kb1:ScannerRole01
 	.
 
 kb1:SpearFishingEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb1:ActOfEmailDelivery01 ,
 		kb1:ActOfLinkOpening01

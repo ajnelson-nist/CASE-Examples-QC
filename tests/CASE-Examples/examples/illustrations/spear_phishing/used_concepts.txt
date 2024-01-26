@@ -4,6 +4,7 @@ https://ontology.unifiedcyberontology.org/uco/action/object
 https://ontology.unifiedcyberontology.org/uco/action/participant
 https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/result
+https://ontology.unifiedcyberontology.org/uco/core/Event
 https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/UcoThing
 https://ontology.unifiedcyberontology.org/uco/core/description

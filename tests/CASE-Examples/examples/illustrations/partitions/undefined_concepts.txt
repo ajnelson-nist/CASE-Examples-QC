@@ -1,6 +1,5 @@
 http://example.org/ontology/drafting/DiskPartitionSystem
 http://example.org/ontology/drafting/DiskPartitionSystemFacet
-http://example.org/ontology/drafting/Event
 http://example.org/ontology/drafting/buildID
 http://example.org/ontology/drafting/diskPartitionLength
 http://example.org/ontology/drafting/diskPartitionOffset

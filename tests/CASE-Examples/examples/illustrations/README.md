@@ -14,7 +14,7 @@ The following table is the count of undefined concepts used in each example file
    0 configured_tool/undefined_concepts.txt
    0 database_records/undefined_concepts.txt
    1 device/undefined_concepts.txt
-   4 event/undefined_concepts.txt
+   0 event/undefined_concepts.txt
    0 exif_data/undefined_concepts.txt
    2 file/undefined_concepts.txt
    0 forensic_lifecycle/undefined_concepts.txt
@@ -23,13 +23,13 @@ The following table is the count of undefined concepts used in each example file
    1 mobile_device_and_sim_card/undefined_concepts.txt
    5 multipart_file/undefined_concepts.txt
    0 network_connection/undefined_concepts.txt
-  13 partitions/undefined_concepts.txt
+  12 partitions/undefined_concepts.txt
    0 raw_data/undefined_concepts.txt
    0 reconstructed_file/undefined_concepts.txt
    0 recoverability/undefined_concepts.txt
    0 sms_and_contacts/undefined_concepts.txt
   19 spear_phishing/undefined_concepts.txt
-  56 undefined_concepts.txt
+  52 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
