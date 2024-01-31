@@ -91,6 +91,13 @@ all: \
 	    dependencies/UCO-Profile-FOAF
 	@test -r dependencies/UCO-Profile-FOAF/README.md \
 	  || (echo "ERROR:Makefile:UCO-Profile-FOAF submodule README.md file not found, even though UCO-Profile-FOAF submodule initialized." >&2 ; exit 2)
+	# UCO-Profile-gufo
+	test -r dependencies/UCO-Profile-gufo/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/UCO-Profile-gufo
+	@test -r dependencies/UCO-Profile-gufo/README.md \
+	  || (echo "ERROR:Makefile:UCO-Profile-gufo submodule README.md file not found, even though UCO-Profile-gufo submodule initialized." >&2 ; exit 2)
 	# casework.github.io
 	test -r dependencies/casework.github.io/README.md \
 	  || (git submodule init dependencies/casework.github.io && git submodule update dependencies/casework.github.io)

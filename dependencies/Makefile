@@ -53,7 +53,9 @@ imports-transitive.ttl: \
   UCO-Profile-BFO/dependencies/imports-transitive.ttl \
   UCO-Profile-BFO/ontology/uco-bfo.ttl \
   UCO-Profile-FOAF/dependencies/imports-transitive.ttl \
-  UCO-Profile-FOAF/ontology/uco-foaf.ttl
+  UCO-Profile-FOAF/ontology/uco-foaf.ttl \
+  UCO-Profile-gufo/dependencies/imports-transitive.ttl \
+  UCO-Profile-gufo/ontology/uco-gufo.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \
