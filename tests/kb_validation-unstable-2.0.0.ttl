@@ -1,0 +1,197 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/account-facet-265c4daa-b473-43d3-a186-77ff2da9ac70> ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/account-facet-2ff9009c-69d9-4f96-8cdf-d282ecae4a24> ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/account-facet-31df5a8a-fb9f-4fa6-85f9-cea13f4b9f03> ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/account-facet-5f3e4a6d-4cf1-41fa-a948-759a08db3ab7> ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/account-facet-a1397192-d69e-427a-ba4a-b55afc4480f5> ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/account-facet-ccba5bf1-e927-40a9-bce5-d6dc8a3d8758> ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/cameralocation-relationship-c6f64e98-68c5-4d2e-9ae8-a7e110f2ac83> ;
+			sh:resultMessage "Value does not have class observable:Observable" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:Observable ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/latlong-8667ec82-8c21-11e9-934e-0c4de9c21b53> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/cdf48c35-c65d-41e4-843b-720f1ad24ab3> ;
+			sh:resultMessage "Value does not have class observable:Observable" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:Observable ;
+				sh:path core:target ;
+			] ;
+			sh:value <http://example.org/kb/f2e90997-16c9-4822-be30-fa4f36553768> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/primaryuser-email-3c4d0804-6ed0-4dfe-a152-3dab6b5f9111> ;
+			sh:resultMessage "Value does not have class observable:Observable" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:Observable ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/primaryuser-email-cb34b068-324b-4162-a9e5-6c96879b061c> ;
+			sh:resultMessage "Value does not have class observable:Observable" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:Observable ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/primaryuser-faceboook-cb34b068-324b-4162-a9e5-6c96879b061c> ;
+			sh:resultMessage "Value does not have class observable:Observable" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:Observable ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/primaryuser-whatsapp-b295bc93-b65c-4670-a5d7-5c2206d78e92> ;
+			sh:resultMessage "Value does not have class observable:Observable" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:Observable ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4> ;
+			sh:resultMessage "Value does not have class observable:Observable" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:Observable ;
+				sh:path core:target ;
+			] ;
+			sh:value <http://example.org/kb/location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee> ;
+		]
+		;
+	.
+
