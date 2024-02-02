@@ -61,6 +61,10 @@ action_name_statistics.md: \
 check: \
   check-prov-constraints \
   kb-case_prov_check.ttl \
+  kb_validation-develop.ttl \
+  kb_validation-develop-2.0.0.ttl \
+  kb_validation-unstable.ttl \
+  kb_validation-unstable-2.0.0.ttl \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
@@ -112,6 +116,108 @@ kb-prov-time.ttl: \
 	      --use-deterministic-uuids \
 	      __$@ \
 	      $<
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-develop.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-develop-2.0.0.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-unstable.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-warnings \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-unstable-2.0.0.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-warnings \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl \
+	    || true
+	test -s __$@
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source __$@ \

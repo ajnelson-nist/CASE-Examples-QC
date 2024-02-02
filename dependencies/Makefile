@@ -19,7 +19,35 @@ SHELL := /bin/bash
 top_srcdir := $(shell cd .. ; pwd)
 
 all: \
+  CASE-Corpora/dependencies/CASE-develop.ttl \
+  CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
+  CASE-Corpora/dependencies/CASE-unstable.ttl \
+  CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl \
   imports-transitive.ttl
+
+CASE-Corpora/dependencies/CASE-develop.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
+
+CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
+
+CASE-Corpora/dependencies/CASE-unstable.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
+
+CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
 
 CASE-Corpora/dependencies/dependencies.ttl:
 	$(MAKE) \
