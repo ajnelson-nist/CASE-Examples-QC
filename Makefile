@@ -156,6 +156,9 @@ all: \
 all-dependencies: \
   .venv.done.log
 	$(MAKE) \
+	  --directory dependencies/CASE-Corpora \
+	  all-dependencies
+	$(MAKE) \
 	  --directory dependencies
 
 all-tests: \
