@@ -65,7 +65,7 @@ $(subjectdir_basename)-prov.ttl: \
   $(top_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)/$(subjectdir_basename).json \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@ _$@
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_rdf \
 	      --allow-empty-results \

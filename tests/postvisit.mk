@@ -110,7 +110,7 @@ kb-case_prov_check.ttl: \
 kb-prov-time.ttl: \
   kb.ttl
 	rm -f __$@ _$@
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_rdf \
 	      --use-deterministic-uuids \
