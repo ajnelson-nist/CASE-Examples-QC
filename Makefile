@@ -84,6 +84,9 @@ all: \
 	    dependencies/UCO-Profile-BFO
 	@test -r dependencies/UCO-Profile-BFO/README.md \
 	  || (echo "ERROR:Makefile:UCO-Profile-BFO submodule README.md file not found, even though UCO-Profile-BFO submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-BFO \
+	  .git_submodule_init.done.log
 	# UCO-Profile-FOAF
 	test -r dependencies/UCO-Profile-FOAF/README.md \
 	  || git submodule update \
@@ -91,6 +94,9 @@ all: \
 	    dependencies/UCO-Profile-FOAF
 	@test -r dependencies/UCO-Profile-FOAF/README.md \
 	  || (echo "ERROR:Makefile:UCO-Profile-FOAF submodule README.md file not found, even though UCO-Profile-FOAF submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-FOAF \
+	  .git_submodule_init.done.log
 	# UCO-Profile-gufo
 	test -r dependencies/UCO-Profile-gufo/README.md \
 	  || git submodule update \
@@ -98,6 +104,9 @@ all: \
 	    dependencies/UCO-Profile-gufo
 	@test -r dependencies/UCO-Profile-gufo/README.md \
 	  || (echo "ERROR:Makefile:UCO-Profile-gufo submodule README.md file not found, even though UCO-Profile-gufo submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-gufo \
+	  .git_submodule_init.done.log
 	# casework.github.io
 	test -r dependencies/casework.github.io/README.md \
 	  || (git submodule init dependencies/casework.github.io && git submodule update dependencies/casework.github.io)

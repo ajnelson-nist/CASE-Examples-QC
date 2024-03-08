@@ -78,11 +78,14 @@ imports-transitive.ttl: \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
   CASE-Examples/examples/illustrations/partitions/drafting.ttl \
   CASE-Examples/examples/illustrations/spear_phishing/drafting.ttl \
-  UCO-Profile-BFO/dependencies/imports-transitive.ttl \
+  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/dependencies/BFO.ttl \
+  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl \
   UCO-Profile-BFO/ontology/uco-bfo.ttl \
-  UCO-Profile-FOAF/dependencies/imports-transitive.ttl \
+  UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/dependencies/foaf.ttl \
+  UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
-  UCO-Profile-gufo/dependencies/imports-transitive.ttl \
+  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/gufo.ttl \
+  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl \
   UCO-Profile-gufo/ontology/uco-gufo.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
