@@ -167,6 +167,7 @@ all-tests: \
 	  --directory tests
 
 check: \
+  all-tests \
   check-mypy \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
