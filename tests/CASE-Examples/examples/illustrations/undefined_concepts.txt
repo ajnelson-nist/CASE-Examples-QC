@@ -26,7 +26,6 @@ http://example.org/ontology/drafting/partitionList
 http://example.org/ontology/drafting/partitionName
 http://example.org/ontology/drafting/uniqueID
 http://example.org/ontology/drafting/unpartitionableSpace
-http://example.org/ontology/drafting/visibility
 https://github.com/ucoProject/UCO/issues/535
 https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management
 urn:example:MobileExtractorToolArgumentsFacet

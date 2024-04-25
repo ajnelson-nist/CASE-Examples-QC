@@ -19,7 +19,7 @@ The following table is the count of undefined concepts used in each example file
    2 file/undefined_concepts.txt
    0 forensic_lifecycle/undefined_concepts.txt
    0 location/undefined_concepts.txt
-   1 message/undefined_concepts.txt
+   0 message/undefined_concepts.txt
    1 mobile_device_and_sim_card/undefined_concepts.txt
    5 multipart_file/undefined_concepts.txt
    0 network_connection/undefined_concepts.txt
@@ -29,7 +29,7 @@ The following table is the count of undefined concepts used in each example file
    0 recoverability/undefined_concepts.txt
    0 sms_and_contacts/undefined_concepts.txt
   19 spear_phishing/undefined_concepts.txt
-  52 undefined_concepts.txt
+  51 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:

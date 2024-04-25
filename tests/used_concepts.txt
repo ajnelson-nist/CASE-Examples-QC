@@ -74,7 +74,6 @@ http://example.org/ontology/drafting/tableName
 http://example.org/ontology/drafting/toolIdentifier
 http://example.org/ontology/drafting/uniqueID
 http://example.org/ontology/drafting/unpartitionableSpace
-http://example.org/ontology/drafting/visibility
 http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#connectionState
 http://example.org/shapes/case-corpora-local
@@ -485,6 +484,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/url
 https://ontology.unifiedcyberontology.org/uco/observable/urlHistoryEntry
 https://ontology.unifiedcyberontology.org/uco/observable/value
 https://ontology.unifiedcyberontology.org/uco/observable/version
+https://ontology.unifiedcyberontology.org/uco/observable/visibility
 https://ontology.unifiedcyberontology.org/uco/observable/visitCount
 https://ontology.unifiedcyberontology.org/uco/observable/volumeID
 https://ontology.unifiedcyberontology.org/uco/role/MaliciousRole

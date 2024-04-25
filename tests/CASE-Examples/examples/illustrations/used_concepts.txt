@@ -26,7 +26,6 @@ http://example.org/ontology/drafting/partitionList
 http://example.org/ontology/drafting/partitionName
 http://example.org/ontology/drafting/uniqueID
 http://example.org/ontology/drafting/unpartitionableSpace
-http://example.org/ontology/drafting/visibility
 https://github.com/ucoProject/UCO/issues/535
 https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management
 https://ontology.caseontology.org/case/investigation/Authorization
@@ -350,6 +349,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/totalFragments
 https://ontology.unifiedcyberontology.org/uco/observable/totalRam
 https://ontology.unifiedcyberontology.org/uco/observable/value
 https://ontology.unifiedcyberontology.org/uco/observable/version
+https://ontology.unifiedcyberontology.org/uco/observable/visibility
 https://ontology.unifiedcyberontology.org/uco/observable/volumeID
 https://ontology.unifiedcyberontology.org/uco/role/MaliciousRole
 https://ontology.unifiedcyberontology.org/uco/role/NeutralRole

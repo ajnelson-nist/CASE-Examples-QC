@@ -19746,24 +19746,22 @@ kb:message-facet-e3505bcc-eb14-4b9f-9395-81942b51ff86
 
 kb:message-thread-facet-33f68c51-0737-4716-8b2d-7612cd78a99b
 	a uco-observable:MessageThreadFacet ;
-	drafting:visibility "PRIVATE" ;
-	uco-observable:displayName "Best Friend Chat!!" ;
 	uco-observable:messageThread kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e ;
 	uco-observable:participant
 		kb:account-16f128ac-7e5b-4cac-908c-11062488eb06 ,
 		kb:account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87
 		;
+	uco-observable:visibility "false"^^xsd:boolean ;
 	.
 
 kb:message-thread-facet-38d3fc48-8519-40c5-98f3-d4ad4d42a867
 	a uco-observable:MessageThreadFacet ;
-	drafting:visibility "PUBLIC" ;
-	uco-observable:displayName "Argle-bargle" ;
 	uco-observable:messageThread kb:thread-f8ebd1db-ce49-495e-850a-7b44187cb128 ;
 	uco-observable:participant
 		kb:account-7fb9ef43-fb36-4781-918b-79a5801223e2 ,
 		kb:account-8f80b20d-d41f-411a-90ce-460dedabf1c3
 		;
+	uco-observable:visibility "true"^^xsd:boolean ;
 	.
 
 kb:message_action-f7078adf-066a-4f55-831e-a10feb8054fb
@@ -24551,11 +24549,13 @@ kb:thread-2d8e20e9-37b2-4766-9aab-f5b9facd9b8a
 kb:thread-4237ff8b-e049-4a56-bcf7-e89ed2797d83
 	a uco-observable:MessageThread ;
 	uco-core:hasFacet kb:message-thread-facet-33f68c51-0737-4716-8b2d-7612cd78a99b ;
+	uco-core:name "Best Friend Chat!!" ;
 	.
 
 kb:thread-64330f59-a10d-4907-93f6-be9fc267834e
 	a uco-observable:MessageThread ;
 	uco-core:hasFacet kb:message-thread-facet-38d3fc48-8519-40c5-98f3-d4ad4d42a867 ;
+	uco-core:name "Argle-bargle" ;
 	.
 
 kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e
