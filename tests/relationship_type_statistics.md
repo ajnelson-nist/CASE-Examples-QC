@@ -119,8 +119,8 @@ Count | `uco-core:kindOfRelationship` | `rdf:type`s of Relationship object | `uc
 3 | `Has_Role` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-identity:Organization`</li></ul> | <ul><li>`uco-role:Role`</li></ul> | <ul></ul>
 7 | `Has_Role` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-identity:Person`</li></ul> | <ul><li>`uco-role:Role`</li></ul> | <ul></ul>
 2 | `Initiated` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`case-investigation:InvestigativeAction`</li></ul> | <ul><li>`case-investigation:InvestigativeAction`</li></ul> | <ul></ul>
+2 | `Located_At` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-observable:CellSite`</li></ul> | <ul><li>`uco-location:Location`</li></ul> | <ul></ul>
 1 | `Located_At` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-observable:Device`</li></ul> | <ul><li>`uco-location:Location`</li></ul> | <ul><li>`uco-core:ConfidenceFacet`</li></ul>
-2 | `Located_At` | <ul><li>`uco-observable:ObservableRelationship`</li></ul> | `True` | <ul><li>`uco-observable:CellSite`</li></ul> | <ul><li>`uco-location:Location`</li></ul> | <ul></ul>
 5 | `Mapped_Into` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`case-investigation:InvestigativeAction`</li></ul> | <ul><li>`uco-action:Action`</li></ul> | <ul></ul>
 1 | `Member_Of` | <ul><li>`uco-core:Relationship`</li></ul> | `True` | <ul><li>`uco-identity:Person`</li></ul> | <ul><li>`uco-identity:Organization`</li></ul> | <ul></ul>
 1 | `Referenced-By` | <ul><li>`uco-observable:ObservableRelationship`</li></ul> | `True` | <ul><li>`uco-observable:DiskPartition`</li></ul> | <ul><li>`uco-observable:DiskPartition`</li><li>`uco-observable:RecoveredObject`</li></ul> | <ul></ul>

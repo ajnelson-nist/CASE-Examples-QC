@@ -11184,7 +11184,7 @@ kb:cctv-recording-f2cde179-5e7a-460d-832e-16d184ddb6ea
 	.
 
 kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Located_At" ;
 	uco-core:source kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4 ;
@@ -23231,7 +23231,7 @@ kb:relationship-75e3a851-9f4b-4add-8e9d-13817d333577
 	.
 
 kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	case-investigation:wasDerivedFrom kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Located_At" ;

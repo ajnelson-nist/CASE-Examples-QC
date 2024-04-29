@@ -174,21 +174,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/cdf48c35-c65d-41e4-843b-720f1ad24ab3> ;
-			sh:resultMessage "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:Observable ;
-				sh:message "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-				sh:path core:target ;
-				sh:severity sh:Warning ;
-			] ;
-			sh:value <http://example.org/kb/f2e90997-16c9-4822-be30-fa4f36553768> ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/primaryuser-email-3c4d0804-6ed0-4dfe-a152-3dab6b5f9111> ;
 			sh:resultMessage "The source on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
 			sh:resultPath core:source ;
@@ -246,21 +231,6 @@
 				sh:severity sh:Warning ;
 			] ;
 			sh:value <http://example.org/kb/primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4> ;
-			sh:resultMessage "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:Observable ;
-				sh:message "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-				sh:path core:target ;
-				sh:severity sh:Warning ;
-			] ;
-			sh:value <http://example.org/kb/location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee> ;
 		] ,
 		[
 			a sh:ValidationResult ;
