@@ -10989,7 +10989,7 @@ kb:camera_action-7995f522-6388-463f-855e-e08130477744
 	.
 
 kb:cameralocation-relationship-c6f64e98-68c5-4d2e-9ae8-a7e110f2ac83
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:latlong-8667ec82-8c21-11e9-934e-0c4de9c21b53 ;
@@ -21349,7 +21349,7 @@ kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f
 	.
 
 kb:primaryuser-email-3c4d0804-6ed0-4dfe-a152-3dab6b5f9111
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19 ;
@@ -21357,7 +21357,7 @@ kb:primaryuser-email-3c4d0804-6ed0-4dfe-a152-3dab6b5f9111
 	.
 
 kb:primaryuser-email-cb34b068-324b-4162-a9e5-6c96879b061c
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f ;
@@ -21365,7 +21365,7 @@ kb:primaryuser-email-cb34b068-324b-4162-a9e5-6c96879b061c
 	.
 
 kb:primaryuser-faceboook-cb34b068-324b-4162-a9e5-6c96879b061c
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f ;
@@ -21373,7 +21373,7 @@ kb:primaryuser-faceboook-cb34b068-324b-4162-a9e5-6c96879b061c
 	.
 
 kb:primaryuser-whatsapp-b295bc93-b65c-4670-a5d7-5c2206d78e92
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19 ;
