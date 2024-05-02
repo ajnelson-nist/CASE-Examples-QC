@@ -1,5 +1,4 @@
 @prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
-@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,7 +10,7 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
+	sh:conforms "true"^^xsd:boolean ;
 	sh:result
 		[
 			a sh:ValidationResult ;
@@ -156,15 +155,6 @@
 				] ;
 				sh:severity sh:Warning ;
 			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/url-history-39ff4987-8ae5-47e3-8369-dbd0d5f79398> ;
-			sh:resultMessage "observable:UcoInherentCharacterizationThing and observable:UcoObject are disjoint classes."@en ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NotConstraintComponent ;
-			sh:sourceShape core:UcoInherentCharacterizationThing-disjointWith-UcoObject-shape ;
-			sh:value <http://example.org/kb/url-history-39ff4987-8ae5-47e3-8369-dbd0d5f79398> ;
 		]
 		;
 	.

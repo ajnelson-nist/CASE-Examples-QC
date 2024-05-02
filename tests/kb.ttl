@@ -24924,10 +24924,7 @@ kb:url-facet-fd37a528-b375-4215-96c1-cf81709ef561
 	.
 
 kb:url-history-39ff4987-8ae5-47e3-8369-dbd0d5f79398
-	a
-		uco-observable:URLHistory ,
-		uco-observable:URLHistoryFacet
-		;
+	a uco-observable:URLHistory ;
 	uco-core:hasFacet
 		kb:url-history-facet-728d325b-d3df-4e4b-97b2-dbf9c7c64da8 ,
 		kb:url-history-facet-a455b867-957e-4fce-a0ad-1af9c6fa4edb

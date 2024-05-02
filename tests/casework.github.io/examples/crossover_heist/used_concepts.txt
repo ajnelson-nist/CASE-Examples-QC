@@ -57,6 +57,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObject
 https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObjectFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
+https://ontology.unifiedcyberontology.org/uco/observable/URLHistory
 https://ontology.unifiedcyberontology.org/uco/observable/URLHistoryEntry
 https://ontology.unifiedcyberontology.org/uco/observable/URLHistoryFacet
 https://ontology.unifiedcyberontology.org/uco/observable/WindowsRegistryHiveFacet
