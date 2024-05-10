@@ -23,6 +23,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/EmailAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/EmailAddress
 https://ontology.unifiedcyberontology.org/uco/observable/EmailAddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/accountIdentifier
 https://ontology.unifiedcyberontology.org/uco/observable/accountIssuer
 https://ontology.unifiedcyberontology.org/uco/observable/accountLogin

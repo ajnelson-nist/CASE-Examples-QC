@@ -19,6 +19,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/SMSMessage
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/addressValue
 https://ontology.unifiedcyberontology.org/uco/observable/application
 https://ontology.unifiedcyberontology.org/uco/observable/applicationIdentifier

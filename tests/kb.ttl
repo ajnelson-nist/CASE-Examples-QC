@@ -346,7 +346,10 @@ kb:AnalyticTool-DAE5EE58-E5ED-4588-93BE-CDEC6FAA9C6A
 	.
 
 kb:Android-class-6f4f675e-9a02-4ab5-8060-50d3d92832d9
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	uco-core:description "The general class of Android operating system instances, treated as an abstract individual." ;
 	.
 
@@ -6122,7 +6125,10 @@ kb:ObservableRelationship-f416968a-cd3d-57b6-aea3-9a4bc7862a95
 	.
 
 kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623 ;
 	uco-core:name "Windows 11 Pro" ;
 	.
@@ -9171,7 +9177,10 @@ kb:android_image-f4bc6a0e-c782-4a7e-b6cd-a6aa67a7cff7
 	.
 
 kb:android_phonebook-5907a3f4-3e63-44d1-8501-2a33adfa4b72
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-2d0fc498-fb73-481a-a996-99fe941b1fd5 ;
 	.
 
@@ -9444,7 +9453,10 @@ kb:application-4b053bbc-cf68-56ba-8979-60e0c5d83425
 	.
 
 kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-d3237eac-1805-43b2-8ff2-58f7c71f0ac6 ;
 	.
 
@@ -9471,7 +9483,10 @@ kb:application-552b6f92-c1d2-50f8-af4b-2abe799e54ac
 	.
 
 kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258
@@ -9597,7 +9612,10 @@ kb:application-6c62add4-ac0b-5c5e-b0ae-4b3fab5ff35d
 	.
 
 kb:application-79636b28-77c9-4005-b62d-b87a233687ef
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-79b3827b-9b6c-5b01-8523-2ebda10ca0d4
@@ -9719,7 +9737,10 @@ kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5
 	.
 
 kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-a6345190-8513-54f7-beb6-0a5e816307ff
@@ -9843,7 +9864,10 @@ kb:application-account-facet-e3b6c495-f966-4316-9c09-51350a49fe22
 	.
 
 kb:application-b01d8144-5fa9-44e9-a5f9-668d433b6108
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-c03097a2-2071-5164-b809-710b3ed35501
@@ -9987,7 +10011,10 @@ kb:application-d8c99a92-a0d2-5ef4-addc-0ca7a885006c
 	.
 
 kb:application-db5e8cbe-70e7-4dff-b981-2c5751b7923c
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8
@@ -10039,11 +10066,18 @@ kb:application-e77308c5-4cbe-58e4-8286-83fcd515be5e
 	.
 
 kb:application-ed4caa32-84c8-4813-b21d-f350e47cba7c
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-facebook-25e8018f-49be-4898-bb1d-731e387e9eb7
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	uco-core:hasFacet kb:application-facet-134b1129-c58e-4fbb-9383-923688bf8a16 ;
 	.
 
@@ -10276,12 +10310,18 @@ kb:application-facet-fda6da38-7b82-52a9-ba30-37a486070996
 	.
 
 kb:application-whatsapp-e662a9de-02bb-47ad-8666-625a0a5dc2fa
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-74e8a566-4575-4ce2-84d5-4bcea81f9b70 ;
 	.
 
 kb:application1-8538c226-1ba5-473b-8342-96150a4ab4ed
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
@@ -17306,7 +17346,10 @@ kb:generation-f5e4a0a8-4bf8-59bf-8353-754322b7b62b
 	.
 
 kb:gmail-a1ce9965-ba9c-4fa1-9bfe-58c68ecaadc5
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-3ecd5cd2-d118-4b03-970f-e1196ad0a133 ;
 	.
 
@@ -19597,7 +19640,11 @@ kb:message-1505f33f-9946-4280-89cd-2e72bdff900e
 	.
 
 kb:message-9999898c-0178-4534-8107-caea0a0f9999
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	.
 
 kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81
@@ -20872,16 +20919,25 @@ kb:organization-whatsapp-7a3fb3d1-0b30-4305-8c9e-f8f90f839bf3
 	.
 
 kb:os-5b6c1685-c603-4df4-9728-026ebfc78cd5
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	.
 
 kb:os-abf0fe20-6852-4004-82bb-d9e8da06aea6
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:operating-system-facet-04d6b0b1-b491-4438-b889-d16a28dffaa4 ;
 	.
 
 kb:os-ca81c2d9-d496-4a06-a0f5-0b6bd5647a9e
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	.
 
 kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b
@@ -24233,7 +24289,11 @@ kb:skype-99992808-7341-40d3-9285-774d865a9999
 	.
 
 kb:skypeapp-a6b73e78-00da-11eb-a396-acde48001122
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	.
 
 kb:skypemsg-eafca388-f926-4d48-864d-1bfdd3a2ba7f
@@ -24242,7 +24302,10 @@ kb:skypemsg-eafca388-f926-4d48-864d-1bfdd3a2ba7f
 	.
 
 kb:sms-application-4e98e83c-4d9e-48da-ac3a-9bc42b7a545e
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:sms-message-2c032220-8c21-11e9-9c99-0c4de9c21b53
@@ -24261,7 +24324,10 @@ kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba
 	.
 
 kb:sms_application-97fd9144-39d2-4da2-b955-c8ee9df9848b
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:sms_message-3f59e298-ac20-433b-adaa-2c5efe510ba2
@@ -24279,7 +24345,11 @@ kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
 	.
 
 kb:software-5d96df90-d9e1-423c-b8db-c2327812ab38
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	uco-core:hasFacet kb:application-facet-ed282901-6700-419b-9a03-aa56d7252c8a ;
 	.
 
@@ -25032,7 +25102,10 @@ kb:volume-facet-87beebe0-20fc-4ab3-a8f5-9b06529ef271
 	.
 
 kb:whatsapp-868abc08-8c21-11e9-934e-0c4de9c21b53
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-f089c7c8-e260-483f-b9dc-e95da12b5906 ;
 	.
 
@@ -25655,7 +25728,10 @@ kb1:observable-relationship-f849b7ab-9e18-46fb-a70d-ea3fd8e47437
 	.
 
 kb1:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	rdfs:comment "TODO, UCO - bitness should use the BitnessVocabulary." ;
 	uco-core:hasFacet kb1:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ;
 	uco-core:name "Windows 10 Enterprise Evaluation" ;
@@ -25735,7 +25811,10 @@ kb1:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25
 	.
 
 kb1:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6
-	a uco-observable:WindowsProcess ;
+	a
+		uco-observable:Software ,
+		uco-observable:WindowsProcess
+		;
 	uco-core:hasFacet
 		kb1:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc ,
 		kb1:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b
@@ -25743,12 +25822,18 @@ kb1:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6
 	.
 
 kb1:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2
-	a uco-observable:WindowsProcess ;
+	a
+		uco-observable:Software ,
+		uco-observable:WindowsProcess
+		;
 	uco-core:hasFacet kb1:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac ;
 	.
 
 kb1:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c
-	a uco-observable:WindowsProcess ;
+	a
+		uco-observable:Software ,
+		uco-observable:WindowsProcess
+		;
 	uco-core:description "Browser process" ;
 	.
 

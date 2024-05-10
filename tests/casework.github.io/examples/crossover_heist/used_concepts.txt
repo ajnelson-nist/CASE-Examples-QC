@@ -55,6 +55,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/ObservableObject
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObject
 https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObjectFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URLHistory

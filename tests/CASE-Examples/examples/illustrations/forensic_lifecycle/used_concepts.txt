@@ -44,6 +44,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/MessageThread
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/ProcessFacet
 https://ontology.unifiedcyberontology.org/uco/observable/RasterPicture
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/arguments
 https://ontology.unifiedcyberontology.org/uco/observable/creatorUser
 https://ontology.unifiedcyberontology.org/uco/observable/currentWorkingDirectory
