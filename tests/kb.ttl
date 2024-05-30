@@ -270,7 +270,7 @@ kb:Analysis-f365add7-1326-426f-9266-406bdeed86a1
 	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
 	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result
 		kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879 ,
@@ -286,7 +286,10 @@ kb:Analyst-13A167EE-D3B5-4AA4-B8BA-83C25F8B8FF4
 	.
 
 kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7
-	a uco-identity:Person ;
+	a
+		uco-identity:Identity ,
+		uco-identity:Person
+		;
 	.
 
 kb:AnalyticResult-14641bfa-ef39-4394-a8ae-d0f57a2d637a
@@ -6236,6 +6239,11 @@ kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1
 		;
 	.
 
+kb:ProvenanceRecord-4915201f-0805-40aa-aaf2-12a7671214d4
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	.
+
 kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f
 	a case-investigation:ProvenanceRecord ;
 	uco-core:description "Record of modification of disk state: Initial object creation" ;
@@ -6720,8 +6728,11 @@ kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81
 	uco-core:name "Forensic Expert" ;
 	.
 
-kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b
-	a uco-observable:Software ;
+kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
+	a
+		uco-observable:File ,
+		uco-observable:Software
+		;
 	.
 
 kb:SoftwareFacet-c0a75e42-9ca7-4133-9838-881b67304923
@@ -8624,11 +8635,11 @@ kb:acme-ufed-arguments-facet-df0c6ff5-575b-49da-a932-74ba6c13f641
 kb:action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T15:58:12+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195 ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46 ;
 	uco-action:startTime "2022-05-12T10:21:10+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
@@ -8765,11 +8776,11 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 kb:action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T16:12:12+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195 ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
 	uco-action:object kb:software-bec1d8eb-2db1-444d-9175-b3c60ac47410 ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result kb:provenancerecord-0db01c96-f34f-431a-9aff-e1cc4fac9842 ;
 	uco-action:startTime "2022-05-12T10:31:10+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
@@ -8788,12 +8799,12 @@ kb:action-7377c5e6-6b28-4bc7-ad21-6763c070bfcc
 kb:action-94446a56-1f78-42e4-a4f4-ec94ad7e9118
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T15:58:00+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
-	uco-action:result kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:result kb:ProvenanceRecord-4915201f-0805-40aa-aaf2-12a7671214d4 ;
 	uco-action:startTime "2022-05-12T10:21:00+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
 	.
@@ -8810,11 +8821,11 @@ kb:action-a86738e7-c890-4615-b3ab-deaccd3bafbb
 kb:action-ce95584e-5065-4287-83fd-81df2ac72180
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T15:58:12+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377 ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42 ;
 	uco-action:startTime "2022-05-12T10:21:10+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
@@ -9126,10 +9137,6 @@ kb:afc48c35-c65d-41e4-843b-720f1ad23d16
 kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c
 	a uco-identity:Person ;
 	uco-core:name "Agamemnon" ;
-	.
-
-kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7
-	a uco-identity:Identity ;
 	.
 
 kb:android-device-facet-2b3356eb-0ce4-4671-a80b-7d5cead82a8c
@@ -11307,10 +11314,6 @@ kb:compressed_gzip-56ce1a82-7965-4a50-8feb-7524e03fba04
 kb:compressed_gzip-e17babc0-dabb-45d1-8202-0f02518c2a89
 	a uco-observable:ContentData ;
 	uco-core:hasFacet kb:content-data-facet-a9e59f58-4ed3-40f4-8500-6b9d27cf72a1 ;
-	.
-
-kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa
-	a uco-observable:Device ;
 	.
 
 kb:computer-specification-facet-0f10db33-9374-467c-bb2d-04172ab05a34
@@ -20835,11 +20838,6 @@ kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f
 	uco-core:name "NFI" ;
 	.
 
-kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784
-	a uco-identity:Organization ;
-	uco-core:name "hex-rays" ;
-	.
-
 kb:organization-e84a49ff-f34c-46fe-ab88-6f0f79023925
 	a uco-identity:Organization ;
 	uco-core:description "Generic" ;
@@ -22864,7 +22862,7 @@ kb:provenancerecord-4dee4ff5-bc77-4dad-a785-05b147149678
 
 kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42
 	a case-investigation:ProvenanceRecord ;
-	uco-core:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-core:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
 	.
 
 kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563
@@ -22879,11 +22877,6 @@ kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53
 	uco-core:object kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07 ;
 	.
 
-kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b
-	a case-investigation:ProvenanceRecord ;
-	uco-core:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	.
-
 kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
 	a case-investigation:ProvenanceRecord ;
 	case-investigation:exhibitNumber "AsgardPD-20190330-001A" ;
@@ -22893,7 +22886,7 @@ kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
 
 kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46
 	a case-investigation:ProvenanceRecord ;
-	uco-core:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-core:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
 	.
 
 kb:provenancerecord-d1828cbb-bb0f-42e3-b021-cfd9d6419ae6
@@ -24340,10 +24333,6 @@ kb:smsmessage-21b3e39d-772d-47b0-8501-a6945ddbdfcd
 	uco-core:hasFacet kb:message-facet-7d687eb6-4b97-4a4d-be1c-e73e0a403f08 ;
 	.
 
-kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
-	a uco-observable:File ;
-	.
-
 kb:software-5d96df90-d9e1-423c-b8db-c2327812ab38
 	a
 		uco-observable:Application ,
@@ -24426,7 +24415,7 @@ kb:sqlite-wal-file-e5598c4e-9d1a-4b14-9142-49900dd6b8e9
 	uco-core:hasFacet kb:file-facet-8d977b6b-fc0b-462b-8002-838ee5240fbb ;
 	.
 
-kb:sqlite-wal-relationship-8a509b23-18bd-4b1f-a77a-4c8ee86b57b3
+kb:sqlite-wal-relationship-5397da33-c662-434c-ad9c-bba4621d7bb8
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "false"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Related_To" ;
@@ -24637,7 +24626,7 @@ kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e
 		;
 	co:item
 		kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8 ,
-		kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2 ,
+		kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46 ,
 		kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87
 		;
 	co:size "3"^^xsd:nonNegativeInteger ;
@@ -24654,20 +24643,20 @@ kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8
 	a uco-types:ThreadItem ;
 	co:index "1"^^xsd:positiveInteger ;
 	co:itemContent kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81 ;
-	uco-types:threadNextItem kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2 ;
-	.
-
-kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2
-	a uco-types:ThreadItem ;
-	co:index "2"^^xsd:positiveInteger ;
-	co:itemContent kb:message-decea264-014d-4da8-9d7f-a63231d2c049 ;
-	uco-types:threadNextItem kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87 ;
+	uco-types:threadNextItem kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46 ;
 	.
 
 kb:thread-item-5a835734-1c84-441f-80e5-8df4ffa005b9
 	a uco-types:ThreadItem ;
 	co:index "1"^^xsd:positiveInteger ;
 	co:itemContent kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331 ;
+	.
+
+kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46
+	a uco-types:ThreadItem ;
+	co:index "2"^^xsd:positiveInteger ;
+	co:itemContent kb:message-decea264-014d-4da8-9d7f-a63231d2c049 ;
+	uco-types:threadNextItem kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87 ;
 	.
 
 kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87
@@ -24692,20 +24681,15 @@ kb:tool-005be9da-ea83-456f-a44f-a63610586bd4
 	a uco-tool:AnalyticTool ;
 	.
 
-kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db
-	a uco-tool:Tool ;
-	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
-	uco-tool:toolType "binary code analysis tool" ;
-	uco-tool:version "7.7" ;
-	.
-
 kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195
-	a uco-tool:ConfiguredTool ;
-	uco-configuration:isConfigurationOf kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
+	a
+		uco-tool:AnalyticTool ,
+		uco-tool:ConfiguredTool
+		;
+	uco-configuration:isConfigurationOf kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-configuration:usesConfiguration kb:configuration-4dafed4a-e369-4755-95fa-f50c40e058cb ;
 	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
+	uco-tool:creator kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae ;
 	uco-tool:toolType "binary code analysis tool" ;
 	uco-tool:version "7.7" ;
 	.
@@ -24737,11 +24721,14 @@ kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879
 	.
 
 kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e
-	a uco-tool:ConfiguredTool ;
-	uco-configuration:isConfigurationOf kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
+	a
+		uco-tool:AnalyticTool ,
+		uco-tool:ConfiguredTool
+		;
+	uco-configuration:isConfigurationOf kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-configuration:usesConfiguration kb:configuration-2934ee74-ee7b-481f-8c05-ecce52d58634 ;
 	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
+	uco-tool:creator kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae ;
 	uco-tool:toolType "binary code analysis tool" ;
 	uco-tool:version "7.7" ;
 	.
@@ -24767,11 +24754,14 @@ kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f
 	.
 
 kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377
-	a uco-tool:ConfiguredTool ;
-	uco-configuration:isConfigurationOf kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
+	a
+		uco-tool:AnalyticTool ,
+		uco-tool:ConfiguredTool
+		;
+	uco-configuration:isConfigurationOf kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-configuration:usesConfiguration kb:configuration-472cd37e-8895-498f-848c-583d83bf2a19 ;
 	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
+	uco-tool:creator kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae ;
 	uco-tool:toolType "binary code analysis tool" ;
 	uco-tool:version "7.7" ;
 	.
@@ -25740,13 +25730,8 @@ kb1:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
 kb1:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:bitness "64" ;
-	uco-observable:manufacturer kb1:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
+	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
 	uco-observable:version "10.0" ;
-	.
-
-kb1:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26
-	a uco-identity:Organization ;
-	uco-core:name "Microsoft" ;
 	.
 
 kb1:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc
