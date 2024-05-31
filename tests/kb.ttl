@@ -85,14 +85,6 @@ kb:4026fabd-924d-4138-a6ba-73df2eb37bcb
 		;
 	.
 
-kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876
-	a uco-observable:MobileAccount ;
-	uco-core:hasFacet
-		kb:account-facet-175f01e3-3672-4c9b-9c3e-2274ced7530d ,
-		kb:mobile-account-facet-35bde336-98f5-4869-a2d0-723981a46e1a
-		;
-	.
-
 kb:665d63be-93e6-4d3e-8e75-3112be091e93
 	a
 		uco-observable:File ,
@@ -8268,6 +8260,14 @@ kb:a83adacb-ceaf-4b4b-b078-7c12dce990b9
 	a
 		uco-observable:Application ,
 		uco-observable:Software
+		;
+	.
+
+kb:ac7a4b44-0dc1-45a6-9fb9-272c33058b1c
+	a uco-observable:MobileAccount ;
+	uco-core:hasFacet
+		kb:account-facet-175f01e3-3672-4c9b-9c3e-2274ced7530d ,
+		kb:mobile-account-facet-35bde336-98f5-4869-a2d0-723981a46e1a
 		;
 	.
 
