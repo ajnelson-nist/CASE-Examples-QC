@@ -145,6 +145,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObjectFacet
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCard
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCardFacet
 https://ontology.unifiedcyberontology.org/uco/observable/SMSMessage
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URLHistory

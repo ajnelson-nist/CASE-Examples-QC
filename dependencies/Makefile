@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
-# Portions of this file contributed by NIST are governed by the following
-# statement:
+# Portions of this file contributed by NIST are governed by the
+# following statement:
 #
 # This software was developed at the National Institute of Standards
 # and Technology by employees of the Federal Government in the course
@@ -19,7 +19,35 @@ SHELL := /bin/bash
 top_srcdir := $(shell cd .. ; pwd)
 
 all: \
+  CASE-Corpora/dependencies/CASE-develop.ttl \
+  CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
+  CASE-Corpora/dependencies/CASE-unstable.ttl \
+  CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl \
   imports-transitive.ttl
+
+CASE-Corpora/dependencies/CASE-develop.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
+
+CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
+
+CASE-Corpora/dependencies/CASE-unstable.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
+
+CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
+	test -r $@
 
 CASE-Corpora/dependencies/dependencies.ttl:
 	$(MAKE) \
@@ -47,13 +75,18 @@ imports-transitive.ttl: \
   CASE-Corpora/ontology/case-corpora.ttl \
   CASE-Corpora/shapes/shapes.ttl \
   CASE-Corpora/taxonomy/devices/drafting.ttl \
-  CASE-Examples/examples/illustrations/event/drafting.ttl \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
+  CASE-Examples/examples/illustrations/partitions/drafting.ttl \
   CASE-Examples/examples/illustrations/spear_phishing/drafting.ttl \
-  UCO-Profile-BFO/dependencies/imports-transitive.ttl \
+  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/dependencies/BFO.ttl \
+  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl \
   UCO-Profile-BFO/ontology/uco-bfo.ttl \
-  UCO-Profile-FOAF/dependencies/imports-transitive.ttl \
-  UCO-Profile-FOAF/ontology/uco-foaf.ttl
+  UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/dependencies/foaf.ttl \
+  UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl \
+  UCO-Profile-FOAF/ontology/uco-foaf.ttl \
+  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/gufo.ttl \
+  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl \
+  UCO-Profile-gufo/ontology/uco-gufo.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \

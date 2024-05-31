@@ -14,6 +14,10 @@
 	path = dependencies/UCO-Profile-FOAF
 	url = https://github.com/ucoProject/UCO-Profile-FOAF.git
 	branch = main
+[submodule "dependencies/UCO-Profile-gufo"]
+	path = dependencies/UCO-Profile-gufo
+	url = https://github.com/ucoProject/UCO-Profile-gufo.git
+	branch = main
 [submodule "dependencies/casework.github.io"]
 	path = dependencies/casework.github.io
 	url = https://github.com/casework/casework.github.io.git

@@ -24,8 +24,8 @@ https://ontology.unifiedcyberontology.org/uco/identity/Organization
 https://ontology.unifiedcyberontology.org/uco/location/Location
 https://ontology.unifiedcyberontology.org/uco/observable/Device
 https://ontology.unifiedcyberontology.org/uco/observable/File
+https://ontology.unifiedcyberontology.org/uco/tool/AnalyticTool
 https://ontology.unifiedcyberontology.org/uco/tool/ConfiguredTool
-https://ontology.unifiedcyberontology.org/uco/tool/Tool
 https://ontology.unifiedcyberontology.org/uco/tool/creator
 https://ontology.unifiedcyberontology.org/uco/tool/toolType
 https://ontology.unifiedcyberontology.org/uco/tool/version

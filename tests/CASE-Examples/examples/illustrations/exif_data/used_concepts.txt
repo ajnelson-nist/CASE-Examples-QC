@@ -1,4 +1,5 @@
 https://ontology.caseontology.org/case/investigation/InvestigativeAction
+https://ontology.caseontology.org/case/investigation/ProvenanceRecord
 https://ontology.unifiedcyberontology.org/uco/action/Action
 https://ontology.unifiedcyberontology.org/uco/action/endTime
 https://ontology.unifiedcyberontology.org/uco/action/environment

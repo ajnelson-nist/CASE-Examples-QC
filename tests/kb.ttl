@@ -1,6 +1,6 @@
 # imports: http://example.org/shapes/case-corpora-local
 
-@prefix : <http://example.org/local#> .
+@prefix : <http://example.org/ontology/local#> .
 @prefix acme: <http://custompb.acme.org/core#> .
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
@@ -8,11 +8,10 @@
 @prefix co: <http://purl.org/co/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix default1: <http://example.org/ontology/local#> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix kb1: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
-@prefix ns1: <rdfs:> .
+@prefix ns1: <http://example.org/local#> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
@@ -55,18 +54,6 @@ kb:14354987-8ae5-47e3-8369-dbd0d5f77489
 	a uco-observable:URL ;
 	.
 
-kb:2af6fcf3-91d3-4457-9333-abab67f8fb91
-	a uco-observable:ObservableRelationship ;
-	uco-core:hasFacet
-		kb:data-range-facet-e5ceec7a-b273-4460-9edf-f778a5744740 ,
-		kb:table-relation-facet-17fb8bb8-91d4-4f16-af9e-17efbae05464
-		;
-	uco-core:isDirectional "true"^^xsd:boolean ;
-	uco-core:kindOfRelationship "Contained_Within" ;
-	uco-core:source kb:url-history-39ff4987-8ae5-47e3-8369-dbd0d5f79398 ;
-	uco-core:target kb:bfe049a6-fa3f-4bf6-9c37-9b09cc6afe6b ;
-	.
-
 kb:2ca4e1c6-9d27-4ba3-fe34-6da3c591b5e2
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
@@ -95,14 +82,6 @@ kb:4026fabd-924d-4138-a6ba-73df2eb37bcb
 	uco-core:hasFacet
 		kb:file-facet-8ce65705-90ab-4934-abb3-67d9c84d81a0 ,
 		kb:recovered-object-facet-95c7b098-ab46-4867-b050-6b095a7bd1b8
-		;
-	.
-
-kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876
-	a uco-observable:MobileAccount ;
-	uco-core:hasFacet
-		kb:account-facet-175f01e3-3672-4c9b-9c3e-2274ced7530d ,
-		kb:mobile-account-facet-35bde336-98f5-4869-a2d0-723981a46e1a
 		;
 	.
 
@@ -143,6 +122,86 @@ kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a
 	uco-core:hasFacet kb:captured-telecommunications-information-facet-efa35d55-1d2d-4e47-ae38-97ccad1945be ;
 	.
 
+kb:Analysis-313d688e-0bb9-4504-a474-d390b0a27010
+	a
+		case-investigation:InvestigativeAction ,
+		uco-analysis:Analysis
+		;
+	uco-action:object
+		kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ,
+		kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ,
+		kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ,
+		kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ,
+		kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976 ,
+		kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1 ,
+		kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990 ,
+		kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69
+		;
+	uco-action:performer kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b ;
+	uco-action:result
+		kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf ,
+		kb:ProvenanceRecord-ee82f650-2ccf-4363-8fe2-b3fd4c465681 ,
+		kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2
+		;
+	uco-core:description "Compare recovered partition against original" ;
+	.
+
+kb:Analysis-32be09b3-89cd-4461-9098-c5204220abd5
+	a
+		case-investigation:InvestigativeAction ,
+		uco-analysis:Analysis
+		;
+	uco-action:object
+		kb:AnalyticResult-8bf460c4-adaf-4839-83b6-ff1d80f7abbd ,
+		kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf ,
+		kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ,
+		kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ,
+		kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ,
+		kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ,
+		kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976 ,
+		kb:ProvenanceRecord-14fde3cf-b65a-4ef8-b539-ef43e0763787 ,
+		kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1 ,
+		kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f ,
+		kb:ProvenanceRecord-ee82f650-2ccf-4363-8fe2-b3fd4c465681 ,
+		kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82 ,
+		kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2 ,
+		kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28 ,
+		kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e
+		;
+	uco-action:performer kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b ;
+	uco-action:result
+		kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe ,
+		kb:ProvenanceRecord-ead0d8a8-b8b7-41cc-876e-3a7529cff711 ,
+		kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab
+		;
+	uco-core:description "Using belief of correspondence between parsed extended partition with original extended partition; and recovered partition with original last partition; compare recovered file system against original file system in last partition" ;
+	.
+
+kb:Analysis-39dcec1b-caa0-41c9-ab12-e45a39d73233
+	a
+		case-investigation:InvestigativeAction ,
+		uco-analysis:Analysis
+		;
+	uco-action:object
+		kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ,
+		kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ,
+		kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa ,
+		kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ,
+		kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1 ,
+		kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f ,
+		kb:ProvenanceRecord-7d2c2d0f-e1d6-44ea-9a1d-68370efed01f ,
+		kb:Relationship-122dd1b1-1da4-4fa3-a701-f5a334d85037 ,
+		kb:Relationship-c439b4b4-e07e-4bbe-b9b1-4fccb762e565
+		;
+	uco-action:performer kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b ;
+	uco-action:result
+		kb:AnalyticResult-8bf460c4-adaf-4839-83b6-ff1d80f7abbd ,
+		kb:ProvenanceRecord-14fde3cf-b65a-4ef8-b539-ef43e0763787 ,
+		kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82
+		;
+	uco-core:description "Compare parsed partition against original" ;
+	.
+
 kb:Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556
 	a uco-analysis:Analysis ;
 	drafting:isAutomated "true"^^xsd:boolean ;
@@ -160,13 +219,38 @@ kb:Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556
 	uco-core:startTime "2022-05-10T08:49:00+00:00"^^xsd:dateTime ;
 	.
 
+kb:Analysis-9dbfb955-d739-42cf-9fcf-7df99a9edc4b
+	a
+		case-investigation:InvestigativeAction ,
+		uco-analysis:Analysis
+		;
+	uco-action:object
+		kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe ,
+		kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6 ,
+		kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a ,
+		kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976 ,
+		kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf ,
+		kb:ProvenanceRecord-ead0d8a8-b8b7-41cc-876e-3a7529cff711 ,
+		kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262 ,
+		kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab ,
+		kb:Relationship-994db660-00b1-468d-844b-1a6636356722
+		;
+	uco-action:performer kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b ;
+	uco-action:result
+		kb:AnalyticResult-14641bfa-ef39-4394-a8ae-d0f57a2d637a ,
+		kb:ProvenanceRecord-7be0575c-63fd-4adc-bd56-523f2c9ca437 ,
+		kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1
+		;
+	uco-core:description "Using belief of correspondence between recovered file system and original file system in last partition, compared recovered file SECOND.TXT with original file of same name." ;
+	.
+
 kb:Analysis-f365add7-1326-426f-9266-406bdeed86a1
 	a uco-analysis:Analysis ;
 	drafting:isAutomated "false"^^xsd:boolean ;
 	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
 	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result
 		kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879 ,
@@ -182,7 +266,22 @@ kb:Analyst-13A167EE-D3B5-4AA4-B8BA-83C25F8B8FF4
 	.
 
 kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7
-	a uco-identity:Person ;
+	a
+		uco-identity:Identity ,
+		uco-identity:Person
+		;
+	.
+
+kb:AnalyticResult-14641bfa-ef39-4394-a8ae-d0f57a2d637a
+	a uco-analysis:AnalyticResult ;
+	uco-analysis:originatingAnalysis kb:Analysis-9dbfb955-d739-42cf-9fcf-7df99a9edc4b ;
+	uco-analysis:resultContent kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1 ;
+	.
+
+kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe
+	a uco-analysis:AnalyticResult ;
+	uco-analysis:originatingAnalysis kb:Analysis-32be09b3-89cd-4461-9098-c5204220abd5 ;
+	uco-analysis:resultContent kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab ;
 	.
 
 kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B
@@ -195,6 +294,18 @@ kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879
 	a uco-analysis:AnalyticResult ;
 	uco-analysis:originatingAnalysis kb:Analysis-f365add7-1326-426f-9266-406bdeed86a1 ;
 	uco-core:statement "Software exhibits malicious intent" ;
+	.
+
+kb:AnalyticResult-8bf460c4-adaf-4839-83b6-ff1d80f7abbd
+	a uco-analysis:AnalyticResult ;
+	uco-analysis:originatingAnalysis kb:Analysis-39dcec1b-caa0-41c9-ab12-e45a39d73233 ;
+	uco-analysis:resultContent kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82 ;
+	.
+
+kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf
+	a uco-analysis:AnalyticResult ;
+	uco-analysis:originatingAnalysis kb:Analysis-313d688e-0bb9-4504-a474-d390b0a27010 ;
+	uco-analysis:resultContent kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2 ;
 	.
 
 kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db
@@ -218,7 +329,10 @@ kb:AnalyticTool-DAE5EE58-E5ED-4588-93BE-CDEC6FAA9C6A
 	.
 
 kb:Android-class-6f4f675e-9a02-4ab5-8060-50d3d92832d9
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	uco-core:description "The general class of Android operating system instances, treated as an abstract individual." ;
 	.
 
@@ -543,11 +657,6 @@ kb:Attribution-29536fe2-850a-57be-9820-65eb86ba97b0
 	.
 
 kb:Attribution-29b1fb51-c4b1-5d8d-aca4-b48bb5a8d6ca
-	a prov:Attribution ;
-	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	.
-
-kb:Attribution-2d5414e0-7025-54d3-a878-b640e926b535
 	a prov:Attribution ;
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
@@ -892,6 +1001,11 @@ kb:Attribution-e9861743-893c-5c57-a2eb-95660390befe
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
+kb:Attribution-e9abcc16-7f42-5e96-9543-f12d0c67ced4
+	a prov:Attribution ;
+	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
 kb:Attribution-eae0bd5d-8659-581c-9c7f-de4ad0634c33
 	a prov:Attribution ;
 	prov:agent orcid:0000-0002-3771-570X ;
@@ -940,6 +1054,12 @@ kb:Attribution-fa585a64-7c72-5f53-9c38-bd7a24124903
 kb:Attribution-ff6c5eed-0e08-51d7-aba3-027679ed3171
 	a prov:Attribution ;
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
+kb:Bundle-8d850b58-3569-4b37-a6e1-7b4c22639e01
+	a uco-core:Bundle ;
+	uco-core:description "Error-focused Test Dataset - Deleted partition, Overwritten File" ;
+	uco-core:object kb:Investigation-5e05495a-513a-45ce-a64c-a17b665d263a ;
 	.
 
 kb:Bundle-feb83c4b-9d88-41ac-b8d8-82d317b40a53
@@ -1262,6 +1382,16 @@ kb:Configuration-2afbfbb1-b4d6-4ad5-9691-ff09b9f6eebe
 		;
 	.
 
+kb:Configuration-c279fd13-ed8d-4758-ab3c-962cdff0c96f
+	a uco-configuration:Configuration ;
+	uco-configuration:configurationEntry kb:configuration-entry-77b375c5-59cd-43c0-8eb4-4cbd350f5402 ;
+	.
+
+kb:Configuration-d5b12717-cb98-476c-bde3-849fd0f91fe2
+	a uco-configuration:Configuration ;
+	uco-configuration:configurationEntry kb:configuration-entry-422105bd-1533-46c9-acbf-0b23bffcb96c ;
+	.
+
 kb:Configuration-d9f82a71-1074-409f-a481-28f1fbc7ee28
 	a uco-configuration:Configuration ;
 	uco-configuration:configurationEntry
@@ -1273,12 +1403,20 @@ kb:Configuration-d9f82a71-1074-409f-a481-28f1fbc7ee28
 
 kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3
 	a uco-tool:ConfiguredTool ;
-	drafting:toolIdentifier "000eccd2007540a6" ;
 	uco-configuration:usesConfiguration kb:Configuration-d9f82a71-1074-409f-a481-28f1fbc7ee28 ;
-	uco-core:name "Tableau TD2u" ;
-	uco-tool:creator kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80 ;
+	uco-core:name "Tool 5" ;
+	uco-tool:creator kb:organization-c9223e2e-4a3b-436d-ad5f-10794d8e17fa ;
 	uco-tool:toolType "acquisition/duplication" ;
-	uco-tool:version "1.2.1 (build 5241-814712f)" ;
+	uco-tool:version "5.6.7" ;
+	.
+
+kb:ConfiguredTool-571e5240-0e58-42f8-89c2-f1917580504b
+	a uco-tool:ConfiguredTool ;
+	uco-configuration:usesConfiguration kb:Configuration-d5b12717-cb98-476c-bde3-849fd0f91fe2 ;
+	uco-core:name "Tool 4" ;
+	uco-tool:creator kb:organization-fb0a0400-9eb6-419f-baee-9336bc4a1038 ;
+	uco-tool:toolType "examination/recovery" ;
+	uco-tool:version "13.0" ;
 	.
 
 kb:ConfiguredTool-58f07c30-ae20-4587-9bb8-1a5299821e57
@@ -1289,6 +1427,25 @@ kb:ConfiguredTool-58f07c30-ae20-4587-9bb8-1a5299821e57
 	uco-tool:creator kb:organization-637dee9d-145d-45e7-b6f8-7ffdf0d4bf4f ;
 	uco-tool:toolType "acquisition/duplication" ;
 	uco-tool:version "3.2u1" ;
+	.
+
+kb:ConfiguredTool-f09436ba-3a57-4386-91c1-d586cebd1919
+	a uco-tool:ConfiguredTool ;
+	drafting:toolIdentifier "000eccd2007540a6" ;
+	uco-configuration:usesConfiguration kb:Configuration-d9f82a71-1074-409f-a481-28f1fbc7ee28 ;
+	uco-core:name "Tableau TD2u" ;
+	uco-tool:creator kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80 ;
+	uco-tool:toolType "acquisition/duplication" ;
+	uco-tool:version "1.2.1 (build 5241-814712f)" ;
+	.
+
+kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e
+	a uco-tool:ConfiguredTool ;
+	uco-configuration:usesConfiguration kb:Configuration-c279fd13-ed8d-4758-ab3c-962cdff0c96f ;
+	uco-core:name "Tool 1" ;
+	uco-tool:creator kb:organization-f2910679-990c-4474-8550-a5086a3b01d9 ;
+	uco-tool:toolType "examination/recovery" ;
+	uco-tool:version "1.2.3" ;
 	.
 
 kb:ContentDataFacet-15c65431-d17c-5845-b20b-5b021b8b294a
@@ -1522,6 +1679,12 @@ kb:Derivation-08a59437-829c-5270-92d0-cefaaeef111b
 	a prov:Derivation ;
 	prov:entity kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ;
 	prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+	.
+
+kb:Derivation-0c128fe8-8c91-5143-9824-2962cee99c5e
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c ;
+	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	.
 
 kb:Derivation-0cb1d9ba-da49-5ba0-aee6-a889915d9262
@@ -1781,22 +1944,10 @@ kb:Derivation-31d6a379-342f-5910-825b-7c645796fa65
 	prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 	.
 
-kb:Derivation-31e9795e-f437-55fd-9284-6ce049969442
-	a prov:Derivation ;
-	prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
-	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
-	.
-
 kb:Derivation-3204ba15-e25b-50ad-9b40-afdcd0013ccf
 	a prov:Derivation ;
 	prov:entity kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
 	prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
-	.
-
-kb:Derivation-369fbb6c-7bae-512c-9603-ef31ec2ec0c9
-	a prov:Derivation ;
-	prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
-	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	.
 
 kb:Derivation-37e22719-7b3f-54f8-a07f-a65c566fd54d
@@ -1874,12 +2025,6 @@ kb:Derivation-40b3b2c4-efe3-5093-80f4-d9339b3eab86
 kb:Derivation-40d1e1d0-46b1-52a5-8560-714f5718ffbd
 	a prov:Derivation ;
 	prov:entity kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a ;
-	.
-
-kb:Derivation-40d92215-7a9b-5f3f-a40a-5b6ce38d57dc
-	a prov:Derivation ;
-	prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
-	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	.
 
 kb:Derivation-42106ff4-0c3a-54e6-b91d-118e1d46b93d
@@ -2415,6 +2560,12 @@ kb:Derivation-7fdb1704-f489-5a70-a337-a49f89eea6a8
 	prov:hadActivity kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ;
 	.
 
+kb:Derivation-80fbd5d4-af8d-5546-84a0-61c3e60bef28
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c ;
+	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	.
+
 kb:Derivation-821f87ac-3d3a-5e23-b6b7-d38480a14c74
 	a prov:Derivation ;
 	prov:entity kb:provenance-record-27610dc7-3dc7-4d57-8143-629c72fb6be7 ;
@@ -2817,12 +2968,6 @@ kb:Derivation-b4f2ee10-7dfb-5fb9-920e-c75fc0894528
 	prov:hadActivity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
 	.
 
-kb:Derivation-b6b5b325-9f40-543e-8a22-8e1348a64d3c
-	a prov:Derivation ;
-	prov:entity kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f ;
-	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
-	.
-
 kb:Derivation-b6b8580c-11f7-5f67-ab08-a152bdaafba6
 	a prov:Derivation ;
 	prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
@@ -2851,6 +2996,12 @@ kb:Derivation-badacccd-69c4-563d-9aea-d8dea69416a1
 	a prov:Derivation ;
 	prov:entity kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694 ;
 	prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	.
+
+kb:Derivation-bb9837b2-6c36-5aa2-bc8d-004e0094554a
+	a prov:Derivation ;
+	prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	.
 
 kb:Derivation-bc11c0e4-6065-5441-85e2-8434ee94be15
@@ -3267,6 +3418,12 @@ kb:Derivation-f2f3b2c1-28ef-5600-96b4-636dbb7cf355
 	prov:hadActivity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
 	.
 
+kb:Derivation-f3ad014d-da23-5d71-8b12-48f5f3dcacce
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f ;
+	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	.
+
 kb:Derivation-f4e7c19a-35d0-55dd-a899-2116f8a62696
 	a prov:Derivation ;
 	prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
@@ -3375,6 +3532,196 @@ kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1
 		kb:content-data-facet-25069e03-040a-421b-9bfa-25d532ec23b8 ,
 		kb:disk-facet-c9fa6408-85f8-4e0b-bf8f-f653f5bc97c3
 		;
+	.
+
+kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb
+	a uco-observable:Disk ;
+	uco-core:description "USB Disk" ;
+	uco-core:hasFacet
+		kb:DiskFacet-81e49f34-38bc-4239-b550-67bd61f4d24f ,
+		kb:content-data-facet-7f3d70a8-d16a-49a9-b75d-01a28c49dff9
+		;
+	.
+
+kb:DiskFacet-81e49f34-38bc-4239-b550-67bd61f4d24f
+	a uco-observable:DiskFacet ;
+	uco-observable:storageCapacityInBytes "1048576000"^^xsd:integer ;
+	.
+
+kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e
+	a
+		prov:Entity ,
+		uco-observable:DiskPartition
+		;
+	prov:qualifiedGeneration kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444 ;
+	.
+
+kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0
+	a
+		prov:Entity ,
+		uco-observable:DiskPartition
+		;
+	prov:qualifiedGeneration kb:Event-26aaae20-6d00-445a-b102-d080753986d2 ;
+	.
+
+kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5
+	a
+		prov:Entity ,
+		uco-observable:DiskPartition
+		;
+	prov:qualifiedGeneration kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779 ;
+	.
+
+kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1
+	a
+		prov:Entity ,
+		uco-observable:DiskPartition
+		;
+	prov:qualifiedGeneration kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c ;
+	.
+
+kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0
+	a
+		prov:Entity ,
+		uco-observable:DiskPartition
+		;
+	rdfs:comment "CASE and UCO do not at present have a concept for an object's 'conclusion', analagous to a PROV Invalidation.  'prov:wasInvalidatedBy' is used to fulfill this need for this example." ;
+	prov:qualifiedGeneration kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c ;
+	prov:wasInvalidatedBy kb:InvestigativeAction-83a8b184-075b-4973-9c51-fe3fe2f7c3f8 ;
+	.
+
+kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:DiskPartitionFacet-9a5200b5-266a-441e-9c32-e1d3550729d6 ;
+	.
+
+kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:DiskPartitionFacet-9f027d4e-247d-4e29-9094-5f8f071d538e ;
+	.
+
+kb:DiskPartition1-19e98159-c55d-4e69-8281-fc35a6f8003e
+	a uco-observable:DiskPartition ;
+	.
+
+kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:disk-partition-facet-de753761-b15e-41b2-95da-81672c51d22c ;
+	.
+
+kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:DiskPartitionFacet-8fb6828a-5d96-4acd-beed-b40f32b3ebce ;
+	.
+
+kb:DiskPartition2-28aede24-3a87-4e64-b9ac-587305d0904a
+	a uco-observable:DiskPartition ;
+	.
+
+kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:disk-partition-facet-040eb408-94e3-4fdf-a7fc-54d25c66a546 ;
+	.
+
+kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:DiskPartitionFacet-fc793089-fc82-4a67-94aa-8acf1f659fb3 ;
+	.
+
+kb:DiskPartition3-38e206a4-b4de-449b-8d47-e1f2db7fa553
+	a uco-observable:DiskPartition ;
+	.
+
+kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:disk-partition-facet-1cf2213c-6dad-4454-b474-ceda664a81e3 ;
+	.
+
+kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17
+	a
+		uco-observable:DiskPartition ,
+		uco-observable:RecoveredObject
+		;
+	uco-core:hasFacet
+		kb:disk-partition-facet-588a0bb6-f791-445c-8d1c-826bd5465f3c ,
+		kb:recovered-object-facet-f135ac26-bbf0-4eab-949b-6a5dfe147c22
+		;
+	.
+
+kb:DiskPartitionExtended-f01d471e-829c-4a8e-afb4-bd3b85f59cd8
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:disk-partition-facet-05945610-68c9-475b-bf38-a4bf9d1fc932 ;
+	.
+
+kb:DiskPartitionFacet-8fb6828a-5d96-4acd-beed-b40f32b3ebce
+	a uco-observable:DiskPartitionFacet ;
+	uco-observable:diskPartitionType "NTFS / exFAT (0x07)" ;
+	uco-observable:partitionID "000:001" ;
+	uco-observable:partitionLength "125829120"^^xsd:integer ;
+	uco-observable:partitionOffset "104923136"^^xsd:integer ;
+	.
+
+kb:DiskPartitionFacet-9a5200b5-266a-441e-9c32-e1d3550729d6
+	a uco-observable:DiskPartitionFacet ;
+	uco-observable:diskPartitionType "DOS Extended (0x05)" ;
+	uco-observable:partitionLength "668991488"^^xsd:integer ;
+	uco-observable:partitionOffset "377552896"^^xsd:integer ;
+	.
+
+kb:DiskPartitionFacet-9f027d4e-247d-4e29-9094-5f8f071d538e
+	a uco-observable:DiskPartitionFacet ;
+	uco-observable:diskPartitionType "Win95 FAT32 (0x0c)" ;
+	uco-observable:partitionID "000:000" ;
+	uco-observable:partitionLength "104857600"^^xsd:integer ;
+	uco-observable:partitionOffset "65536"^^xsd:integer ;
+	.
+
+kb:DiskPartitionFacet-fc793089-fc82-4a67-94aa-8acf1f659fb3
+	a uco-observable:DiskPartitionFacet ;
+	uco-observable:diskPartitionType "NTFS / exFAT (0x07)" ;
+	uco-observable:partitionID "000:002" ;
+	uco-observable:partitionLength "146800640"^^xsd:integer ;
+	uco-observable:partitionOffset "230752256"^^xsd:integer ;
+	.
+
+kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa
+	a drafting:DiskPartitionSystem ;
+	uco-core:hasFacet kb:DiskPartitionSystemFacet-f97e7cdb-4458-4c1e-b2c4-119dfbbdba9b ;
+	.
+
+kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0
+	a
+		drafting:DiskPartitionSystem ,
+		prov:Entity
+		;
+	prov:qualifiedGeneration kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e ;
+	uco-core:hasFacet kb:DiskPartitionSystemFacet-fae62886-ed9d-4804-9429-17fd14a8daac ;
+	.
+
+kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245
+	a drafting:DiskPartitionSystem ;
+	uco-core:hasFacet kb:DiskPartitionSystemFacet-61ecd83f-5c20-4b41-bf6f-6d10bebfdb4c ;
+	.
+
+kb:DiskPartitionSystemFacet-61ecd83f-5c20-4b41-bf6f-6d10bebfdb4c
+	a drafting:DiskPartitionSystemFacet ;
+	drafting:diskPartitionSchemeType "MBR" ;
+	drafting:diskSignature "04A95A92" ;
+	drafting:partitionList kb:partitionlist-e0d00075-96fa-443e-be97-78efe0e8bc38 ;
+	drafting:unpartitionableSpace "3997696" ;
+	.
+
+kb:DiskPartitionSystemFacet-f97e7cdb-4458-4c1e-b2c4-119dfbbdba9b
+	a drafting:DiskPartitionSystemFacet ;
+	drafting:diskPartitionSchemeType "MBR" ;
+	drafting:partitionList kb:partitionlist-e7018775-5b21-48eb-8b1c-25dc643ac9bc ;
+	.
+
+kb:DiskPartitionSystemFacet-fae62886-ed9d-4804-9429-17fd14a8daac
+	a drafting:DiskPartitionSystemFacet ;
+	rdfs:comment "NOTE: Though the user-interface actions taken to create the partition system and each of its child partitions are each potentially time-stampable, separate uco-action:Actions, the Facet design pattern means the generating InvestigativeAction cannot be broken out into separate Actions.  The partition list must be generated and populated at the time of the creation of this Partition System object.  Hence, the act of creating the child partitions is instead represented as part of the multi-minute single Action that creates and populates the partition system." ;
+	drafting:diskPartitionSchemeType "MBR" ;
+	drafting:partitionList kb:partitionlist-e9f1481a-d40f-4a9d-a275-b0d057be3a92 ;
 	.
 
 kb:DownloadableRelation-03131d31-e559-49d5-a3a6-e75d2fbf0ee3
@@ -3685,6 +4032,61 @@ kb:End-d1d333d7-fe44-5b9d-8fff-34b593a6e748
 		;
 	.
 
+kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e
+	a
+		time:Instant ,
+		prov:Generation ,
+		uco-core:Event
+		;
+	.
+
+kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444
+	a
+		time:Instant ,
+		prov:Generation ,
+		uco-core:Event
+		;
+	time:after kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e ;
+	.
+
+kb:Event-26aaae20-6d00-445a-b102-d080753986d2
+	a
+		time:Instant ,
+		prov:Generation ,
+		uco-core:Event
+		;
+	time:after kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444 ;
+	.
+
+kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779
+	a
+		time:Instant ,
+		prov:Generation ,
+		uco-core:Event
+		;
+	time:after kb:Event-26aaae20-6d00-445a-b102-d080753986d2 ;
+	.
+
+kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c
+	a
+		time:Instant ,
+		prov:Generation ,
+		uco-core:Event
+		;
+	rdfs:comment "This event was the generation of the extended partition table and its contained partition." ;
+	time:after kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779 ;
+	.
+
+kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348
+	a
+		time:Instant ,
+		prov:Generation ,
+		prov:Invalidation ,
+		uco-core:Event
+		;
+	rdfs:comment "The precise timestamp of this file deletion event was not recorded, but it is known to have occurred.  This event invalidates (ends) a Relationship FIRST.TXT had with its file system, leaving FIRST.TXT in a marked-unallocated state apparent from a superseding Relationship." ;
+	.
+
 kb:File-26adfe08-e545-4d24-872b-84f95bd01284
 	a uco-observable:File ;
 	uco-core:hasFacet kb:file-facet-fa661a0f-1b8d-4552-870e-daf7b93404be ;
@@ -3693,6 +4095,11 @@ kb:File-26adfe08-e545-4d24-872b-84f95bd01284
 kb:File-31c06b79-ad9f-446a-859a-62b848e2e1f8
 	a uco-observable:File ;
 	uco-core:hasFacet kb:file-facet-763c6961-c335-40b6-a8b3-36b6f5f15ecb ;
+	.
+
+kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f
+	a uco-observable:File ;
+	uco-core:hasFacet kb:file-facet-8f25239c-5952-470f-ad3a-505d15998bb0 ;
 	.
 
 kb:File-61082f03-46ed-4bc7-a7c9-571754ffcb60
@@ -3711,9 +4118,52 @@ kb:File-bbb4f0c4-ea2c-42fa-9ec0-11bc4678b7b8
 		;
 	.
 
+kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51
+	a uco-observable:File ;
+	uco-core:hasFacet
+		kb:file-facet-fe9bb809-ad2c-41b3-9b04-281c5a4a83a0 ,
+		kb:recovered-object-facet-1cba33f1-601f-4716-b409-5c6014c68a47
+		;
+	.
+
+kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06
+	a
+		uco-observable:File ,
+		uco-observable:Image
+		;
+	uco-core:hasFacet
+		kb:content-data-facet-340937e3-0e27-4da8-ada1-d2e8394103ea ,
+		kb:file-facet-cd2ecec2-8ff2-4520-af44-c078a42b8383
+		;
+	.
+
+kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6
+	a uco-observable:File ;
+	uco-core:hasFacet kb:file-facet-7daa8890-8301-4389-82bc-75642a652fdf ;
+	.
+
+kb:File-dc86b574-f66b-4b79-b254-e55449535ef5
+	a
+		prov:Entity ,
+		uco-observable:File
+		;
+	rdfs:comment "This File object avoids using the uco-observable:fileName property because that property changes values in this scenario, suggesting the need for a Quality to represent how this file's name is represented." ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/535> ;
+	uco-core:name "FIRST.TXT" ;
+	.
+
 kb:File-ed7c30a2-e233-4732-adee-8514955b6dfb
 	a uco-observable:File ;
 	uco-core:hasFacet kb:file-facet-929bcdfd-ca54-4df7-989a-6b7206b8661e ;
+	.
+
+kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a
+	a
+		prov:Entity ,
+		uco-observable:File
+		;
+	prov:qualifiedGeneration kb:Generation-6a6274a8-a82b-45ca-b570-dea8789560af ;
+	uco-core:name "SECOND.TXT" ;
 	.
 
 kb:FileFacet-12098bfd-bc6d-56eb-970d-0efe3e8df805
@@ -3826,6 +4276,21 @@ kb:FileFacet-e8260820-359e-5803-af99-92326d4a4af5
 	uco-observable:fileName "SMS-Messages.xlsx" ;
 	uco-observable:modifiedTime "2020-11-22T03:14:58+00:00"^^xsd:dateTime ;
 	uco-observable:sizeInBytes "16016"^^xsd:integer ;
+	.
+
+kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4
+	a uco-observable:FileSystem ;
+	uco-core:hasFacet kb:file-system-facet-4fe95932-8b21-4463-a20b-85e3b151e388 ;
+	.
+
+kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4
+	a uco-observable:FileSystem ;
+	uco-core:hasFacet kb:FileSystemFacet-0833f401-db1c-42ce-b427-28fe4875193b ;
+	.
+
+kb:FileSystemFacet-0833f401-db1c-42ce-b427-28fe4875193b
+	a uco-observable:FileSystemFacet ;
+	uco-observable:fileSystemType "FAT32" ;
 	.
 
 kb:Generation-0087dfe9-6144-5d89-8997-24b2e35d7dbe
@@ -4086,6 +4551,16 @@ kb:Generation-68f741b5-ab9b-5790-a8fd-7a08c576344e
 	prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	.
 
+kb:Generation-6a6274a8-a82b-45ca-b570-dea8789560af
+	a
+		time:Instant ,
+		prov:Generation ,
+		uco-core:Event
+		;
+	rdfs:comment "The precise timestamp of this file creation event was not recorded, but it is known to have occurred after FIRST.TXT's deletion." ;
+	time:after kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348 ;
+	.
+
 kb:Generation-7070472f-3fe9-5d7e-8bf0-0b2019c7130f
 	a
 		time:Instant ,
@@ -4211,15 +4686,6 @@ kb:Generation-9b3f04af-8a07-50ca-9b3d-014f661c803b
 		kb:Usage-ff17a5b0-fe8b-5375-a00a-496ae6eae779
 		;
 	prov:activity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
-	.
-
-kb:Generation-9b8bea6f-65a2-5435-8132-12d50a405e76
-	a
-		time:Instant ,
-		prov:Generation
-		;
-	time:before kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9 ;
-	prov:activity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	.
 
 kb:Generation-9c7ebcf0-197d-5f83-ac40-a00c3c877838
@@ -4559,6 +5025,15 @@ kb:Generation-e0e2da82-5191-57de-ae56-287b289a0bba
 		;
 	time:before kb:Usage-e96d62ee-6f47-5433-9c27-bc68b1b2d9e7 ;
 	prov:activity kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
+	.
+
+kb:Generation-e1ad0e9c-d7c5-5738-ba6f-bfdf577dc9f4
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d ;
+	prov:activity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	.
 
 kb:Generation-e2cd5988-ec83-5775-9606-718977a90ae5
@@ -5260,9 +5735,55 @@ kb:Hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
 	uco-types:hashValue "de6b07d9dd6a4a4c856e73a9ef0030e05641cf4e3a9c7062f38baf17a050a0949606a198e2bc3323b1ee9dcda5532a95b8f2697f7eb20ad1771cd112e915ee8e"^^xsd:hexBinary ;
 	.
 
+kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804
+	a uco-identity:Organization ;
+	uco-core:name "Chris Hargreaves" ;
+	.
+
 kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28
 	a uco-identity:Organization ;
 	uco-core:name "ESC" ;
+	.
+
+kb:Investigation-5e05495a-513a-45ce-a64c-a17b665d263a
+	a case-investigation:Investigation ;
+	case-investigation:focus "DF Error-focused Tool Testing" ;
+	uco-core:description "Test whether digital forensic tools can correctly detect and recover deleted partiton and overwritten file." ;
+	uco-core:name "USB_2023_EFDS_01" ;
+	uco-core:object
+		kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ,
+		kb:ConfiguredTool-571e5240-0e58-42f8-89c2-f1917580504b ,
+		kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e ,
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899 ,
+		kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20 ,
+		kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15 ,
+		kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ,
+		kb:DiskPartitionExtended-f01d471e-829c-4a8e-afb4-bd3b85f59cd8 ,
+		kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ,
+		kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f ,
+		kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06 ,
+		kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ,
+		kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804 ,
+		kb:InvestigativeAction-a5c03fc1-092d-4c1a-9142-adf22966ba93 ,
+		kb:InvestigativeAction-db5f7449-256e-4d16-9486-6c7f3524c070 ,
+		kb:InvestigativeAction-e55a3d16-a516-4ebe-bba2-cf7aa9a6b8ba ,
+		kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976 ,
+		kb:ProvenanceRecord-7d2c2d0f-e1d6-44ea-9a1d-68370efed01f ,
+		kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e ,
+		kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245 ,
+		kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d ,
+		kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31 ,
+		kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b ,
+		kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89 ,
+		kb:Relationship-e1d02a55-16aa-4490-a115-1695ed8be2d4 ,
+		kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e ,
+		kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ,
+		kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8 ,
+		kb:organization-c9223e2e-4a3b-436d-ad5f-10794d8e17fa ,
+		kb:organization-f2910679-990c-4474-8550-a5086a3b01d9 ,
+		kb:organization-fb0a0400-9eb6-419f-baee-9336bc4a1038
+		;
 	.
 
 kb:Investigation1-85c7b8d1-54e0-4023-847a-20e0f55dd48e
@@ -5274,11 +5795,149 @@ kb:Investigation1-85c7b8d1-54e0-4023-847a-20e0f55dd48e
 	uco-core:object kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
 	.
 
+kb:InvestigativeAction-37881b8a-edad-41e3-ae0c-4c205cf2d8d1
+	a case-investigation:InvestigativeAction ;
+	uco-action:environment kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61 ;
+	uco-action:instrument kb:Tool-8ae63f46-44cb-40d9-9e50-539b29f05ea8 ;
+	uco-action:object
+		kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ,
+		kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f
+		;
+	uco-action:performer kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	uco-action:result
+		kb:File-dc86b574-f66b-4b79-b254-e55449535ef5 ,
+		kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a ,
+		kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf ,
+		kb:Relationship-72049a02-0ec0-428c-b1ac-043808aa3a6d ,
+		kb:Relationship-77c33269-e357-4203-a1b6-663d71aee493 ,
+		kb:Relationship-994db660-00b1-468d-844b-1a6636356722
+		;
+	uco-core:description "Run preparation script 2: Placing overwritten file" ;
+	.
+
+kb:InvestigativeAction-83a8b184-075b-4973-9c51-fe3fe2f7c3f8
+	a case-investigation:InvestigativeAction ;
+	uco-action:environment kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61 ;
+	uco-action:instrument kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696 ;
+	uco-action:object
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245
+		;
+	uco-action:performer kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	uco-action:result
+		kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e ,
+		kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0 ,
+		kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5 ,
+		kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ,
+		kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ,
+		kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ,
+		kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ,
+		kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f ,
+		kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69 ,
+		kb:Relationship-6ca9b1d0-85de-4e33-b8dd-fecbf2ba44ae ,
+		kb:Relationship-7df72f66-9fb2-49b4-be1c-b0cee31ba104 ,
+		kb:Relationship-c439b4b4-e07e-4bbe-b9b1-4fccb762e565 ,
+		kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28 ,
+		kb:Relationship-fb8026c8-4391-4372-98d7-c21cac111649
+		;
+	uco-core:description "Run preparation script 1: Creation of partition system and file systems" ;
+	.
+
+kb:InvestigativeAction-8ab415cd-6156-4e86-b5f5-34d9cb583075
+	a case-investigation:InvestigativeAction ;
+	uco-action:environment kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61 ;
+	uco-action:instrument kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696 ;
+	uco-action:object
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ,
+		kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ,
+		kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf ,
+		kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f
+		;
+	uco-action:performer kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	uco-action:result kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1 ;
+	uco-core:description "Run preparation script 3: Manual deletion of partition" ;
+	.
+
+kb:InvestigativeAction-a5c03fc1-092d-4c1a-9142-adf22966ba93
+	a case-investigation:InvestigativeAction ;
+	uco-action:endTime "2023-08-31T09:35:13+00:00"^^xsd:dateTime ;
+	uco-action:instrument kb:ConfiguredTool-571e5240-0e58-42f8-89c2-f1917580504b ;
+	uco-action:object
+		kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06 ,
+		kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e
+		;
+	uco-action:performer kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	uco-action:result
+		kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ,
+		kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3 ,
+		kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1 ,
+		kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e ,
+		kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa ,
+		kb:ProvenanceRecord-7d2c2d0f-e1d6-44ea-9a1d-68370efed01f ,
+		kb:Relationship-122dd1b1-1da4-4fa3-a701-f5a334d85037 ,
+		kb:Relationship-143d1375-76c9-42e0-b26d-de8f7403047c ,
+		kb:Relationship-61d73f33-1a1d-42d6-8c72-87ab57e4d632 ,
+		kb:Relationship-94c43ab8-337b-45d6-bb24-fd984e2fdbf7
+		;
+	uco-action:startTime "2023-08-31T09:32:54+00:00"^^xsd:dateTime ;
+	uco-core:description "Partition recovery using Tool 4" ;
+	uco-core:name "forensic recovery" ;
+	.
+
+kb:InvestigativeAction-c08691b3-852c-4d3f-a8d7-cc09ed916090
+	a case-investigation:InvestigativeAction ;
+	uco-action:performer kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	uco-action:result
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245
+		;
+	uco-core:description "Enter USB Disk into chain of custody" ;
+	.
+
+kb:InvestigativeAction-db5f7449-256e-4d16-9486-6c7f3524c070
+	a case-investigation:InvestigativeAction ;
+	uco-action:endTime "2023-08-31T09:35:13+00:00"^^xsd:dateTime ;
+	uco-action:instrument kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e ;
+	uco-action:object
+		kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06 ,
+		kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e
+		;
+	uco-action:performer kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	uco-action:result
+		kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899 ,
+		kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20 ,
+		kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15 ,
+		kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ,
+		kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ,
+		kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f ,
+		kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51 ,
+		kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6 ,
+		kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ,
+		kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976 ,
+		kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990 ,
+		kb:Relationship-0b086d89-db06-4503-807e-490563d10292 ,
+		kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d ,
+		kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262 ,
+		kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31 ,
+		kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b ,
+		kb:Relationship-6faf5831-fb44-471a-9016-076d439c2d95 ,
+		kb:Relationship-732cfd65-1be4-4123-894c-4f951493ae63 ,
+		kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89 ,
+		kb:Relationship-ddc23d5a-5b8c-4f42-bc82-fb4dc8654630 ,
+		kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e ,
+		kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8
+		;
+	uco-action:startTime "2023-08-31T09:32:54+00:00"^^xsd:dateTime ;
+	uco-core:description "Partition recovery using Tool 1" ;
+	uco-core:name "forensic recovery" ;
+	.
+
 kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c
 	a case-investigation:InvestigativeAction ;
 	drafting:notProvidedByReport uco-action:location ;
 	uco-action:endTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
-	uco-action:instrument kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	uco-action:instrument kb:ConfiguredTool-f09436ba-3a57-4386-91c1-d586cebd1919 ;
 	uco-action:object
 		kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ,
 		kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89
@@ -5293,7 +5952,25 @@ kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c
 	uco-core:name "disk image" ;
 	.
 
-kb:LoginData-c316c405-9326-4f28-9b8d-44a3bb9e7283
+kb:InvestigativeAction-e55a3d16-a516-4ebe-bba2-cf7aa9a6b8ba
+	a case-investigation:InvestigativeAction ;
+	uco-action:endTime "2023-08-16T16:45:38+00:00"^^xsd:dateTime ;
+	uco-action:instrument kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	uco-action:object
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1
+		;
+	uco-action:performer kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	uco-action:result
+		kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06 ,
+		kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e
+		;
+	uco-action:startTime "2023-08-16T16:44:02+00:00"^^xsd:dateTime ;
+	uco-core:description "Acquisition of USB" ;
+	uco-core:name "disk image" ;
+	.
+
+kb:LoginData-bdf17f36-76cc-418e-918f-1a11d288d9d2
 	a uco-observable:ObservableRelationship ;
 	uco-core:hasFacet kb:data-range-facet-139e35d8-3a76-4320-86d1-05d136c8d128 ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
@@ -5430,12 +6107,142 @@ kb:ObservableRelationship-f416968a-cd3d-57b6-aea3-9a4bc7862a95
 	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip> ;
 	.
 
+kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
+	uco-core:hasFacet kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623 ;
+	uco-core:name "Windows 11 Pro" ;
+	.
+
+kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623
+	a uco-observable:OperatingSystemFacet ;
+	drafting:buildID "22621.2283" ;
+	uco-observable:manufacturer kb:Organization-a94338c2-030a-493f-9d26-55cade656276 ;
+	uco-observable:version "22H2" ;
+	.
+
+kb:Organization-a94338c2-030a-493f-9d26-55cade656276
+	a uco-identity:Organization ;
+	uco-core:name "Microsoft" ;
+	.
+
+kb:PathRelationFacet-b9510561-e892-4122-871e-1220533f083c
+	a uco-observable:PathRelationFacet ;
+	uco-observable:path "/del_demo/folder1/?IRST.txt" ;
+	.
+
+kb:PathRelationFacet-d2dcd646-2bdc-423c-a80a-bf19588623c1
+	a uco-observable:PathRelationFacet ;
+	uco-observable:path "/del_demo/folder2/SECOND.txt" ;
+	.
+
+kb:PathRelationFacet-df847850-f362-48a6-a8b0-5d03e83f8bba
+	a uco-observable:PathRelationFacet ;
+	uco-observable:path "/del_demo/folder1/FIRST.txt" ;
+	.
+
+kb:Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f
+	a uco-identity:Person ;
+	uco-core:name "Alex Nelson" ;
+	.
+
+kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "20230816-001-001-01-P4" ;
+	case-investigation:rootExhibitNumber "20230816-001-001" ;
+	uco-core:description "Forensically recovered partition" ;
+	uco-core:object
+		kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899 ,
+		kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20 ,
+		kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15 ,
+		kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ,
+		kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ,
+		kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f ,
+		kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51 ,
+		kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6 ,
+		kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ,
+		kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990 ,
+		kb:Relationship-0b086d89-db06-4503-807e-490563d10292 ,
+		kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d ,
+		kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262 ,
+		kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31 ,
+		kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b ,
+		kb:Relationship-6faf5831-fb44-471a-9016-076d439c2d95 ,
+		kb:Relationship-732cfd65-1be4-4123-894c-4f951493ae63 ,
+		kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89 ,
+		kb:Relationship-ddc23d5a-5b8c-4f42-bc82-fb4dc8654630 ,
+		kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e ,
+		kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8
+		;
+	uco-observable:observableCreatedTime "2023-08-31T09:35:13+00:00"^^xsd:dateTime ;
+	.
+
 kb:ProvenanceRecord-0ff68932-2abc-433c-91b0-5af1ca34b470
 	a case-investigation:ProvenanceRecord ;
 	case-investigation:exhibitNumber "20181119-001-001-01" ;
 	uco-core:description "Forensic image with E01Capture" ;
 	uco-core:object kb:usb-b2dbb227-06ec-432d-9f63-058e8ab73944 ;
 	uco-observable:observableCreatedTime "2018-11-19T15:50:58+00:00"^^xsd:dateTime ;
+	.
+
+kb:ProvenanceRecord-14fde3cf-b65a-4ef8-b539-ef43e0763787
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object
+		kb:AnalyticResult-8bf460c4-adaf-4839-83b6-ff1d80f7abbd ,
+		kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82
+		;
+	.
+
+kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of creation of a file, its deletion, and its overwriting with the creation of another file." ;
+	uco-core:object
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:File-dc86b574-f66b-4b79-b254-e55449535ef5 ,
+		kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a ,
+		kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ,
+		kb:Relationship-72049a02-0ec0-428c-b1ac-043808aa3a6d ,
+		kb:Relationship-77c33269-e357-4203-a1b6-663d71aee493 ,
+		kb:Relationship-994db660-00b1-468d-844b-1a6636356722
+		;
+	.
+
+kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of modification of disk state: Deletion of some objects" ;
+	uco-core:object
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ,
+		kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0
+		;
+	.
+
+kb:ProvenanceRecord-4915201f-0805-40aa-aaf2-12a7671214d4
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	.
+
+kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of modification of disk state: Initial object creation" ;
+	uco-core:object
+		kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ,
+		kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e ,
+		kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0 ,
+		kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5 ,
+		kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ,
+		kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ,
+		kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ,
+		kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ,
+		kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69 ,
+		kb:Relationship-6ca9b1d0-85de-4e33-b8dd-fecbf2ba44ae ,
+		kb:Relationship-7df72f66-9fb2-49b4-be1c-b0cee31ba104 ,
+		kb:Relationship-c439b4b4-e07e-4bbe-b9b1-4fccb762e565 ,
+		kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28 ,
+		kb:Relationship-fb8026c8-4391-4372-98d7-c21cac111649
+		;
 	.
 
 kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89
@@ -5446,9 +6253,45 @@ kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89
 	uco-observable:observableCreatedTime "2018-10-26T13:12:48+00:00"^^xsd:dateTime ;
 	.
 
+kb:ProvenanceRecord-7be0575c-63fd-4adc-bd56-523f2c9ca437
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object
+		kb:AnalyticResult-14641bfa-ef39-4394-a8ae-d0f57a2d637a ,
+		kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1
+		;
+	.
+
+kb:ProvenanceRecord-7d2c2d0f-e1d6-44ea-9a1d-68370efed01f
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "20230816-001-001-01-MBR" ;
+	case-investigation:rootExhibitNumber "20230816-001-001" ;
+	uco-core:description "Parse partition system structure" ;
+	uco-core:object
+		kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ,
+		kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3 ,
+		kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1 ,
+		kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e ,
+		kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa ,
+		kb:Relationship-122dd1b1-1da4-4fa3-a701-f5a334d85037 ,
+		kb:Relationship-143d1375-76c9-42e0-b26d-de8f7403047c ,
+		kb:Relationship-61d73f33-1a1d-42d6-8c72-87ab57e4d632 ,
+		kb:Relationship-94c43ab8-337b-45d6-bb24-fd984e2fdbf7
+		;
+	uco-observable:observableCreatedTime "2023-08-31T09:32:12+00:00"^^xsd:dateTime ;
+	.
+
 kb:ProvenanceRecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879 ;
+	.
+
+kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "20230816-001-001-01" ;
+	case-investigation:rootExhibitNumber "20230816-001-001" ;
+	uco-core:description "Forensic image with E01 capture method" ;
+	uco-core:object kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06 ;
+	uco-observable:observableCreatedTime "2023-08-16T16:44:58+00:00"^^xsd:dateTime ;
 	.
 
 kb:ProvenanceRecord-d628b0f6-686d-4d22-a577-ec737e5947bc
@@ -5456,8 +6299,117 @@ kb:ProvenanceRecord-d628b0f6-686d-4d22-a577-ec737e5947bc
 	uco-core:object kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B ;
 	.
 
+kb:ProvenanceRecord-ead0d8a8-b8b7-41cc-876e-3a7529cff711
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object
+		kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe ,
+		kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab
+		;
+	.
+
+kb:ProvenanceRecord-ee82f650-2ccf-4363-8fe2-b3fd4c465681
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object
+		kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf ,
+		kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2
+		;
+	.
+
+kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "20230816-001-001" ;
+	case-investigation:rootExhibitNumber "20230816-001-001" ;
+	uco-core:description "Initial record of USB Disk in chain of custody" ;
+	uco-core:object kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb ;
+	uco-observable:observableCreatedTime "2023-08-16T16:45:38+00:00"^^xsd:dateTime ;
+	.
+
 kb:RasterPicture1-b67308c0-c31b-41a6-805a-10ec526ec8bc
 	a uco-observable:RasterPicture ;
+	.
+
+kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ;
+	uco-core:target kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ;
+	.
+
+kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ;
+	uco-core:target kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ;
+	.
+
+kb:Relationship-0b086d89-db06-4503-807e-490563d10292
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15 ;
+	uco-core:target kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ;
+	.
+
+kb:Relationship-122dd1b1-1da4-4fa3-a701-f5a334d85037
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ;
+	uco-core:target kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa ;
+	.
+
+kb:Relationship-143d1375-76c9-42e0-b26d-de8f7403047c
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1 ;
+	uco-core:target kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa ;
+	.
+
+kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8 ;
+	uco-core:target kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ;
+	.
+
+kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82
+	a uco-core:Relationship ;
+	uco-core:isDirectional "false"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Corresponds_to" ;
+	uco-core:source kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ;
+	uco-core:target kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ;
+	.
+
+kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262
+	a uco-observable:ObservableRelationship ;
+	uco-core:hasFacet kb:path-relation-facet-3b7077c6-98fe-40bc-9f1f-0805f7cdaa97 ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6 ;
+	uco-core:target kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ;
+	.
+
+kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31
+	a uco-observable:ObservableRelationship ;
+	uco-core:hasFacet kb:data-range-facet-2b54a0f8-9737-4c2b-8edd-584558cb6c2f ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06 ;
+	uco-core:target kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ;
+	.
+
+kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b
+	a uco-observable:ObservableRelationship ;
+	uco-core:endTime "2023-08-15T16:38:06+00:00"^^xsd:dateTime ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Referenced-By" ;
+	uco-core:source kb:DiskPartitionExtended-f01d471e-829c-4a8e-afb4-bd3b85f59cd8 ;
+	uco-core:startTime "2023-08-15T00:29:15+00:00"^^xsd:dateTime ;
+	uco-core:target kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ;
 	.
 
 kb:Relationship-47601a3c-d962-4e3a-b90d-fa2bad7a0be3
@@ -5484,12 +6436,140 @@ kb:Relationship-59a90c3f-12a9-4ed4-b175-2e56b75abd74
 	uco-core:target kb:File-ed7c30a2-e233-4732-adee-8514955b6dfb ;
 	.
 
+kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1
+	a uco-core:Relationship ;
+	uco-core:isDirectional "false"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Corresponds_to" ;
+	uco-core:source kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a ;
+	uco-core:target kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6 ;
+	.
+
+kb:Relationship-61d73f33-1a1d-42d6-8c72-87ab57e4d632
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3 ;
+	uco-core:target kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa ;
+	.
+
+kb:Relationship-6ca9b1d0-85de-4e33-b8dd-fecbf2ba44ae
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0 ;
+	uco-core:target kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ;
+	.
+
+kb:Relationship-6faf5831-fb44-471a-9016-076d439c2d95
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899 ;
+	uco-core:target kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ;
+	.
+
+kb:Relationship-72049a02-0ec0-428c-b1ac-043808aa3a6d
+	a
+		prov:Entity ,
+		uco-observable:ObservableRelationship
+		;
+	prov:qualifiedInvalidation kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348 ;
+	uco-core:hasFacet kb:PathRelationFacet-df847850-f362-48a6-a8b0-5d03e83f8bba ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:File-dc86b574-f66b-4b79-b254-e55449535ef5 ;
+	uco-core:target kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ;
+	.
+
+kb:Relationship-732cfd65-1be4-4123-894c-4f951493ae63
+	a uco-observable:ObservableRelationship ;
+	uco-core:hasFacet kb:path-relation-facet-7bf952dc-f372-4432-9ffb-3582727776e3 ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51 ;
+	uco-core:target kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ;
+	.
+
+kb:Relationship-77c33269-e357-4203-a1b6-663d71aee493
+	a
+		prov:Entity ,
+		uco-observable:ObservableRelationship
+		;
+	prov:qualifiedGeneration kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348 ;
+	uco-core:hasFacet kb:PathRelationFacet-b9510561-e892-4122-871e-1220533f083c ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:File-dc86b574-f66b-4b79-b254-e55449535ef5 ;
+	uco-core:target kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ;
+	.
+
 kb:Relationship-7a0eda2d-598e-4e40-961f-01583226628d
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Downloadable_From" ;
 	uco-core:source <s3://digitalcorpora/corpora/mobile/android_10/Android_10.zip> ;
 	uco-core:target <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
+	.
+
+kb:Relationship-7df72f66-9fb2-49b4-be1c-b0cee31ba104
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e ;
+	uco-core:target kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ;
+	.
+
+kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab
+	a uco-core:Relationship ;
+	uco-core:isDirectional "false"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Corresponds_to" ;
+	uco-core:source kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ;
+	uco-core:target kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ;
+	.
+
+kb:Relationship-94c43ab8-337b-45d6-bb24-fd984e2fdbf7
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e ;
+	uco-core:target kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa ;
+	.
+
+kb:Relationship-994db660-00b1-468d-844b-1a6636356722
+	a
+		prov:Entity ,
+		uco-observable:ObservableRelationship
+		;
+	uco-core:hasFacet kb:PathRelationFacet-d2dcd646-2bdc-423c-a80a-bf19588623c1 ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a ;
+	uco-core:target kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ;
+	.
+
+kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2
+	a uco-core:Relationship ;
+	uco-core:isDirectional "false"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Corresponds_to" ;
+	uco-core:source kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ;
+	uco-core:target kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ;
+	.
+
+kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89
+	a uco-observable:ObservableRelationship ;
+	uco-core:hasFacet kb:path-relation-facet-b6f51579-6be3-42e2-bf81-290bfffad44c ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f ;
+	uco-core:target kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ;
+	.
+
+kb:Relationship-c439b4b4-e07e-4bbe-b9b1-4fccb762e565
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ;
+	uco-core:target kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ;
 	.
 
 kb:Relationship-ce92625b-c5f0-4856-940b-692d82de602c
@@ -5524,6 +6604,38 @@ kb:Relationship-daf100bc-16b3-422f-9796-272edf7424cf
 	uco-core:target <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx> ;
 	.
 
+kb:Relationship-ddc23d5a-5b8c-4f42-bc82-fb4dc8654630
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20 ;
+	uco-core:target kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245 ;
+	.
+
+kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4 ;
+	uco-core:target kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ;
+	.
+
+kb:Relationship-e1919c92-4d47-4b33-be27-691ef4ec5b8c
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f ;
+	uco-core:target kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b ;
+	.
+
+kb:Relationship-e1d02a55-16aa-4490-a115-1695ed8be2d4
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804 ;
+	uco-core:target kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8 ;
+	.
+
 kb:Relationship-e29bbd14-396d-48d4-abbf-acdfd346ca64
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
@@ -5541,6 +6653,14 @@ kb:Relationship-e4b416ed-4e02-4ecd-bd4d-d57ec485a37e
 	uco-core:target kb:usb-b2dbb227-06ec-432d-9f63-058e8ab73944 ;
 	.
 
+kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4 ;
+	uco-core:target kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ;
+	.
+
 kb:Relationship-e6d52185-c570-409c-ae35-ceaf3e01080b
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
@@ -5550,7 +6670,7 @@ kb:Relationship-e6d52185-c570-409c-ae35-ceaf3e01080b
 	.
 
 kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28 ;
@@ -5565,13 +6685,39 @@ kb:Relationship-f0505f2a-5de0-4651-9486-16746758f6c8
 	uco-core:target kb:harddrive-partition2-e3f25b0b-37bf-4111-bae3-d355aff3c8a2 ;
 	.
 
+kb:Relationship-fb8026c8-4391-4372-98d7-c21cac111649
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5 ;
+	uco-core:target kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ;
+	.
+
+kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b
+	a uco-role:Role ;
+	uco-core:name "Forensic Researcher" ;
+	.
+
+kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8
+	a uco-role:Role ;
+	uco-core:name "Forensic Researcher" ;
+	.
+
 kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81
 	a uco-role:Role ;
 	uco-core:name "Forensic Expert" ;
 	.
 
-kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b
-	a uco-observable:Software ;
+kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
+	a
+		uco-observable:File ,
+		uco-observable:Software
+		;
+	.
+
+kb:SoftwareFacet-c0a75e42-9ca7-4133-9838-881b67304923
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:Organization-a94338c2-030a-493f-9d26-55cade656276 ;
 	.
 
 kb:Start-028e0492-daaa-5d70-8f78-1d85cd1e089f
@@ -5847,6 +6993,27 @@ kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0
 		time:Instant ,
 		prov:Start
 		;
+	.
+
+kb:Tool-8ae63f46-44cb-40d9-9e50-539b29f05ea8
+	a
+		prov:Entity ,
+		prov:SoftwareAgent ,
+		uco-tool:Tool
+		;
+	prov:wasAttributedTo kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804 ;
+	uco-core:description "A one-off test subject population script." ;
+	uco-core:name "file_copier.py" ;
+	.
+
+kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696
+	a
+		uco-observable:Software ,
+		uco-tool:Tool
+		;
+	rdfs:seeAlso <https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management> ;
+	uco-core:hasFacet kb:SoftwareFacet-c0a75e42-9ca7-4133-9838-881b67304923 ;
+	uco-core:name "Disk Management" ;
 	.
 
 kb:URL-05e18d67-0d0d-4522-8c73-c4fc73a37585
@@ -6727,14 +7894,6 @@ kb:Usage-a54a9f32-a941-5950-aacb-89cd88daa3b2
 	prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
 	.
 
-kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9
-	a
-		time:Instant ,
-		prov:Usage
-		;
-	prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
-	.
-
 kb:Usage-a9e33170-f1d0-569e-b8f5-41b8c257d1e3
 	a
 		time:Instant ,
@@ -6893,6 +8052,14 @@ kb:Usage-ce2ad85e-40aa-52cf-90dc-dc5f1f61b995
 		prov:Usage
 		;
 	prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+	.
+
+kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c ;
 	.
 
 kb:Usage-d5e8f211-2caa-5d85-9c41-a5a19bedddde
@@ -7079,9 +8246,29 @@ kb:Usage-ff17a5b0-fe8b-5375-a00a-496ae6eae779
 	prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
 	.
 
+kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8
+	a uco-observable:Volume ;
+	uco-core:hasFacet kb:volume-facet-87beebe0-20fc-4ab3-a8f5-9b06529ef271 ;
+	.
+
 kb:WindowsRegistryKey-684af874-4c95-4be9-9c58-3eda29b94443
 	a uco-observable:WindowsRegistryKey ;
 	uco-core:hasFacet kb:windows-registry-key-facet-840333f7-e6b8-415e-b08e-8b33cc7dcc90 ;
+	.
+
+kb:a83adacb-ceaf-4b4b-b078-7c12dce990b9
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	.
+
+kb:ac7a4b44-0dc1-45a6-9fb9-272c33058b1c
+	a uco-observable:MobileAccount ;
+	uco-core:hasFacet
+		kb:account-facet-175f01e3-3672-4c9b-9c3e-2274ced7530d ,
+		kb:mobile-account-facet-35bde336-98f5-4869-a2d0-723981a46e1a
+		;
 	.
 
 kb:account-0a7850bf-516e-4b29-8e73-9d6ae368d334
@@ -7211,13 +8398,6 @@ kb:account-facet-4d4de5bf-85a1-4c47-9697-4f748d23416b
 	a uco-observable:AccountFacet ;
 	uco-observable:accountIdentifier "SP123456890" ;
 	uco-observable:accountIssuer kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202 ;
-	uco-observable:isActive "true"^^xsd:boolean ;
-	.
-
-kb:account-facet-502bc393-9727-415d-b336-e466f0fa21bf
-	a uco-observable:AccountFacet ;
-	uco-observable:accountIdentifier "31647934784@s.whatsapp.net" ;
-	uco-observable:accountIssuer kb:organization-whatsapp-7a3fb3d1-0b30-4305-8c9e-f8f90f839bf3 ;
 	uco-observable:isActive "true"^^xsd:boolean ;
 	.
 
@@ -7443,11 +8623,11 @@ kb:acme-ufed-arguments-facet-df0c6ff5-575b-49da-a932-74ba6c13f641
 kb:action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T15:58:12+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195 ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46 ;
 	uco-action:startTime "2022-05-12T10:21:10+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
@@ -7584,11 +8764,11 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 kb:action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T16:12:12+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195 ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
 	uco-action:object kb:software-bec1d8eb-2db1-444d-9175-b3c60ac47410 ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result kb:provenancerecord-0db01c96-f34f-431a-9aff-e1cc4fac9842 ;
 	uco-action:startTime "2022-05-12T10:31:10+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
@@ -7607,12 +8787,12 @@ kb:action-7377c5e6-6b28-4bc7-ad21-6763c070bfcc
 kb:action-94446a56-1f78-42e4-a4f4-ec94ad7e9118
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T15:58:00+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
-	uco-action:result kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:result kb:ProvenanceRecord-4915201f-0805-40aa-aaf2-12a7671214d4 ;
 	uco-action:startTime "2022-05-12T10:21:00+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
 	.
@@ -7629,11 +8809,11 @@ kb:action-a86738e7-c890-4615-b3ab-deaccd3bafbb
 kb:action-ce95584e-5065-4287-83fd-81df2ac72180
 	a uco-action:Action ;
 	uco-action:endTime "2022-05-14T15:58:12+00:00"^^xsd:dateTime ;
-	uco-action:environment kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
+	uco-action:environment kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa ;
 	uco-action:instrument kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377 ;
 	uco-action:location kb:9b82c2bc-10f7-47b2-81a8-443a9f458440 ;
-	uco-action:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	uco-action:performer kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
+	uco-action:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-action:performer kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7 ;
 	uco-action:result kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42 ;
 	uco-action:startTime "2022-05-12T10:21:10+00:00"^^xsd:dateTime ;
 	uco-core:name "Reverse engineer software to determine malicious intent" ;
@@ -7947,10 +9127,6 @@ kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c
 	uco-core:name "Agamemnon" ;
 	.
 
-kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7
-	a uco-identity:Identity ;
-	.
-
 kb:android-device-facet-2b3356eb-0ce4-4671-a80b-7d5cead82a8c
 	a uco-observable:AndroidDeviceFacet ;
 	uco-observable:androidFingerprint "lge…" ;
@@ -7996,7 +9172,10 @@ kb:android_image-f4bc6a0e-c782-4a7e-b6cd-a6aa67a7cff7
 	.
 
 kb:android_phonebook-5907a3f4-3e63-44d1-8501-2a33adfa4b72
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-2d0fc498-fb73-481a-a996-99fe941b1fd5 ;
 	.
 
@@ -8269,7 +9448,10 @@ kb:application-4b053bbc-cf68-56ba-8979-60e0c5d83425
 	.
 
 kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-d3237eac-1805-43b2-8ff2-58f7c71f0ac6 ;
 	.
 
@@ -8296,7 +9478,10 @@ kb:application-552b6f92-c1d2-50f8-af4b-2abe799e54ac
 	.
 
 kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258
@@ -8358,14 +9543,14 @@ kb:application-5ef487a0-67c5-5652-9cb9-d56589bfde96
 		;
 	prov:qualifiedAttribution kb:Attribution-8c3f7357-7321-5618-9517-4bd932c5479b ;
 	prov:qualifiedDerivation
-		kb:Derivation-369fbb6c-7bae-512c-9603-ef31ec2ec0c9 ,
+		kb:Derivation-0c128fe8-8c91-5143-9824-2962cee99c5e ,
 		kb:Derivation-586f74b5-b5e6-5ae7-968e-e619fb599b13
 		;
 	prov:qualifiedGeneration kb:generation-746402ba-4814-57c4-b2d4-07bc36e61a64 ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	prov:wasGeneratedBy kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	uco-core:description "Application: Gallery Vault" ;
@@ -8422,7 +9607,10 @@ kb:application-6c62add4-ac0b-5c5e-b0ae-4b3fab5ff35d
 	.
 
 kb:application-79636b28-77c9-4005-b62d-b87a233687ef
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-79b3827b-9b6c-5b01-8523-2ebda10ca0d4
@@ -8544,7 +9732,10 @@ kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5
 	.
 
 kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-a6345190-8513-54f7-beb6-0a5e816307ff
@@ -8622,11 +9813,6 @@ kb:application-account-facet-074bd62f-b071-44d9-a934-d11d21b45970
 	uco-observable:application kb:application-facebook-25e8018f-49be-4898-bb1d-731e387e9eb7 ;
 	.
 
-kb:application-account-facet-15811836-e4ed-48d1-ae51-1822aab89aa9
-	a uco-observable:ApplicationAccountFacet ;
-	uco-observable:application kb:application-whatsapp-e662a9de-02bb-47ad-8666-625a0a5dc2fa ;
-	.
-
 kb:application-account-facet-23edbdf6-269b-4a30-8cba-d083ef180f52
 	a uco-observable:ApplicationAccountFacet ;
 	uco-observable:application kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996 ;
@@ -8668,7 +9854,10 @@ kb:application-account-facet-e3b6c495-f966-4316-9c09-51350a49fe22
 	.
 
 kb:application-b01d8144-5fa9-44e9-a5f9-668d433b6108
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-c03097a2-2071-5164-b809-710b3ed35501
@@ -8812,7 +10001,10 @@ kb:application-d8c99a92-a0d2-5ef4-addc-0ca7a885006c
 	.
 
 kb:application-db5e8cbe-70e7-4dff-b981-2c5751b7923c
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8
@@ -8864,11 +10056,18 @@ kb:application-e77308c5-4cbe-58e4-8286-83fcd515be5e
 	.
 
 kb:application-ed4caa32-84c8-4813-b21d-f350e47cba7c
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:application-facebook-25e8018f-49be-4898-bb1d-731e387e9eb7
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	uco-core:hasFacet kb:application-facet-134b1129-c58e-4fbb-9383-923688bf8a16 ;
 	.
 
@@ -8973,11 +10172,6 @@ kb:application-facet-728e133d-3d62-5136-914b-aca44805ec4b
 	a uco-observable:ApplicationFacet ;
 	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
 	uco-observable:version "10.45.7" ;
-	.
-
-kb:application-facet-74e8a566-4575-4ce2-84d5-4bcea81f9b70
-	a uco-observable:ApplicationFacet ;
-	drafting:appName "WhatsApp" ;
 	.
 
 kb:application-facet-84381458-3a7b-5c61-aed9-8f8c561f071f
@@ -9100,13 +10294,11 @@ kb:application-facet-fda6da38-7b82-52a9-ba30-37a486070996
 	uco-observable:version "8.34.0" ;
 	.
 
-kb:application-whatsapp-e662a9de-02bb-47ad-8666-625a0a5dc2fa
-	a uco-observable:Application ;
-	uco-core:hasFacet kb:application-facet-74e8a566-4575-4ce2-84d5-4bcea81f9b70 ;
-	.
-
 kb:application1-8538c226-1ba5-473b-8342-96150a4ab4ed
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
@@ -9238,11 +10430,11 @@ kb:associated-account-40d3bfa5-b808-4cf3-8f3e-4c8ea2d79686
 
 kb:associated-account-419252da-6d0b-4f93-b070-75b9a5bc1cc2
 	a uco-core:Relationship ;
+	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Associated_Account" ;
 	uco-core:source kb:facebook_account-c188af2d-9651-44a8-8d4c-07a1f5f1aa20 ;
 	uco-core:target kb:email_account-e798e18c-0bef-4883-83df-e2710c4bc7e4 ;
-	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	.
 
 kb:associated-account-6620a818-7584-4760-a2cf-ff91aa742205
@@ -9255,11 +10447,11 @@ kb:associated-account-6620a818-7584-4760-a2cf-ff91aa742205
 
 kb:associated-account-8222be1c-1e4a-4c1d-a631-bb3aa9743971
 	a uco-observable:ObservableRelationship ;
+	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Associated_Account" ;
 	uco-core:source kb:google_account-f514a133-bca6-488c-a0a3-44c40f9ac766 ;
 	uco-core:target kb:email_account-e798e18c-0bef-4883-83df-e2710c4bc7e4 ;
-	rdfs:comment "It is possible isDirectional should be false.  This is being tracked in UCO OC-135." ;
 	.
 
 kb:associated-account-b7748cb7-304f-4706-9d88-fef49dc94981
@@ -9282,8 +10474,8 @@ kb:associated-account-phonenumber-0307a497-f1fb-4af4-9877-90c56ee76fba
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Associated_Account" ;
-	uco-core:source kb:facebook-90652808-7341-40d3-9285-774d865ad3f9 ;
-	uco-core:target kb:c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1 ;
+	uco-core:source kb:facebook-4dd9cd88-0acd-475c-ba45-c5bc6ad7244d ;
+	uco-core:target kb:phoneaccount-b6f2f869-0e70-4ee8-bc2e-0046fa8fc416 ;
 	.
 
 kb:associated-device-816082a4-622e-41d5-8eea-5344a535b520
@@ -9568,7 +10760,8 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:attachment_file-ad07f4fb-ef85-4a74-ad88-68341a1e9606 ,
 		kb:cassandra-1b38d28a-f88f-471f-8f83-16877dedacc0 ,
 		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
-		kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1 ,
+		kb:cassandra-image-filesystem-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1 ,
+		kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af ,
 		kb:cassandra-mobileaccount-ddd1303c-a85e-4307-b79e-b800a2420842 ,
 		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
 		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
@@ -9627,6 +10820,7 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ,
 		kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ,
 		kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ,
+		kb:trace-relationship-9f68401c-206e-4ff5-b342-2ef14331ad67 ,
 		kb:trace-relationship-bd43f037-cf0f-4494-b36d-94f7a1da700c ,
 		kb:trace-relationship-dfad5a2f-696b-44bd-88b7-04e634f7ee57 ,
 		kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f ,
@@ -9662,7 +10856,7 @@ kb:bundle-5db141fc-597b-4771-bea5-b9605292d2ed
 
 kb:bundle-616a3d68-eb5e-4b0b-86e4-acd062c8022e
 	a uco-core:Bundle ;
-	default1:__CASE__ "ASGARD_2019_00162" ;
+	:__CASE__ "ASGARD_2019_00162" ;
 	uco-core:description "Initial evidence seizure in cross border investigation into disruption of public transportation service" ;
 	uco-core:object
 		kb:application1-8538c226-1ba5-473b-8342-96150a4ab4ed ,
@@ -9705,14 +10899,6 @@ kb:c01e67f9-adb5-48bd-b09d-e7326fa8d592
 	uco-core:hasFacet
 		kb:message-facet-1cd126fc-e556-4460-9c1e-37c2ed553367 ,
 		kb:recovered-object-facet-1dc5e3f4-4951-44ff-b9f3-14bd63684b29
-		;
-	.
-
-kb:c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1
-	a uco-observable:PhoneAccount ;
-	uco-core:hasFacet
-		kb:account-facet-c90795be-47ec-49cc-9f1d-e74a427262e9 ,
-		kb:phone-account-facet-c34e1761-ed44-40fa-aac0-33305c743958
 		;
 	.
 
@@ -9812,7 +10998,7 @@ kb:camera_action-7995f522-6388-463f-855e-e08130477744
 	.
 
 kb:cameralocation-relationship-c6f64e98-68c5-4d2e-9ae8-a7e110f2ac83
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:latlong-8667ec82-8c21-11e9-934e-0c4de9c21b53 ;
@@ -9925,13 +11111,17 @@ kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba
 		;
 	.
 
-kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1
+kb:cassandra-image-filesystem-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1
 	a uco-observable:FileSystem ;
 	uco-core:hasFacet
 		kb:content-data-facet-327b9496-09b9-4331-8e06-db1dd5b159e1 ,
-		kb:disk-partition-facet-1adea3d7-80be-4fcb-8e78-38a50404b487 ,
 		kb:file-system-facet-ea298510-c4b6-4c66-b1e6-4c5e57875d3c
 		;
+	.
+
+kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af
+	a uco-observable:DiskPartition ;
+	uco-core:hasFacet kb:disk-partition-facet-1adea3d7-80be-4fcb-8e78-38a50404b487 ;
 	.
 
 kb:cassandra-mobileaccount-ddd1303c-a85e-4307-b79e-b800a2420842
@@ -10003,7 +11193,7 @@ kb:cctv-recording-f2cde179-5e7a-460d-832e-16d184ddb6ea
 	.
 
 kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Located_At" ;
 	uco-core:source kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4 ;
@@ -10039,7 +11229,7 @@ kb:chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78
 	a uco-observable:File ;
 	.
 
-kb:chromelogindata-16805dff-05f9-4cba-9266-d5fa712f3d8f
+kb:chromelogindata-16399672-32ad-4c83-9a40-efe68c690bb8
 	a uco-observable:ObservableObject ;
 	.
 
@@ -10086,10 +11276,6 @@ kb:compressed_gzip-56ce1a82-7965-4a50-8feb-7524e03fba04
 kb:compressed_gzip-e17babc0-dabb-45d1-8202-0f02518c2a89
 	a uco-observable:ContentData ;
 	uco-core:hasFacet kb:content-data-facet-a9e59f58-4ed3-40f4-8500-6b9d27cf72a1 ;
-	.
-
-kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa
-	a uco-observable:Device ;
 	.
 
 kb:computer-specification-facet-0f10db33-9374-467c-bb2d-04172ab05a34
@@ -10241,6 +11427,12 @@ kb:configuration-entry-37f096da-d75a-4d29-ad41-f3502e682204
 	uco-configuration:itemValue "" ;
 	.
 
+kb:configuration-entry-422105bd-1533-46c9-acbf-0b23bffcb96c
+	a uco-configuration:ConfigurationEntry ;
+	uco-configuration:itemName "run_tool_4.sh" ;
+	uco-configuration:itemValue "run_tool_4.sh -i ewf NewUSBExample.E01" ;
+	.
+
 kb:configuration-entry-43c509fc-8755-410a-97e7-a6001d3a3f61
 	a uco-configuration:ConfigurationEntry ;
 	uco-configuration:itemName "Method" ;
@@ -10263,6 +11455,12 @@ kb:configuration-entry-745aa640-306e-45e6-8ed0-80c819b4ae6a
 	a uco-configuration:ConfigurationEntry ;
 	uco-configuration:itemName "preferred_year" ;
 	uco-configuration:itemValue "" ;
+	.
+
+kb:configuration-entry-77b375c5-59cd-43c0-8eb4-4cbd350f5402
+	a uco-configuration:ConfigurationEntry ;
+	uco-configuration:itemName "Partition Recovery" ;
+	uco-configuration:itemValue "True" ;
 	.
 
 kb:configuration-entry-781652eb-f047-4a94-9bcc-2415effa87c4
@@ -10622,6 +11820,11 @@ kb:content-data-facet-33dee628-9332-4b77-8853-1dc5481c5460
 	uco-observable:sizeInBytes "1389601"^^xsd:integer ;
 	.
 
+kb:content-data-facet-340937e3-0e27-4da8-ada1-d2e8394103ea
+	a uco-observable:ContentDataFacet ;
+	uco-observable:hash kb:hash-66d11615-dd6c-4bba-8643-efe5fe8f58f4 ;
+	.
+
 kb:content-data-facet-34636d31-7af6-43c9-ad43-a4d995828c23
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
@@ -10852,6 +12055,14 @@ kb:content-data-facet-79503339-556a-4e23-ae5c-c2c948bde088
 kb:content-data-facet-79d69309-3b1a-4235-9312-adb0c23eeb52
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash kb:hash-d3ba3b98-b06a-5a2e-b45b-3668f50608c2 ;
+	.
+
+kb:content-data-facet-7f3d70a8-d16a-49a9-b75d-01a28c49dff9
+	a uco-observable:ContentDataFacet ;
+	uco-observable:hash
+		kb:hash-40b16c22-3d7f-4f7c-b207-dc41b771e878 ,
+		kb:hash-5d0be344-b166-4de0-9250-cfc7f7bbd9ae
+		;
 	.
 
 kb:content-data-facet-83493b92-2a26-4bcb-a183-4d39c3795c6a
@@ -11858,6 +13069,12 @@ kb:data-range-facet-1d806e56-ea69-4de0-8d9d-46681a164d87
 	uco-observable:rangeSize "2878"^^xsd:integer ;
 	.
 
+kb:data-range-facet-2b54a0f8-9737-4c2b-8edd-584558cb6c2f
+	a uco-observable:DataRangeFacet ;
+	uco-observable:rangeOffset "377618432"^^xsd:integer ;
+	uco-observable:rangeSize "52428800"^^xsd:integer ;
+	.
+
 kb:data-range-facet-386840da-c175-4429-9334-279bd6d4c23a
 	a uco-observable:DataRangeFacet ;
 	uco-observable:rangeOffset "22215"^^xsd:integer ;
@@ -11877,8 +13094,8 @@ kb:data-range-facet-4e75e42d-d972-4b16-904e-91e1d6310a1d
 
 kb:data-range-facet-5c250680-cc8b-40d5-a6e9-8adb878b8ff7
 	a uco-observable:DataRangeFacet ;
-	uco-observable:rangeOffset "234909233"^^xsd:integer ;
-	uco-observable:rangeSize "120000000000"^^xsd:integer ;
+	uco-observable:rangeOffset "11010048"^^xsd:integer ;
+	uco-observable:rangeSize "50053119"^^xsd:integer ;
 	.
 
 kb:data-range-facet-61745bae-5bda-403a-89dd-cf97e0eace93
@@ -12463,11 +13680,6 @@ kb:digital-account-facet-869af028-c0f6-43e1-8241-00153b319ebf
 	uco-observable:lastLoginTime "2010-03-12T17:59:43.250000+00:00"^^xsd:dateTime ;
 	.
 
-kb:digital-account-facet-8794c717-cc13-44ab-8f93-77cca75fc649
-	a uco-observable:DigitalAccountFacet ;
-	uco-observable:displayName "Ares Lupin" ;
-	.
-
 kb:digital-account-facet-90a397d9-d615-4d57-af0d-9013a45ff862
 	a uco-observable:DigitalAccountFacet ;
 	uco-observable:displayName "????" ;
@@ -12525,6 +13737,24 @@ kb:disk-facet-c9fa6408-85f8-4e0b-bf8f-f653f5bc97c3
 	uco-observable:storageCapacityInBytes "7803174912"^^xsd:integer ;
 	.
 
+kb:disk-partition-facet-040eb408-94e3-4fdf-a7fc-54d25c66a546
+	a uco-observable:DiskPartitionFacet ;
+	uco-observable:diskPartitionType "NTFS" ;
+	uco-observable:observableCreatedTime "2023-08-26T16:40:04+00:00"^^xsd:dateTime ;
+	uco-observable:partitionID "2" ;
+	uco-observable:partitionLength "125829120"^^xsd:integer ;
+	uco-observable:partitionOffset "104923136"^^xsd:integer ;
+	.
+
+kb:disk-partition-facet-05945610-68c9-475b-bf38-a4bf9d1fc932
+	a uco-observable:DiskPartitionFacet ;
+	drafting:diskPartitionLength "668991488"^^xsd:integer ;
+	drafting:diskPartitionOffset "377552896"^^xsd:integer ;
+	uco-observable:diskPartitionType "DOS Extended (0x05)" ;
+	uco-observable:observableCreatedTime "2023-08-15T00:29:15+00:00"^^xsd:dateTime ;
+	uco-observable:partitionID "4" ;
+	.
+
 kb:disk-partition-facet-13433f3c-7423-4774-98c2-26dbb5b9dd19
 	a uco-observable:DiskPartitionFacet ;
 	uco-observable:partitionID "3" ;
@@ -12540,14 +13770,20 @@ kb:disk-partition-facet-177cecb7-f2cb-44be-b643-672650383865
 
 kb:disk-partition-facet-1adea3d7-80be-4fcb-8e78-38a50404b487
 	a uco-observable:DiskPartitionFacet ;
-	rdfs:comment
-		"TODO: diskPartitionType in UCO 0.3.0 is supposed to describe the type of partition (per documenting rdfs:comment), not the type of the containing partition system.  However, further clarification is needed on the range of this property - the numeric type?  There does not appear to be a consistent dictionary labeling these numeric types, and tools frequently provide multiple guesses (e.g. TSK's mmls reports exfat and ntfs for one code)." ,
-		"TODO: partitionOffset should be in bytes.  Nothing in this example specifies the sector size of the device's storage."
-		;
-	uco-observable:diskPartitionType "MBR" ;
-	uco-observable:partitionID "06" ;
-	uco-observable:partitionLength "245235063"^^xsd:integer ;
-	uco-observable:partitionOffset "63"^^xsd:integer ;
+	drafting:diskPartitionName "userdata" ;
+	uco-observable:diskPartitionType "Linux (0x83)" ;
+	uco-observable:partitionID "42" ;
+	uco-observable:partitionLength "50053119"^^xsd:integer ;
+	uco-observable:partitionOffset "11010048"^^xsd:integer ;
+	.
+
+kb:disk-partition-facet-1cf2213c-6dad-4454-b474-ceda664a81e3
+	a uco-observable:DiskPartitionFacet ;
+	uco-observable:diskPartitionType "NTFS" ;
+	uco-observable:observableCreatedTime "2023-08-26T16:40:41+00:00"^^xsd:dateTime ;
+	uco-observable:partitionID "3" ;
+	uco-observable:partitionLength "146800640"^^xsd:integer ;
+	uco-observable:partitionOffset "230752256"^^xsd:integer ;
 	.
 
 kb:disk-partition-facet-1fc828ec-77b6-44d4-8810-35d4c7875699
@@ -12582,6 +13818,16 @@ kb:disk-partition-facet-4a13df3b-6a69-4d0b-85f1-a0798ebf2c28
 	uco-observable:partitionOffset "122683392"^^xsd:integer ;
 	.
 
+kb:disk-partition-facet-588a0bb6-f791-445c-8d1c-826bd5465f3c
+	a uco-observable:DiskPartitionFacet ;
+	drafting:diskPartitionLength "52428800"^^xsd:integer ;
+	drafting:diskPartitionOffset "377618432"^^xsd:integer ;
+	drafting:partitionName "NO NAME" ;
+	uco-observable:diskPartitionType "FAT32" ;
+	uco-observable:observableCreatedTime "2023-08-15T00:29:15+00:00"^^xsd:dateTime ;
+	uco-observable:partitionID "4" ;
+	.
+
 kb:disk-partition-facet-7eb4b7cf-35ab-4b71-ad45-428b53db9b44
 	a uco-observable:DiskPartitionFacet ;
 	uco-observable:diskPartitionType "GPT" ;
@@ -12604,6 +13850,16 @@ kb:disk-partition-facet-c6cc1366-30f5-46f0-9537-64ed9e9e85bc
 	uco-observable:partitionID "5" ;
 	uco-observable:partitionLength "1073741824"^^xsd:integer ;
 	uco-observable:partitionOffset "999129350144"^^xsd:integer ;
+	.
+
+kb:disk-partition-facet-de753761-b15e-41b2-95da-81672c51d22c
+	a uco-observable:DiskPartitionFacet ;
+	drafting:partitionName "NO NAME" ;
+	uco-observable:diskPartitionType "FAT32" ;
+	uco-observable:observableCreatedTime "2023-08-26T16:39:48+00:00"^^xsd:dateTime ;
+	uco-observable:partitionID "1" ;
+	uco-observable:partitionLength "104857600"^^xsd:integer ;
+	uco-observable:partitionOffset "65536"^^xsd:integer ;
 	.
 
 kb:disk_image-f654431a-ee73-4c9f-8ebb-e689df534f6c
@@ -12828,7 +14084,7 @@ kb:electra-orestes-email-9e2f3524-6541-459e-96e7-61c61f97e850
 	uco-core:hasFacet kb:email-message-facet-02240694-317a-4a18-afde-2e8789515de9 ;
 	.
 
-kb:email-account-99d72bac-8c21-11e9-8902-0c4de9c21b53
+kb:email-account-bfe874d4-b094-4859-85d4-bca2d20e3d1d
 	a uco-observable:EmailAccount ;
 	uco-core:hasFacet
 		kb:account-authentication-facet-75964c74-1054-4f3c-bf9d-1e3f3edcff30 ,
@@ -12858,7 +14114,7 @@ kb:email-account-facet-d0748846-14d8-4b7f-8987-c5f9449cb053
 
 kb:email-account-facet-e0dd5970-71d8-4261-a43a-1d216b84680f
 	a uco-observable:EmailAccountFacet ;
-	uco-observable:emailAddress kb:emailaddress-99d72bac-8c21-11e9-8902-0c4de9c21b53 ;
+	uco-observable:emailAddress kb:emailaddress-ec940324-eb79-467a-825b-0f1136d2b6d3 ;
 	.
 
 kb:email-account-facet-e4a9c9f2-b7aa-4bd2-ae0d-b24453b6af01
@@ -12947,7 +14203,7 @@ kb:email-message-facet-6c0d5813-5557-481d-95f3-b5f660e3e102
 	uco-observable:application kb:gmail-a1ce9965-ba9c-4fa1-9bfe-58c68ecaadc5 ;
 	uco-observable:bodyRaw kb:contentdata-f3b4a8da-d3ba-46b7-a7a0-3c17ec13648d ;
 	uco-observable:messageID "CAKBqNfyKo+pvHkJy6kwO82jTbkNA@mail.gmail.com" ;
-	uco-observable:sender kb:emailaccount-99d72bac-8c21-11e9-8902-0c4de9c21b53 ;
+	uco-observable:sender kb:emailaccount-11bf944d-b540-4abf-86a2-b439a157f325 ;
 	uco-observable:sentTime "2018-11-20T21:28:07+00:00"^^xsd:dateTime ;
 	uco-observable:subject "Re: Bank transfer ?" ;
 	.
@@ -12977,13 +14233,17 @@ kb:email_account-e798e18c-0bef-4883-83df-e2710c4bc7e4
 	uco-core:hasFacet kb:email-account-facet-e4a9c9f2-b7aa-4bd2-ae0d-b24453b6af01 ;
 	.
 
-kb:emailaccount-99d72bac-8c21-11e9-8902-0c4de9c21b53
+kb:emailaccount-11bf944d-b540-4abf-86a2-b439a157f325
 	a uco-observable:EmailAccount ;
 	uco-core:hasFacet
 		kb:digital-account-facet-4c39bdf1-0835-4be3-8bd8-e92160d4753b ,
-		kb:email-account-facet-c77b24e3-a373-4dbc-8837-380668a3247a ,
-		kb:email-account-facet-e0dd5970-71d8-4261-a43a-1d216b84680f
+		kb:email-account-facet-c77b24e3-a373-4dbc-8837-380668a3247a
 		;
+	.
+
+kb:emailaccount-99d72bac-8c21-11e9-8902-0c4de9c21b53
+	a uco-observable:EmailAccount ;
+	uco-core:hasFacet kb:email-account-facet-e0dd5970-71d8-4261-a43a-1d216b84680f ;
 	.
 
 kb:emailaddress-456a2bac-8c21-11e9-8902-0c4de9c24de5
@@ -12991,12 +14251,12 @@ kb:emailaddress-456a2bac-8c21-11e9-8902-0c4de9c24de5
 	uco-core:hasFacet kb:email-address-facet-154d38fe-b6cd-4c75-a930-8f983f25c626 ;
 	.
 
-kb:emailaddress-99d72bac-8c21-11e9-8902-0c4de9c21b53
+kb:emailaddress-ec940324-eb79-467a-825b-0f1136d2b6d3
 	a uco-observable:EmailAddress ;
 	uco-core:hasFacet kb:email-address-facet-7ce6f940-5f1d-435f-9cf5-03db933d72d8 ;
 	.
 
-kb:emailmessage-2c032220-8c21-11e9-9c99-0c4de9c21b53
+kb:emailmessage-c9a3cfa6-41c3-4c0c-9343-c011c1660467
 	a uco-observable:EmailMessage ;
 	uco-core:hasFacet kb:email-message-facet-6c0d5813-5557-481d-95f3-b5f660e3e102 ;
 	.
@@ -13046,14 +14306,14 @@ kb:euripides-3696c710-161f-47af-9ae8-61b178611773
 	.
 
 kb:event-d4a5a009-7b4d-445d-8d06-9dc85f263b3e
-	a drafting:Event ;
-	drafting:eventAttribute kb:dictionary-b222a5f4-e7eb-442a-8aab-c22c89734b9e ;
-	drafting:eventContext
+	a uco-core:Event ;
+	uco-core:endTime "2023-07-15T17:59:45.330000+00:00"^^xsd:dateTime ;
+	uco-core:eventAttribute kb:dictionary-b222a5f4-e7eb-442a-8aab-c22c89734b9e ;
+	uco-core:eventContext
 		kb:action-7377c5e6-6b28-4bc7-ad21-6763c070bfcc ,
 		kb:action-a86738e7-c890-4615-b3ab-deaccd3bafbb
 		;
-	drafting:eventType "Authentication" ;
-	uco-core:endTime "2023-07-15T17:59:45.330000+00:00"^^xsd:dateTime ;
+	uco-core:eventType "Authentication" ;
 	uco-core:name "user logged in" ;
 	uco-core:startTime "2023-07-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	.
@@ -13243,22 +14503,11 @@ kb:f2e90997-16c9-4822-be30-fa4f36553768
 	uco-core:hasFacet kb:lat-long-coordinates-facet-3dfdf206-2284-4a03-812f-d1ab9d40a606 ;
 	.
 
-kb:f3fd304e-ef6c-4cbd-94cb-425880f82748
-	a
-		uco-observable:File ,
-		uco-observable:Image
-		;
-	uco-core:hasFacet
-		kb:content-data-facet-c0a55cb3-6caf-4226-bc99-b2a6b4bfb802 ,
-		kb:file-facet-3295df4a-1c4f-4ffc-9c54-b7af1ec9f829
-		;
-	.
-
 kb:f96cfe21-1149-4a46-acb9-7299152c776b
 	a uco-observable:ObservableObject ;
 	.
 
-kb:facebook-90652808-7341-40d3-9285-774d865ad3f9
+kb:facebook-4dd9cd88-0acd-475c-ba45-c5bc6ad7244d
 	a uco-observable:DigitalAccount ;
 	uco-core:hasFacet
 		kb:account-facet-fb1a2b29-018f-4c2d-ac02-797112901c8c ,
@@ -14123,11 +15372,6 @@ kb:file-c5a93f7d-2482-4752-b8f1-491d8584496a
 		;
 	.
 
-kb:file-cd52c3b8-7759-40b7-ae10-dfc90a35f644
-	a uco-observable:File ;
-	uco-core:hasFacet kb:file-facet-b6bc7e31-cb7b-49be-bdf9-74b4d5da2997 ;
-	.
-
 kb:file-cee5a02b-56a7-4ad6-9e78-d297e6b92517
 	a
 		prov:Entity ,
@@ -14510,8 +15754,8 @@ kb:file-facet-33d40dab-c65f-4204-985d-204c381069e0
 
 kb:file-facet-36334066-5d9f-4cc0-8ebe-d905832896ff
 	a uco-observable:FileFacet ;
-	:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	uco-observable:filePath "/data/data/multipart_file.002" ;
 	uco-observable:fileSystemType "EXT4" ;
 	uco-observable:modifiedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
@@ -14781,8 +16025,8 @@ kb:file-facet-65c90c48-5c9c-4196-8329-63ccda9157dd
 
 kb:file-facet-6600c140-c71e-4e9c-9f99-2671655d66e1
 	a uco-observable:FileFacet ;
-	:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:accessAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:createAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	uco-observable:filePath "/data/data/multipart_file.003" ;
 	uco-observable:fileSystemType "EXT4" ;
 	uco-observable:modifiedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
@@ -14917,6 +16161,17 @@ kb:file-facet-7a709348-6a13-4125-b3b4-59876cdf6848
 	uco-observable:fileName "LG GSM_H790 Nexus 5X.ufd" ;
 	.
 
+kb:file-facet-7daa8890-8301-4389-82bc-75642a652fdf
+	a uco-observable:FileFacet ;
+	uco-observable:extension "txt" ;
+	uco-observable:fileName "SECOND.txt" ;
+	uco-observable:filePath "/NewUSBExample.E01/vol_vol4/del_demo/folder2/SECOND.txt" ;
+	uco-observable:isDirectory "false"^^xsd:boolean ;
+	uco-observable:modifiedTime "2019-08-16T16:38:06+00:00"^^xsd:dateTime ;
+	uco-observable:observableCreatedTime "2023-08-16T16:38:04+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "40"^^xsd:integer ;
+	.
+
 kb:file-facet-81b80de3-c1ca-48ec-a052-4b07da5f4a2e
 	a uco-observable:FileFacet ;
 	uco-observable:extension "E01" ;
@@ -15016,6 +16271,17 @@ kb:file-facet-8f0f9d96-601f-46a4-b568-767c49a12c8c
 	uco-observable:sizeInBytes "4294967296"^^xsd:integer ;
 	.
 
+kb:file-facet-8f25239c-5952-470f-ad3a-505d15998bb0
+	a uco-observable:FileFacet ;
+	uco-observable:extension "txt" ;
+	uco-observable:fileName "missedme.txt" ;
+	uco-observable:filePath "/NewUSBExample.E01/vol_vol4/missedme.txt" ;
+	uco-observable:isDirectory "false"^^xsd:boolean ;
+	uco-observable:modifiedTime "2019-09-06T21:12:38+00:00"^^xsd:dateTime ;
+	uco-observable:observableCreatedTime "2023-08-16T16:37:34+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "81"^^xsd:integer ;
+	.
+
 kb:file-facet-926300e9-998b-4a0c-a2ec-ea67dcbffab9
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "blk32_mmcblk0rpmb.bin" ;
@@ -15074,8 +16340,8 @@ kb:file-facet-9c8c3ff9-0ae8-4bd1-b6bb-010047b747a3
 
 kb:file-facet-9d8fe5e6-a4c0-4e56-bcee-5835049a5959
 	a uco-observable:FileFacet ;
-	:accessedAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	:createdAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:accessedAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	ns1:createdAction "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	uco-observable:filePath "/data/data/multipart_file.001" ;
 	uco-observable:fileSystemType "EXT4" ;
 	uco-observable:modifiedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
@@ -15273,6 +16539,17 @@ kb:file-facet-ca17615e-efc4-4e76-9f44-06f1d94ee4d5
 	uco-observable:sizeInBytes "4294967296"^^xsd:integer ;
 	.
 
+kb:file-facet-cd2ecec2-8ff2-4520-af44-c078a42b8383
+	a uco-observable:FileFacet ;
+	uco-observable:extension "E01" ;
+	uco-observable:fileName "NewUSBExample.E01" ;
+	uco-observable:filePath "EFDS/NewUSBExample.E01" ;
+	uco-observable:fileSystemType "ntfs" ;
+	uco-observable:isDirectory "false"^^xsd:boolean ;
+	uco-observable:observableCreatedTime "2023-08-16T16:45:38+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "2218758"^^xsd:integer ;
+	.
+
 kb:file-facet-ce987ef1-8378-4c10-9f98-8dd2691e2994
 	a uco-observable:FileFacet ;
 	uco-observable:accessedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
@@ -15425,6 +16702,17 @@ kb:file-facet-fe054752-ca76-475d-908c-6069624c3e45
 	uco-observable:sizeInBytes "4294967296"^^xsd:integer ;
 	.
 
+kb:file-facet-fe9bb809-ad2c-41b3-9b04-281c5a4a83a0
+	a uco-observable:FileFacet ;
+	uco-observable:extension "txt" ;
+	uco-observable:fileName "?IRST.txt" ;
+	uco-observable:filePath "/NewUSBExample.E01/vol_vol4/del_demo/folder1/?IRST.txt" ;
+	uco-observable:isDirectory "false"^^xsd:boolean ;
+	uco-observable:modifiedTime "2019-08-16T16:38:00+00:00"^^xsd:dateTime ;
+	uco-observable:observableCreatedTime "2023-08-16T16:37:59+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "39"^^xsd:integer ;
+	.
+
 kb:file-fb00a9cd-17e1-438f-9b28-ca5d7149f9c7
 	a uco-observable:File ;
 	uco-core:hasFacet
@@ -15480,6 +16768,11 @@ kb:file-system-facet-0195c87e-151f-407f-82e7-9c6b19463430
 kb:file-system-facet-179b7a12-7086-4a11-94f9-1b2bec8a48a4
 	a uco-observable:FileSystemFacet ;
 	uco-observable:fileSystemType "EXT3" ;
+	.
+
+kb:file-system-facet-4fe95932-8b21-4463-a20b-85e3b151e388
+	a uco-observable:FileSystemFacet ;
+	uco-observable:fileSystemType "FAT32" ;
 	.
 
 kb:file-system-facet-d14c4ae7-75e4-4043-97c5-e16b383ca714
@@ -15622,7 +16915,10 @@ kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3
 	uco-action:instrument kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
 	uco-action:location kb:forensic_lab-fae4ff1e-7d06-49da-9c89-da37ef612b25 ;
 	uco-action:performer kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d ;
-	uco-action:result kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b ;
+	uco-action:result
+		kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b ,
+		kb:provenance-record-855f91a2-cc07-4d8e-bb93-d2b6db7672db
+		;
 	uco-action:startTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	uco-core:name "annotated" ;
 	.
@@ -15735,7 +17031,7 @@ kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013
 
 kb:forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d
 	a uco-observable:Device ;
-	:location kb:forensic_lab-2514fffb-affc-43be-a3bb-be1dd606eff0 ;
+	ns1:location kb:forensic_lab-2514fffb-affc-43be-a3bb-be1dd606eff0 ;
 	uco-core:hasFacet
 		kb:acme-inventory-computer-facet-f34d5828-7f40-44b2-8531-6ce3a8d34467 ,
 		kb:computer-specification-facet-d02adab1-cbaa-4ec5-b98c-4fe128e7281f ,
@@ -15771,6 +17067,17 @@ kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07
 		;
 	.
 
+kb:forensicimage-e656ccdf-4341-418b-ad93-20829e6eea5d
+	a
+		uco-observable:File ,
+		uco-observable:Image
+		;
+	uco-core:hasFacet
+		kb:content-data-facet-c0a55cb3-6caf-4226-bc99-b2a6b4bfb802 ,
+		kb:file-facet-3295df4a-1c4f-4ffc-9c54-b7af1ec9f829
+		;
+	.
+
 kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748
 	a
 		uco-observable:File ,
@@ -15794,13 +17101,13 @@ kb:fragment-facet-1f681316-2991-4231-b702-9aeb222f3099
 
 kb:fragment-facet-3a3220f1-e434-4f21-b462-acff3f8b91c4
 	a uco-observable:FragmentFacet ;
-	:totalFragments "3"^^xsd:integer ;
+	ns1:totalFragments "3"^^xsd:integer ;
 	uco-observable:fragmentIndex "1"^^xsd:integer ;
 	.
 
 kb:fragment-facet-5d237f35-8496-4b87-9053-08725d0b2d7d
 	a uco-observable:FragmentFacet ;
-	:totalFragments "3"^^xsd:integer ;
+	ns1:totalFragments "3"^^xsd:integer ;
 	uco-observable:fragmentIndex "2"^^xsd:integer ;
 	.
 
@@ -15812,7 +17119,7 @@ kb:fragment-facet-9adbdf33-c7a8-43d6-953a-a576c097f2b5
 
 kb:fragment-facet-a703a10c-e18b-4388-9702-a8b251522553
 	a uco-observable:FragmentFacet ;
-	:totalFragments "3"^^xsd:integer ;
+	ns1:totalFragments "3"^^xsd:integer ;
 	uco-observable:fragmentIndex "0"^^xsd:integer ;
 	.
 
@@ -15998,7 +17305,10 @@ kb:generation-f5e4a0a8-4bf8-59bf-8353-754322b7b62b
 	.
 
 kb:gmail-a1ce9965-ba9c-4fa1-9bfe-58c68ecaadc5
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-3ecd5cd2-d118-4b03-970f-e1196ad0a133 ;
 	.
 
@@ -16125,6 +17435,12 @@ kb:hash-3a4926c9-4713-57b5-b980-347a28b38914
 	uco-types:hashValue "47001faf6ae8d73e3a47df33c260be6bcc47b2d0"^^xsd:hexBinary ;
 	.
 
+kb:hash-40b16c22-3d7f-4f7c-b207-dc41b771e878
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "4d61e67668e900a12318e5cff55ce878"^^xsd:hexBinary ;
+	.
+
 kb:hash-41f6331e-1190-5c29-a8c5-63e93b1162bd
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
@@ -16179,6 +17495,12 @@ kb:hash-59bd11fd-af49-5e39-ba3b-54ba31f3c8d6
 	uco-types:hashValue "9a6c11d66829bf429efe5ef4c066d50272394481cc3f8ae8116a006c81dc6cf9"^^xsd:hexBinary ;
 	.
 
+kb:hash-5d0be344-b166-4de0-9250-cfc7f7bbd9ae
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "56807d313674f386c76a53c5890ecb5d6dc709e8"^^xsd:hexBinary ;
+	.
+
 kb:hash-5dd9e9eb-665d-534d-a2cc-5c6d68d27150
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
@@ -16195,6 +17517,12 @@ kb:hash-6615b5a2-32b3-5453-9c0c-687eea0aaa30
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "11c2c9e940859133d1928dd5f9483e430bfe9991"^^xsd:hexBinary ;
+	.
+
+kb:hash-66d11615-dd6c-4bba-8643-efe5fe8f58f4
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "4beaf62374cf2395a10ac031400ecb0a5572a8173c427f9304bde40237ee9d06"^^xsd:hexBinary ;
 	.
 
 kb:hash-681f5852-ebc6-5b58-a1f4-aa36a5da870c
@@ -16759,7 +18087,7 @@ kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5
 		kb:attach_relationship-40b34873-f772-42ad-9af0-b69069d00a92 ,
 		kb:cassandra-1b38d28a-f88f-471f-8f83-16877dedacc0 ,
 		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
-		kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1 ,
+		kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af ,
 		kb:cassandra-mobileaccount-ddd1303c-a85e-4307-b79e-b800a2420842 ,
 		kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50 ,
 		kb:clytemnestra-mobileaccount-363dd368-94bd-4dbb-af1d-f53d0085791e ,
@@ -17089,7 +18417,7 @@ kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1
 		;
 	uco-action:performer kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43 ;
 	uco-action:result
-		kb:f3fd304e-ef6c-4cbd-94cb-425880f82748 ,
+		kb:forensicimage-e656ccdf-4341-418b-ad93-20829e6eea5d ,
 		kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8
 		;
 	uco-action:startTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
@@ -17962,7 +19290,7 @@ kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357
 	.
 
 kb:investigatorrole-e9a01d66-fff4-4fa8-88d4-8e445f3369aa
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb:identity-0108480e-1e7a-4341-8b1d-558877c4cc39 ;
@@ -18271,7 +19599,11 @@ kb:message-1505f33f-9946-4280-89cd-2e72bdff900e
 	.
 
 kb:message-9999898c-0178-4534-8107-caea0a0f9999
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	.
 
 kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81
@@ -18369,7 +19701,7 @@ kb:message-facet-9b01629a-6c67-4dce-8d6e-ff0b7b38ccf4
 	uco-observable:from kb:9999237a-6d7f-4e96-bbef-6eb4c0a69999 ;
 	uco-observable:messageText "Sarah, the delivery is today 7 tonight the confirmation will come later through pidgin" ;
 	uco-observable:sentTime "2017-02-01T00:41:15+00:00"^^xsd:dateTime ;
-	uco-observable:to kb:c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1 ;
+	uco-observable:to kb:phoneaccount-b6f2f869-0e70-4ee8-bc2e-0046fa8fc416 ;
 	.
 
 kb:message-facet-b6e547d9-d3cf-4c79-8696-eb46f504d8bd
@@ -18420,24 +19752,22 @@ kb:message-facet-e3505bcc-eb14-4b9f-9395-81942b51ff86
 
 kb:message-thread-facet-33f68c51-0737-4716-8b2d-7612cd78a99b
 	a uco-observable:MessageThreadFacet ;
-	drafting:visibility "PRIVATE" ;
-	uco-observable:displayName "Best Friend Chat!!" ;
 	uco-observable:messageThread kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e ;
 	uco-observable:participant
 		kb:account-16f128ac-7e5b-4cac-908c-11062488eb06 ,
 		kb:account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87
 		;
+	uco-observable:visibility "false"^^xsd:boolean ;
 	.
 
 kb:message-thread-facet-38d3fc48-8519-40c5-98f3-d4ad4d42a867
 	a uco-observable:MessageThreadFacet ;
-	drafting:visibility "PUBLIC" ;
-	uco-observable:displayName "Argle-bargle" ;
 	uco-observable:messageThread kb:thread-f8ebd1db-ce49-495e-850a-7b44187cb128 ;
 	uco-observable:participant
 		kb:account-7fb9ef43-fb36-4781-918b-79a5801223e2 ,
 		kb:account-8f80b20d-d41f-411a-90ce-460dedabf1c3
 		;
+	uco-observable:visibility "true"^^xsd:boolean ;
 	.
 
 kb:message_action-f7078adf-066a-4f55-831e-a10feb8054fb
@@ -18610,7 +19940,7 @@ kb:mobile-device-facet-b03b6c7e-85f8-4a07-8069-e40e2f1a06fe
 kb:mobile-extractor-tool-arguments-facet-273f1bdd-e01d-4557-8f44-ee49fb1c4205
 	a
 		uco-core:Facet ,
-		<mobileextractor:ToolArgumentsFacet>
+		<urn:example:MobileExtractorToolArgumentsFacet>
 		;
 	drafting:aquisitionType "Physical Extraction" ;
 	drafting:method "Boot Loader" ;
@@ -18671,7 +20001,7 @@ kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4
 		;
 	.
 
-kb:msgstoredb-16805dff-05f9-4cba-9266-d5fa712f3d8f
+kb:msgstoredb-d82c3aae-488c-43d4-bcbd-a3ac38bacfd4
 	a uco-observable:File ;
 	uco-core:hasFacet
 		kb:content-data-facet-191aebdd-749f-4dba-8ec8-52c9a766970c ,
@@ -18735,7 +20065,7 @@ kb:network-connection-facet-9b6f6ebd-5262-44e7-a011-6f616e751322
 
 kb:network-connection-facet-a9497bfe-6857-45ac-933d-365a48285f9b
 	a uco-observable:NetworkConnectionFacet ;
-	default1:connectionState "APSF" ;
+	:connectionState "APSF" ;
 	uco-observable:destinationPort "139"^^xsd:integer ;
 	uco-observable:dst kb:destination-host-7f441a17-1c72-4caf-b5e2-f1a08f5dfa82 ;
 	uco-observable:endTime "2009-04-03T02:29:25.636551+00:00"^^xsd:dateTime ;
@@ -19444,6 +20774,11 @@ kb:organization-c240cf37-0556-439b-9a51-1ca41732010d
 	uco-core:name "Dell" ;
 	.
 
+kb:organization-c9223e2e-4a3b-436d-ad5f-10794d8e17fa
+	a uco-identity:Identity ;
+	uco-core:name "Company 5" ;
+	.
+
 kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26
 	a uco-identity:Organization ;
 	uco-core:name "Microsoft" ;
@@ -19459,14 +20794,14 @@ kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f
 	uco-core:name "NFI" ;
 	.
 
-kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784
-	a uco-identity:Organization ;
-	uco-core:name "hex-rays" ;
-	.
-
 kb:organization-e84a49ff-f34c-46fe-ab88-6f0f79023925
 	a uco-identity:Organization ;
 	uco-core:description "Generic" ;
+	.
+
+kb:organization-f2910679-990c-4474-8550-a5086a3b01d9
+	a uco-identity:Identity ;
+	uco-core:name "Company 1" ;
 	.
 
 kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc
@@ -19477,6 +20812,11 @@ kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc
 kb:organization-facebook-fcb0d2ee-e681-4314-98c3-47fb2541aae9
 	a uco-identity:Organization ;
 	uco-core:name "Facebook" ;
+	.
+
+kb:organization-fb0a0400-9eb6-419f-baee-9336bc4a1038
+	a uco-identity:Identity ;
+	uco-core:name "Company 4" ;
 	.
 
 kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec
@@ -19533,16 +20873,25 @@ kb:organization-whatsapp-7a3fb3d1-0b30-4305-8c9e-f8f90f839bf3
 	.
 
 kb:os-5b6c1685-c603-4df4-9728-026ebfc78cd5
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	.
 
 kb:os-abf0fe20-6852-4004-82bb-d9e8da06aea6
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:operating-system-facet-04d6b0b1-b491-4438-b889-d16a28dffaa4 ;
 	.
 
 kb:os-ca81c2d9-d496-4a06-a0f5-0b6bd5647a9e
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	.
 
 kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b
@@ -19555,7 +20904,7 @@ kb:partition-87d669fc-8ab9-47c6-a66d-af09d73361d5
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:userdata-partition-d94cd1b5-5cf7-4642-8927-5ebea573d68e ;
-	uco-core:target kb:f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
+	uco-core:target kb:forensicimage-e656ccdf-4341-418b-ad93-20829e6eea5d ;
 	.
 
 kb:partition-d0806935-829b-4909-8e2d-2503b28df89b
@@ -19565,6 +20914,147 @@ kb:partition-d0806935-829b-4909-8e2d-2503b28df89b
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:filesystem-6c344839-2ee8-4d63-851b-6710a35c33ac ;
 	uco-core:target kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
+	.
+
+kb:partitionlist-e0d00075-96fa-443e-be97-78efe0e8bc38
+	a co:List ;
+	co:element
+		kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899 ,
+		kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20 ,
+		kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15 ,
+		kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17
+		;
+	co:item
+		kb:partitionlist-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2 ,
+		kb:partitionlist-item-3739b0ad-e313-40a8-bfa5-b012449e7e93 ,
+		kb:partitionlist-item-470d9cd6-eab4-400f-988d-7b8decb07119 ,
+		kb:partitionlist-item-9bd1300f-f544-4a27-9729-0c3d2112b6cd
+		;
+	co:size "4"^^xsd:nonNegativeInteger ;
+	.
+
+kb:partitionlist-e7018775-5b21-48eb-8b1c-25dc643ac9bc
+	a co:List ;
+	co:element
+		kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ,
+		kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3 ,
+		kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1 ,
+		kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e
+		;
+	co:item
+		kb:partitionlist-item-19f6c854-19f0-46de-b420-6d5eb458b9c0 ,
+		kb:partitionlist-item-2e445cc6-00a7-41dd-9a54-0d7d5e3d328f ,
+		kb:partitionlist-item-3b4c5e37-4c7a-4bb7-882e-3a8849b1d914 ,
+		kb:partitionlist-item-487535b3-4d0d-4a05-b8ce-853d992e75c0
+		;
+	co:size "4"^^xsd:nonNegativeInteger ;
+	.
+
+kb:partitionlist-e9f1481a-d40f-4a9d-a275-b0d057be3a92
+	a co:List ;
+	co:element
+		kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e ,
+		kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0 ,
+		kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5 ,
+		kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ,
+		kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0
+		;
+	co:item
+		kb:partitionlist-item-163bc314-b73b-46e3-965c-2a2937f2b68a ,
+		kb:partitionlist-item-2adb371a-ac4d-4625-9d26-85b7a12c0db5 ,
+		kb:partitionlist-item-3d2e16f8-1f28-44ba-8f96-4ea5fa7b781c ,
+		kb:partitionlist-item-4b763375-1cef-4c18-9cc3-73f745002742 ,
+		kb:partitionlist-item-58f64e2c-111a-4de0-b53f-23612c4532dd
+		;
+	co:size "5"^^xsd:nonNegativeInteger ;
+	.
+
+kb:partitionlist-item-163bc314-b73b-46e3-965c-2a2937f2b68a
+	a co:ListItem ;
+	co:index "1"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e ;
+	co:nextItem kb:partitionlist-item-2adb371a-ac4d-4625-9d26-85b7a12c0db5 ;
+	.
+
+kb:partitionlist-item-19f6c854-19f0-46de-b420-6d5eb458b9c0
+	a co:ListItem ;
+	co:index "1"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3 ;
+	co:nextItem kb:partitionlist-item-2e445cc6-00a7-41dd-9a54-0d7d5e3d328f ;
+	.
+
+kb:partitionlist-item-2adb371a-ac4d-4625-9d26-85b7a12c0db5
+	a co:ListItem ;
+	co:index "2"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0 ;
+	co:nextItem kb:partitionlist-item-3d2e16f8-1f28-44ba-8f96-4ea5fa7b781c ;
+	.
+
+kb:partitionlist-item-2e445cc6-00a7-41dd-9a54-0d7d5e3d328f
+	a co:ListItem ;
+	co:index "2"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1 ;
+	co:nextItem kb:partitionlist-item-3b4c5e37-4c7a-4bb7-882e-3a8849b1d914 ;
+	.
+
+kb:partitionlist-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2
+	a co:ListItem ;
+	co:index "3"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15 ;
+	co:nextItem kb:partitionlist-item-9bd1300f-f544-4a27-9729-0c3d2112b6cd ;
+	.
+
+kb:partitionlist-item-3739b0ad-e313-40a8-bfa5-b012449e7e93
+	a co:ListItem ;
+	co:index "2"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20 ;
+	co:nextItem kb:partitionlist-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2 ;
+	.
+
+kb:partitionlist-item-3b4c5e37-4c7a-4bb7-882e-3a8849b1d914
+	a co:ListItem ;
+	co:index "3"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e ;
+	co:nextItem kb:partitionlist-item-487535b3-4d0d-4a05-b8ce-853d992e75c0 ;
+	.
+
+kb:partitionlist-item-3d2e16f8-1f28-44ba-8f96-4ea5fa7b781c
+	a co:ListItem ;
+	co:index "3"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5 ;
+	co:nextItem kb:partitionlist-item-4b763375-1cef-4c18-9cc3-73f745002742 ;
+	.
+
+kb:partitionlist-item-470d9cd6-eab4-400f-988d-7b8decb07119
+	a co:ListItem ;
+	co:index "1"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899 ;
+	co:nextItem kb:partitionlist-item-3739b0ad-e313-40a8-bfa5-b012449e7e93 ;
+	.
+
+kb:partitionlist-item-487535b3-4d0d-4a05-b8ce-853d992e75c0
+	a co:ListItem ;
+	co:index "4"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ;
+	.
+
+kb:partitionlist-item-4b763375-1cef-4c18-9cc3-73f745002742
+	a co:ListItem ;
+	co:index "4"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ;
+	co:nextItem kb:partitionlist-item-58f64e2c-111a-4de0-b53f-23612c4532dd ;
+	.
+
+kb:partitionlist-item-58f64e2c-111a-4de0-b53f-23612c4532dd
+	a co:ListItem ;
+	co:index "5"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0 ;
+	.
+
+kb:partitionlist-item-9bd1300f-f544-4a27-9729-0c3d2112b6cd
+	a co:ListItem ;
+	co:index "4"^^xsd:positiveInteger ;
+	co:itemContent kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17 ;
 	.
 
 kb:path-relation-facet-01ee833e-c420-430e-a327-61ca00d8b0f5
@@ -19587,6 +21077,11 @@ kb:path-relation-facet-387e0314-0709-4cf8-9895-e63bc495b644
 	uco-observable:path "/data/data/multipart_file.002" ;
 	.
 
+kb:path-relation-facet-3b7077c6-98fe-40bc-9f1f-0805f7cdaa97
+	a uco-observable:PathRelationFacet ;
+	uco-observable:path "/del_demo/folder2/SECOND.txt" ;
+	.
+
 kb:path-relation-facet-44a7738f-f00d-4ae6-9a71-0f18e5a40bec
 	a uco-observable:PathRelationFacet ;
 	uco-observable:path "/Root/data/com.google.android.gms/app_dg_cache/B0970DD8CBD5F4763E7C602156284D4DD796AE5D/the.apk" ;
@@ -19607,9 +21102,19 @@ kb:path-relation-facet-79e5625d-5fd3-4e17-bc0c-2ac3dd5d37e9
 	uco-observable:path "/mobile/sms.db" ;
 	.
 
+kb:path-relation-facet-7bf952dc-f372-4432-9ffb-3582727776e3
+	a uco-observable:PathRelationFacet ;
+	uco-observable:path "/del_demo/folder1/?IRST.txt" ;
+	.
+
 kb:path-relation-facet-a410ff4b-21f3-4089-b56c-dac6a5c53882
 	a uco-observable:PathRelationFacet ;
 	uco-observable:path "/data/data/com.whatsapp/cache/messages.db" ;
+	.
+
+kb:path-relation-facet-b6f51579-6be3-42e2-bf81-290bfffad44c
+	a uco-observable:PathRelationFacet ;
+	uco-observable:path "/missedme.txt" ;
 	.
 
 kb:path-relation-facet-da0ef358-bb92-488a-b0c1-0229efdefbf4
@@ -19826,6 +21331,14 @@ kb:phone_call-edacc7ec-4e8e-4de4-ad83-10a892cd3855
 	uco-core:hasFacet kb:call-facet-c93c0dc7-4a01-4145-9c1c-839b743fba64 ;
 	.
 
+kb:phoneaccount-b6f2f869-0e70-4ee8-bc2e-0046fa8fc416
+	a uco-observable:PhoneAccount ;
+	uco-core:hasFacet
+		kb:account-facet-c90795be-47ec-49cc-9f1d-e74a427262e9 ,
+		kb:phone-account-facet-c34e1761-ed44-40fa-aac0-33305c743958
+		;
+	.
+
 kb:phoneaccount-c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1
 	a uco-observable:PhoneAccount ;
 	uco-core:hasFacet
@@ -19854,7 +21367,7 @@ kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f
 	.
 
 kb:primaryuser-email-3c4d0804-6ed0-4dfe-a152-3dab6b5f9111
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19 ;
@@ -19862,27 +21375,27 @@ kb:primaryuser-email-3c4d0804-6ed0-4dfe-a152-3dab6b5f9111
 	.
 
 kb:primaryuser-email-cb34b068-324b-4162-a9e5-6c96879b061c
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f ;
-	uco-core:target kb:facebook-90652808-7341-40d3-9285-774d865ad3f9 ;
+	uco-core:target kb:facebook-4dd9cd88-0acd-475c-ba45-c5bc6ad7244d ;
 	.
 
-kb:primaryuser-faceboook-cb34b068-324b-4162-a9e5-6c96879b061c
-	a uco-observable:ObservableRelationship ;
+kb:primaryuser-faceboook-64758967-e83a-44ba-9768-dae368c2c953
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f ;
-	uco-core:target kb:email-account-99d72bac-8c21-11e9-8902-0c4de9c21b53 ;
+	uco-core:target kb:email-account-bfe874d4-b094-4859-85d4-bca2d20e3d1d ;
 	.
 
 kb:primaryuser-whatsapp-b295bc93-b65c-4670-a5d7-5c2206d78e92
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Account" ;
 	uco-core:source kb:primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19 ;
-	uco-core:target kb:whatsapp-90652808-7341-40d3-9285-774d865ad3f9 ;
+	uco-core:target kb:account-90652808-7341-40d3-9285-774d865ad3f9 ;
 	.
 
 kb:process-facet-1c427e8c-2f64-43f8-a8aa-d1472a27a446
@@ -20313,34 +21826,6 @@ kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
-kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
-	a
-		prov:Collection ,
-		prov:Entity ,
-		case-investigation:ProvenanceRecord
-		;
-	prov:hadMember
-		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
-		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
-		;
-	prov:qualifiedAttribution kb:Attribution-2d5414e0-7025-54d3-a878-b640e926b535 ;
-	prov:qualifiedDerivation
-		kb:Derivation-31e9795e-f437-55fd-9284-6ce049969442 ,
-		kb:Derivation-b6b5b325-9f40-543e-8a22-8e1348a64d3c
-		;
-	prov:qualifiedGeneration kb:Generation-9b8bea6f-65a2-5435-8132-12d50a405e76 ;
-	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	prov:wasDerivedFrom
-		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
-		;
-	prov:wasGeneratedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
-	uco-core:object
-		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
-		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
-		;
-	.
-
 kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97
 	a
 		prov:Collection ,
@@ -20378,6 +21863,11 @@ kb:provenance-record-7f8080e7-b3c8-43ea-adf1-8a54e187003b
 	prov:wasGeneratedBy kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
 	uco-core:description "Record of having imaged the phone" ;
 	uco-core:object kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	.
+
+kb:provenance-record-855f91a2-cc07-4d8e-bb93-d2b6db7672db
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b ;
 	.
 
 kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
@@ -20723,7 +22213,7 @@ kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8
 	a case-investigation:ProvenanceRecord ;
 	case-investigation:exhibitNumber "MD1" ;
 	uco-core:description "Forensic duplicate of smartphone used by subject" ;
-	uco-core:object kb:f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
+	uco-core:object kb:forensicimage-e656ccdf-4341-418b-ad93-20829e6eea5d ;
 	.
 
 kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
@@ -20970,6 +22460,34 @@ kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
+kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember
+		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution kb:Attribution-e9abcc16-7f42-5e96-9543-f12d0c67ced4 ;
+	prov:qualifiedDerivation
+		kb:Derivation-bb9837b2-6c36-5aa2-bc8d-004e0094554a ,
+		kb:Derivation-f3ad014d-da23-5d71-8b12-48f5f3dcacce
+		;
+	prov:qualifiedGeneration kb:Generation-e1ad0e9c-d7c5-5738-ba6f-bfdf577dc9f4 ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
+		;
+	prov:wasGeneratedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	uco-core:object
+		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	.
+
 kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2
 	a case-investigation:ProvenanceRecord ;
 	case-investigation:exhibitNumber "20181211001-002" ;
@@ -21039,14 +22557,14 @@ kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e
 		;
 	prov:qualifiedAttribution kb:Attribution-53f00db0-ffe5-5abf-9832-5b88faf5ceb6 ;
 	prov:qualifiedDerivation
-		kb:Derivation-40d92215-7a9b-5f3f-a40a-5b6ce38d57dc ,
-		kb:Derivation-6b668b76-aa92-56c2-be6b-35ffe962b836
+		kb:Derivation-6b668b76-aa92-56c2-be6b-35ffe962b836 ,
+		kb:Derivation-80fbd5d4-af8d-5546-84a0-61c3e60bef28
 		;
 	prov:qualifiedGeneration kb:Generation-b2172b30-d23e-56fe-a871-c5e3ac980b54 ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	prov:wasGeneratedBy kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	uco-core:object
@@ -21308,7 +22826,7 @@ kb:provenancerecord-4dee4ff5-bc77-4dad-a785-05b147149678
 
 kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42
 	a case-investigation:ProvenanceRecord ;
-	uco-core:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-core:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
 	.
 
 kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563
@@ -21323,11 +22841,6 @@ kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53
 	uco-core:object kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07 ;
 	.
 
-kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b
-	a case-investigation:ProvenanceRecord ;
-	uco-core:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
-	.
-
 kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
 	a case-investigation:ProvenanceRecord ;
 	case-investigation:exhibitNumber "AsgardPD-20190330-001A" ;
@@ -21337,7 +22850,7 @@ kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
 
 kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46
 	a case-investigation:ProvenanceRecord ;
-	uco-core:object kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
+	uco-core:object kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b ;
 	.
 
 kb:provenancerecord-d1828cbb-bb0f-42e3-b021-cfd9d6419ae6
@@ -21491,6 +23004,13 @@ kb:recovered-object-facet-0a916246-a9a0-43ad-a158-ae76cc2c1bb7
 	uco-observable:nameRecoveredStatus "recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
 	.
 
+kb:recovered-object-facet-1cba33f1-601f-4716-b409-5c6014c68a47
+	a uco-observable:RecoveredObjectFacet ;
+	uco-observable:contentRecoveredStatus "overwritten"^^uco-vocabulary:RecoveredObjectStatusVocab ;
+	uco-observable:metadataRecoveredStatus "recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
+	uco-observable:nameRecoveredStatus "partially recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
+	.
+
 kb:recovered-object-facet-1dc5e3f4-4951-44ff-b9f3-14bd63684b29
 	a uco-observable:RecoveredObjectFacet ;
 	uco-observable:contentRecoveredStatus "partially recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
@@ -21540,6 +23060,13 @@ kb:recovered-object-facet-cdb678d8-f75c-4997-a975-59966d8c5530
 	uco-observable:nameRecoveredStatus "recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
 	.
 
+kb:recovered-object-facet-f135ac26-bbf0-4eab-949b-6a5dfe147c22
+	a uco-observable:RecoveredObjectFacet ;
+	uco-observable:contentRecoveredStatus "recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
+	uco-observable:metadataRecoveredStatus "recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
+	uco-observable:nameRecoveredStatus "recovered"^^uco-vocabulary:RecoveredObjectStatusVocab ;
+	.
+
 kb:reddit-6f321baa-cc57-4c0a-9dd2-7f2038fd44d1
 	a uco-observable:DigitalAccount ;
 	uco-core:hasFacet
@@ -21563,7 +23090,7 @@ kb:relationship-20f7ade6-93a7-4d67-a657-adeffba35dc7
 	uco-core:hasFacet kb:path-relation-facet-db06c02e-cc75-4904-812f-0382c07aa163 ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
-	uco-core:source kb:msgstoredb-16805dff-05f9-4cba-9266-d5fa712f3d8f ;
+	uco-core:source kb:msgstoredb-d82c3aae-488c-43d4-bcbd-a3ac38bacfd4 ;
 	uco-core:target kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
 	.
 
@@ -21681,6 +23208,18 @@ kb:relationship-6d7a7a20-ca70-4f7f-994d-c2db39e08545
 	uco-core:target kb:mobileaccount-4b3cdcbd-6a31-462f-be9b-1ca2944c8876 ;
 	.
 
+kb:relationship-6d96bcc8-5527-49a3-9442-3f8b0319c33f
+	a uco-observable:ObservableRelationship ;
+	uco-core:hasFacet
+		kb:data-range-facet-e5ceec7a-b273-4460-9edf-f778a5744740 ,
+		kb:table-relation-facet-17fb8bb8-91d4-4f16-af9e-17efbae05464
+		;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:url-history-d86828ae-ea1f-4433-97ad-114ace6c36ca ;
+	uco-core:target kb:bfe049a6-fa3f-4bf6-9c37-9b09cc6afe6b ;
+	.
+
 kb:relationship-7187406b-78ce-49b4-a684-460a69b009aa
 	a uco-observable:ObservableRelationship ;
 	uco-core:hasFacet kb:encrypted-stream-facet-ac696809-eeeb-4e9d-85b7-ed27599a938f ;
@@ -21717,7 +23256,7 @@ kb:relationship-75e3a851-9f4b-4add-8e9d-13817d333577
 	.
 
 kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	case-investigation:wasDerivedFrom kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Located_At" ;
@@ -21777,7 +23316,7 @@ kb:relationship-bf423267-3afe-4f4d-aa9f-d903eae55f99
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Associated_Account" ;
-	uco-core:source kb:whatsapp-90652808-7341-40d3-9285-774d865ad3f9 ;
+	uco-core:source kb:account-90652808-7341-40d3-9285-774d865ad3f9 ;
 	uco-core:target kb:phoneaccount-c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1 ;
 	.
 
@@ -21799,7 +23338,7 @@ kb:relationship-c316c405-9326-4f28-9b8d-44a3bb9e7283
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:message-ed5d35d6-6e7c-4099-80f4-1fadfc0ee08c ;
-	uco-core:target kb:msgstoredb-16805dff-05f9-4cba-9266-d5fa712f3d8f ;
+	uco-core:target kb:msgstoredb-d82c3aae-488c-43d4-bcbd-a3ac38bacfd4 ;
 	.
 
 kb:relationship-c34de1cd-daa3-4381-a4c6-7a05005cb3d3
@@ -21836,7 +23375,7 @@ kb:relationship-d348200b-e180-40b8-8617-2319f5fe6ffa
 	.
 
 kb:relationship-d5b4a1e1-0e25-4257-81f7-19febc86ded1
-	a uco-observable:ObservableRelationship ;
+	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb:identity-c5bb09c3-3612-4bf2-b165-6f12d0e3c6af ;
@@ -21852,7 +23391,7 @@ kb:relationship-e30adaa6-2bc0-45f8-a9e4-24f1c1583fe6
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:reddit-6f321baa-cc57-4c0a-9dd2-7f2038fd44d1 ;
-	uco-core:target kb:chromelogindata-16805dff-05f9-4cba-9266-d5fa712f3d8f ;
+	uco-core:target kb:chromelogindata-16399672-32ad-4c83-9a40-efe68c690bb8 ;
 	.
 
 kb:relationship-e463912d-2ebb-4558-9990-3391eef56c4d
@@ -22189,24 +23728,24 @@ kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43
 	time:inside
 		kb:Generation-b2172b30-d23e-56fe-a871-c5e3ac980b54 ,
 		kb:Usage-55d912db-0988-5739-a6ac-5510f6b5dab4 ,
-		kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9
+		kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d
 		;
 	prov:qualifiedAssociation kb:Association-f691f032-b09d-56d0-b1cc-fee4796e389d ;
 	prov:qualifiedCommunication kb:Communication-b50dd878-b308-50d7-98bb-871df6c70018 ;
 	prov:qualifiedStart kb:Start-2bd2eb08-da2f-5dc2-abff-50a321d7e13a ;
 	prov:qualifiedUsage
 		kb:Usage-55d912db-0988-5739-a6ac-5510f6b5dab4 ,
-		kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9
+		kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d
 		;
 	prov:used
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasInformedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	uco-action:object
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result
@@ -22309,7 +23848,7 @@ kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
 		;
 	time:hasBeginning kb:Start-2a6dc76e-7d28-57bc-b587-2ace1cbacf7e ;
 	time:inside
-		kb:Generation-9b8bea6f-65a2-5435-8132-12d50a405e76 ,
+		kb:Generation-e1ad0e9c-d7c5-5738-ba6f-bfdf577dc9f4 ,
 		kb:Usage-52866e82-4020-5224-b4cb-7e15f018761c ,
 		kb:Usage-c99a900f-7fcb-5f2f-965f-587bff3aa308
 		;
@@ -22333,7 +23872,7 @@ kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result
 		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	uco-core:description "Install AppLock" ;
 	.
@@ -22464,7 +24003,7 @@ kb:sim-card-facet-15765152-c1d9-40f2-91d9-c10885fdf077
 
 kb:sim-card-facet-1d69df5c-1fb1-42e2-a2bd-7cb6892d3bca
 	a uco-observable:SIMCardFacet ;
-	:IMSI kb:mobile-account-05328472-66de-4290-8c95-0984504e7279 ;
+	ns1:IMSI kb:mobile-account-05328472-66de-4290-8c95-0984504e7279 ;
 	uco-observable:ICCID "456673345673436xxx" ;
 	uco-observable:SIMForm "micro" ;
 	uco-observable:SIMType "USIM" ;
@@ -22521,7 +24060,7 @@ kb:sim3-telephony-relationship-fa7fd470-e58c-4d35-858a-bcc3e04e822a
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Referenced_Within" ;
 	uco-core:source kb:simcard-1c401020-c200-4b90-9128-adb3b5e0b6fb ;
-	uco-core:target kb:file-cd52c3b8-7759-40b7-ae10-dfc90a35f644 ;
+	uco-core:target kb:telephony-cd52c3b8-7759-40b7-ae10-dfc90a35f644 ;
 	.
 
 kb:simcard-1c401020-c200-4b90-9128-adb3b5e0b6fb
@@ -22544,7 +24083,16 @@ kb:simcard-b0252511-4875-4e2e-a27f-d95c35d87c1f
 	uco-core:hasFacet kb:sim-card-facet-778b424f-fbda-4ca0-9097-0f545388a7e7 ;
 	.
 
-kb:simcard1-relationship-a1dbff0e-974b-4295-b035-e1bc3271945d
+kb:simcard1-relationship-af318ae5-b792-4297-b1c3-74e5bbd9b018
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:simcard-b0252511-4875-4e2e-a27f-d95c35d87c1f ;
+	uco-core:startTime "2018-11-16T12:34:28+00:00"^^xsd:dateTime ;
+	uco-core:target kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ;
+	.
+
+kb:simcard1-relationship-d6b69721-9ac7-460b-910a-b45702fad215
 	a uco-observable:ObservableRelationship ;
 	rdfs:comment "TODO - The startTime for this relationship was previously recorded with a time stamp that, by later analyst's guess, was meant to be a stand-in for an unknown time in 2017: '2017-00-00T12:34:56Z'.  Such partial information requires another representation.  See e.g. time:Instant." ;
 	rdfs:seeAlso <https://www.w3.org/TR/owl-time/#time:Instant> ;
@@ -22553,15 +24101,6 @@ kb:simcard1-relationship-a1dbff0e-974b-4295-b035-e1bc3271945d
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:simcard-24d20c80-f035-40ae-88dd-fc66f70180f6 ;
 	uco-core:target kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
-	.
-
-kb:simcard1-relationship-af318ae5-b792-4297-b1c3-74e5bbd9b018
-	a uco-observable:ObservableRelationship ;
-	uco-core:isDirectional "true"^^xsd:boolean ;
-	uco-core:kindOfRelationship "Contained_Within" ;
-	uco-core:source kb:simcard-b0252511-4875-4e2e-a27f-d95c35d87c1f ;
-	uco-core:startTime "2018-11-16T12:34:28+00:00"^^xsd:dateTime ;
-	uco-core:target kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ;
 	.
 
 kb:simcard3-relationship-dfba6daa-26fd-4a3e-9638-d85c32f17e2f
@@ -22719,7 +24258,11 @@ kb:skype-99992808-7341-40d3-9285-774d865a9999
 	.
 
 kb:skypeapp-a6b73e78-00da-11eb-a396-acde48001122
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	.
 
 kb:skypemsg-eafca388-f926-4d48-864d-1bfdd3a2ba7f
@@ -22728,7 +24271,10 @@ kb:skypemsg-eafca388-f926-4d48-864d-1bfdd3a2ba7f
 	.
 
 kb:sms-application-4e98e83c-4d9e-48da-ac3a-9bc42b7a545e
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:sms-message-2c032220-8c21-11e9-9c99-0c4de9c21b53
@@ -22747,7 +24293,10 @@ kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba
 	.
 
 kb:sms_application-97fd9144-39d2-4da2-b955-c8ee9df9848b
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	.
 
 kb:sms_message-3f59e298-ac20-433b-adaa-2c5efe510ba2
@@ -22760,17 +24309,24 @@ kb:smsmessage-21b3e39d-772d-47b0-8501-a6945ddbdfcd
 	uco-core:hasFacet kb:message-facet-7d687eb6-4b97-4a4d-be1c-e73e0a403f08 ;
 	.
 
-kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
-	a uco-observable:File ;
-	.
-
 kb:software-5d96df90-d9e1-423c-b8db-c2327812ab38
-	a uco-observable:Application ;
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
 	uco-core:hasFacet kb:application-facet-ed282901-6700-419b-9a03-aa56d7252c8a ;
 	.
 
 kb:software-bec1d8eb-2db1-444d-9175-b3c60ac47410
 	a uco-observable:File ;
+	.
+
+kb:software-cc22d2f4-636d-4cf2-bec4-0b91aa9926de
+	a
+		uco-observable:Application ,
+		uco-observable:Software
+		;
+	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	.
 
 kb:source-host-d77fdc61-b382-4aad-98fd-6dbf8cadd2bf
@@ -22842,7 +24398,7 @@ kb:sqlite-wal-file-e5598c4e-9d1a-4b14-9142-49900dd6b8e9
 	uco-core:hasFacet kb:file-facet-8d977b6b-fc0b-462b-8002-838ee5240fbb ;
 	.
 
-kb:sqlite-wal-relationship-8a509b23-18bd-4b1f-a77a-4c8ee86b57b3
+kb:sqlite-wal-relationship-5397da33-c662-434c-ad9c-bba4621d7bb8
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "false"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Related_To" ;
@@ -23012,7 +24568,11 @@ kb:tar_archive_file-2857804a-91d7-4cfb-8929-8448d92bb8de
 	.
 
 kb:telephony-cd52c3b8-7759-40b7-ae10-dfc90a35f644
-	a uco-observable:ObservableObject ;
+	a
+		uco-observable:File ,
+		uco-observable:ObservableObject
+		;
+	uco-core:hasFacet kb:file-facet-b6bc7e31-cb7b-49be-bdf9-74b4d5da2997 ;
 	.
 
 kb:textapp-9b38d51f-f5b9-4740-9968-6f1a1e1ec7bf
@@ -23035,11 +24595,13 @@ kb:thread-2d8e20e9-37b2-4766-9aab-f5b9facd9b8a
 kb:thread-4237ff8b-e049-4a56-bcf7-e89ed2797d83
 	a uco-observable:MessageThread ;
 	uco-core:hasFacet kb:message-thread-facet-33f68c51-0737-4716-8b2d-7612cd78a99b ;
+	uco-core:name "Best Friend Chat!!" ;
 	.
 
 kb:thread-64330f59-a10d-4907-93f6-be9fc267834e
 	a uco-observable:MessageThread ;
 	uco-core:hasFacet kb:message-thread-facet-38d3fc48-8519-40c5-98f3-d4ad4d42a867 ;
+	uco-core:name "Argle-bargle" ;
 	.
 
 kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e
@@ -23051,7 +24613,7 @@ kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e
 		;
 	co:item
 		kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8 ,
-		kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2 ,
+		kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46 ,
 		kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87
 		;
 	co:size "3"^^xsd:nonNegativeInteger ;
@@ -23068,20 +24630,20 @@ kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8
 	a uco-types:ThreadItem ;
 	co:index "1"^^xsd:positiveInteger ;
 	co:itemContent kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81 ;
-	uco-types:threadNextItem kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2 ;
-	.
-
-kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2
-	a uco-types:ThreadItem ;
-	co:index "2"^^xsd:positiveInteger ;
-	co:itemContent kb:message-decea264-014d-4da8-9d7f-a63231d2c049 ;
-	uco-types:threadNextItem kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87 ;
+	uco-types:threadNextItem kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46 ;
 	.
 
 kb:thread-item-5a835734-1c84-441f-80e5-8df4ffa005b9
 	a uco-types:ThreadItem ;
 	co:index "1"^^xsd:positiveInteger ;
 	co:itemContent kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331 ;
+	.
+
+kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46
+	a uco-types:ThreadItem ;
+	co:index "2"^^xsd:positiveInteger ;
+	co:itemContent kb:message-decea264-014d-4da8-9d7f-a63231d2c049 ;
+	uco-types:threadNextItem kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87 ;
 	.
 
 kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87
@@ -23106,20 +24668,15 @@ kb:tool-005be9da-ea83-456f-a44f-a63610586bd4
 	a uco-tool:AnalyticTool ;
 	.
 
-kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db
-	a uco-tool:Tool ;
-	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
-	uco-tool:toolType "binary code analysis tool" ;
-	uco-tool:version "7.7" ;
-	.
-
 kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195
-	a uco-tool:ConfiguredTool ;
-	uco-configuration:isConfigurationOf kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
+	a
+		uco-tool:AnalyticTool ,
+		uco-tool:ConfiguredTool
+		;
+	uco-configuration:isConfigurationOf kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-configuration:usesConfiguration kb:configuration-4dafed4a-e369-4755-95fa-f50c40e058cb ;
 	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
+	uco-tool:creator kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae ;
 	uco-tool:toolType "binary code analysis tool" ;
 	uco-tool:version "7.7" ;
 	.
@@ -23151,11 +24708,14 @@ kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879
 	.
 
 kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e
-	a uco-tool:ConfiguredTool ;
-	uco-configuration:isConfigurationOf kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
+	a
+		uco-tool:AnalyticTool ,
+		uco-tool:ConfiguredTool
+		;
+	uco-configuration:isConfigurationOf kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-configuration:usesConfiguration kb:configuration-2934ee74-ee7b-481f-8c05-ecce52d58634 ;
 	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
+	uco-tool:creator kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae ;
 	uco-tool:toolType "binary code analysis tool" ;
 	uco-tool:version "7.7" ;
 	.
@@ -23181,11 +24741,14 @@ kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f
 	.
 
 kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377
-	a uco-tool:ConfiguredTool ;
-	uco-configuration:isConfigurationOf kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
+	a
+		uco-tool:AnalyticTool ,
+		uco-tool:ConfiguredTool
+		;
+	uco-configuration:isConfigurationOf kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db ;
 	uco-configuration:usesConfiguration kb:configuration-472cd37e-8895-498f-848c-583d83bf2a19 ;
 	uco-core:name "IDA Pro" ;
-	uco-tool:creator kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784 ;
+	uco-tool:creator kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae ;
 	uco-tool:toolType "binary code analysis tool" ;
 	uco-tool:version "7.7" ;
 	.
@@ -23226,12 +24789,20 @@ kb:trace-relationship-44bc4b9d-680d-499f-9db1-80af07e11bdc
 	uco-core:target kb:mobile-device-d5143a67-8b61-491b-a5e9-863b606e296a ;
 	.
 
+kb:trace-relationship-9f68401c-206e-4ff5-b342-2ef14331ad67
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:cassandra-image-filesystem-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1 ;
+	uco-core:target kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af ;
+	.
+
 kb:trace-relationship-bd43f037-cf0f-4494-b36d-94f7a1da700c
 	a uco-observable:ObservableRelationship ;
 	uco-core:hasFacet kb:data-range-facet-5c250680-cc8b-40d5-a6e9-8adb878b8ff7 ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
-	uco-core:source kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1 ;
+	uco-core:source kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af ;
 	uco-core:target kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
 	.
 
@@ -23242,10 +24813,10 @@ kb:trace-relationship-dfad5a2f-696b-44bd-88b7-04e634f7ee57
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
-	uco-core:target kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1 ;
+	uco-core:target kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af ;
 	.
 
-kb:url-39ff4987-8ae5-47e3-8369-dbd0d5f79398
+kb:url-8abab405-9029-45b0-a30d-be0dc6f353cc
 	a uco-observable:URL ;
 	uco-core:hasFacet kb:url-facet-cfc6f806-50ba-4929-9c93-c8804967555f ;
 	.
@@ -23399,15 +24970,14 @@ kb:url-facet-fd37a528-b375-4215-96c1-cf81709ef561
 	uco-observable:fullValue "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
 	.
 
-kb:url-history-39ff4987-8ae5-47e3-8369-dbd0d5f79398
-	a
-		uco-observable:URLHistory ,
-		uco-observable:URLHistoryFacet
-		;
-	uco-core:hasFacet
-		kb:url-history-facet-728d325b-d3df-4e4b-97b2-dbf9c7c64da8 ,
-		kb:url-history-facet-a455b867-957e-4fce-a0ad-1af9c6fa4edb
-		;
+kb:url-history-51cf5cf9-806a-4944-ae6b-ba61229cb3a5
+	a uco-observable:URLHistory ;
+	uco-core:hasFacet kb:url-history-facet-728d325b-d3df-4e4b-97b2-dbf9c7c64da8 ;
+	.
+
+kb:url-history-d86828ae-ea1f-4433-97ad-114ace6c36ca
+	a uco-observable:URLHistory ;
+	uco-core:hasFacet kb:url-history-facet-a455b867-957e-4fce-a0ad-1af9c6fa4edb ;
 	.
 
 kb:url-history-entry-193a7fc6-5f15-4b3c-8763-f1dc3c9bfd14
@@ -23428,13 +24998,13 @@ kb:url-history-entry-5fdbb3f9-40e5-42d9-8099-a02bdcec7eee
 	drafting:allocationStatus "allocated" ;
 	drafting:browserUserProfileAccount kb:profile--account-uuid ;
 	drafting:propertyIsNull uco-observable:expirationTime ;
-	uco-observable:browserInformation kb:5d96df90-d9e1-423c-b8db-c2327812ab38 ;
+	uco-observable:browserInformation kb:a83adacb-ceaf-4b4b-b078-7c12dce990b9 ;
 	uco-observable:firstVisit "2018-12-06T18:52:21+00:00"^^xsd:dateTime ;
 	uco-observable:lastVisit "2017-01-25T02:20:22+00:00"^^xsd:dateTime ;
 	uco-observable:manuallyEnteredCount "0"^^xsd:nonNegativeInteger ;
 	uco-observable:pageTitle "Friday Magazine | Home" ;
 	uco-observable:referrerUrl kb:14354987-8ae5-47e3-8369-dbd0d5f77489 ;
-	uco-observable:url kb:url-39ff4987-8ae5-47e3-8369-dbd0d5f79398 ;
+	uco-observable:url kb:url-8abab405-9029-45b0-a30d-be0dc6f353cc ;
 	uco-observable:visitCount "1"^^xsd:integer ;
 	.
 
@@ -23462,7 +25032,7 @@ kb:url-history-facet-728d325b-d3df-4e4b-97b2-dbf9c7c64da8
 
 kb:url-history-facet-a455b867-957e-4fce-a0ad-1af9c6fa4edb
 	a uco-observable:URLHistoryFacet ;
-	uco-observable:browserInformation kb:software-5d96df90-d9e1-423c-b8db-c2327812ab38 ;
+	uco-observable:browserInformation kb:software-cc22d2f4-636d-4cf2-bec4-0b91aa9926de ;
 	uco-observable:urlHistoryEntry kb:url-history-entry-193a7fc6-5f15-4b3c-8763-f1dc3c9bfd14 ;
 	.
 
@@ -23504,18 +25074,18 @@ kb:victim-cd09156f-5f0c-427b-9c75-6272c3926137
 	a uco-victim:Victim ;
 	.
 
-kb:whatsapp-868abc08-8c21-11e9-934e-0c4de9c21b53
-	a uco-observable:Application ;
-	uco-core:hasFacet kb:application-facet-f089c7c8-e260-483f-b9dc-e95da12b5906 ;
+kb:volume-facet-87beebe0-20fc-4ab3-a8f5-9b06529ef271
+	a uco-observable:VolumeFacet ;
+	uco-observable:sectorSize "512"^^xsd:integer ;
+	uco-observable:volumeID "34 A2 74 12" ;
 	.
 
-kb:whatsapp-90652808-7341-40d3-9285-774d865ad3f9
-	a uco-observable:ApplicationAccount ;
-	uco-core:hasFacet
-		kb:account-facet-502bc393-9727-415d-b336-e466f0fa21bf ,
-		kb:application-account-facet-15811836-e4ed-48d1-ae51-1822aab89aa9 ,
-		kb:digital-account-facet-8794c717-cc13-44ab-8f93-77cca75fc649
+kb:whatsapp-868abc08-8c21-11e9-934e-0c4de9c21b53
+	a
+		uco-observable:Application ,
+		uco-observable:Software
 		;
+	uco-core:hasFacet kb:application-facet-f089c7c8-e260-483f-b9dc-e95da12b5906 ;
 	.
 
 kb:wifi-address-facet-00ec20e0-4af9-45c0-9246-7a87e8c47f3d
@@ -23748,7 +25318,7 @@ kb1:CorporateLoggingTool01
 	.
 
 kb1:DetectionEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb1:ActOfEndpointScan01 ,
 		kb1:ActOfFileFlagging01 ,
@@ -23797,7 +25367,7 @@ kb1:EndpointProtectionSoftware01
 	.
 
 kb1:InfectionEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb1:ActOfMalwareDelivery01 ,
 		kb1:ActOfMalwareInstallation01
@@ -23851,7 +25421,7 @@ kb1:ScannerRole01
 	.
 
 kb1:SpearFishingEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb1:ActOfEmailDelivery01 ,
 		kb1:ActOfLinkOpening01
@@ -24128,7 +25698,10 @@ kb1:observable-relationship-f849b7ab-9e18-46fb-a70d-ea3fd8e47437
 	.
 
 kb1:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
-	a uco-observable:OperatingSystem ;
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
 	rdfs:comment "TODO, UCO - bitness should use the BitnessVocabulary." ;
 	uco-core:hasFacet kb1:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ;
 	uco-core:name "Windows 10 Enterprise Evaluation" ;
@@ -24137,13 +25710,8 @@ kb1:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
 kb1:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:bitness "64" ;
-	uco-observable:manufacturer kb1:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
+	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
 	uco-observable:version "10.0" ;
-	.
-
-kb1:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26
-	a uco-identity:Organization ;
-	uco-core:name "Microsoft" ;
 	.
 
 kb1:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc
@@ -24208,7 +25776,10 @@ kb1:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25
 	.
 
 kb1:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6
-	a uco-observable:WindowsProcess ;
+	a
+		uco-observable:Software ,
+		uco-observable:WindowsProcess
+		;
 	uco-core:hasFacet
 		kb1:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc ,
 		kb1:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b
@@ -24216,12 +25787,18 @@ kb1:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6
 	.
 
 kb1:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2
-	a uco-observable:WindowsProcess ;
+	a
+		uco-observable:Software ,
+		uco-observable:WindowsProcess
+		;
 	uco-core:hasFacet kb1:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac ;
 	.
 
 kb1:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c
-	a uco-observable:WindowsProcess ;
+	a
+		uco-observable:Software ,
+		uco-observable:WindowsProcess
+		;
 	uco-core:description "Browser process" ;
 	.
 

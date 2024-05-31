@@ -1,13 +1,16 @@
 #!/usr/bin/make -f
 
+# Portions of this file contributed by NIST are governed by the
+# following statement:
+#
 # This software was developed at the National Institute of Standards
 # and Technology by employees of the Federal Government in the course
-# of their official duties. Pursuant to title 17 Section 105 of the
-# United States Code this software is not subject to copyright
-# protection and is in the public domain. NIST assumes no
-# responsibility whatsoever for its use by other parties, and makes
-# no guarantees, expressed or implied, about its quality,
-# reliability, or any other characteristic.
+# of their official duties. Pursuant to Title 17 Section 105 of the
+# United States Code, this software is not subject to copyright
+# protection within the United States. NIST assumes no responsibility
+# whatsoever for its use by other parties, and makes no guarantees,
+# expressed or implied, about its quality, reliability, or any other
+# characteristic.
 #
 # We would appreciate acknowledgement if the software is used.
 
@@ -39,6 +42,8 @@ used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)
 
 all: \
   prov-constraints.log \
+  action_name_statistics.md \
+  relationship_type_statistics.md \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
@@ -47,10 +52,23 @@ all: \
 .PHONY: \
   check-prov-constraints
 
+action_name_statistics.md: \
+  kb.ttl \
+  $(top_srcdir)/src/action_name_statistics_md.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/action_name_statistics_md.py \
+	    kb.ttl \
+	    > _$@
+	mv _$@ $@
+
 check: \
   check-prov-constraints \
   check-pytest \
   kb-case_prov_check.ttl \
+  kb_validation-develop.ttl \
+  kb_validation-develop-2.0.0.ttl \
+  kb_validation-unstable.ttl \
+  kb_validation-unstable-2.0.0.ttl \
   undefined_concepts.txt \
   undefined_kindOfRelationships.tsv \
   used_concepts.txt \
@@ -72,6 +90,8 @@ check-pytest: \
 	    --verbose
 
 clean:
+	@rm -rf \
+	  __pycache__
 	@rm -f \
 	  *_ \
 	  _* \
@@ -103,12 +123,114 @@ kb-case_prov_check.ttl: \
 kb-prov-time.ttl: \
   kb.ttl
 	rm -f __$@ _$@
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_rdf \
 	      --use-deterministic-uuids \
 	      __$@ \
 	      $<
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-develop.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-develop-2.0.0.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-unstable.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-warnings \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+kb_validation-unstable-2.0.0.ttl: \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl \
+  deactivate_uuid_suggestion.ttl \
+  kb.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-warnings \
+	    --built-version none \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl \
+	    --ontology-graph deactivate_uuid_suggestion.ttl \
+	    --format turtle \
+	    --output __$@ \
+	    $(top_srcdir)/dependencies/imports-transitive.ttl \
+	    kb.ttl \
+	    kb-entailment.ttl \
+	    || true
+	test -s __$@
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source __$@ \
@@ -160,6 +282,15 @@ prov-constraints.log: \
 	    kb-prov-time.ttl \
 	    > _$@ \
 	    2>&1
+	mv _$@ $@
+
+relationship_type_statistics.md: \
+  kb.ttl \
+  $(top_srcdir)/src/relationship_type_statistics_md.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/relationship_type_statistics_md.py \
+	    kb.ttl \
+	    > _$@
 	mv _$@ $@
 
 undefined_concepts.txt: \

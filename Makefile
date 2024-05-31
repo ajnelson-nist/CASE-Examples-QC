@@ -1,13 +1,16 @@
 #!/usr/bin/make -f
 
+# Portions of this file contributed by NIST are governed by the
+# following statement:
+#
 # This software was developed at the National Institute of Standards
 # and Technology by employees of the Federal Government in the course
-# of their official duties. Pursuant to title 17 Section 105 of the
-# United States Code this software is not subject to copyright
-# protection and is in the public domain. NIST assumes no
-# responsibility whatsoever for its use by other parties, and makes
-# no guarantees, expressed or implied, about its quality,
-# reliability, or any other characteristic.
+# of their official duties. Pursuant to Title 17 Section 105 of the
+# United States Code, this software is not subject to copyright
+# protection within the United States. NIST assumes no responsibility
+# whatsoever for its use by other parties, and makes no guarantees,
+# expressed or implied, about its quality, reliability, or any other
+# characteristic.
 #
 # We would appreciate acknowledgement if the software is used.
 
@@ -60,8 +63,7 @@ all: \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules \
   check-tests \
-  download \
-  normalize
+  download
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -85,6 +87,9 @@ all: \
 	    dependencies/UCO-Profile-BFO
 	@test -r dependencies/UCO-Profile-BFO/README.md \
 	  || (echo "ERROR:Makefile:UCO-Profile-BFO submodule README.md file not found, even though UCO-Profile-BFO submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-BFO \
+	  .git_submodule_init.done.log
 	# UCO-Profile-FOAF
 	test -r dependencies/UCO-Profile-FOAF/README.md \
 	  || git submodule update \
@@ -92,6 +97,19 @@ all: \
 	    dependencies/UCO-Profile-FOAF
 	@test -r dependencies/UCO-Profile-FOAF/README.md \
 	  || (echo "ERROR:Makefile:UCO-Profile-FOAF submodule README.md file not found, even though UCO-Profile-FOAF submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-FOAF \
+	  .git_submodule_init.done.log
+	# UCO-Profile-gufo
+	test -r dependencies/UCO-Profile-gufo/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/UCO-Profile-gufo
+	@test -r dependencies/UCO-Profile-gufo/README.md \
+	  || (echo "ERROR:Makefile:UCO-Profile-gufo submodule README.md file not found, even though UCO-Profile-gufo submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-gufo \
+	  .git_submodule_init.done.log
 	# casework.github.io
 	test -r dependencies/casework.github.io/README.md \
 	  || (git submodule init dependencies/casework.github.io && git submodule update dependencies/casework.github.io)
@@ -150,6 +168,9 @@ all: \
 all-dependencies: \
   .venv.done.log
 	$(MAKE) \
+	  --directory dependencies/CASE-Corpora \
+	  all-dependencies
+	$(MAKE) \
 	  --directory dependencies
 
 all-tests: \
@@ -158,6 +179,7 @@ all-tests: \
 	  --directory tests
 
 check: \
+  all-tests \
   check-mypy \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
@@ -177,13 +199,36 @@ check-supply-chain: \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules
 
+# Update pre-commit configuration and use the updated config file to
+# review code.  Only have Make exit if 'pre-commit run' modifies files.
 check-supply-chain-pre-commit: \
   .venv-pre-commit/var/.pre-commit-built.log
 	source .venv-pre-commit/bin/activate \
 	  && pre-commit autoupdate
 	git diff \
 	  --exit-code \
-	  .pre-commit-config.yaml
+	  .pre-commit-config.yaml \
+	  || ( \
+	      source .venv-pre-commit/bin/activate \
+	        && pre-commit run \
+	          --all-files \
+	          --config .pre-commit-config.yaml \
+	    ) \
+	    || git diff \
+	      --stat \
+	      --exit-code \
+	      || ( \
+	          echo \
+	            "WARNING:Makefile:pre-commit configuration can be updated.  It appears the updated would change file formatting." \
+	            >&2 \
+	            ; exit 1 \
+                )
+	@git diff \
+	  --exit-code \
+	  .pre-commit-config.yaml \
+	  || echo \
+	    "INFO:Makefile:pre-commit configuration can be updated.  It appears the update would not change file formatting." \
+	    >&2
 
 check-supply-chain-submodules: \
   .git_submodule_init.done.log
@@ -204,6 +249,10 @@ clean:
 	@$(MAKE) \
 	  --directory tests \
 	  clean
+	@rm -f \
+	  .venv.done.log
+	@rm -rf \
+	  venv
 
 # This recipe guarantees a timestamp update order, and is otherwise a nop.
 dependencies/CASE-Corpora/requirements.txt: \
@@ -219,9 +268,3 @@ dependencies/CASE-Examples/requirements.txt: \
 
 download: \
   .venv.done.log
-
-normalize: \
-  .venv.done.log
-	$(MAKE) \
-	  --directory tests \
-	  normalize

@@ -1,4 +1,5 @@
 https://ontology.caseontology.org/case/investigation/wasDerivedFrom
+https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/UcoObject
 https://ontology.unifiedcyberontology.org/uco/core/description
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet

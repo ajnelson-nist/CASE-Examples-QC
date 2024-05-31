@@ -1,4 +1,3 @@
-http://example.org/ontology/drafting/visibility
 https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/hasFacet
 https://ontology.unifiedcyberontology.org/uco/core/isDirectional
@@ -21,12 +20,12 @@ https://ontology.unifiedcyberontology.org/uco/observable/MessageThreadFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/application
 https://ontology.unifiedcyberontology.org/uco/observable/applicationIdentifier
 https://ontology.unifiedcyberontology.org/uco/observable/dataPayloadReferenceURL
-https://ontology.unifiedcyberontology.org/uco/observable/displayName
 https://ontology.unifiedcyberontology.org/uco/observable/from
 https://ontology.unifiedcyberontology.org/uco/observable/fullValue
 https://ontology.unifiedcyberontology.org/uco/observable/manufacturer
@@ -38,6 +37,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/participant
 https://ontology.unifiedcyberontology.org/uco/observable/sentTime
 https://ontology.unifiedcyberontology.org/uco/observable/to
 https://ontology.unifiedcyberontology.org/uco/observable/version
+https://ontology.unifiedcyberontology.org/uco/observable/visibility
 https://ontology.unifiedcyberontology.org/uco/types/Thread
 https://ontology.unifiedcyberontology.org/uco/types/ThreadItem
 https://ontology.unifiedcyberontology.org/uco/types/threadNextItem

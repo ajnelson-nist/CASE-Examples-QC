@@ -5,7 +5,7 @@ This directory contains text files that list terms not known to CASE or UCO, but
 The following table is the count of undefined concepts used in each example file:
 
 ```
-   8 Oresteia/undefined_concepts.txt
+   9 Oresteia/undefined_concepts.txt
    0 accounts/undefined_concepts.txt
    1 analysis/undefined_concepts.txt
    0 bulk_extractor_forensic_path/undefined_concepts.txt
@@ -14,21 +14,22 @@ The following table is the count of undefined concepts used in each example file
    0 configured_tool/undefined_concepts.txt
    0 database_records/undefined_concepts.txt
    1 device/undefined_concepts.txt
-   4 event/undefined_concepts.txt
+   0 event/undefined_concepts.txt
    0 exif_data/undefined_concepts.txt
    2 file/undefined_concepts.txt
    0 forensic_lifecycle/undefined_concepts.txt
    0 location/undefined_concepts.txt
-   1 message/undefined_concepts.txt
+   0 message/undefined_concepts.txt
    1 mobile_device_and_sim_card/undefined_concepts.txt
    5 multipart_file/undefined_concepts.txt
    0 network_connection/undefined_concepts.txt
+  12 partitions/undefined_concepts.txt
    0 raw_data/undefined_concepts.txt
    0 reconstructed_file/undefined_concepts.txt
    0 recoverability/undefined_concepts.txt
    0 sms_and_contacts/undefined_concepts.txt
   19 spear_phishing/undefined_concepts.txt
-  43 undefined_concepts.txt
+  51 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
@@ -52,10 +53,11 @@ The following table is the count of undefined relationship literals used in each
    2 mobile_device_and_sim_card/undefined_kindOfRelationships.tsv
    2 multipart_file/undefined_kindOfRelationships.tsv
    1 network_connection/undefined_kindOfRelationships.tsv
+   4 partitions/undefined_kindOfRelationships.tsv
    1 raw_data/undefined_kindOfRelationships.tsv
    2 reconstructed_file/undefined_kindOfRelationships.tsv
    0 recoverability/undefined_kindOfRelationships.tsv
    1 sms_and_contacts/undefined_kindOfRelationships.tsv
    5 spear_phishing/undefined_kindOfRelationships.tsv
-  21 undefined_kindOfRelationships.tsv
+  23 undefined_kindOfRelationships.tsv
 ```

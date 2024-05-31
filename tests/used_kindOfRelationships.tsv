@@ -3,6 +3,7 @@ http://www.w3.org/2001/XMLSchema#string	Attachment_Of
 http://www.w3.org/2001/XMLSchema#string	Connected_To
 http://www.w3.org/2001/XMLSchema#string	Contained-Within
 http://www.w3.org/2001/XMLSchema#string	Contained_Within
+http://www.w3.org/2001/XMLSchema#string	Corresponds_to
 http://www.w3.org/2001/XMLSchema#string	Decoded_From
 http://www.w3.org/2001/XMLSchema#string	Decompressed_From
 http://www.w3.org/2001/XMLSchema#string	Decrypted_From
@@ -18,6 +19,7 @@ http://www.w3.org/2001/XMLSchema#string	Initiated
 http://www.w3.org/2001/XMLSchema#string	Located_At
 http://www.w3.org/2001/XMLSchema#string	Mapped_Into
 http://www.w3.org/2001/XMLSchema#string	Member_Of
+http://www.w3.org/2001/XMLSchema#string	Referenced-By
 http://www.w3.org/2001/XMLSchema#string	Referenced_Within
 http://www.w3.org/2001/XMLSchema#string	Related_To
 http://www.w3.org/2001/XMLSchema#string	Sends

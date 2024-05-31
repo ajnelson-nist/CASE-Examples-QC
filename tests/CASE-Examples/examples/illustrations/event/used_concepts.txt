@@ -1,7 +1,3 @@
-http://example.org/ontology/drafting/Event
-http://example.org/ontology/drafting/eventAttribute
-http://example.org/ontology/drafting/eventContext
-http://example.org/ontology/drafting/eventType
 https://ontology.unifiedcyberontology.org/uco/action/Action
 https://ontology.unifiedcyberontology.org/uco/action/endTime
 https://ontology.unifiedcyberontology.org/uco/action/instrument
@@ -10,7 +6,11 @@ https://ontology.unifiedcyberontology.org/uco/action/object
 https://ontology.unifiedcyberontology.org/uco/action/performer
 https://ontology.unifiedcyberontology.org/uco/action/result
 https://ontology.unifiedcyberontology.org/uco/action/startTime
+https://ontology.unifiedcyberontology.org/uco/core/Event
 https://ontology.unifiedcyberontology.org/uco/core/endTime
+https://ontology.unifiedcyberontology.org/uco/core/eventAttribute
+https://ontology.unifiedcyberontology.org/uco/core/eventContext
+https://ontology.unifiedcyberontology.org/uco/core/eventType
 https://ontology.unifiedcyberontology.org/uco/core/name
 https://ontology.unifiedcyberontology.org/uco/core/startTime
 https://ontology.unifiedcyberontology.org/uco/identity/Person

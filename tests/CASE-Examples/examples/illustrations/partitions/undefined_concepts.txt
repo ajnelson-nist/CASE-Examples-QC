@@ -1,0 +1,12 @@
+http://example.org/ontology/drafting/DiskPartitionSystem
+http://example.org/ontology/drafting/DiskPartitionSystemFacet
+http://example.org/ontology/drafting/buildID
+http://example.org/ontology/drafting/diskPartitionLength
+http://example.org/ontology/drafting/diskPartitionOffset
+http://example.org/ontology/drafting/diskPartitionSchemeType
+http://example.org/ontology/drafting/diskSignature
+http://example.org/ontology/drafting/partitionList
+http://example.org/ontology/drafting/partitionName
+http://example.org/ontology/drafting/unpartitionableSpace
+https://github.com/ucoProject/UCO/issues/535
+https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management

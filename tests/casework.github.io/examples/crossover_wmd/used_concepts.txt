@@ -31,6 +31,7 @@ https://ontology.unifiedcyberontology.org/uco/configuration/usesConfiguration
 https://ontology.unifiedcyberontology.org/uco/core/Bundle
 https://ontology.unifiedcyberontology.org/uco/core/ConfidenceFacet
 https://ontology.unifiedcyberontology.org/uco/core/Facet
+https://ontology.unifiedcyberontology.org/uco/core/Relationship
 https://ontology.unifiedcyberontology.org/uco/core/confidence
 https://ontology.unifiedcyberontology.org/uco/core/description
 https://ontology.unifiedcyberontology.org/uco/core/endTime
@@ -99,6 +100,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCard
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCardFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URLHistory
