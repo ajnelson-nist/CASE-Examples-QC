@@ -63,6 +63,7 @@ action_name_statistics.md: \
 
 check: \
   check-prov-constraints \
+  check-pytest \
   kb-case_prov_check.ttl \
   kb_validation-develop.ttl \
   kb_validation-develop-2.0.0.ttl \
@@ -78,6 +79,15 @@ check-prov-constraints: \
   prov-constraints.log
 	@test 1 -eq $$(tail -n1 $< | grep 'True' | wc -l) \
 	  || (echo "ERROR:illustration.mk:prov-constraints reported a constraint error." >&2 ; exit 1)
+
+check-pytest: \
+  kb.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && pytest \
+	    --ignore rdfs \
+	    --log-level=DEBUG \
+	    --verbose \
+	    --verbose
 
 clean:
 	@rm -rf \
