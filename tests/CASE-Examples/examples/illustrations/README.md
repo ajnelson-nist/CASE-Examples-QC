@@ -16,6 +16,7 @@ The following table is the count of undefined concepts used in each example file
    1 device/undefined_concepts.txt
    0 event/undefined_concepts.txt
    0 exif_data/undefined_concepts.txt
+  13 existence_intervals/undefined_concepts.txt
    2 file/undefined_concepts.txt
    0 forensic_lifecycle/undefined_concepts.txt
    0 location/undefined_concepts.txt
@@ -29,7 +30,7 @@ The following table is the count of undefined concepts used in each example file
    0 recoverability/undefined_concepts.txt
    0 sms_and_contacts/undefined_concepts.txt
   19 spear_phishing/undefined_concepts.txt
-  51 undefined_concepts.txt
+  64 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
@@ -46,6 +47,7 @@ The following table is the count of undefined relationship literals used in each
    0 device/undefined_kindOfRelationships.tsv
    0 event/undefined_kindOfRelationships.tsv
    1 exif_data/undefined_kindOfRelationships.tsv
+   0 existence_intervals/undefined_kindOfRelationships.tsv
    5 file/undefined_kindOfRelationships.tsv
    2 forensic_lifecycle/undefined_kindOfRelationships.tsv
    0 location/undefined_kindOfRelationships.tsv

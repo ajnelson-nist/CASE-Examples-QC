@@ -9,6 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix ex: <http://example.org/ontology/example/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix kb1: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix ns1: <http://example.org/local#> .
@@ -4087,6 +4088,16 @@ kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348
 	rdfs:comment "The precise timestamp of this file deletion event was not recorded, but it is known to have occurred.  This event invalidates (ends) a Relationship FIRST.TXT had with its file system, leaving FIRST.TXT in a marked-unallocated state apparent from a superseding Relationship." ;
 	.
 
+kb:ExistenceInterval-03c8fef4-dac9-4f17-bc98-2ef468390daa
+	a ex:ExistenceInterval ;
+	rdfs:label "E" ;
+	rdfs:comment "The existence interval of T." ;
+	ex:hasBeginningTimestamp "2020-01-02T03:04:05.678900+00:00"^^xsd:dateTime ;
+	ex:hasEnd kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b ;
+	ex:hasEndingTimestamp "2021-02-03T04:05:06.789000+00:00"^^xsd:dateTime ;
+	ex:hasStart kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8 ;
+	.
+
 kb:File-26adfe08-e545-4d24-872b-84f95bd01284
 	a uco-observable:File ;
 	uco-core:hasFacet kb:file-facet-fa661a0f-1b8d-4552-870e-daf7b93404be ;
@@ -5745,6 +5756,20 @@ kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28
 	uco-core:name "ESC" ;
 	.
 
+kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b
+	a ex:Instant ;
+	rdfs:label "T1" ;
+	rdfs:comment "The instant that is the end of E." ;
+	ex:hasTimestamp "2021-02-03T04:05:06.789000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8
+	a ex:Instant ;
+	rdfs:label "T0" ;
+	rdfs:comment "The instant that is the beginning of E." ;
+	ex:hasTimestamp "2020-01-02T03:04:05.678900+00:00"^^xsd:dateTime ;
+	.
+
 kb:Investigation-5e05495a-513a-45ce-a64c-a17b665d263a
 	a case-investigation:Investigation ;
 	case-investigation:focus "DF Error-focused Tool Testing" ;
@@ -6993,6 +7018,17 @@ kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0
 		time:Instant ,
 		prov:Start
 		;
+	.
+
+kb:TimeBoundThing-bbd18617-4118-4376-ad0c-19fb729a9b54
+	a ex:TimeBoundedThing ;
+	rdfs:label "T" ;
+	rdfs:comment "A thing with a time-bounded existence." ;
+	ex:existsAtAndSince kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8 ;
+	ex:existsUntil kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b ;
+	ex:hasCreationTimestamp "2020-01-02T03:04:05.678900+00:00"^^xsd:dateTime ;
+	ex:hasExistenceInterval kb:ExistenceInterval-03c8fef4-dac9-4f17-bc98-2ef468390daa ;
+	ex:hasTerminationTimestamp "2021-02-03T04:05:06.789000+00:00"^^xsd:dateTime ;
 	.
 
 kb:Tool-8ae63f46-44cb-40d9-9e50-539b29f05ea8

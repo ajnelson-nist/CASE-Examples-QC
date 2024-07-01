@@ -1,0 +1,13 @@
+http://example.org/ontology/example/ExistenceInterval
+http://example.org/ontology/example/Instant
+http://example.org/ontology/example/TimeBoundedThing
+http://example.org/ontology/example/existsAtAndSince
+http://example.org/ontology/example/existsUntil
+http://example.org/ontology/example/hasBeginningTimestamp
+http://example.org/ontology/example/hasCreationTimestamp
+http://example.org/ontology/example/hasEnd
+http://example.org/ontology/example/hasEndingTimestamp
+http://example.org/ontology/example/hasExistenceInterval
+http://example.org/ontology/example/hasStart
+http://example.org/ontology/example/hasTerminationTimestamp
+http://example.org/ontology/example/hasTimestamp
