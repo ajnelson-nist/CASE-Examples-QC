@@ -18,7 +18,7 @@
 This script is for reporting the kindOfRelationship vocabulary literals used in instance-data files.
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 import argparse
 import logging
@@ -49,6 +49,7 @@ def main() -> None:
 
         query = rdflib.plugins.sparql.prepareQuery(
             """\
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
 SELECT ?lKindOfRelationship
 WHERE {
   ?nRelationship uco-core:kindOfRelationship ?lKindOfRelationship .
