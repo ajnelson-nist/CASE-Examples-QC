@@ -4098,6 +4098,14 @@ kb:ExistenceInterval-03c8fef4-dac9-4f17-bc98-2ef468390daa
 	ex:hasStart kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8 ;
 	.
 
+kb:ExistenceInterval-27802c47-1c75-43fa-ab4b-fc01aa6c2c92
+	a time:Interval ;
+	rdfs:label "E" ;
+	rdfs:comment "The existence interval of T." ;
+	time:hasBeginning kb:Instant-9c248bb3-ea05-4ef0-9ac7-b68a99d5c07a ;
+	time:hasEnd kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b ;
+	.
+
 kb:File-26adfe08-e545-4d24-872b-84f95bd01284
 	a uco-observable:File ;
 	uco-core:hasFacet kb:file-facet-fa661a0f-1b8d-4552-870e-daf7b93404be ;
@@ -5756,6 +5764,20 @@ kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28
 	uco-core:name "ESC" ;
 	.
 
+kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b
+	a time:Instant ;
+	rdfs:label "T1" ;
+	rdfs:comment "The instant that is the end of E." ;
+	time:inXSDDateTimeStamp "2021-02-03T04:05:06.7890Z"^^xsd:dateTimeStamp ;
+	.
+
+kb:Instant-9c248bb3-ea05-4ef0-9ac7-b68a99d5c07a
+	a time:Instant ;
+	rdfs:label "T0" ;
+	rdfs:comment "The instant that is the beginning of E." ;
+	time:inXSDDateTimeStamp "2020-01-02T03:04:05.6789Z"^^xsd:dateTimeStamp ;
+	.
+
 kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b
 	a ex:Instant ;
 	rdfs:label "T1" ;
@@ -7018,6 +7040,13 @@ kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0
 		time:Instant ,
 		prov:Start
 		;
+	.
+
+kb:TimeBoundThing-b1fd892f-f190-4e15-a928-6c949867c59d
+	a owl:Thing ;
+	rdfs:label "T" ;
+	rdfs:comment "A thing with a time-bounded existence." ;
+	time:hasTime kb:ExistenceInterval-27802c47-1c75-43fa-ab4b-fc01aa6c2c92 ;
 	.
 
 kb:TimeBoundThing-bbd18617-4118-4376-ad0c-19fb729a9b54
