@@ -10,6 +10,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix ex: <http://example.org/ontology/example/> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
 @prefix kb: <http://example.org/kb/> .
 @prefix kb1: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix ns1: <http://example.org/local#> .
@@ -6026,6 +6027,14 @@ kb:LoginData-bdf17f36-76cc-418e-918f-1a11d288d9d2
 	uco-core:target kb:textapplogcat-1a717ea6-8990-4709-92f0-d748cacb817e ;
 	.
 
+kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc
+	a gufo:Object ;
+	rdfs:label "T" ;
+	rdfs:comment "A thing with a time-bounded existence." ;
+	gufo:hasBeginPointInXSDDateTimeStamp "2020-01-02T03:04:05.6789Z"^^xsd:dateTimeStamp ;
+	gufo:hasEndPointInXSDDateTimeStamp "2021-02-03T04:05:06.7890Z"^^xsd:dateTimeStamp ;
+	.
+
 kb:ObservableRelationship-1d7f6241-3bf1-54fb-bad3-4d348fd11d2c
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
@@ -6188,6 +6197,12 @@ kb:PathRelationFacet-d2dcd646-2bdc-423c-a80a-bf19588623c1
 kb:PathRelationFacet-df847850-f362-48a6-a8b0-5d03e83f8bba
 	a uco-observable:PathRelationFacet ;
 	uco-observable:path "/del_demo/folder1/FIRST.txt" ;
+	.
+
+kb:Person-3393dfc0-c765-4710-86db-8182c34de806
+	a ex:Person ;
+	rdfs:label "J. Doe" ;
+	gufo:standsInQualifiedInstantiation kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8 ;
 	.
 
 kb:Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f
@@ -7040,6 +7055,14 @@ kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0
 		time:Instant ,
 		prov:Start
 		;
+	.
+
+kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8
+	a gufo:TemporaryInstantiationSituation ;
+	rdfs:comment "This is the situation where J. Doe is a student, which started to hold Sep 1 2018, and no longer held on Jun 16, 2022." ;
+	gufo:concernsNonRigidType ex:Student ;
+	gufo:hasBeginPointInXSDDateTimeStamp "2018-09-01T00:00Z"^^xsd:dateTimeStamp ;
+	gufo:hasEndPointInXSDDateTimeStamp "2022-06-16T00:00:00Z"^^xsd:dateTimeStamp ;
 	.
 
 kb:TimeBoundThing-b1fd892f-f190-4e15-a928-6c949867c59d
@@ -25229,6 +25252,22 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	a owl:Class ;
 	rdfs:subClassOf uco-observable:AndroidPhone ;
 	rdfs:label "Samsung SM-G925F"@en ;
+	.
+
+ex:Person
+	a
+		gufo:Kind ,
+		owl:Class
+		;
+	rdfs:subClassOf gufo:Object ;
+	.
+
+ex:Student
+	a
+		gufo:Role ,
+		owl:Class
+		;
+	rdfs:subClassOf ex:Person ;
 	.
 
 kb1:ActOfEmailDelivery01

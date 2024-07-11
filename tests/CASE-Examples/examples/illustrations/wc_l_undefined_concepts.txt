@@ -9,7 +9,7 @@
    1 device/undefined_concepts.txt
    0 event/undefined_concepts.txt
    0 exif_data/undefined_concepts.txt
-  13 existence_intervals/undefined_concepts.txt
+  15 existence_intervals/undefined_concepts.txt
    2 file/undefined_concepts.txt
    0 forensic_lifecycle/undefined_concepts.txt
    0 location/undefined_concepts.txt
@@ -23,4 +23,4 @@
    0 recoverability/undefined_concepts.txt
    0 sms_and_contacts/undefined_concepts.txt
   19 spear_phishing/undefined_concepts.txt
-  64 undefined_concepts.txt
+  66 undefined_concepts.txt

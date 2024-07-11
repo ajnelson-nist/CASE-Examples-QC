@@ -28,6 +28,8 @@ http://example.org/ontology/drafting/uniqueID
 http://example.org/ontology/drafting/unpartitionableSpace
 http://example.org/ontology/example/ExistenceInterval
 http://example.org/ontology/example/Instant
+http://example.org/ontology/example/Person
+http://example.org/ontology/example/Student
 http://example.org/ontology/example/TimeBoundedThing
 http://example.org/ontology/example/existsAtAndSince
 http://example.org/ontology/example/existsUntil
