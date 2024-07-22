@@ -10591,6 +10591,11 @@ kb:athenspd-evidenceroom-541e0be3-afa3-4929-bd87-80eaab387e47
 	a uco-location:Location ;
 	.
 
+kb:atreus-5c9fc0ba-251a-47c4-a1ec-b49ae7e3bce1
+	a uco-identity:Person ;
+	uco-core:name "Atreus" ;
+	.
+
 kb:att-466a0ea8-b22f-4175-8119-846bec8f7831
 	a uco-identity:Organization ;
 	.
@@ -10653,6 +10658,11 @@ kb:attachment_file-eff14a6a-40e6-46b7-9958-4cbb72f3873c
 kb:attachment_file-f822bc08-7bf5-4a5d-9e20-02572db4b40b
 	a uco-observable:ContentData ;
 	uco-core:hasFacet kb:content-data-facet-b672fcde-bf45-44d8-b654-84a93c5c5103 ;
+	.
+
+kb:aulis-82f1a189-7e8b-4c56-932a-5d871c206527
+	a uco-location:Location ;
+	uco-core:name "Aulis" ;
 	.
 
 kb:authorization-10c1cf73-54e7-4bc4-953f-f93d5408b614
@@ -10844,8 +10854,10 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:associated-emailaccount-2f12ffc0-cffd-4afb-a6ac-4994ca30773a ,
 		kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ,
 		kb:athenspd-evidenceroom-541e0be3-afa3-4929-bd87-80eaab387e47 ,
+		kb:atreus-5c9fc0ba-251a-47c4-a1ec-b49ae7e3bce1 ,
 		kb:attach_relationship-40b34873-f772-42ad-9af0-b69069d00a92 ,
 		kb:attachment_file-ad07f4fb-ef85-4a74-ad88-68341a1e9606 ,
+		kb:aulis-82f1a189-7e8b-4c56-932a-5d871c206527 ,
 		kb:cassandra-1b38d28a-f88f-471f-8f83-16877dedacc0 ,
 		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
 		kb:cassandra-image-filesystem-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1 ,
@@ -10854,6 +10866,7 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
 		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
 		kb:cctv-recording-f2cde179-5e7a-460d-832e-16d184ddb6ea ,
+		kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006 ,
 		kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50 ,
 		kb:clytemnestra-mobileaccount-363dd368-94bd-4dbb-af1d-f53d0085791e ,
 		kb:device-account-relationship-467407d1-91f3-4086-9308-cdf9d1c5502f ,
@@ -10880,16 +10893,20 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:investigative-action-relationship-97b9d9ac-deeb-45ea-8f81-6acda53c9b3e ,
 		kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196 ,
 		kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ,
+		kb:iphigenia-323bc6bc-d64b-42d1-a9f5-d4452efdbae6 ,
 		kb:location-37ebc673-b72b-4331-acb3-3c7d0a167c1c ,
 		kb:location_relationship-42a48162-8ecb-4f02-ba8b-00ef5ffd9bca ,
+		kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c ,
 		kb:offender-46a9ed63-122d-40bc-a80d-cf7e047821a6 ,
 		kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ,
+		kb:orestes-5e400330-677d-42c1-8b32-2836cda219bf ,
 		kb:orestes-emailaccount-258c14b5-e726-4075-abe9-9c8d7f556462 ,
 		kb:orestes-facebookmsg-f7c67008-efe1-441c-8e52-2ec189dd6e56 ,
 		kb:orestes-selfie-photograph-601035c4-a53e-4c5e-a339-b6f3b1f586e9 ,
 		kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4 ,
 		kb:organization-bec38288-8663-436f-96bd-14b0d2422cc4 ,
 		kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec ,
+		kb:pelopia-d4b29a40-998b-4660-b67e-2ebb9683893d ,
 		kb:person-82684209-0ee5-45d9-b873-125d2ca63919 ,
 		kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792 ,
 		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ,
@@ -10905,6 +10922,8 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6 ,
 		kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba ,
 		kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45 ,
+		kb:thyestes-son-2a869a9a-ab97-4fc9-95cf-63804fcf061f ,
+		kb:thyestes-son-e992bb12-2322-46e8-b8f4-5095a4767b14 ,
 		kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ,
 		kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ,
 		kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ,
@@ -11324,6 +11343,11 @@ kb:chromelogindata-16399672-32ad-4c83-9a40-efe68c690bb8
 kb:chunk_of_data-4456c025-6e96-43b3-a2d1-e7b3952a1731
 	a uco-observable:ContentData ;
 	uco-core:hasFacet kb:content-data-facet-fa1faab5-f212-4ab5-ae09-6937ca06e847 ;
+	.
+
+kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006
+	a uco-identity:Person ;
+	uco-core:name "Clytemnestra" ;
 	.
 
 kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50
@@ -18079,7 +18103,11 @@ kb:investigation-2545442b-321c-454d-bcb8-c40d321ce2c2
 	case-investigation:focus "Murder" ;
 	uco-core:description "In Aulis, Agamemnon killed his daughter Iphigenia as a sacrifice to the gods" ;
 	uco-core:name "Crime D" ;
-	uco-core:object kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c ;
+	uco-core:object
+		kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c ,
+		kb:aulis-82f1a189-7e8b-4c56-932a-5d871c206527 ,
+		kb:iphigenia-323bc6bc-d64b-42d1-a9f5-d4452efdbae6
+		;
 	.
 
 kb:investigation-38851327-125e-4710-a5a0-79c2b3a88295
@@ -18106,8 +18134,12 @@ kb:investigation-4586742a-710a-454f-bcb8-b60e230ec1b2
 	uco-core:description "In Mycenae, Atreus killed two sons of Thyestes, cooked them (except for their hands and heads), fed them to Thyestes, and then taunted Thyestes with his murdered sons' hands and heads." ;
 	uco-core:name "Crime A" ;
 	uco-core:object
+		kb:atreus-5c9fc0ba-251a-47c4-a1ec-b49ae7e3bce1 ,
+		kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c ,
 		kb:role-relationship-1f3edeca-9d98-462d-935f-fdf214d06af1 ,
 		kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45 ,
+		kb:thyestes-son-2a869a9a-ab97-4fc9-95cf-63804fcf061f ,
+		kb:thyestes-son-e992bb12-2322-46e8-b8f4-5095a4767b14 ,
 		kb:victim-bbb4d46f-099e-4bf8-828e-7befd2a5f535
 		;
 	.
@@ -18127,9 +18159,12 @@ kb:investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220
 	uco-core:description "In the Palace of Argos, Clytemnestra and Aegisthus were killed by Orestes (accomplice Electra)" ;
 	uco-core:name "Crime F" ;
 	uco-core:object
+		kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d ,
 		kb:argos-palace-d9633e60-a44c-40f5-a0f0-c5225f3ef90e ,
+		kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006 ,
 		kb:electra-a960648e-c88e-4728-9853-7b7f06de8caa ,
 		kb:electra-orestes-email-9e2f3524-6541-459e-96e7-61c61f97e850 ,
+		kb:orestes-5e400330-677d-42c1-8b32-2836cda219bf ,
 		kb:orestes-facebookmsg-f7c67008-efe1-441c-8e52-2ec189dd6e56
 		;
 	.
@@ -18162,7 +18197,9 @@ kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5
 	uco-core:description "In the Palace of Argos, Agamemnon and Cassandra were killed by Clytemnestra (accomplice Aegisthus)" ;
 	uco-core:name "Crime E" ;
 	uco-core:object
+		kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d ,
 		kb:aeschylus-1ab8a80e-39fb-4209-9781-b10bdbc5d0c2 ,
+		kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c ,
 		kb:annotation-8b103f41-6b91-4220-a6a0-346fe22a3846 ,
 		kb:annotation-8d871925-a419-4738-a659-f34ff432acd9 ,
 		kb:annotation-dcd87791-2358-4dc4-b6a7-c9657eea007e ,
@@ -18177,6 +18214,7 @@ kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5
 		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
 		kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af ,
 		kb:cassandra-mobileaccount-ddd1303c-a85e-4307-b79e-b800a2420842 ,
+		kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006 ,
 		kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50 ,
 		kb:clytemnestra-mobileaccount-363dd368-94bd-4dbb-af1d-f53d0085791e ,
 		kb:device-location-relationship-9364f91b-e2d2-4307-b76a-473cd7b118bb ,
@@ -18230,7 +18268,11 @@ kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8
 	case-investigation:focus "Murder" ;
 	uco-core:description "In Mycenae, Aegisthus killed Atreus (Agamemnon's father)" ;
 	uco-core:name "Crime C" ;
-	uco-core:object kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d ;
+	uco-core:object
+		kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d ,
+		kb:atreus-5c9fc0ba-251a-47c4-a1ec-b49ae7e3bce1 ,
+		kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c
+		;
 	.
 
 kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd
@@ -18239,8 +18281,11 @@ kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd
 	uco-core:description "In Mycenae, Thyestes raped his daughter Pelopia to have a son (Aegisthus)" ;
 	uco-core:name "Crime B" ;
 	uco-core:object
+		kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d ,
 		kb:cctv-recording-f2cde179-5e7a-460d-832e-16d184ddb6ea ,
+		kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c ,
 		kb:offender-46a9ed63-122d-40bc-a80d-cf7e047821a6 ,
+		kb:pelopia-d4b29a40-998b-4660-b67e-2ebb9683893d ,
 		kb:provenance-record-9a1b4927-15e7-4985-8bd6-734c160d1503 ,
 		kb:role-relationship-fd1abeab-2d7d-4768-9e1d-071cd2a96270 ,
 		kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45
@@ -19385,6 +19430,11 @@ kb:investigatorrole-e9a01d66-fff4-4fa8-88d4-8e445f3369aa
 	uco-core:target kb:investigator-10b3d2da-e801-4afe-b70a-61f16a75e68b ;
 	.
 
+kb:iphigenia-323bc6bc-d64b-42d1-a9f5-d4452efdbae6
+	a uco-identity:Person ;
+	uco-core:name "Iphigenia" ;
+	.
+
 kb:iphone-device-facet-5c6faa58-be86-45b0-83af-fe7e51a54bb9
 	a
 		drafting:iPhoneDeviceFacet ,
@@ -20108,6 +20158,11 @@ kb:multipart_file-60dd6b9e-bb3b-4b37-8a2a-6256f86c8bfb
 	uco-core:hasFacet kb:content-data-facet-f56b996f-e398-46f3-83ac-ecf88d3a3518 ;
 	.
 
+kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c
+	a uco-location:Location ;
+	uco-core:name "Mycenae" ;
+	.
+
 kb:network-connection-66f723eb-81bd-439c-a106-949805005d8d
 	a uco-observable:NetworkConnection ;
 	uco-core:createdBy kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357 ;
@@ -20776,6 +20831,11 @@ kb:operating-system-facet-f1c16acb-44f7-4728-8f5e-72bcc0f3f3f8
 	uco-observable:version "4.2.2" ;
 	.
 
+kb:orestes-5e400330-677d-42c1-8b32-2836cda219bf
+	a uco-identity:Person ;
+	uco-core:name "Orestes" ;
+	.
+
 kb:orestes-emailaccount-258c14b5-e726-4075-abe9-9c8d7f556462
 	a uco-observable:EmailAccount ;
 	.
@@ -21249,6 +21309,11 @@ kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b
 	uco-tool:creator kb:networkanalysercorporation-8d8345fe-5a20-4780-bd8e-c00b24a45e7e ;
 	uco-tool:toolType "PCAP Parser" ;
 	uco-tool:version "2.5.0.0" ;
+	.
+
+kb:pelopia-d4b29a40-998b-4660-b67e-2ebb9683893d
+	a uco-identity:Person ;
+	uco-core:name "Pelopia" ;
 	.
 
 kb:person-38cb4243-bc7e-48a4-91b0-9d296b8f862a
@@ -24750,6 +24815,16 @@ kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45
 		kb:birth-information-facet-3814ae87-4805-46b4-bdb0-fecb7a63b0b9 ,
 		kb:simple-name-facet-b8890477-df16-4bf8-b016-d690eba262b0
 		;
+	.
+
+kb:thyestes-son-2a869a9a-ab97-4fc9-95cf-63804fcf061f
+	a uco-identity:Person ;
+	uco-core:description "Son of Thyestes" ;
+	.
+
+kb:thyestes-son-e992bb12-2322-46e8-b8f4-5095a4767b14
+	a uco-identity:Person ;
+	uco-core:description "Son of Thyestes" ;
 	.
 
 kb:tool-005be9da-ea83-456f-a44f-a63610586bd4
