@@ -41,6 +41,12 @@ http://example.org/ontology/example/hasExistenceInterval
 http://example.org/ontology/example/hasStart
 http://example.org/ontology/example/hasTerminationTimestamp
 http://example.org/ontology/example/hasTimestamp
+http://purl.obolibrary.org/obo/BFO_0000001
+http://purl.obolibrary.org/obo/BFO_0000038
+http://purl.obolibrary.org/obo/BFO_0000108
+http://purl.obolibrary.org/obo/BFO_0000203
+http://purl.obolibrary.org/obo/BFO_0000222
+http://purl.obolibrary.org/obo/BFO_0000224
 https://github.com/ucoProject/UCO/issues/535
 https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management
 urn:example:MobileExtractorToolArgumentsFacet

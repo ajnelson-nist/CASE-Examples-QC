@@ -14,6 +14,7 @@
 @prefix kb: <http://example.org/kb/> .
 @prefix kb1: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix ns1: <http://example.org/local#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
@@ -4034,6 +4035,12 @@ kb:End-d1d333d7-fe44-5b9d-8fff-34b593a6e748
 		;
 	.
 
+kb:Entity-52d479e6-4b3e-4a21-a60a-29b08397a315
+	a obo:BFO_0000001 ;
+	rdfs:label "T" ;
+	obo:BFO_0000108 kb:OneDimensionalTemporalRegion-95fc3589-849b-406b-85c4-3b2119121f1e ;
+	.
+
 kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e
 	a
 		time:Instant ,
@@ -6163,6 +6170,13 @@ kb:ObservableRelationship-f416968a-cd3d-57b6-aea3-9a4bc7862a95
 	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip> ;
 	.
 
+kb:OneDimensionalTemporalRegion-95fc3589-849b-406b-85c4-3b2119121f1e
+	a obo:BFO_0000038 ;
+	rdfs:label "E" ;
+	obo:BFO_0000222 kb:TemporalInstant-19f182b4-6bc8-4ad8-a456-56fa15aec976 ;
+	obo:BFO_0000224 kb:TemporalInstant-3299e3a8-8d3e-43c7-a142-14bb41638669 ;
+	.
+
 kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61
 	a
 		uco-observable:OperatingSystem ,
@@ -7055,6 +7069,16 @@ kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0
 		time:Instant ,
 		prov:Start
 		;
+	.
+
+kb:TemporalInstant-19f182b4-6bc8-4ad8-a456-56fa15aec976
+	a obo:BFO_0000203 ;
+	rdfs:label "T0" ;
+	.
+
+kb:TemporalInstant-3299e3a8-8d3e-43c7-a142-14bb41638669
+	a obo:BFO_0000203 ;
+	rdfs:label "T1" ;
 	.
 
 kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8

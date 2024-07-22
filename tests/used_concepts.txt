@@ -92,6 +92,12 @@ http://example.org/ontology/example/hasTimestamp
 http://example.org/ontology/local#__CASE__
 http://example.org/ontology/local#connectionState
 http://example.org/shapes/case-corpora-local
+http://purl.obolibrary.org/obo/BFO_0000001
+http://purl.obolibrary.org/obo/BFO_0000038
+http://purl.obolibrary.org/obo/BFO_0000108
+http://purl.obolibrary.org/obo/BFO_0000203
+http://purl.obolibrary.org/obo/BFO_0000222
+http://purl.obolibrary.org/obo/BFO_0000224
 http://www.wikidata.org/entity/Q162345
 http://www.wikidata.org/entity/Q20716
 http://www.wikidata.org/entity/Q5058279
