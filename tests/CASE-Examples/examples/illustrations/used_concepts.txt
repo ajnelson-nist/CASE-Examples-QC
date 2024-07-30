@@ -227,6 +227,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/SMSMessage
 https://ontology.unifiedcyberontology.org/uco/observable/SQLiteBlobFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
+https://ontology.unifiedcyberontology.org/uco/observable/StorageMedium
 https://ontology.unifiedcyberontology.org/uco/observable/TableField
 https://ontology.unifiedcyberontology.org/uco/observable/TableFieldFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URL

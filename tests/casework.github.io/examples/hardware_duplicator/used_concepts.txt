@@ -37,6 +37,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/DiskPartitionFacet
 https://ontology.unifiedcyberontology.org/uco/observable/File
 https://ontology.unifiedcyberontology.org/uco/observable/FileFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
+https://ontology.unifiedcyberontology.org/uco/observable/StorageMedium
 https://ontology.unifiedcyberontology.org/uco/observable/diskPartitionType
 https://ontology.unifiedcyberontology.org/uco/observable/extension
 https://ontology.unifiedcyberontology.org/uco/observable/fileName

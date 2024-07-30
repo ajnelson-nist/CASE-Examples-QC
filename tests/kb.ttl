@@ -3530,7 +3530,10 @@ kb:Derivation-ffc05f46-e171-5a7f-bf4c-082cc89ea533
 	.
 
 kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1
-	a uco-observable:Disk ;
+	a
+		uco-observable:Disk ,
+		uco-observable:StorageMedium
+		;
 	uco-core:hasFacet
 		kb:content-data-facet-25069e03-040a-421b-9bfa-25d532ec23b8 ,
 		kb:disk-facet-c9fa6408-85f8-4e0b-bf8f-f653f5bc97c3
@@ -3538,7 +3541,10 @@ kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1
 	.
 
 kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb
-	a uco-observable:Disk ;
+	a
+		uco-observable:Disk ,
+		uco-observable:StorageMedium
+		;
 	uco-core:description "USB Disk" ;
 	uco-core:hasFacet
 		kb:DiskFacet-81e49f34-38bc-4239-b550-67bd61f4d24f ,
@@ -13851,7 +13857,10 @@ kb:digital_photograph_thumbnail-a4e05bbf-f533-43a5-abaf-e8907afdc7a0
 	.
 
 kb:disk-e598c1b3-f76d-4c27-b592-49bfdbf23d11
-	a uco-observable:Disk ;
+	a
+		uco-observable:Disk ,
+		uco-observable:StorageMedium
+		;
 	uco-core:hasFacet
 		kb:content-data-facet-c971a595-53c0-4451-a27d-78da68678230 ,
 		kb:disk-facet-257d2533-2d2d-4263-8467-0fd7ef8de262

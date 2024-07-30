@@ -68,6 +68,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObject
 https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObjectFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Software
 https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
+https://ontology.unifiedcyberontology.org/uco/observable/StorageMedium
 https://ontology.unifiedcyberontology.org/uco/observable/Volume
 https://ontology.unifiedcyberontology.org/uco/observable/VolumeFacet
 https://ontology.unifiedcyberontology.org/uco/observable/contentRecoveredStatus
