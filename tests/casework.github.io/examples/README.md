@@ -17,11 +17,11 @@ The following table is the count of undefined concepts used in each example file
 The following table is the count of undefined relationship literals used in each example file:
 
 ```
-   2 asgard/undefined_kindOfRelationships.tsv
+   3 asgard/undefined_kindOfRelationships.tsv
    5 crossover_heist/undefined_kindOfRelationships.tsv
-   5 crossover_wmd/undefined_kindOfRelationships.tsv
+   6 crossover_wmd/undefined_kindOfRelationships.tsv
    2 hardware_duplicator/undefined_kindOfRelationships.tsv
-   3 owl_trafficking/undefined_kindOfRelationships.tsv
+   4 owl_trafficking/undefined_kindOfRelationships.tsv
    1 urgent_evidence/undefined_kindOfRelationships.tsv
-   7 undefined_kindOfRelationships.tsv
+   8 undefined_kindOfRelationships.tsv
 ```

@@ -99,8 +99,8 @@ https://ontology.unifiedcyberontology.org/uco/observable/ObservableAction
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
 https://ontology.unifiedcyberontology.org/uco/observable/Observation
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
-https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PDFFile
+https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/archiveType

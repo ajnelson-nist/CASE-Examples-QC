@@ -92,6 +92,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/MobileDevice
 https://ontology.unifiedcyberontology.org/uco/observable/MobileDeviceFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableObject
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
+https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PathRelationFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount
@@ -101,6 +102,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/SIMCard
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCardFacet
 https://ontology.unifiedcyberontology.org/uco/observable/SMSMessage
 https://ontology.unifiedcyberontology.org/uco/observable/Software
+https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URLHistory
