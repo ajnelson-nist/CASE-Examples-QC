@@ -12,6 +12,7 @@ http://www.w3.org/2001/XMLSchema#string	Forensic_Image_Of
 http://www.w3.org/2001/XMLSchema#string	Has_Account
 http://www.w3.org/2001/XMLSchema#string	Has_Device
 http://www.w3.org/2001/XMLSchema#string	Has_Fragment
+http://www.w3.org/2001/XMLSchema#string	Has_Operating_System
 http://www.w3.org/2001/XMLSchema#string	Has_Role
 http://www.w3.org/2001/XMLSchema#string	Initiated
 http://www.w3.org/2001/XMLSchema#string	Located_At

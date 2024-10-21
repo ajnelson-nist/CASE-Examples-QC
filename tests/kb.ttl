@@ -71,7 +71,6 @@ kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789
 		kb:bluetooth-address-facet-1206416f-2397-49e9-9606-3ce78b1ea0fd ,
 		kb:device-facet-7c021140-6220-49e8-bbea-704bf1160763 ,
 		kb:mobile-device-facet-1be55ed0-1177-4466-8417-208c714afd15 ,
-		kb:operating-system-facet-407e9113-cb7c-45af-b456-6de8df391d6f ,
 		kb:wifi-address-facet-d389ff9d-cdfe-44d9-b1c5-2b39ffdb802f
 		;
 	uco-observable:hasChanged "true"^^xsd:boolean ;
@@ -6188,15 +6187,16 @@ kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61
 		uco-observable:OperatingSystem ,
 		uco-observable:Software
 		;
-	uco-core:hasFacet kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623 ;
+	uco-core:hasFacet
+		kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623 ,
+		kb:SoftwareFacet-247fe7a7-8434-4fca-8f9b-ac7e136f6ca5
+		;
 	uco-core:name "Windows 11 Pro" ;
 	.
 
 kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623
 	a uco-observable:OperatingSystemFacet ;
 	drafting:buildID "22621.2283" ;
-	uco-observable:manufacturer kb:Organization-a94338c2-030a-493f-9d26-55cade656276 ;
-	uco-observable:version "22H2" ;
 	.
 
 kb:Organization-a94338c2-030a-493f-9d26-55cade656276
@@ -6795,6 +6795,12 @@ kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
 		uco-observable:File ,
 		uco-observable:Software
 		;
+	.
+
+kb:SoftwareFacet-247fe7a7-8434-4fca-8f9b-ac7e136f6ca5
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:Organization-a94338c2-030a-493f-9d26-55cade656276 ;
+	uco-observable:version "22H2" ;
 	.
 
 kb:SoftwareFacet-c0a75e42-9ca7-4133-9838-881b67304923
@@ -9262,8 +9268,7 @@ kb:android_device-814c2229-d163-47af-87be-6437b205dde4
 	rdfs:comment "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead." ;
 	uco-core:hasFacet
 		kb:computer-specification-facet-0f10db33-9374-467c-bb2d-04172ab05a34 ,
-		kb:device-facet-03594fea-dda3-49a7-97c3-b0004910d668 ,
-		kb:operating-system-facet-f1c16acb-44f7-4728-8f5e-72bcc0f3f3f8
+		kb:device-facet-03594fea-dda3-49a7-97c3-b0004910d668
 		;
 	.
 
@@ -10929,6 +10934,7 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c ,
 		kb:offender-46a9ed63-122d-40bc-a80d-cf7e047821a6 ,
 		kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ,
+		kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204 ,
 		kb:orestes-5e400330-677d-42c1-8b32-2836cda219bf ,
 		kb:orestes-emailaccount-258c14b5-e726-4075-abe9-9c8d7f556462 ,
 		kb:orestes-facebookmsg-f7c67008-efe1-441c-8e52-2ec189dd6e56 ,
@@ -10943,6 +10949,7 @@ kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
 		kb:provenance-record-9a1b4927-15e7-4985-8bd6-734c160d1503 ,
 		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ,
 		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ,
+		kb:relationship-3707f6c4-b90a-4c70-9482-bb208d332e85 ,
 		kb:role-relationship-1f3edeca-9d98-462d-935f-fdf214d06af1 ,
 		kb:role-relationship-5679069b-42ac-494b-a2e4-f7c1960d96dc ,
 		kb:role-relationship-8c77bcd1-2952-4775-99d1-16339a208fdd ,
@@ -11389,7 +11396,6 @@ kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50
 		kb:device-facet-d51543d2-f019-44da-8f9d-504c2a996fbb ,
 		kb:iphone-device-facet-5c6faa58-be86-45b0-83af-fe7e51a54bb9 ,
 		kb:mobile-device-facet-56924df2-1ddd-4f44-bddb-24e8d498ffac ,
-		kb:operating-system-facet-ad90e7e5-c692-4c59-87c6-d36c463ff1b0 ,
 		kb:wifi-address-facet-00ec20e0-4af9-45c0-9246-7a87e8c47f3d
 		;
 	.
@@ -17170,8 +17176,7 @@ kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013
 	uco-core:hasFacet
 		kb:acme-inventory-computer-facet-274c8bf5-48b7-4056-9740-d31efa217bf5 ,
 		kb:computer-specification-facet-fd3be213-cb78-4130-8888-323a259f3509 ,
-		kb:device-facet-4bb6a55f-5d2a-41b9-a07c-6b46c89731df ,
-		kb:operating-system-facet-83153006-3432-4538-a0d7-871a6e879d76
+		kb:device-facet-4bb6a55f-5d2a-41b9-a07c-6b46c89731df
 		;
 	.
 
@@ -17183,8 +17188,7 @@ kb:forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d
 		kb:computer-specification-facet-d02adab1-cbaa-4ec5-b98c-4fe128e7281f ,
 		kb:device-facet-9355901e-5dca-48b1-b463-7a239e25ee39 ,
 		kb:domain-name-facet-fd503093-f17c-435f-b9ca-05ab97201b22 ,
-		kb:ipv4-address-facet-55d9ed1a-3016-445d-96dc-e4919a43f33d ,
-		kb:operating-system-facet-429e8d0f-4974-421b-a01e-2b54437e4287
+		kb:ipv4-address-facet-55d9ed1a-3016-445d-96dc-e4919a43f33d
 		;
 	.
 
@@ -18264,12 +18268,14 @@ kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5
 		kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196 ,
 		kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ,
 		kb:offender-46a9ed63-122d-40bc-a80d-cf7e047821a6 ,
+		kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204 ,
 		kb:orestes-facebookmsg-f7c67008-efe1-441c-8e52-2ec189dd6e56 ,
 		kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792 ,
 		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ,
 		kb:provenance-record-9a1b4927-15e7-4985-8bd6-734c160d1503 ,
 		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ,
 		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ,
+		kb:relationship-3707f6c4-b90a-4c70-9482-bb208d332e85 ,
 		kb:role-relationship-1f3edeca-9d98-462d-935f-fdf214d06af1 ,
 		kb:role-relationship-5679069b-42ac-494b-a2e4-f7c1960d96dc ,
 		kb:role-relationship-8c77bcd1-2952-4775-99d1-16339a208fdd ,
@@ -20032,7 +20038,6 @@ kb:mobile-device-d5143a67-8b61-491b-a5e9-863b606e296a
 		kb:bluetooth-address-facet-8cfbe309-22e5-4e0f-a5b3-139a6e2cae29 ,
 		kb:device-facet-35a12fef-aa85-49bd-a5fc-6ef4f2015bcd ,
 		kb:mobile-device-facet-78f46f74-0ae8-49b2-b126-7cf5221a52ad ,
-		kb:operating-system-facet-48f9672f-c16c-4137-b9cd-1e99bd368335 ,
 		kb:wifi-address-facet-f61c5fbb-289c-4e2c-bd70-130e3beb6b6f
 		;
 	.
@@ -20763,6 +20768,66 @@ kb:operating-system-1b7f841a-8df7-454f-9b7d-1a2ace0573e3
 	uco-core:name "iOS" ;
 	.
 
+kb:operating-system-1d468d48-3ac2-4242-a9cb-61bd47319d43
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
+	uco-core:hasFacet kb:software-facet-9c9aa4ea-9e84-45e8-8437-ac97327d651b ;
+	uco-core:name "Android" ;
+	.
+
+kb:operating-system-66ff1c3d-8cf0-439c-b8b0-5697df555b55
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
+	uco-core:hasFacet kb:software-facet-9796be5d-172d-4c84-aaa1-92daa24d49d7 ;
+	uco-core:name "Android" ;
+	.
+
+kb:operating-system-6c71847e-0569-48c4-9587-772e18c45d9f
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
+	uco-core:hasFacet
+		kb:operating-system-facet-2ebffd0a-4d07-4313-8be2-cca326cbd547 ,
+		kb:software-facet-bb00a67a-4f64-4275-a818-01192b0934bf
+		;
+	uco-core:name "Windows 7 Ultimate Edition" ;
+	.
+
+kb:operating-system-8a0026cb-2f40-460d-baac-e5b8dc2da0e0
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
+	uco-core:hasFacet kb:software-facet-de8739b6-74ba-486e-b452-49a990ffbb22 ;
+	uco-core:name "Windows 7 Ultimate Edition" ;
+	.
+
+kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
+	uco-core:hasFacet kb:software-facet-906f160c-bbc0-48a5-bb0c-7338ebabf1e9 ;
+	uco-core:name "iOS" ;
+	.
+
+kb:operating-system-be32618a-dade-4284-9435-f18be7e035c6
+	a
+		uco-observable:OperatingSystem ,
+		uco-observable:Software
+		;
+	uco-core:hasFacet
+		kb:operating-system-facet-27d37081-422b-466d-b19b-8a338917f230 ,
+		kb:software-facet-0be3dc19-f97e-4d10-ba8e-d551bfd2ea28
+		;
+	uco-core:name "iOS" ;
+	.
+
 kb:operating-system-c56dde27-0a50-49dc-ae9e-8a0473e80137
 	a
 		uco-observable:OperatingSystem ,
@@ -20812,26 +20877,14 @@ kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
 	uco-core:name "Android Nougat" ;
 	.
 
-kb:operating-system-facet-04d6b0b1-b491-4438-b889-d16a28dffaa4
+kb:operating-system-facet-27d37081-422b-466d-b19b-8a338917f230
 	a uco-observable:OperatingSystemFacet ;
-	uco-core:name "Android" ;
-	uco-observable:manufacturer kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7 ;
-	uco-observable:version "5.4.3" ;
+	uco-observable:installDate "2018-04-09T16:33:42+00:00"^^xsd:dateTime ;
 	.
 
-kb:operating-system-facet-407e9113-cb7c-45af-b456-6de8df391d6f
+kb:operating-system-facet-2ebffd0a-4d07-4313-8be2-cca326cbd547
 	a uco-observable:OperatingSystemFacet ;
-	uco-core:name "Android" ;
-	uco-observable:manufacturer kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec ;
-	uco-observable:version "6.0.1" ;
-	.
-
-kb:operating-system-facet-429e8d0f-4974-421b-a01e-2b54437e4287
-	a uco-observable:OperatingSystemFacet ;
-	uco-core:name "Windows 7 Ultimate Edition" ;
 	uco-observable:installDate "2019-07-10T16:33:42+00:00"^^xsd:dateTime ;
-	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
-	uco-observable:version "6.1.7601 Service Pack 1 Build 7601" ;
 	.
 
 kb:operating-system-facet-478dc553-2d39-45ff-8974-d3d1b8df7c75
@@ -20839,38 +20892,9 @@ kb:operating-system-facet-478dc553-2d39-45ff-8974-d3d1b8df7c75
 	uco-observable:advertisingID "48500120-c9c5-402e-a6bc-04e2f92ae259" ;
 	.
 
-kb:operating-system-facet-48f9672f-c16c-4137-b9cd-1e99bd368335
-	a uco-observable:OperatingSystemFacet ;
-	uco-core:name "iOS" ;
-	uco-observable:installDate "2018-04-09T16:33:42+00:00"^^xsd:dateTime ;
-	uco-observable:manufacturer kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4 ;
-	uco-observable:version "11.2.6" ;
-	.
-
-kb:operating-system-facet-83153006-3432-4538-a0d7-871a6e879d76
-	a uco-observable:OperatingSystemFacet ;
-	uco-core:name "Windows 7 Ultimate Edition" ;
-	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
-	uco-observable:version "6.1.7601 Service Pack 1 Build 7601" ;
-	.
-
-kb:operating-system-facet-ad90e7e5-c692-4c59-87c6-d36c463ff1b0
-	a uco-observable:OperatingSystemFacet ;
-	uco-core:name "iOS" ;
-	uco-observable:manufacturer kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4 ;
-	uco-observable:version "10.3" ;
-	.
-
 kb:operating-system-facet-b55d7244-720f-4fb8-a4d3-2a26d407a353
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:advertisingID "48500120-c9c5-402e-a6bc-04e2f92ae259" ;
-	.
-
-kb:operating-system-facet-f1c16acb-44f7-4728-8f5e-72bcc0f3f3f8
-	a uco-observable:OperatingSystemFacet ;
-	uco-core:name "Android" ;
-	uco-observable:manufacturer kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7 ;
-	uco-observable:version "4.2.2" ;
 	.
 
 kb:orestes-5e400330-677d-42c1-8b32-2836cda219bf
@@ -21074,7 +21098,8 @@ kb:os-abf0fe20-6852-4004-82bb-d9e8da06aea6
 		uco-observable:OperatingSystem ,
 		uco-observable:Software
 		;
-	uco-core:hasFacet kb:operating-system-facet-04d6b0b1-b491-4438-b889-d16a28dffaa4 ;
+	uco-core:hasFacet kb:software-facet-e331aa04-4403-4560-a759-c07a993791ec ;
+	uco-core:name "Android" ;
 	.
 
 kb:os-ca81c2d9-d496-4a06-a0f5-0b6bd5647a9e
@@ -23337,6 +23362,14 @@ kb:relationship-345d313f-908f-4f66-954a-016748368312
 	uco-core:target kb:tar_archive_file-2857804a-91d7-4cfb-8929-8448d92bb8de ;
 	.
 
+kb:relationship-3707f6c4-b90a-4c70-9482-bb208d332e85
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Operating_System" ;
+	uco-core:source kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50 ;
+	uco-core:target kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204 ;
+	.
+
 kb:relationship-3bacd102-db00-4bcc-8998-e58e4431b959
 	a uco-observable:ObservableRelationship ;
 	uco-core:hasFacet kb:disk-partition-facet-13433f3c-7423-4774-98c2-26dbb5b9dd19 ;
@@ -23370,6 +23403,14 @@ kb:relationship-58b547f5-65a5-4275-84d7-32a234f4aba0
 	uco-core:kindOfRelationship "Contained_Within" ;
 	uco-core:source kb:compressed_gzip-56ce1a82-7965-4a50-8feb-7524e03fba04 ;
 	uco-core:target kb:decompressed_gzip-93aef5ce-40a5-4bd4-8a4f-56f885d27695 ;
+	.
+
+kb:relationship-5d4c09d2-2109-4828-948f-aa449d07ead9
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Operating_System" ;
+	uco-core:source kb:mobile-device-d5143a67-8b61-491b-a5e9-863b606e296a ;
+	uco-core:target kb:operating-system-be32618a-dade-4284-9435-f18be7e035c6 ;
 	.
 
 kb:relationship-624cdda4-ea74-4a16-a699-e4e075c0a5b1
@@ -23462,6 +23503,14 @@ kb:relationship-75e3a851-9f4b-4add-8e9d-13817d333577
 	uco-core:target kb:data_piece-e43f5b78-99ab-4130-8fec-7510a01ffd14 ;
 	.
 
+kb:relationship-7a75a470-b017-424b-a81b-d1411172c0c6
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Operating_System" ;
+	uco-core:source kb:android_device-814c2229-d163-47af-87be-6437b205dde4 ;
+	uco-core:target kb:operating-system-1d468d48-3ac2-4242-a9cb-61bd47319d43 ;
+	.
+
 kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4
 	a uco-core:Relationship ;
 	case-investigation:wasDerivedFrom kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b ;
@@ -23492,6 +23541,14 @@ kb:relationship-9a3ffcf3-91d3-4457-9333-abab67f8ab4f
 	uco-core:target kb:file-2af6fcf3-91d3-4457-9333-abab67f8fb91 ;
 	.
 
+kb:relationship-a66eba82-1224-422e-a427-73895cab5b5a
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Operating_System" ;
+	uco-core:source kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013 ;
+	uco-core:target kb:operating-system-8a0026cb-2f40-460d-baac-e5b8dc2da0e0 ;
+	.
+
 kb:relationship-a9371c5e-0550-40e9-9e13-65afa01da881
 	a uco-observable:ObservableRelationship ;
 	uco-core:hasFacet kb:path-relation-facet-a410ff4b-21f3-4089-b56c-dac6a5c53882 ;
@@ -23518,6 +23575,14 @@ kb:relationship-aca6d788-12e4-45d1-8f00-06a63579309d
 	uco-core:target kb:operating-system-cbba474a-d58c-4715-a7fa-5854d811021d ;
 	.
 
+kb:relationship-ae5bc717-1bef-433c-8753-4bc19adae8db
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Operating_System" ;
+	uco-core:source kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a ;
+	uco-core:target kb:operating-system-66ff1c3d-8cf0-439c-b8b0-5697df555b55 ;
+	.
+
 kb:relationship-b22f8a64-21cb-4a77-b3eb-701612b39265
 	a uco-observable:ObservableRelationship ;
 	uco-core:hasFacet kb:path-relation-facet-4fbcece4-afd5-4cd6-b70e-aab77f930b00 ;
@@ -23541,6 +23606,14 @@ kb:relationship-b6951277-419f-4226-b0d3-76c4d6ae33b4
 	uco-core:kindOfRelationship "Has_Operating_System" ;
 	uco-core:source kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
 	uco-core:target kb:operating-system-1b7f841a-8df7-454f-9b7d-1a2ace0573e3 ;
+	.
+
+kb:relationship-b96f493a-806b-4914-b522-5f8c4456da3b
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Operating_System" ;
+	uco-core:source kb:forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d ;
+	uco-core:target kb:operating-system-6c71847e-0569-48c4-9587-772e18c45d9f ;
 	.
 
 kb:relationship-bf423267-3afe-4f4d-aa9f-d903eae55f99
@@ -24560,10 +24633,34 @@ kb:software-cc22d2f4-636d-4cf2-bec4-0b91aa9926de
 	rdfs:comment "TODO: The uco-observable:Software type is redundant after the release of 2.0.0." ;
 	.
 
+kb:software-facet-0be3dc19-f97e-4d10-ba8e-d551bfd2ea28
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4 ;
+	uco-observable:version "11.2.6" ;
+	.
+
 kb:software-facet-397cfb4d-9caa-472c-824f-ccffa3bd2d46
 	a uco-observable:SoftwareFacet ;
 	uco-observable:manufacturer wd:Q95 ;
 	uco-observable:version "7.1.2" ;
+	.
+
+kb:software-facet-906f160c-bbc0-48a5-bb0c-7338ebabf1e9
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4 ;
+	uco-observable:version "10.3" ;
+	.
+
+kb:software-facet-9796be5d-172d-4c84-aaa1-92daa24d49d7
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec ;
+	uco-observable:version "6.0.1" ;
+	.
+
+kb:software-facet-9c9aa4ea-9e84-45e8-8437-ac97327d651b
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7 ;
+	uco-observable:version "4.2.2" ;
 	.
 
 kb:software-facet-a3cd613c-1c35-4f0e-8983-a4720121fa9e
@@ -24578,10 +24675,28 @@ kb:software-facet-afd9bd2d-652d-4b43-bc07-cd8912d95290
 	uco-observable:version "7.10.1.1080" ;
 	.
 
+kb:software-facet-bb00a67a-4f64-4275-a818-01192b0934bf
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
+	uco-observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+	.
+
 kb:software-facet-da02e9c9-b35b-42e7-bbc8-013b15e17803
 	a uco-observable:SoftwareFacet ;
 	uco-observable:manufacturer kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec ;
 	uco-observable:version "6.0.1" ;
+	.
+
+kb:software-facet-de8739b6-74ba-486e-b452-49a990ffbb22
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
+	uco-observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+	.
+
+kb:software-facet-e331aa04-4403-4560-a759-c07a993791ec
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7 ;
+	uco-observable:version "5.4.3" ;
 	.
 
 kb:software-facet-fbedb8fd-0b1c-4470-a8dd-14612514bd56
@@ -25990,15 +26105,16 @@ kb1:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
 		uco-observable:Software
 		;
 	rdfs:comment "TODO, UCO - bitness should use the BitnessVocabulary." ;
-	uco-core:hasFacet kb1:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ;
+	uco-core:hasFacet
+		kb1:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ,
+		kb1:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
+		;
 	uco-core:name "Windows 10 Enterprise Evaluation" ;
 	.
 
 kb1:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:bitness "64" ;
-	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
-	uco-observable:version "10.0" ;
 	.
 
 kb1:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc
@@ -26043,6 +26159,12 @@ kb1:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb1:Agent01 ;
 	uco-core:target kb1:ManagerRole01 ;
+	.
+
+kb1:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26 ;
+	uco-observable:version "10.0" ;
 	.
 
 kb1:url-a9b1bdec-8228-4356-a18c-a5357eee613d

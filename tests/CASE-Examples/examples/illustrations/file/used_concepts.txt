@@ -22,9 +22,11 @@ https://ontology.unifiedcyberontology.org/uco/observable/FileFacet
 https://ontology.unifiedcyberontology.org/uco/observable/FileSystem
 https://ontology.unifiedcyberontology.org/uco/observable/Image
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
-https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
+https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/PathRelationFacet
 https://ontology.unifiedcyberontology.org/uco/observable/SQLiteBlobFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Software
+https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
 https://ontology.unifiedcyberontology.org/uco/observable/accessedTime
 https://ontology.unifiedcyberontology.org/uco/observable/biosVersion
 https://ontology.unifiedcyberontology.org/uco/observable/byteOrder

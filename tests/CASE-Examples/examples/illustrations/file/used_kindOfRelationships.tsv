@@ -2,4 +2,5 @@ http://www.w3.org/2001/XMLSchema#string	Contained_Within
 http://www.w3.org/2001/XMLSchema#string	Decoded_From
 http://www.w3.org/2001/XMLSchema#string	Decrypted_From
 http://www.w3.org/2001/XMLSchema#string	Forensic_Image_Of
+http://www.w3.org/2001/XMLSchema#string	Has_Operating_System
 http://www.w3.org/2001/XMLSchema#string	Stored_On

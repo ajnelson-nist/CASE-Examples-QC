@@ -41,6 +41,7 @@ https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ProcessFacet
 https://ontology.unifiedcyberontology.org/uco/observable/Software
+https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/UserAccount

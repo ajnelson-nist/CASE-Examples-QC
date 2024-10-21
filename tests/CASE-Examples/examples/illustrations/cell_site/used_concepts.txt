@@ -31,9 +31,11 @@ https://ontology.unifiedcyberontology.org/uco/observable/MobileAccount
 https://ontology.unifiedcyberontology.org/uco/observable/MobileAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/MobileDeviceFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
-https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
+https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCard
 https://ontology.unifiedcyberontology.org/uco/observable/SIMCardFacet
+https://ontology.unifiedcyberontology.org/uco/observable/Software
+https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
 https://ontology.unifiedcyberontology.org/uco/observable/WifiAddressFacet
 https://ontology.unifiedcyberontology.org/uco/observable/accountIdentifier
 https://ontology.unifiedcyberontology.org/uco/observable/addressValue

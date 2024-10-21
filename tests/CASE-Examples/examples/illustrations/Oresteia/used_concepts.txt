@@ -94,13 +94,14 @@ https://ontology.unifiedcyberontology.org/uco/observable/MobileAccount
 https://ontology.unifiedcyberontology.org/uco/observable/MobileAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/MobileDeviceFacet
 https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship
-https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet
+https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem
 https://ontology.unifiedcyberontology.org/uco/observable/PathRelationFacet
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount
 https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccountFacet
 https://ontology.unifiedcyberontology.org/uco/observable/RasterPicture
 https://ontology.unifiedcyberontology.org/uco/observable/SMSMessage
 https://ontology.unifiedcyberontology.org/uco/observable/Software
+https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet
 https://ontology.unifiedcyberontology.org/uco/observable/URL
 https://ontology.unifiedcyberontology.org/uco/observable/URLFacet
 https://ontology.unifiedcyberontology.org/uco/observable/WifiAddressFacet

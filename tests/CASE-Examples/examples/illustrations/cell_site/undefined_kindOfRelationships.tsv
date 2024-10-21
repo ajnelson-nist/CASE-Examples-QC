@@ -1,3 +1,4 @@
 http://www.w3.org/2001/XMLSchema#string	Connected_To
 http://www.w3.org/2001/XMLSchema#string	Contained_Within
+http://www.w3.org/2001/XMLSchema#string	Has_Operating_System
 http://www.w3.org/2001/XMLSchema#string	Located_At
