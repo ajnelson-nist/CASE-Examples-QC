@@ -76,7 +76,6 @@ clean:
 
 imports-transitive.ttl: \
   CASE-Corpora/catalog/shared.ttl \
-  CASE-Corpora/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
   CASE-Corpora/dependencies/dependencies.ttl \
   CASE-Corpora/ontology/case-corpora.ttl \
   CASE-Corpora/shapes/shapes.ttl \
@@ -90,6 +89,10 @@ imports-transitive.ttl: \
   UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/dependencies/foaf.ttl \
   UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
+  UCO-Profile-Time/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
+  UCO-Profile-Time/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
+  UCO-Profile-Time/ontology/uco-time.ttl \
+  UCO-Profile-Time/shapes/sh-uco-time.ttl \
   UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/gufo.ttl \
   UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl \
   UCO-Profile-gufo/ontology/uco-gufo.ttl

@@ -100,6 +100,16 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/UCO-Profile-FOAF \
 	  .git_submodule_init.done.log
+	# UCO-Profile-Time
+	test -r dependencies/UCO-Profile-Time/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/UCO-Profile-Time
+	@test -r dependencies/UCO-Profile-Time/README.md \
+	  || (echo "ERROR:Makefile:UCO-Profile-Time submodule README.md file not found, even though UCO-Profile-Time submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-Time \
+	  .git_submodule_init.done.log
 	# UCO-Profile-gufo
 	test -r dependencies/UCO-Profile-gufo/README.md \
 	  || git submodule update \

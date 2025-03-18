@@ -14,6 +14,10 @@
 	path = dependencies/UCO-Profile-FOAF
 	url = https://github.com/ucoProject/UCO-Profile-FOAF.git
 	branch = main
+[submodule "dependencies/UCO-Profile-Time"]
+	path = dependencies/UCO-Profile-Time
+	url = https://github.com/ucoProject/UCO-Profile-Time.git
+	branch = main
 [submodule "dependencies/UCO-Profile-gufo"]
 	path = dependencies/UCO-Profile-gufo
 	url = https://github.com/ucoProject/UCO-Profile-gufo.git
