@@ -8,6 +8,7 @@ http://example.org/local#totalFragments
 http://example.org/ontology/drafting/DiskPartitionSystem
 http://example.org/ontology/drafting/DiskPartitionSystemFacet
 http://example.org/ontology/drafting/FacebookMessageFacet
+http://example.org/ontology/drafting/Perdurant
 http://example.org/ontology/drafting/accessedAction
 http://example.org/ontology/drafting/aquisitionType
 http://example.org/ontology/drafting/buildID
@@ -18,6 +19,7 @@ http://example.org/ontology/drafting/diskPartitionOffset
 http://example.org/ontology/drafting/diskPartitionSchemeType
 http://example.org/ontology/drafting/diskSignature
 http://example.org/ontology/drafting/iPhoneDeviceFacet
+http://example.org/ontology/drafting/intervalIn
 http://example.org/ontology/drafting/isAutomated
 http://example.org/ontology/drafting/localeLanguage
 http://example.org/ontology/drafting/method
@@ -48,6 +50,8 @@ http://purl.obolibrary.org/obo/BFO_0000203
 http://purl.obolibrary.org/obo/BFO_0000222
 http://purl.obolibrary.org/obo/BFO_0000224
 https://github.com/ucoProject/UCO/issues/535
+https://github.com/ucoProject/UCO/issues/544
+https://github.com/ucoProject/UCO/issues/651
 https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management
 https://ontology.caseontology.org/case/investigation/Authorization
 https://ontology.caseontology.org/case/investigation/Investigation

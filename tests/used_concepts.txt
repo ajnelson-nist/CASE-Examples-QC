@@ -26,6 +26,7 @@ http://example.org/ontology/drafting/DiskPartitionSystem
 http://example.org/ontology/drafting/DiskPartitionSystemFacet
 http://example.org/ontology/drafting/FacebookMessageFacet
 http://example.org/ontology/drafting/FileHashQuality
+http://example.org/ontology/drafting/Perdurant
 http://example.org/ontology/drafting/S3Object
 http://example.org/ontology/drafting/TableRelationFacet
 http://example.org/ontology/drafting/USBSerialNumber
@@ -56,6 +57,7 @@ http://example.org/ontology/drafting/exhibitTransferrer
 http://example.org/ontology/drafting/fileLocalPath
 http://example.org/ontology/drafting/hasQuality
 http://example.org/ontology/drafting/iPhoneDeviceFacet
+http://example.org/ontology/drafting/intervalIn
 http://example.org/ontology/drafting/isAutomated
 http://example.org/ontology/drafting/label
 http://example.org/ontology/drafting/localeLanguage
@@ -138,6 +140,8 @@ https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-dia
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip
 https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip
 https://github.com/ucoProject/UCO/issues/535
+https://github.com/ucoProject/UCO/issues/544
+https://github.com/ucoProject/UCO/issues/651
 https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management
 https://ontology.caseontology.org/case/investigation/Authorization
 https://ontology.caseontology.org/case/investigation/Investigation

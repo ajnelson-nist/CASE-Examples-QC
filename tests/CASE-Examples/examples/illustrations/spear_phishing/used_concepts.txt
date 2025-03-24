@@ -1,3 +1,8 @@
+http://example.org/ontology/drafting/Perdurant
+http://example.org/ontology/drafting/intervalIn
+https://github.com/ucoProject/UCO/issues/544
+https://github.com/ucoProject/UCO/issues/651
+https://ontology.unifiedcyberontology.org/uco/action/Action
 https://ontology.unifiedcyberontology.org/uco/action/endTime
 https://ontology.unifiedcyberontology.org/uco/action/environment
 https://ontology.unifiedcyberontology.org/uco/action/object

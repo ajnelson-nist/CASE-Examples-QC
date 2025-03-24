@@ -1,3 +1,7 @@
+http://example.org/ontology/drafting/Perdurant
+http://example.org/ontology/drafting/intervalIn
+https://github.com/ucoProject/UCO/issues/544
+https://github.com/ucoProject/UCO/issues/651
 urn:example:unmapped
 urn:example:unmapped/bearerOf
 urn:example:unmapped/contains

@@ -25,6 +25,7 @@ http://example.org/ontology/drafting/DiskPartitionSystem
 http://example.org/ontology/drafting/DiskPartitionSystemFacet
 http://example.org/ontology/drafting/FacebookMessageFacet
 http://example.org/ontology/drafting/FileHashQuality
+http://example.org/ontology/drafting/Perdurant
 http://example.org/ontology/drafting/S3Object
 http://example.org/ontology/drafting/TableRelationFacet
 http://example.org/ontology/drafting/USBSerialNumber
@@ -55,6 +56,7 @@ http://example.org/ontology/drafting/exhibitTransferrer
 http://example.org/ontology/drafting/fileLocalPath
 http://example.org/ontology/drafting/hasQuality
 http://example.org/ontology/drafting/iPhoneDeviceFacet
+http://example.org/ontology/drafting/intervalIn
 http://example.org/ontology/drafting/isAutomated
 http://example.org/ontology/drafting/label
 http://example.org/ontology/drafting/localeLanguage
@@ -118,6 +120,8 @@ https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Non-Cellebrite
 https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx
 https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz
 https://github.com/ucoProject/UCO/issues/535
+https://github.com/ucoProject/UCO/issues/544
+https://github.com/ucoProject/UCO/issues/651
 https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management
 https://orcid.org/0000-0002-3771-570X
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl

@@ -29,8 +29,8 @@ The following table is the count of undefined concepts used in each example file
    0 reconstructed_file/undefined_concepts.txt
    0 recoverability/undefined_concepts.txt
    0 sms_and_contacts/undefined_concepts.txt
-  19 spear_phishing/undefined_concepts.txt
-  72 undefined_concepts.txt
+  23 spear_phishing/undefined_concepts.txt
+  76 undefined_concepts.txt
 ```
 
 The following table is the count of undefined relationship literals used in each example file:
