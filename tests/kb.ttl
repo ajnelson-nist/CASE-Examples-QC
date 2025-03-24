@@ -16030,15 +16030,15 @@ kb:file-facet-4783de40-fcad-4e9b-9090-5c5cb4871a93
 kb:file-facet-4ae352de-83e2-4554-9ca4-ad8f4b46b700
 	a uco-observable:FileFacet ;
 	drafting:fileLocalPath "files/image/Elder_Wand.png" ;
-	uco-observable:accessedTime "2018-11-30T09:43:24+00:00"^^xsd:dateTime ;
+	uco-observable:accessedTime "2018-11-30T08:43:24+00:00"^^xsd:dateTime ;
 	uco-observable:allocationStatus "allocated" ;
 	uco-observable:extension ".png" ;
 	uco-observable:fileName "the.apk" ;
 	uco-observable:filePath "/Root/media/0/Download/Elder_Wand.png" ;
 	uco-observable:fileSystemType "ExtX" ;
 	uco-observable:isDirectory "false"^^xsd:boolean ;
-	uco-observable:modifiedTime "2018-11-30T09:43:25+00:00"^^xsd:dateTime ;
-	uco-observable:observableCreatedTime "2018-11-30T09:43:24+00:00"^^xsd:dateTime ;
+	uco-observable:modifiedTime "2018-11-30T08:43:25+00:00"^^xsd:dateTime ;
+	uco-observable:observableCreatedTime "2018-11-30T08:43:24+00:00"^^xsd:dateTime ;
 	uco-observable:sizeInBytes "534167"^^xsd:integer ;
 	.
 
@@ -17912,8 +17912,7 @@ kb:hash-c9bcd939-06f2-5367-b620-72be08d1fb2e
 
 kb:hash-cb86489c-4d91-5261-adcd-4cf377726d94
 	a uco-types:Hash ;
-	rdfs:comment "TODO: From the hash length, the algorithm appears to be MD5, not SHA2-256." ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "13f1393bfe548620da920fac9865965e"^^xsd:hexBinary ;
 	.
 
