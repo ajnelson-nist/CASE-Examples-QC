@@ -89,6 +89,10 @@ imports-transitive.ttl: \
   UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/dependencies/foaf.ttl \
   UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
+  UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/geo.ttl \
+  UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl \
+  UCO-Profile-GeoSPARQL/ontology/uco-geo.ttl \
+  UCO-Profile-GeoSPARQL/shapes/sh-uco-geo.ttl \
   UCO-Profile-Time/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
   UCO-Profile-Time/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
   UCO-Profile-Time/ontology/uco-time.ttl \
