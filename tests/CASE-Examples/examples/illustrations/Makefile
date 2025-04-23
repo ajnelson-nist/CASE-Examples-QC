@@ -28,8 +28,9 @@ clean_targets     := $(foreach illdir,$(illdirs),clean-$(illdir))
 
 all: \
   $(all_targets)
-	$(MAKE) \
-	  --file postvisit.mk
+	LC_ALL=C \
+	  $(MAKE) \
+	    --file postvisit.mk
 
 all-%:
 	$(MAKE) \
@@ -37,9 +38,10 @@ all-%:
 
 check: \
   $(check_targets)
-	$(MAKE) \
-	  --file postvisit.mk \
-	  check
+	LC_ALL=C \
+	  $(MAKE) \
+	    --file postvisit.mk \
+	    check
 
 check-%:
 	$(MAKE) \
