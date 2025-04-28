@@ -40,6 +40,11 @@ undefined_kindOfRelationships_dependencies := $(foreach exdir,$(exdirs),$(exdir)
 used_concepts_dependencies                 := $(foreach exdir,$(exdirs),$(exdir)/used_concepts.txt)
 used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)/used_kindOfRelationships.tsv)
 
+kb_ttls := \
+  $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
+  CASE-Examples/examples/illustrations/kb.ttl \
+  casework.github.io/examples/kb.ttl
+
 all: \
   prov-constraints.log \
   action_name_statistics.md \
@@ -243,17 +248,13 @@ kb_validation-unstable-2.0.0.ttl: \
 	mv _$@ $@
 
 kb.ttl: \
-  $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
+  $(kb_ttls) \
   $(top_srcdir)/dependencies/imports-transitive.ttl \
-  $(top_srcdir)/src/entail.py \
-  CASE-Examples/examples/illustrations/kb.ttl \
-  casework.github.io/examples/kb.ttl
+  $(top_srcdir)/src/entail.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \
-	    $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
-	    CASE-Examples/examples/illustrations/kb.ttl \
-	    casework.github.io/examples/kb.ttl \
+	    $(kb_ttls) \
 	    > __$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/entail.py \
