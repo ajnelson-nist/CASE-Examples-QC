@@ -639,6 +639,32 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Hash-4c3d0623-d365-4c69-a1a1-01523c6502fa> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA1"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Hash-4c3d0623-d365-4c69-a1a1-01523c6502fa> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape types:Hash-hashMethod-in-shape ;
+			sh:value "SHA1"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/Hash-4c81e96f-84b7-5550-b832-60258234c418> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath types:hashMethod ;

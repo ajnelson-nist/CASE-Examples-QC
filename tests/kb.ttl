@@ -1,4 +1,14 @@
+# imports: http://example.org/ontology/uco-bfo
+# imports: http://example.org/ontology/uco-foaf
+# imports: http://example.org/ontology/uco-geo
+# imports: http://example.org/ontology/uco-gufo
+# imports: http://example.org/ontology/uco-time
 # imports: http://example.org/shapes/case-corpora-local
+# imports: http://example.org/shapes/sh-bfo
+# imports: http://example.org/shapes/sh-geo
+# imports: http://example.org/shapes/sh-time
+# imports: http://purl.org/nemo/gufo#/1.0.0
+# imports: http://xmlns.com/foaf/0.1/
 
 @prefix : <http://example.org/ontology/local#> .
 @prefix acme: <http://custompb.acme.org/core#> .
@@ -11,6 +21,8 @@
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix ep: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix ex: <http://example.org/ontology/example/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix gufo: <http://purl.org/nemo/gufo#> .
 @prefix kb: <http://example.org/kb/> .
 @prefix ns1: <http://example.org/local#> .
@@ -31,6 +43,7 @@
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-location: <https://ontology.unifiedcyberontology.org/uco/location/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
 @prefix uco-role: <https://ontology.unifiedcyberontology.org/uco/role/> .
 @prefix uco-tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
 @prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
@@ -42,7 +55,23 @@
 
 <http://example.org/kb>
 	a owl:Ontology ;
-	owl:imports <http://example.org/shapes/case-corpora-local> ;
+	rdfs:comment
+		"This knowledge base instantiates each of the mapped classes and properties, so SHACL shapes can perform a review for inconsistencies in the mapping between UCO and the mapped ontology."@en ,
+		"This knowledge base instantiates each of the shape-reviewed classes and properties, so SHACL shapes can be exercised for the reviewed ontology."@en
+		;
+	owl:imports
+		<http://example.org/ontology/uco-bfo> ,
+		<http://example.org/ontology/uco-foaf> ,
+		<http://example.org/ontology/uco-geo> ,
+		<http://example.org/ontology/uco-gufo> ,
+		<http://example.org/ontology/uco-time> ,
+		<http://example.org/shapes/case-corpora-local> ,
+		<http://example.org/shapes/sh-bfo> ,
+		<http://example.org/shapes/sh-geo> ,
+		<http://example.org/shapes/sh-time> ,
+		<http://purl.org/nemo/gufo#/1.0.0> ,
+		<http://xmlns.com/foaf/0.1/>
+		;
 	.
 
 <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection>
@@ -122,6 +151,56 @@ kb:9b82c2bc-10f7-47b2-81a8-443a9f458440
 kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a
 	a uco-observable:CapturedTelecommunicationsInformation ;
 	uco-core:hasFacet kb:captured-telecommunications-information-facet-efa35d55-1d2d-4e47-ae38-97ccad1945be ;
+	.
+
+kb:Action-13c91d40-9ca0-4558-81a1-4f7db888c371
+	a uco-action:Action ;
+	gufo:hasBeginPointInXSDDateTimeStamp "2020-01-02T03:04:05Z"^^xsd:dateTimeStamp ;
+	gufo:hasEndPointInXSDDateTimeStamp "2021-02-03T04:05:06Z"^^xsd:dateTimeStamp ;
+	uco-action:endTime "2021-02-03T04:05:06+00:00"^^xsd:dateTime ;
+	uco-action:startTime "2020-01-02T03:04:05+00:00"^^xsd:dateTime ;
+	.
+
+kb:Action-1fd171bc-fa89-44d6-b785-f3a5b947c7a5
+	a uco-action:Action ;
+	uco-action:subaction kb:Action-294a8a80-0701-4bb5-b8e9-90e79a1c2bbe ;
+	.
+
+kb:Action-294a8a80-0701-4bb5-b8e9-90e79a1c2bbe
+	a uco-action:Action ;
+	drafting:intervalDuring kb:Action-1fd171bc-fa89-44d6-b785-f3a5b947c7a5 ;
+	.
+
+kb:Action-3bf63503-51e7-49bc-b7c2-fc2ed0c811a2
+	a uco-action:Action ;
+	uco-action:instrument kb:Camera-1c9a2999-b34c-459b-b983-113c7b9e71df ;
+	uco-action:object kb:Device-f28f07fa-0c36-486e-b957-750d183e5851 ;
+	uco-action:participant kb:Person-ee7130a7-0fec-48df-8312-4da1a214bd59 ;
+	uco-action:performer kb:Person-799c0b1d-2259-4438-b282-168060b3cb57 ;
+	uco-action:result kb:File-9a36db96-b6ee-49e6-a976-046a95a072a0 ;
+	uco-core:description "A photographer and assistant use a camera to photograph a device." ;
+	.
+
+kb:Action-561624b7-1ca5-4571-9ef8-3b9bf65f82b4
+	a uco-action:Action ;
+	.
+
+kb:Action-8d1de002-78d4-4dd5-8841-653bb229d3bb
+	a uco-action:Action ;
+	uco-action:subaction kb:Action-8e371326-10db-4ecf-adb5-e9220b07694b ;
+	.
+
+kb:Action-8e371326-10db-4ecf-adb5-e9220b07694b
+	a uco-action:Action ;
+	.
+
+kb:AlternateDataStream-e6ceee40-5614-4740-b08c-d21ce9b2356d
+	a
+		uco-observable:AlternateDataStream ,
+		uco-observable:FileSystemObject
+		;
+	rdfs:comment "TODO - The assignment of FileSystemObject is only necessary until UCO Issue 590 is incorporated."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/590> ;
 	.
 
 kb:Analysis-313d688e-0bb9-4504-a474-d390b0a27010
@@ -290,6 +369,10 @@ kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B
 	a uco-analysis:AnalyticResult ;
 	uco-analysis:originatingAnalysis kb:Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556 ;
 	uco-core:hasFacet kb:artifact-classification-result-facet-61a3c100-7614-4699-8ef2-1ec140018ced ;
+	.
+
+kb:AnalyticResult-34fb92db-d576-45a7-9d62-dae04510968f
+	a uco-analysis:AnalyticResult ;
 	.
 
 kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879
@@ -1058,6 +1141,23 @@ kb:Attribution-ff6c5eed-0e08-51d7-aba3-027679ed3171
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
+kb:Bearing-74c2bb20-1e4f-40ac-807e-bc2c528e39da
+	a drafting:Bearing ;
+	gufo:inheresIn kb:Vehicle-c7e910e8-4bed-473e-ad74-3df3eb63cbcc ;
+	.
+
+kb:BluetoothAddress-53c6bc31-4f9c-4ca7-96cb-c9c61d7e4ca2
+	a uco-observable:BluetoothAddress ;
+	uco-core:hasFacet
+		kb:BluetoothAddressFacet-717b8cce-e9c2-4d59-81e4-1747d7e2d8ee ,
+		kb:MACAddressFacet-3b25d05e-a3b0-4828-8b6d-1e08f4d4264f
+		;
+	.
+
+kb:BluetoothAddressFacet-717b8cce-e9c2-4d59-81e4-1747d7e2d8ee
+	a uco-observable:BluetoothAddressFacet ;
+	.
+
 kb:Bundle-8d850b58-3569-4b37-a6e1-7b4c22639e01
 	a uco-core:Bundle ;
 	uco-core:description "Error-focused Test Dataset - Deleted partition, Overwritten File" ;
@@ -1068,6 +1168,11 @@ kb:Bundle-feb83c4b-9d88-41ac-b8d8-82d317b40a53
 	a uco-core:Bundle ;
 	uco-core:description "Evidence in bank robbery" ;
 	uco-core:object kb:Investigation1-85c7b8d1-54e0-4023-847a-20e0f55dd48e ;
+	.
+
+kb:Camera-1c9a2999-b34c-459b-b983-113c7b9e71df
+	a uco-observable:Device ;
+	rdfs:comment "A digital, non-phone camera."@en ;
 	.
 
 kb:Communication-01153274-2671-5291-a0c0-a7315dd57239
@@ -1365,6 +1470,13 @@ kb:Communication-fdff848e-1494-504e-87a9-c7d17e3cf96f
 	prov:activity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	.
 
+kb:ComparativeRelationship-20cf44b4-026f-4249-a2c3-408642012c0c
+	a
+		owl:ObjectProperty ,
+		gufo:ComparativeRelationshipType
+		;
+	.
+
 kb:Computer-533FA61A-BE79-469E-A05F-1A341848B925
 	a uco-observable:Device ;
 	.
@@ -1448,6 +1560,19 @@ kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e
 	uco-tool:creator kb:organization-f2910679-990c-4474-8550-a5086a3b01d9 ;
 	uco-tool:toolType "examination/recovery" ;
 	uco-tool:version "1.2.3" ;
+	.
+
+kb:ContentData-0571dfb7-889e-4e8c-bec7-47a62ab9286f
+	a uco-observable:ContentData ;
+	.
+
+kb:ContentData-179c7e84-f72d-47f7-b6f3-3f4a1f0938bd
+	a uco-observable:ContentData ;
+	uco-core:hasFacet kb:ContentDataFacet-a961d865-087b-43bd-ab31-0e33331c5628 ;
+	.
+
+kb:ContentData-3f13e43a-a3f4-4dcc-8db2-e934b24890ec
+	a uco-observable:ContentData ;
 	.
 
 kb:ContentDataFacet-15c65431-d17c-5845-b20b-5b021b8b294a
@@ -1557,6 +1682,10 @@ kb:ContentDataFacet-9d3d9c4d-569c-5845-bee9-00cf0350ba8b
 	uco-observable:sizeInBytes "2479876"^^xsd:integer ;
 	.
 
+kb:ContentDataFacet-a961d865-087b-43bd-ab31-0e33331c5628
+	a uco-observable:ContentDataFacet ;
+	.
+
 kb:ContentDataFacet-ac12a1f7-6165-5e1e-80bf-42a03c134538
 	a uco-observable:ContentDataFacet ;
 	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.ufd> ;
@@ -1615,6 +1744,24 @@ kb:ContentDataFacet-e7da8c9f-a9ed-5c99-8406-f4bc100a2dcf
 		kb:Hash-fa63feec-f608-5e7f-b13c-7471199d7eea
 		;
 	uco-observable:sizeInBytes "1073741824"^^xsd:integer ;
+	.
+
+kb:Continuant-13a8fe95-cca2-4df6-8f91-7930ec2cf095
+	a obo:BFO_0000002 ;
+	.
+
+kb:Continuant-4e953d8f-132e-4901-a603-c42c17f44855
+	a obo:BFO_0000002 ;
+	obo:BFO_0000178 kb:Continuant-ffbdff5c-62ad-4a75-9729-c3aa292435d3 ;
+	.
+
+kb:Continuant-c34d4597-29be-4abc-b723-a20949670903
+	a obo:BFO_0000002 ;
+	obo:BFO_0000176 kb:Continuant-13a8fe95-cca2-4df6-8f91-7930ec2cf095 ;
+	.
+
+kb:Continuant-ffbdff5c-62ad-4a75-9729-c3aa292435d3
+	a obo:BFO_0000002 ;
 	.
 
 kb:Delegation-d387312f-67d7-5a72-bd3b-6f2b921f86fe
@@ -3528,6 +3675,19 @@ kb:Derivation-ffc05f46-e171-5a7f-bf4c-082cc89ea533
 	prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
 	.
 
+kb:Device-90448bb3-0921-4b74-87ba-19044f0518ef
+	a uco-observable:Device ;
+	.
+
+kb:Device-af503a3b-397c-4690-bef9-3972e0f2889d
+	a uco-observable:Device ;
+	.
+
+kb:Device-f28f07fa-0c36-486e-b957-750d183e5851
+	a uco-observable:Device ;
+	rdfs:comment "A subject device that was photographed."@en ;
+	.
+
 kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1
 	a
 		uco-observable:Disk ,
@@ -3730,6 +3890,23 @@ kb:DiskPartitionSystemFacet-fae62886-ed9d-4804-9429-17fd14a8daac
 	rdfs:comment "NOTE: Though the user-interface actions taken to create the partition system and each of its child partitions are each potentially time-stampable, separate uco-action:Actions, the Facet design pattern means the generating InvestigativeAction cannot be broken out into separate Actions.  The partition list must be generated and populated at the time of the creation of this Partition System object.  Hence, the act of creating the child partitions is instead represented as part of the multi-minute single Action that creates and populates the partition system." ;
 	drafting:diskPartitionSchemeType "MBR" ;
 	drafting:partitionList kb:partitionlist-e9f1481a-d40f-4a9d-a275-b0d057be3a92 ;
+	.
+
+kb:Disposition-1ff5e290-724a-4385-b268-32ad49bc8b4f
+	a obo:BFO_0000016 ;
+	.
+
+kb:Disposition-4555076c-0ce0-4565-9662-cc220f173f29
+	a obo:BFO_0000016 ;
+	obo:BFO_0000218 kb:MaterialEntity-f3665603-ce7c-4222-a58a-6213abc4daa0 ;
+	.
+
+kb:Disposition-85f2bb81-69f2-472b-aba9-33192e533a72
+	a obo:BFO_0000016 ;
+	.
+
+kb:Document-05943940-ba94-4c99-807e-6c02345609a5
+	a foaf:Document ;
 	.
 
 kb:DownloadableRelation-03131d31-e559-49d5-a3a6-e75d2fbf0ee3
@@ -4046,6 +4223,23 @@ kb:Entity-52d479e6-4b3e-4a21-a60a-29b08397a315
 	obo:BFO_0000108 kb:OneDimensionalTemporalRegion-95fc3589-849b-406b-85c4-3b2119121f1e ;
 	.
 
+kb:Entity-5d6597d6-3a2c-42cb-9ca2-d853b790aab3
+	a obo:BFO_0000001 ;
+	obo:BFO_0000108 kb:TemporalRegion-860568c1-203f-4762-a24b-c975c43cf89a ;
+	.
+
+kb:Event-03a1a1db-0579-4427-9a51-448c32281146
+	a uco-core:Event ;
+	gufo:hasBeginPointInXSDDateTimeStamp "2010-01-02T03:04:05Z"^^xsd:dateTimeStamp ;
+	gufo:hasEndPointInXSDDateTimeStamp "2011-02-03T04:05:06Z"^^xsd:dateTimeStamp ;
+	uco-core:endTime "2011-02-03T04:05:06+00:00"^^xsd:dateTime ;
+	uco-core:startTime "2010-01-02T03:04:05+00:00"^^xsd:dateTime ;
+	.
+
+kb:Event-05c8d973-25f3-4390-9c2e-2c0af3fbfc44
+	a uco-core:Event ;
+	.
+
 kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e
 	a
 		time:Instant ,
@@ -4070,6 +4264,10 @@ kb:Event-26aaae20-6d00-445a-b102-d080753986d2
 		uco-core:Event
 		;
 	time:after kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444 ;
+	.
+
+kb:Event-36ca992e-47e5-43a5-b344-71465c222a05
+	a uco-core:Event ;
 	.
 
 kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779
@@ -4119,6 +4317,25 @@ kb:ExistenceInterval-27802c47-1c75-43fa-ab4b-fc01aa6c2c92
 	time:hasEnd kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b ;
 	.
 
+kb:Feature-59e1587a-e50e-46c6-8bb7-bb882fda28c2
+	a geo:Feature ;
+	geo:hasBoundingBox kb:Geometry-5de89fc1-6fb7-4c00-8942-28986a2a7326 ;
+	.
+
+kb:Feature-611e3f05-d4e2-4192-8e7a-3a20e3483c50
+	a geo:Feature ;
+	geo:hasCentroid kb:Geometry-65172bd0-13ca-4b7f-a8b2-4d357b5ed0c2 ;
+	.
+
+kb:Feature-65bb1fb1-5c06-4795-a150-1a99425faf65
+	a geo:Feature ;
+	geo:hasDefaultGeometry kb:Geometry-65beb630-1da0-46e6-be26-d845c3a375e1 ;
+	.
+
+kb:FiatPoint-1fc8d2bb-5e11-4b4e-a3bd-41ec511ad8ec
+	a obo:BFO_0000147 ;
+	.
+
 kb:File-26adfe08-e545-4d24-872b-84f95bd01284
 	a uco-observable:File ;
 	uco-core:hasFacet kb:file-facet-fa661a0f-1b8d-4552-870e-daf7b93404be ;
@@ -4140,6 +4357,11 @@ kb:File-61082f03-46ed-4bc7-a7c9-571754ffcb60
 		kb:file-facet-5734cd54-aa04-4c70-a0b4-909032e408c1 ,
 		kb:windows-registry-hive-facet-34c54d87-0ddc-43d5-a185-062da9693e3e
 		;
+	.
+
+kb:File-9a36db96-b6ee-49e6-a976-046a95a072a0
+	a uco-observable:RasterPicture ;
+	rdfs:comment "TODO - At the time of this writing, File and its subclasses need alignment with gUFO."@en ;
 	.
 
 kb:File-bbb4f0c4-ea2c-42fa-9ec0-11bc4678b7b8
@@ -4182,6 +4404,10 @@ kb:File-dc86b574-f66b-4b79-b254-e55449535ef5
 	rdfs:comment "This File object avoids using the uco-observable:fileName property because that property changes values in this scenario, suggesting the need for a Quality to represent how this file's name is represented." ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/535> ;
 	uco-core:name "FIRST.TXT" ;
+	.
+
+kb:File-e364d7d2-25c8-4d4a-95d1-b03f73934e83
+	a uco-observable:File ;
 	.
 
 kb:File-ed7c30a2-e233-4732-adee-8514955b6dfb
@@ -4320,9 +4546,17 @@ kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4
 	uco-core:hasFacet kb:FileSystemFacet-0833f401-db1c-42ce-b427-28fe4875193b ;
 	.
 
+kb:FileSystem-c0becd4a-5b5d-4a26-a1f8-175d623abab2
+	a uco-observable:FileSystem ;
+	.
+
 kb:FileSystemFacet-0833f401-db1c-42ce-b427-28fe4875193b
 	a uco-observable:FileSystemFacet ;
 	uco-observable:fileSystemType "FAT32" ;
+	.
+
+kb:Function-c920c29a-034f-40b8-97e1-0eb443f44b1c
+	a obo:BFO_0000034 ;
 	.
 
 kb:Generation-0087dfe9-6144-5d89-8997-24b2e35d7dbe
@@ -5152,6 +5386,124 @@ kb:Generation-ff707067-a681-586b-8674-20c7044f9dba
 	prov:activity kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
 	.
 
+kb:GenericallyDependentContinuant-0fac3951-dd55-401c-bd42-91310deaa2b6
+	a obo:BFO_0000031 ;
+	.
+
+kb:GenericallyDependentContinuant-4e13fcc3-ed48-4af6-978e-e99ec140b4c3
+	a obo:BFO_0000031 ;
+	obo:BFO_0000056 kb:Process-cefbc2d0-ca28-4065-ad72-c41dc0270437 ;
+	.
+
+kb:GenericallyDependentContinuant-5b63c9a0-1605-480d-abbb-5f929d36996a
+	a obo:BFO_0000031 ;
+	obo:BFO_0000058 kb:SpecificallyDependentContinuant-fe0b19d8-5d41-4011-ae47-9f82ff972865 ;
+	.
+
+kb:GenericallyDependentContinuant-91c418c1-55d9-4531-b318-bebe3d8957f2
+	a obo:BFO_0000031 ;
+	obo:BFO_0000084 kb:IndependentContinuant-6f0c7852-6a93-4a84-9860-b3250d6235ce ;
+	.
+
+kb:GenericallyDependentContinuant-9c155a43-63e9-496c-ae5f-5a983479c340
+	a obo:BFO_0000031 ;
+	.
+
+kb:GenericallyDependentContinuant-e170434c-80ac-46bd-b352-b77b6e5e059c
+	a obo:BFO_0000031 ;
+	obo:BFO_0000058 kb:Process-93797b2d-d684-4a4f-8abe-593ef47f44e7 ;
+	.
+
+kb:GenericallyDependentContinuant-e5ba7328-fd1a-4d08-95b8-bd994d0493aa
+	a obo:BFO_0000031 ;
+	.
+
+kb:GenericallyDependentContinuant-e86c1e56-9692-496e-9ffe-657a7de57c06
+	a obo:BFO_0000031 ;
+	.
+
+kb:Geometry-0494a337-3849-4f28-a972-33b1ba26629e
+	a geo:Geometry ;
+	geo:asDGGS ""^^geo:dggsLiteral ;
+	.
+
+kb:Geometry-07985c65-4388-466b-a736-45757e6b2e1b
+	a geo:Geometry ;
+	geo:asGML ""^^geo:gmlLiteral ;
+	.
+
+kb:Geometry-089d5864-6e21-43a9-861f-9f8bc3b13d6e
+	a geo:Geometry ;
+	geo:asGeoJSON ""^^geo:geoJSONLiteral ;
+	.
+
+kb:Geometry-0b3a8ade-8231-4597-94af-cab731dafdd3
+	a geo:Geometry ;
+	geo:asKML ""^^geo:kmlLiteral ;
+	.
+
+kb:Geometry-0eaf2b78-4f63-4ec2-93d7-896ff02764f4
+	a geo:Geometry ;
+	geo:asWKT ""^^geo:wktLiteral ;
+	.
+
+kb:Geometry-0f35edd0-cb47-4fc9-a4c0-4f9b01ea7f5f
+	a geo:Geometry ;
+	geo:coordinateDimension "0"^^xsd:integer ;
+	.
+
+kb:Geometry-0ff531da-8bcf-46e2-b656-4cbbc58f9a31
+	a geo:Geometry ;
+	geo:dimension "0"^^xsd:integer ;
+	.
+
+kb:Geometry-5de89fc1-6fb7-4c00-8942-28986a2a7326
+	a geo:Geometry ;
+	.
+
+kb:Geometry-65172bd0-13ca-4b7f-a8b2-4d357b5ed0c2
+	a geo:Geometry ;
+	.
+
+kb:Geometry-65beb630-1da0-46e6-be26-d845c3a375e1
+	a geo:Geometry ;
+	.
+
+kb:Geometry-822c5b24-83ce-4de9-969b-ca89df9cc6f9
+	a geo:Geometry ;
+	geo:hasMetricSpatialAccuracy "0e+00"^^xsd:double ;
+	.
+
+kb:Geometry-822c73eb-3e06-4619-b13d-fa8709f6278e
+	a geo:Geometry ;
+	geo:hasMetricSpatialResolution "0e+00"^^xsd:double ;
+	.
+
+kb:Geometry-98b146b1-863a-4b06-9f7f-ff6773c06f8f
+	a geo:Geometry ;
+	geo:hasSpatialAccuracy kb:Thing-9c1b9d56-2d8f-4e39-83f5-8beb965c200f ;
+	.
+
+kb:Geometry-9f80c5b5-8461-4fd8-a05a-ad33a15b0dff
+	a geo:Geometry ;
+	geo:hasSpatialResolution kb:Thing-a45376c3-8af6-4a86-9adc-18382146c5d1 ;
+	.
+
+kb:Geometry-ace3ab20-edfe-4300-810a-9baddcd9a287
+	a geo:Geometry ;
+	geo:isEmpty "true"^^xsd:boolean ;
+	.
+
+kb:Geometry-b0f84898-2b62-4519-898e-85c452249735
+	a geo:Geometry ;
+	geo:isSimple "true"^^xsd:boolean ;
+	.
+
+kb:Geometry-ffb4fb75-cc56-4826-8bf2-12d8b2c95722
+	a geo:Geometry ;
+	geo:spatialDimension "1"^^xsd:integer ;
+	.
+
 kb:Hash-01a2ccb5-d773-5f0f-9f1e-355a8a6a4dab
 	a
 		sosa:Result ,
@@ -5309,6 +5661,15 @@ kb:Hash-47209933-7865-5623-843a-dcde837091a4
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "4dbc003bb80aeb1c5ee61491bcb245c7f077a7f85fa4fa1325064556e173a4dd"^^xsd:hexBinary ;
+	.
+
+kb:Hash-4c3d0623-d365-4c69-a1a1-01523c6502fa
+	a
+		gufo:QualityValue ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "da39a3ee5e6b4b0d3255bfef95601890afd80709"^^xsd:hexBinary ;
 	.
 
 kb:Hash-4c81e96f-84b7-5550-b832-60258234c418
@@ -5767,9 +6128,22 @@ kb:Hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
 	uco-types:hashValue "de6b07d9dd6a4a4c856e73a9ef0030e05641cf4e3a9c7062f38baf17a050a0949606a198e2bc3323b1ee9dcda5532a95b8f2697f7eb20ad1771cd112e915ee8e"^^xsd:hexBinary ;
 	.
 
+kb:History-284dcf45-82af-4df7-8198-5044fe01652b
+	a obo:BFO_0000182 ;
+	.
+
+kb:History-955a8b64-c998-46e5-93c8-be074c7c50af
+	a obo:BFO_0000182 ;
+	obo:BFO_0000184 kb:MaterialEntity-28c27483-ae07-46fc-96b9-0a2c06996986 ;
+	.
+
 kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804
 	a uco-identity:Organization ;
 	uco-core:name "Chris Hargreaves" ;
+	.
+
+kb:Identity-7658570e-f6e1-4fbf-ad6b-d057a38cc7eb
+	a uco-identity:Identity ;
 	.
 
 kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28
@@ -5777,11 +6151,96 @@ kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28
 	uco-core:name "ESC" ;
 	.
 
+kb:Image-98525b14-302b-44a1-8c35-82b758531d98
+	a foaf:Image ;
+	.
+
+kb:Image-a5423d0b-8752-444e-ad47-9ac2d5579717
+	a foaf:Image ;
+	foaf:depicts kb:Thing-55c62ab8-ea65-4ae0-9e96-0ff4b04e8bd4 ;
+	.
+
+kb:ImmaterialEntity-3bd0b8bc-c5c4-4ce7-837c-18f90b943ad7
+	a obo:BFO_0000141 ;
+	.
+
+kb:IndependentContinuant-051b6d7b-b49c-49e6-ad62-63934f6c77db
+	a obo:BFO_0000004 ;
+	.
+
+kb:IndependentContinuant-2352bc23-304d-40c5-9b3c-f76e6c5d2e03
+	a obo:BFO_0000004 ;
+	obo:BFO_0000124 kb:IndependentContinuant-9e4c61c5-4b22-4ce0-826f-c604be36139b ;
+	.
+
+kb:IndependentContinuant-3a9a69f6-0662-4217-a031-6441adf281f2
+	a obo:BFO_0000004 ;
+	obo:BFO_0000101 kb:GenericallyDependentContinuant-e86c1e56-9692-496e-9ffe-657a7de57c06 ;
+	.
+
+kb:IndependentContinuant-42caca9f-93d5-4fdf-ac9b-a35b06bf3e08
+	a obo:BFO_0000004 ;
+	obo:BFO_0000196 kb:SpecificallyDependentContinuant-e73398c3-e406-40df-a3ce-f9965ce6bc71 ;
+	.
+
+kb:IndependentContinuant-6e679854-4141-4ba9-810c-98a9a63e159e
+	a obo:BFO_0000004 ;
+	obo:BFO_0000194 kb:SpecificallyDependentContinuant-ced2fb35-3e5c-431e-8cd1-ecb4f79ad057 ;
+	.
+
+kb:IndependentContinuant-6f0c7852-6a93-4a84-9860-b3250d6235ce
+	a obo:BFO_0000004 ;
+	.
+
+kb:IndependentContinuant-725839fb-4cb3-4190-a982-6d5eb5363945
+	a obo:BFO_0000004 ;
+	obo:BFO_0000171 kb:IndependentContinuant-051b6d7b-b49c-49e6-ad62-63934f6c77db ;
+	.
+
+kb:IndependentContinuant-86e6bef9-873e-4b9f-b464-a1a39e3e8493
+	a obo:BFO_0000004 ;
+	.
+
+kb:IndependentContinuant-9e4c61c5-4b22-4ce0-826f-c604be36139b
+	a obo:BFO_0000004 ;
+	.
+
+kb:IndependentContinuant-c4541bd5-164f-4c26-86a9-4e170a963a1b
+	a obo:BFO_0000004 ;
+	obo:BFO_0000056 kb:Process-139b0336-0af6-4bce-8e0b-08dd5c610244 ;
+	.
+
+kb:IndependentContinuant-d6721a69-aa1b-4b61-b6ae-fcdec1dae52d
+	a obo:BFO_0000004 ;
+	.
+
+kb:IndependentContinuant-edf2432e-2630-406c-8e12-134210bb8522
+	a obo:BFO_0000004 ;
+	.
+
+kb:IndependentContinuant-fde381ef-f922-40e1-b878-071b809b48dd
+	a obo:BFO_0000004 ;
+	obo:BFO_0000210 kb:SpatialRegion-86e7de31-c892-4429-9834-507b28d79211 ;
+	.
+
+kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047
+	a time:Instant ;
+	.
+
+kb:Instant-2918592a-9d87-4b30-acbc-521a19f97fcd
+	a time:Instant ;
+	time:inXSDDateTimeStamp "2023-11-22T15:30:00Z"^^xsd:dateTimeStamp ;
+	.
+
 kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b
 	a time:Instant ;
 	rdfs:label "T1" ;
 	rdfs:comment "The instant that is the end of E." ;
 	time:inXSDDateTimeStamp "2021-02-03T04:05:06.7890Z"^^xsd:dateTimeStamp ;
+	.
+
+kb:Instant-9a688ff3-df05-4151-b68d-c056f1bde072
+	a time:Instant ;
 	.
 
 kb:Instant-9c248bb3-ea05-4ef0-9ac7-b68a99d5c07a
@@ -5798,11 +6257,37 @@ kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b
 	ex:hasTimestamp "2021-02-03T04:05:06.789000+00:00"^^xsd:dateTime ;
 	.
 
+kb:Instant-c306e8e7-30b1-4dda-b039-fda00d20b2b0
+	a time:Instant ;
+	time:inXSDDateTimeStamp "2020-01-01T00:00:00+00:00"^^xsd:dateTimeStamp ;
+	.
+
+kb:Instant-c9ae3fce-ddcb-416b-971b-559c2f5bee95
+	a time:Instant ;
+	.
+
 kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8
 	a ex:Instant ;
 	rdfs:label "T0" ;
 	rdfs:comment "The instant that is the beginning of E." ;
 	ex:hasTimestamp "2020-01-02T03:04:05.678900+00:00"^^xsd:dateTime ;
+	.
+
+kb:Instant-fe358785-e77f-436a-bb03-157286c7e476
+	a time:Instant ;
+	time:inXSDDate "2020-01-01"^^xsd:date ;
+	.
+
+kb:Interval-336d4db4-727e-4694-8bf0-5902c6ae504f
+	a time:Interval ;
+	time:hasBeginning kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047 ;
+	time:hasEnd kb:Instant-c9ae3fce-ddcb-416b-971b-559c2f5bee95 ;
+	time:inside kb:Instant-2918592a-9d87-4b30-acbc-521a19f97fcd ;
+	.
+
+kb:Interval-9940bc62-e795-4923-bc2e-a83197211b6b
+	a time:Interval ;
+	time:inside kb:Instant-9a688ff3-df05-4151-b68d-c056f1bde072 ;
 	.
 
 kb:Investigation-5e05495a-513a-45ce-a64c-a17b665d263a
@@ -6030,6 +6515,22 @@ kb:InvestigativeAction-e55a3d16-a516-4ebe-bba2-cf7aa9a6b8ba
 	uco-core:name "disk image" ;
 	.
 
+kb:Location-776426f4-b39e-4a7e-aceb-59fe69a0ca0f
+	a uco-location:Location ;
+	.
+
+kb:Location-b28d808d-d0f8-495e-b7df-783ce6aabdc3
+	a uco-location:Location ;
+	.
+
+kb:Location-c39f5c70-ba6d-44a1-8c6c-426b0372eade
+	a uco-location:Location ;
+	.
+
+kb:LogicalPattern-31b4baf1-a8af-4cd8-8648-8946115c04ce
+	a uco-pattern:LogicalPattern ;
+	.
+
 kb:LoginData-bdf17f36-76cc-418e-918f-1a11d288d9d2
 	a uco-observable:ObservableRelationship ;
 	uco-core:hasFacet kb:data-range-facet-139e35d8-3a76-4320-86d1-05d136c8d128 ;
@@ -6039,12 +6540,97 @@ kb:LoginData-bdf17f36-76cc-418e-918f-1a11d288d9d2
 	uco-core:target kb:textapplogcat-1a717ea6-8990-4709-92f0-d748cacb817e ;
 	.
 
+kb:MACAddressFacet-3b25d05e-a3b0-4828-8b6d-1e08f4d4264f
+	a uco-observable:MACAddressFacet ;
+	.
+
+kb:MaterialEntity-10606d79-14b9-47fe-843f-dfbc20cfb102
+	a obo:BFO_0000040 ;
+	.
+
+kb:MaterialEntity-28c27483-ae07-46fc-96b9-0a2c06996986
+	a obo:BFO_0000040 ;
+	.
+
+kb:MaterialEntity-41fbafdf-bf4d-447d-b84d-70fa6e105e45
+	a obo:BFO_0000040 ;
+	obo:BFO_0000129 kb:MaterialEntity-10606d79-14b9-47fe-843f-dfbc20cfb102 ;
+	.
+
+kb:MaterialEntity-6afa9a8e-9aca-47c6-b0fd-3a02ded55b17
+	a obo:BFO_0000040 ;
+	.
+
+kb:MaterialEntity-795af18f-f81b-4f02-a83d-cb2afd91877f
+	a obo:BFO_0000040 ;
+	.
+
+kb:MaterialEntity-7d82040a-f5d0-4d14-8dff-522400a1a42f
+	a obo:BFO_0000040 ;
+	obo:BFO_0000183 kb:ProcessBoundary-e809c85a-5d1c-4d64-a13d-c6087ad9e27c ;
+	.
+
+kb:MaterialEntity-84772973-e892-4463-836e-a231a7da3413
+	a obo:BFO_0000040 ;
+	obo:BFO_0000127 kb:Disposition-85f2bb81-69f2-472b-aba9-33192e533a72 ;
+	.
+
+kb:MaterialEntity-8b4d913c-41e2-45e0-87b5-1329cb07c13e
+	a obo:BFO_0000040 ;
+	obo:BFO_0000185 kb:History-284dcf45-82af-4df7-8198-5044fe01652b ;
+	.
+
+kb:MaterialEntity-a96d8ef3-4940-46ec-98a0-bd81473837f3
+	a obo:BFO_0000040 ;
+	obo:BFO_0000183 kb:Process-6b48b88e-ecef-407c-8549-48064d4cf19b ;
+	.
+
+kb:MaterialEntity-b2c21d16-e702-4ace-9cdc-71aa09bbce2e
+	a obo:BFO_0000040 ;
+	obo:BFO_0000115 kb:MaterialEntity-fe7a0731-b7ea-499f-947f-f2a3f16d01f8 ;
+	.
+
+kb:MaterialEntity-f3665603-ce7c-4222-a58a-6213abc4daa0
+	a obo:BFO_0000040 ;
+	.
+
+kb:MaterialEntity-f9412e8f-45d8-42a9-9d1d-db9e047c9b66
+	a obo:BFO_0000040 ;
+	.
+
+kb:MaterialEntity-fe7a0731-b7ea-499f-947f-f2a3f16d01f8
+	a obo:BFO_0000040 ;
+	.
+
+kb:MaterialRelationship-95952b20-2c19-47e6-b567-b3998e7b3553
+	a
+		owl:ObjectProperty ,
+		gufo:MaterialRelationshipType
+		;
+	.
+
+kb:Object-a56f08dd-8e36-4c73-845d-8dd873b113ba
+	a obo:BFO_0000030 ;
+	.
+
 kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc
 	a gufo:Object ;
 	rdfs:label "T" ;
 	rdfs:comment "A thing with a time-bounded existence." ;
 	gufo:hasBeginPointInXSDDateTimeStamp "2020-01-02T03:04:05.6789Z"^^xsd:dateTimeStamp ;
 	gufo:hasEndPointInXSDDateTimeStamp "2021-02-03T04:05:06.7890Z"^^xsd:dateTimeStamp ;
+	.
+
+kb:Object-cd1aeb20-f037-476e-a2ae-45be3c79c64d
+	a gufo:Object ;
+	.
+
+kb:ObjectAggregate-6bf39b10-1673-4c2f-b013-daaae6dfa9df
+	a obo:BFO_0000027 ;
+	.
+
+kb:ObservablePattern-43623d97-2877-46c6-a52c-7e636f767ceb
+	a uco-observable:ObservablePattern ;
 	.
 
 kb:ObservableRelationship-1d7f6241-3bf1-54fb-bad3-4d348fd11d2c
@@ -6175,6 +6761,72 @@ kb:ObservableRelationship-f416968a-cd3d-57b6-aea3-9a4bc7862a95
 	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip> ;
 	.
 
+kb:Occurrent-02414079-cd66-4855-983d-5c2746b8d005
+	a obo:BFO_0000003 ;
+	.
+
+kb:Occurrent-2145f481-6e84-48b2-8c39-441da2eb3223
+	a obo:BFO_0000003 ;
+	obo:BFO_0000062 kb:Occurrent-23c2e209-3d6a-49e9-9ba7-7de76dc7a637 ;
+	.
+
+kb:Occurrent-23c2e209-3d6a-49e9-9ba7-7de76dc7a637
+	a obo:BFO_0000003 ;
+	.
+
+kb:Occurrent-376f52a5-ed3a-4cb8-a6ba-017441a94d60
+	a obo:BFO_0000003 ;
+	.
+
+kb:Occurrent-56b81cb2-57fd-4433-b581-0638309147dd
+	a obo:BFO_0000003 ;
+	obo:BFO_0000063 kb:Occurrent-376f52a5-ed3a-4cb8-a6ba-017441a94d60 ;
+	.
+
+kb:Occurrent-6c596ae3-9263-43fb-b164-dd889bdefab2
+	a obo:BFO_0000003 ;
+	obo:BFO_0000139 kb:Occurrent-ff0994aa-c9c7-4422-83fe-364924aabd18 ;
+	.
+
+kb:Occurrent-92a117c7-99fb-4a01-83e1-245c717b18f7
+	a obo:BFO_0000003 ;
+	obo:BFO_0000117 kb:Occurrent-e83afd12-71b8-4e11-a0cd-ffefe1f76f84 ;
+	.
+
+kb:Occurrent-9edf32e8-264a-47ef-b6a4-09e31510aa9f
+	a obo:BFO_0000003 ;
+	obo:BFO_0000121 kb:Occurrent-d20fe4c8-619c-4d11-acdc-89cc30153cf8 ;
+	.
+
+kb:Occurrent-aec59ae4-5c9e-4de8-aeef-458791c48ce2
+	a obo:BFO_0000003 ;
+	obo:BFO_0000132 kb:Occurrent-02414079-cd66-4855-983d-5c2746b8d005 ;
+	.
+
+kb:Occurrent-d20fe4c8-619c-4d11-acdc-89cc30153cf8
+	a obo:BFO_0000003 ;
+	.
+
+kb:Occurrent-e83afd12-71b8-4e11-a0cd-ffefe1f76f84
+	a obo:BFO_0000003 ;
+	.
+
+kb:Occurrent-ff0994aa-c9c7-4422-83fe-364924aabd18
+	a obo:BFO_0000003 ;
+	.
+
+kb:OneDimensionalContinuantFiatBoundary-6538ea95-538e-4a12-bd0d-999535a4a878
+	a obo:BFO_0000142 ;
+	.
+
+kb:OneDimensionalSpatialRegion-559ec53b-45aa-4370-907d-6175cae8b570
+	a obo:BFO_0000026 ;
+	.
+
+kb:OneDimensionalTemporalRegion-7ca3f761-e4f7-4500-9442-13df3054f03e
+	a obo:BFO_0000038 ;
+	.
+
 kb:OneDimensionalTemporalRegion-95fc3589-849b-406b-85c4-3b2119121f1e
 	a obo:BFO_0000038 ;
 	rdfs:label "E" ;
@@ -6199,6 +6851,14 @@ kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623
 	drafting:buildID "22621.2283" ;
 	.
 
+kb:Organization-16d1f813-a501-42f0-97b1-d41b20595d06
+	a foaf:Organization ;
+	.
+
+kb:Organization-3b542161-47e1-40cd-a1b1-e1b9d07af81f
+	a uco-identity:Organization ;
+	.
+
 kb:Organization-a94338c2-030a-493f-9d26-55cade656276
 	a uco-identity:Organization ;
 	uco-core:name "Microsoft" ;
@@ -6219,6 +6879,184 @@ kb:PathRelationFacet-df847850-f362-48a6-a8b0-5d03e83f8bba
 	uco-observable:path "/del_demo/folder1/FIRST.txt" ;
 	.
 
+kb:Perdurant-037af646-e4eb-4cfb-b332-976915782280
+	a drafting:Perdurant ;
+	drafting:intervalOverlappedBy kb:Perdurant-06679e73-f18e-450f-a490-876f1f97013a ;
+	.
+
+kb:Perdurant-06679e73-f18e-450f-a490-876f1f97013a
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-0bca64b4-b6d1-4658-857b-2ed2a463f7d4
+	a drafting:Perdurant ;
+	drafting:intervalOverlaps kb:Perdurant-0cb945c1-f849-48c1-a7c3-f2d734cf3a0d ;
+	.
+
+kb:Perdurant-0cb945c1-f849-48c1-a7c3-f2d734cf3a0d
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-19657f6d-e237-4eea-a196-705761c064b3
+	a drafting:Perdurant ;
+	drafting:inside kb:Perdurant-1f9c1209-c6a5-41eb-b982-750a5dd9f5ca ;
+	.
+
+kb:Perdurant-1f9c1209-c6a5-41eb-b982-750a5dd9f5ca
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-30245c7b-4ac4-4e4b-9f93-14b8b6e05ff0
+	a drafting:Perdurant ;
+	drafting:intervalMetBy kb:Perdurant-318601b7-0ea2-4710-9ad2-2f49db1dd058 ;
+	.
+
+kb:Perdurant-318601b7-0ea2-4710-9ad2-2f49db1dd058
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-3ccac1ae-6d94-4675-869d-1c4e0a9f2547
+	a drafting:InstantaneousPerdurant ;
+	.
+
+kb:Perdurant-3e622627-009f-4bb6-a60c-b5cd1b76de56
+	a drafting:Perdurant ;
+	drafting:intervalMeets kb:Perdurant-3eac2f6f-43b3-4b01-985b-79d347b448ad ;
+	.
+
+kb:Perdurant-3eac2f6f-43b3-4b01-985b-79d347b448ad
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-4a15f0b8-2bda-41bf-9c29-e304ed8715ab
+	a drafting:IntervalicPerdurant ;
+	.
+
+kb:Perdurant-53499be0-2a4b-4a65-b9bb-ba294ca4030d
+	a drafting:Perdurant ;
+	drafting:intervalStartedBy kb:Perdurant-54e72655-cb84-4f78-8182-e7b0b98037cd ;
+	.
+
+kb:Perdurant-54e72655-cb84-4f78-8182-e7b0b98037cd
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-57ef1b67-55d0-471c-8819-83c255fed58e
+	a drafting:Perdurant ;
+	drafting:intervalStarts kb:Perdurant-5808f7ac-da66-4063-bdce-4260444850aa ;
+	.
+
+kb:Perdurant-5808f7ac-da66-4063-bdce-4260444850aa
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-599c259f-a25d-416d-b2de-52929861a5c7
+	a drafting:ProperIntervalicPerdurant ;
+	.
+
+kb:Perdurant-a4b2d65f-880c-4782-ba0e-93610abe8dff
+	a drafting:Perdurant ;
+	drafting:intervalAfter kb:Perdurant-a5b37ae7-0e57-4980-9452-1e5d72c82095 ;
+	.
+
+kb:Perdurant-a5b37ae7-0e57-4980-9452-1e5d72c82095
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-b1135fd3-2918-406a-b9fc-6e5008c08129
+	a drafting:Perdurant ;
+	drafting:after kb:Perdurant-bef78884-4d40-4365-9898-f771e4118a10 ;
+	.
+
+kb:Perdurant-b869cffc-7964-4a51-aed1-569b70183e7d
+	a drafting:Perdurant ;
+	drafting:before kb:Perdurant-ba623ad2-0a64-4e71-8037-ecf6baf2e2fb ;
+	.
+
+kb:Perdurant-ba623ad2-0a64-4e71-8037-ecf6baf2e2fb
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-bc7d69c4-23f0-4d28-8871-c3c9eef1d014
+	a drafting:Perdurant ;
+	drafting:hasBeginning kb:Perdurant-bcac306d-fafb-4787-93bd-e61cd8806d0c ;
+	.
+
+kb:Perdurant-bcac306d-fafb-4787-93bd-e61cd8806d0c
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-bda79bc5-1643-4e26-aa20-21339a617c26
+	a drafting:Perdurant ;
+	drafting:intervalBefore kb:Perdurant-bfb91b38-8bfd-4f71-a3ed-255b5beded13 ;
+	.
+
+kb:Perdurant-bef78884-4d40-4365-9898-f771e4118a10
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-bfb91b38-8bfd-4f71-a3ed-255b5beded13
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-c29c23e6-8876-46f8-b391-73c1503281a7
+	a drafting:Perdurant ;
+	drafting:intervalContains kb:Perdurant-cea1151a-8036-49b1-8578-d7d1fcc229f1 ;
+	.
+
+kb:Perdurant-cea1151a-8036-49b1-8578-d7d1fcc229f1
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-d42d4adf-cfd0-4519-8c6a-c109a5e0eb9e
+	a drafting:Perdurant ;
+	drafting:intervalDisjoint kb:Perdurant-d4e3c2fb-6869-4cb1-953e-78b33a6f41ed ;
+	.
+
+kb:Perdurant-d4e3c2fb-6869-4cb1-953e-78b33a6f41ed
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-e4302ce8-e51b-4beb-8909-4c7114699bb7
+	a drafting:Perdurant ;
+	drafting:hasEnd kb:Perdurant-efbad0fb-206d-499b-8e2e-1d23f5ef7d07 ;
+	.
+
+kb:Perdurant-e99ccaf2-3cf4-4b22-8c7e-c91744fe50dc
+	a drafting:Perdurant ;
+	drafting:intervalEquals kb:Perdurant-ee47c5ab-e427-43cb-b789-45af59d3bd66 ;
+	.
+
+kb:Perdurant-ee47c5ab-e427-43cb-b789-45af59d3bd66
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-efbad0fb-206d-499b-8e2e-1d23f5ef7d07
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-f2118bfb-3466-4cc0-bb0b-e765009a6395
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-f4343f83-fe56-4a47-8dd0-8b2b6999d208
+	a drafting:Perdurant ;
+	drafting:intervalFinishes kb:Perdurant-f2118bfb-3466-4cc0-bb0b-e765009a6395 ;
+	.
+
+kb:Perdurant-f560f871-730a-493e-92de-a2f10e1c53df
+	a drafting:Perdurant ;
+	.
+
+kb:Perdurant-f596d83f-c01b-445c-8a20-2125150d8183
+	a drafting:Perdurant ;
+	drafting:intervalFinishedBy kb:Perdurant-f560f871-730a-493e-92de-a2f10e1c53df ;
+	.
+
+kb:Person-0c9728af-7f52-400e-9861-72cd11f6966a
+	a uco-identity:Person ;
+	.
+
 kb:Person-3393dfc0-c765-4710-86db-8182c34de806
 	a ex:Person ;
 	rdfs:label "J. Doe" ;
@@ -6228,6 +7066,171 @@ kb:Person-3393dfc0-c765-4710-86db-8182c34de806
 kb:Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f
 	a uco-identity:Person ;
 	uco-core:name "Alex Nelson" ;
+	.
+
+kb:Person-799c0b1d-2259-4438-b282-168060b3cb57
+	a uco-identity:Person ;
+	.
+
+kb:Person-91a56f33-943f-43e6-b53f-75d23600fe46
+	a foaf:Person ;
+	.
+
+kb:Person-aec83773-81b1-4db2-aa8f-59cf745bf558
+	a uco-identity:Person ;
+	.
+
+kb:Person-da1c0374-12f0-40d1-9ddd-8c9d90c6b3bf
+	a uco-identity:Person ;
+	.
+
+kb:Person-ee7130a7-0fec-48df-8312-4da1a214bd59
+	a uco-identity:Person ;
+	.
+
+kb:Process-139b0336-0af6-4bce-8e0b-08dd5c610244
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-38cce5b9-bbf6-4c67-9a09-3266ea007912
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-64222382-c0b3-415b-a0c6-9ad91d3bcf0e
+	a obo:BFO_0000015 ;
+	obo:BFO_0000057 kb:GenericallyDependentContinuant-9c155a43-63e9-496c-ae5f-5a983479c340 ;
+	.
+
+kb:Process-6b48b88e-ecef-407c-8549-48064d4cf19b
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-6f0dd8a7-fd90-42e8-b2a3-6b065adc320f
+	a obo:BFO_0000015 ;
+	obo:BFO_0000057 kb:SpecificallyDependentContinuant-7117f099-4321-49de-a6e6-65f339259f67 ;
+	.
+
+kb:Process-91bbdb72-e830-46e2-b466-93a50b360977
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-93797b2d-d684-4a4f-8abe-593ef47f44e7
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-93c8ddcf-d117-41dc-9b37-f184c31a1e73
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-94e7df30-510e-4e47-842f-2cb2111d18e4
+	a obo:BFO_0000015 ;
+	obo:BFO_0000200 kb:SpatiotemporalRegion-f48abbfe-07a4-47d6-b99d-fc11d144a99d ;
+	.
+
+kb:Process-9a52e338-ab1a-4c77-b3ef-5cff13f951dc
+	a obo:BFO_0000015 ;
+	obo:BFO_0000199 kb:TemporalRegion-767887bf-17bb-43c8-b06d-0dac0f0604a1 ;
+	.
+
+kb:Process-a02223cb-35a9-4efa-92a0-3dc2c3217b06
+	a obo:BFO_0000015 ;
+	obo:BFO_0000066 kb:MaterialEntity-f9412e8f-45d8-42a9-9d1d-db9e047c9b66 ;
+	.
+
+kb:Process-ac3f725c-2594-41aa-b29b-fa2fb44c1cf8
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-b605dd67-2fbf-49f3-bfba-88fd5e45dcd4
+	a obo:BFO_0000015 ;
+	obo:BFO_0000055 kb:RealizableEntity-451a5886-c9c4-4555-9f80-68577105ca18 ;
+	.
+
+kb:Process-cefbc2d0-ca28-4065-ad72-c41dc0270437
+	a obo:BFO_0000015 ;
+	.
+
+kb:Process-dc691106-548e-4a6c-9399-728690782b4c
+	a obo:BFO_0000015 ;
+	obo:BFO_0000059 kb:GenericallyDependentContinuant-0fac3951-dd55-401c-bd42-91310deaa2b6 ;
+	.
+
+kb:Process-e02b88a2-e820-4787-964c-93837122d918
+	a obo:BFO_0000015 ;
+	obo:BFO_0000057 kb:IndependentContinuant-d6721a69-aa1b-4b61-b6ae-fcdec1dae52d ;
+	.
+
+kb:Process-e8c1ea47-53c8-4c70-97e4-fb81a7cce4c0
+	a obo:BFO_0000015 ;
+	obo:BFO_0000066 kb:Site-c9897e8b-35f7-4428-8c3d-a63761d07545 ;
+	.
+
+kb:ProcessBoundary-4ca1b875-d83a-462c-85e8-e32e280386ec
+	a obo:BFO_0000035 ;
+	.
+
+kb:ProcessBoundary-808abb31-d905-4ecf-a7e7-808e800dac10
+	a obo:BFO_0000035 ;
+	.
+
+kb:ProcessBoundary-89103cc9-8a19-4029-9f68-37a85155a1dc
+	a obo:BFO_0000035 ;
+	obo:BFO_0000200 kb:SpatiotemporalRegion-06e84871-0779-4cea-8d37-a11e0f874638 ;
+	.
+
+kb:ProcessBoundary-9ce78ef2-613d-4da6-af17-71462228bcae
+	a obo:BFO_0000035 ;
+	obo:BFO_0000066 kb:Site-c92e1487-b40d-471f-bdb3-9eac7691a9d0 ;
+	.
+
+kb:ProcessBoundary-d3ad139b-c4c2-4b39-9451-5d1b76d82ea1
+	a obo:BFO_0000035 ;
+	obo:BFO_0000199 kb:TemporalRegion-512c277c-9fbd-46d3-af9d-a72d76b3fd1f ;
+	.
+
+kb:ProcessBoundary-de94d99f-a088-45e9-a67c-1b30761bab4b
+	a obo:BFO_0000035 ;
+	obo:BFO_0000066 kb:MaterialEntity-6afa9a8e-9aca-47c6-b0fd-3a02ded55b17 ;
+	.
+
+kb:ProcessBoundary-e809c85a-5d1c-4d64-a13d-c6087ad9e27c
+	a obo:BFO_0000035 ;
+	.
+
+kb:ProperInterval-1374ad9e-9c65-4369-a656-7cf7b223c816
+	a time:ProperInterval ;
+	time:intervalDuring kb:ProperInterval-ec8303f4-2862-41b7-b6ee-b6f3f6e8251e ;
+	.
+
+kb:ProperInterval-6224434f-df82-40e8-a78a-4faacfa6df1c
+	a time:ProperInterval ;
+	time:intervalContains kb:ProperInterval-89561820-12d5-4fa9-8972-90b6877d2d92 ;
+	.
+
+kb:ProperInterval-6a3cbd9f-b177-4e90-ba3b-a198f563aa8a
+	a time:ProperInterval ;
+	.
+
+kb:ProperInterval-82019c04-9a6b-4dc4-8a07-99b890e824ba
+	a time:ProperInterval ;
+	time:intervalEquals kb:ProperInterval-995ed778-ee4e-436b-84de-d374f37238a1 ;
+	.
+
+kb:ProperInterval-89561820-12d5-4fa9-8972-90b6877d2d92
+	a time:ProperInterval ;
+	.
+
+kb:ProperInterval-995ed778-ee4e-436b-84de-d374f37238a1
+	a time:ProperInterval ;
+	.
+
+kb:ProperInterval-b56e4478-9c70-445e-8279-6fce6a8f9018
+	a time:ProperInterval ;
+	time:intervalIn kb:ProperInterval-6a3cbd9f-b177-4e90-ba3b-a198f563aa8a ;
+	.
+
+kb:ProperInterval-ec8303f4-2862-41b7-b6ee-b6f3f6e8251e
+	a time:ProperInterval ;
 	.
 
 kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976
@@ -6406,8 +7409,61 @@ kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245
 	uco-observable:observableCreatedTime "2023-08-16T16:45:38+00:00"^^xsd:dateTime ;
 	.
 
+kb:Quality-4b765c1f-362c-4562-a50f-7bb781fe4737
+	a drafting:Quality ;
+	obo:BFO_0000197 kb:ContentData-179c7e84-f72d-47f7-b6f3-3f4a1f0938bd ;
+	gufo:hasReifiedQualityValue kb:Hash-4c3d0623-d365-4c69-a1a1-01523c6502fa ;
+	gufo:inheresIn kb:ContentData-179c7e84-f72d-47f7-b6f3-3f4a1f0938bd ;
+	.
+
+kb:QualityType-3a0ff32d-9743-46e4-bdcd-e86777f98551
+	a
+		gufo:Kind ,
+		owl:Class
+		;
+	rdfs:subClassOf gufo:Quality ;
+	.
+
+kb:QualityValueAttributionSituation-3ec99074-3cd1-4d24-a2c0-2339850ab9d2
+	a gufo:QualityValueAttributionSituation ;
+	gufo:concernsQualityType drafting:Bearing ;
+	gufo:concernsQualityValue "90 degrees" ;
+	gufo:hasBeginPoint kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047 ;
+	gufo:hasEndPoint kb:Instant-c9ae3fce-ddcb-416b-971b-559c2f5bee95 ;
+	.
+
+kb:QualityValueAttributionSituation-872b7dd1-b49a-4278-bfdf-df507493d63f
+	a gufo:QualityValueAttributionSituation ;
+	gufo:concernsQualityType drafting:Velocity ;
+	gufo:concernsQualityValue "50 km/h" ;
+	gufo:hasBeginPoint kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047 ;
+	gufo:hasEndPoint kb:Instant-c9ae3fce-ddcb-416b-971b-559c2f5bee95 ;
+	.
+
+kb:QualityValueAttributionSituation-d760ff9f-8b16-4628-9236-fbe77b372e27
+	a gufo:QualityValueAttributionSituation ;
+	gufo:concernsQualityType kb:QualityType-3a0ff32d-9743-46e4-bdcd-e86777f98551 ;
+	.
+
 kb:RasterPicture1-b67308c0-c31b-41a6-805a-10ec526ec8bc
 	a uco-observable:RasterPicture ;
+	.
+
+kb:RealizableEntity-32a470e8-9146-4b33-b547-80c113bbc6f2
+	a obo:BFO_0000017 ;
+	.
+
+kb:RealizableEntity-451a5886-c9c4-4555-9f80-68577105ca18
+	a obo:BFO_0000017 ;
+	.
+
+kb:RealizableEntity-59fddb7a-a9d8-48ad-bf6e-3ecd1b576a5b
+	a obo:BFO_0000017 ;
+	obo:BFO_0000054 kb:Process-93c8ddcf-d117-41dc-9b37-f184c31a1e73 ;
+	.
+
+kb:RelationalQuality-8fa06615-f63c-4c81-a841-d19f838e682e
+	a obo:BFO_0000145 ;
 	.
 
 kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990
@@ -6464,6 +7520,14 @@ kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82
 	uco-core:kindOfRelationship "Corresponds_to" ;
 	uco-core:source kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4 ;
 	uco-core:target kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1 ;
+	.
+
+kb:Relationship-2be6b54a-a051-499c-9dcd-63d17d813293
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within" ;
+	uco-core:source kb:ContentData-0571dfb7-889e-4e8c-bec7-47a62ab9286f ;
+	uco-core:target kb:ContentData-3f13e43a-a3f4-4dcc-8db2-e934b24890ec ;
 	.
 
 kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262
@@ -6790,6 +7854,32 @@ kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81
 	uco-core:name "Forensic Expert" ;
 	.
 
+kb:Role-fe963f11-c4fb-4088-b452-c6b62ee7aab0
+	a obo:BFO_0000023 ;
+	.
+
+kb:Site-4d09c7a0-1426-4b97-9ee0-1e410167e6e4
+	a obo:BFO_0000029 ;
+	obo:BFO_0000183 kb:ProcessBoundary-4ca1b875-d83a-462c-85e8-e32e280386ec ;
+	.
+
+kb:Site-c92e1487-b40d-471f-bdb3-9eac7691a9d0
+	a obo:BFO_0000029 ;
+	.
+
+kb:Site-c9897e8b-35f7-4428-8c3d-a63761d07545
+	a obo:BFO_0000029 ;
+	.
+
+kb:Site-d7c3a9aa-c3a6-4214-b568-88537feaa618
+	a obo:BFO_0000029 ;
+	.
+
+kb:Site-fdc896e0-45df-47b9-bf5d-46c8866f4b0f
+	a obo:BFO_0000029 ;
+	obo:BFO_0000183 kb:Process-38cce5b9-bbf6-4c67-9a09-3266ea007912 ;
+	.
+
 kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
 	a
 		uco-observable:File ,
@@ -6806,6 +7896,352 @@ kb:SoftwareFacet-247fe7a7-8434-4fca-8f9b-ac7e136f6ca5
 kb:SoftwareFacet-c0a75e42-9ca7-4133-9838-881b67304923
 	a uco-observable:SoftwareFacet ;
 	uco-observable:manufacturer kb:Organization-a94338c2-030a-493f-9d26-55cade656276 ;
+	.
+
+kb:SpatialObject-1324a6ba-7156-4615-a533-d26d11acd72f
+	a geo:SpatialObject ;
+	geo:ehContains kb:SpatialObject-14898011-ca4c-4970-b898-6db6d0e554b0 ;
+	.
+
+kb:SpatialObject-14898011-ca4c-4970-b898-6db6d0e554b0
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-17f1dfb7-588c-44fb-9c51-eac972b25e9c
+	a geo:SpatialObject ;
+	geo:ehCoveredBy kb:SpatialObject-2192999a-8832-4242-88b4-df5a42df4f92 ;
+	.
+
+kb:SpatialObject-2192999a-8832-4242-88b4-df5a42df4f92
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-2cf9caf2-1989-49e6-bfcc-988449ee5243
+	a geo:SpatialObject ;
+	geo:ehCovers kb:SpatialObject-2e27a7ff-1f2b-483f-be51-36b2f28abbc6 ;
+	.
+
+kb:SpatialObject-2e27a7ff-1f2b-483f-be51-36b2f28abbc6
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-2f31ae9d-5ba2-4237-9753-f5fa2d169f3c
+	a geo:SpatialObject ;
+	geo:ehDisjoint kb:SpatialObject-33ca8958-2d4f-4b6a-90c4-0940db068fb8 ;
+	.
+
+kb:SpatialObject-33ca8958-2d4f-4b6a-90c4-0940db068fb8
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-3c794284-dada-4d79-9826-cf05cceb5c5c
+	a geo:SpatialObject ;
+	geo:ehEquals kb:SpatialObject-3d40b6e9-ec90-4f9c-94c4-875b03dc8186 ;
+	.
+
+kb:SpatialObject-3d40b6e9-ec90-4f9c-94c4-875b03dc8186
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-3ebcd03a-ffb2-4700-9ab6-da6bd061b1cd
+	a geo:SpatialObject ;
+	geo:ehInside kb:SpatialObject-40543eb1-5bdb-4133-a548-76e5ec502f31 ;
+	.
+
+kb:SpatialObject-40543eb1-5bdb-4133-a548-76e5ec502f31
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-42845d0d-6527-49c4-b2f5-438bb6755146
+	a geo:SpatialObject ;
+	geo:ehMeet kb:SpatialObject-42f02316-8cb3-4e08-b953-a610ed263b55 ;
+	.
+
+kb:SpatialObject-42f02316-8cb3-4e08-b953-a610ed263b55
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-4bcc11ac-da41-4707-ba32-9be5931c461b
+	a geo:SpatialObject ;
+	geo:ehOverlap kb:SpatialObject-4e37154e-6a92-4b14-b607-ce028bb65cfe ;
+	.
+
+kb:SpatialObject-4e37154e-6a92-4b14-b607-ce028bb65cfe
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-4f3f5acb-9ae0-42a1-b325-bc64b51080fd
+	a geo:SpatialObject ;
+	geo:hasArea kb:Thing-5290d266-e7be-4082-afb3-c6e3bfc9ab46 ;
+	.
+
+kb:SpatialObject-676b0caa-7ffd-4e40-99ae-a6ddd63b4de6
+	a geo:SpatialObject ;
+	geo:hasLength kb:Thing-70c5c4a0-6933-4a15-8131-a0444538385e ;
+	.
+
+kb:SpatialObject-71cc650e-6b53-49e8-859c-5b660dc90f01
+	a geo:SpatialObject ;
+	geo:hasMetricArea "0e+00"^^xsd:double ;
+	.
+
+kb:SpatialObject-74d62b15-7d2e-471f-a86e-7f908aff92c1
+	a geo:SpatialObject ;
+	geo:hasMetricLength "0e+00"^^xsd:double ;
+	.
+
+kb:SpatialObject-7dfe0c62-5da0-4e01-bc30-4a91fcbefb80
+	a geo:SpatialObject ;
+	geo:hasMetricPerimeterLength "0e+00"^^xsd:double ;
+	.
+
+kb:SpatialObject-800a1fa8-24f0-42fa-a5aa-ca23d1eee4fb
+	a geo:SpatialObject ;
+	geo:hasMetricSize "0e+00"^^xsd:double ;
+	.
+
+kb:SpatialObject-8326a203-94cb-4b29-b7b1-04b22bd3105b
+	a geo:SpatialObject ;
+	geo:hasMetricVolume "0e+00"^^xsd:double ;
+	.
+
+kb:SpatialObject-870e98bb-64cc-4fd8-9d23-8b52b5b9de26
+	a geo:SpatialObject ;
+	geo:hasPerimeterLength kb:Thing-897806be-2c7c-44b9-98d0-accb2a97cbf2 ;
+	.
+
+kb:SpatialObject-897ff938-586f-4909-9620-2bc5c085e9c7
+	a geo:SpatialObject ;
+	geo:hasSize kb:Thing-8cd09fc8-df48-4b2a-9a91-2dd20c2f419e ;
+	.
+
+kb:SpatialObject-a4b886d5-0efb-4261-84a6-704b22c5c369
+	a geo:SpatialObject ;
+	geo:hasVolume kb:Thing-a94d1b87-25d6-4785-90e7-e93fc3a9a5e8 ;
+	.
+
+kb:SpatialObject-bdc1d206-a4b2-48f6-a1bf-ef6347c88390
+	a geo:SpatialObject ;
+	geo:rcc8dc kb:SpatialObject-c0565d61-f5b3-403a-871d-576bcf5d3361 ;
+	.
+
+kb:SpatialObject-c0565d61-f5b3-403a-871d-576bcf5d3361
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-c55aafd9-0285-4dad-99f2-578d963f98e7
+	a geo:SpatialObject ;
+	geo:rcc8ec kb:SpatialObject-c668a181-5456-4332-8091-6951ba9950a7 ;
+	.
+
+kb:SpatialObject-c668a181-5456-4332-8091-6951ba9950a7
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-c6d7656d-a0c3-4b75-a092-ddde43007835
+	a geo:SpatialObject ;
+	geo:rcc8eq kb:SpatialObject-c6de02a2-e05f-45ff-b614-cf9508dece0b ;
+	.
+
+kb:SpatialObject-c6de02a2-e05f-45ff-b614-cf9508dece0b
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-c7f61d56-e79b-4959-bce4-835e5b7ad68a
+	a geo:SpatialObject ;
+	geo:rcc8ntpp kb:SpatialObject-c996ad75-c4e7-49a1-a41d-f7accf86a98b ;
+	.
+
+kb:SpatialObject-c996ad75-c4e7-49a1-a41d-f7accf86a98b
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-ca47fbb0-ddcd-4b49-825b-0ea6d58c4330
+	a geo:SpatialObject ;
+	geo:rcc8ntppi kb:SpatialObject-cd79624b-db4b-4c93-b05f-c30995bf37f7 ;
+	.
+
+kb:SpatialObject-cd79624b-db4b-4c93-b05f-c30995bf37f7
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-cddfcad5-ee83-4614-9bb8-789d1e834f39
+	a geo:SpatialObject ;
+	geo:rcc8po kb:SpatialObject-cf51639a-c7ec-4237-80e0-47857f0795f7 ;
+	.
+
+kb:SpatialObject-cf51639a-c7ec-4237-80e0-47857f0795f7
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-cf907401-5967-4d6e-8bbe-aa097c6fe048
+	a geo:SpatialObject ;
+	geo:rcc8tpp kb:SpatialObject-d06dba03-990e-4e52-917b-5b5bdc38c307 ;
+	.
+
+kb:SpatialObject-d06dba03-990e-4e52-917b-5b5bdc38c307
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-d12f8f2f-d2f6-4144-a1d1-f441c5b5aa37
+	a geo:SpatialObject ;
+	geo:rcc8tppi kb:SpatialObject-d17aee85-8ea2-4f78-a561-cf4d4721ac39 ;
+	.
+
+kb:SpatialObject-d17aee85-8ea2-4f78-a561-cf4d4721ac39
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-d393cd75-3a87-4d9b-b638-84a811647fb8
+	a geo:SpatialObject ;
+	geo:sfContains kb:SpatialObject-d519c661-8a9a-4d52-8825-8b2799c765a9 ;
+	.
+
+kb:SpatialObject-d519c661-8a9a-4d52-8825-8b2799c765a9
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-d99bb1d2-585f-4d95-82c4-7e44be05498f
+	a geo:SpatialObject ;
+	geo:sfCrosses kb:SpatialObject-d9de431f-da5a-4511-8824-22ae055ce609 ;
+	.
+
+kb:SpatialObject-d9de431f-da5a-4511-8824-22ae055ce609
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-d9f62382-ff07-49cd-971f-c920afe2fb43
+	a geo:SpatialObject ;
+	geo:sfDisjoint kb:SpatialObject-dc72e6c6-f7f9-4fc7-bc0d-8587beb7dad7 ;
+	.
+
+kb:SpatialObject-dc72e6c6-f7f9-4fc7-bc0d-8587beb7dad7
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-dc8bc2a6-5e9e-4a0a-a9c7-83c3e53c63d6
+	a geo:SpatialObject ;
+	geo:sfEquals kb:SpatialObject-defdfd6f-84cf-47a1-ba9b-01e6deae42ca ;
+	.
+
+kb:SpatialObject-defdfd6f-84cf-47a1-ba9b-01e6deae42ca
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-dfc9a541-ef6c-4d63-848d-1d0b9ca1ae82
+	a geo:SpatialObject ;
+	geo:sfIntersects kb:SpatialObject-e1d3fded-5ea3-42cb-96d6-392bb86c0132 ;
+	.
+
+kb:SpatialObject-e1d3fded-5ea3-42cb-96d6-392bb86c0132
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-e7096a29-02ae-4244-89ed-d4a4843a4cd4
+	a geo:SpatialObject ;
+	geo:sfOverlaps kb:SpatialObject-e7809e0c-4bf6-43be-90b3-159ffb35d078 ;
+	.
+
+kb:SpatialObject-e7809e0c-4bf6-43be-90b3-159ffb35d078
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-e80b6ac0-a868-4b73-a114-502a18e84ad9
+	a geo:SpatialObject ;
+	geo:sfTouches kb:SpatialObject-e8a53a76-12a6-4020-9fab-74fe835de297 ;
+	.
+
+kb:SpatialObject-e8a53a76-12a6-4020-9fab-74fe835de297
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialObject-ea3a1bf7-b29b-46ba-b0e2-4a6ac107f9a5
+	a geo:SpatialObject ;
+	geo:sfWithin kb:SpatialObject-ec1472bd-c739-4a1a-beeb-1dd138966a2a ;
+	.
+
+kb:SpatialObject-ec1472bd-c739-4a1a-beeb-1dd138966a2a
+	a geo:SpatialObject ;
+	.
+
+kb:SpatialRegion-86e7de31-c892-4429-9834-507b28d79211
+	a obo:BFO_0000006 ;
+	.
+
+kb:SpatialRegion-b919da41-16c8-4dcd-820b-03850d6b6754
+	a obo:BFO_0000006 ;
+	.
+
+kb:SpatiotemporalRegion-06e84871-0779-4cea-8d37-a11e0f874638
+	a obo:BFO_0000011 ;
+	.
+
+kb:SpatiotemporalRegion-a14d7915-483c-4240-8b02-6cf2cf61e229
+	a obo:BFO_0000011 ;
+	obo:BFO_0000153 kb:TemporalRegion-58089219-8603-42b8-8289-1bec56535be7 ;
+	.
+
+kb:SpatiotemporalRegion-e6c6f486-8284-40c2-923c-01e7f27a2ee1
+	a obo:BFO_0000011 ;
+	obo:BFO_0000216 kb:SpatialRegion-b919da41-16c8-4dcd-820b-03850d6b6754 ;
+	.
+
+kb:SpatiotemporalRegion-f48abbfe-07a4-47d6-b99d-fc11d144a99d
+	a obo:BFO_0000011 ;
+	.
+
+kb:SpecificallyDependentContinuant-015a5018-10fb-4256-8fee-018733d6162f
+	a obo:BFO_0000020 ;
+	obo:BFO_0000195 kb:SpecificallyDependentContinuant-8d77cf78-b800-4c25-9b11-81d1ef00d169 ;
+	.
+
+kb:SpecificallyDependentContinuant-15d80310-3026-440a-869d-abcf5eef8932
+	a obo:BFO_0000020 ;
+	obo:BFO_0000059 kb:GenericallyDependentContinuant-e5ba7328-fd1a-4d08-95b8-bd994d0493aa ;
+	.
+
+kb:SpecificallyDependentContinuant-507e8e36-3cf0-4b45-aff8-a9316a6dc9c0
+	a obo:BFO_0000020 ;
+	.
+
+kb:SpecificallyDependentContinuant-6a5f76c8-f40a-490d-b7ef-7da8681aaf9d
+	a obo:BFO_0000020 ;
+	obo:BFO_0000056 kb:Process-ac3f725c-2594-41aa-b29b-fa2fb44c1cf8 ;
+	.
+
+kb:SpecificallyDependentContinuant-7117f099-4321-49de-a6e6-65f339259f67
+	a obo:BFO_0000020 ;
+	.
+
+kb:SpecificallyDependentContinuant-73ce2dee-e25d-4b3f-b38d-98037c9156c6
+	a obo:BFO_0000020 ;
+	obo:BFO_0000197 kb:IndependentContinuant-86e6bef9-873e-4b9f-b464-a1a39e3e8493 ;
+	.
+
+kb:SpecificallyDependentContinuant-7c16229b-58b7-45dc-9789-53dd7583fc74
+	a obo:BFO_0000020 ;
+	obo:BFO_0000194 kb:SpecificallyDependentContinuant-d7da90b5-864c-4771-81a6-5d8fedde9994 ;
+	.
+
+kb:SpecificallyDependentContinuant-8d77cf78-b800-4c25-9b11-81d1ef00d169
+	a obo:BFO_0000020 ;
+	.
+
+kb:SpecificallyDependentContinuant-ced2fb35-3e5c-431e-8cd1-ecb4f79ad057
+	a obo:BFO_0000020 ;
+	.
+
+kb:SpecificallyDependentContinuant-d7da90b5-864c-4771-81a6-5d8fedde9994
+	a obo:BFO_0000020 ;
+	.
+
+kb:SpecificallyDependentContinuant-fbd4c247-033d-4a85-8704-09fcac8a30f7
+	a obo:BFO_0000020 ;
+	obo:BFO_0000195 kb:IndependentContinuant-edf2432e-2630-406c-8e12-134210bb8522 ;
+	.
+
+kb:SpecificallyDependentContinuant-fe0b19d8-5d41-4011-ae47-9f82ff972865
+	a obo:BFO_0000020 ;
 	.
 
 kb:Start-028e0492-daaa-5d70-8f78-1d85cd1e089f
@@ -7083,14 +8519,80 @@ kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0
 		;
 	.
 
+kb:TemporalEntity-87790b29-70f9-4093-ba98-f0f8f159190e
+	a time:TemporalEntity ;
+	time:hasBeginning time:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a ;
+	.
+
+kb:TemporalEntity-a872dbc9-78ff-46e0-b6ed-64a59d436598
+	a time:TemporalEntity ;
+	time:hasEnd time:Instant-15a735b3-b9ef-4eb7-947d-a0deb8cc8ec7 ;
+	.
+
+kb:TemporalInstant-080014e3-e491-4103-add7-4d3e3883ad82
+	a obo:BFO_0000203 ;
+	obo:BFO_0000223 kb:TemporalRegion-b2460c2c-bcc4-41d7-aa74-af40f8cce598 ;
+	.
+
 kb:TemporalInstant-19f182b4-6bc8-4ad8-a456-56fa15aec976
 	a obo:BFO_0000203 ;
 	rdfs:label "T0" ;
 	.
 
+kb:TemporalInstant-1b51851b-a496-4e2f-9888-56c2415fa7bb
+	a obo:BFO_0000203 ;
+	.
+
 kb:TemporalInstant-3299e3a8-8d3e-43c7-a142-14bb41638669
 	a obo:BFO_0000203 ;
 	rdfs:label "T1" ;
+	.
+
+kb:TemporalInstant-7c25b4f4-dc0a-4d5d-ba12-0f80a8e1b172
+	a obo:BFO_0000203 ;
+	obo:BFO_0000221 kb:TemporalRegion-a37d65fb-e615-43f3-ba39-e7b76dffa981 ;
+	.
+
+kb:TemporalInstant-deadfc20-b0f9-47cf-b07e-6603cf75c3eb
+	a obo:BFO_0000203 ;
+	.
+
+kb:TemporalInterval-d5e244a5-b364-48a6-b79d-392c6792e207
+	a obo:BFO_0000202 ;
+	.
+
+kb:TemporalRegion-512c277c-9fbd-46d3-af9d-a72d76b3fd1f
+	a obo:BFO_0000008 ;
+	.
+
+kb:TemporalRegion-58089219-8603-42b8-8289-1bec56535be7
+	a obo:BFO_0000008 ;
+	.
+
+kb:TemporalRegion-767887bf-17bb-43c8-b06d-0dac0f0604a1
+	a obo:BFO_0000008 ;
+	.
+
+kb:TemporalRegion-860568c1-203f-4762-a24b-c975c43cf89a
+	a obo:BFO_0000008 ;
+	.
+
+kb:TemporalRegion-a13a3f1d-a373-4026-a56a-f72cecd043be
+	a obo:BFO_0000008 ;
+	obo:BFO_0000222 kb:TemporalInstant-1b51851b-a496-4e2f-9888-56c2415fa7bb0 ;
+	.
+
+kb:TemporalRegion-a37d65fb-e615-43f3-ba39-e7b76dffa981
+	a obo:BFO_0000008 ;
+	.
+
+kb:TemporalRegion-b2460c2c-bcc4-41d7-aa74-af40f8cce598
+	a obo:BFO_0000008 ;
+	.
+
+kb:TemporalRegion-c6572eee-2c27-454e-bf56-45c1f6cfb4cf
+	a obo:BFO_0000008 ;
+	obo:BFO_0000224 kb:TemporalInstant-deadfc20-b0f9-47cf-b07e-6603cf75c3eb ;
 	.
 
 kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8
@@ -7099,6 +8601,47 @@ kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8
 	gufo:concernsNonRigidType ex:Student ;
 	gufo:hasBeginPointInXSDDateTimeStamp "2018-09-01T00:00Z"^^xsd:dateTimeStamp ;
 	gufo:hasEndPointInXSDDateTimeStamp "2022-06-16T00:00:00Z"^^xsd:dateTimeStamp ;
+	.
+
+kb:Thing-3e09d460-5076-4076-a583-821fe1b0dff4
+	foaf:depiction kb:Image-98525b14-302b-44a1-8c35-82b758531d98 ;
+	.
+
+kb:Thing-5290d266-e7be-4082-afb3-c6e3bfc9ab46
+	a owl:Thing ;
+	.
+
+kb:Thing-6e734b5d-21fc-4604-91b3-015da5aeac76
+	a owl:Thing ;
+	time:hasTime time:TemporalEntity-c379e54b-540a-4c60-b709-3689f5a273c1 ;
+	.
+
+kb:Thing-70c5c4a0-6933-4a15-8131-a0444538385e
+	a owl:Thing ;
+	.
+
+kb:Thing-897806be-2c7c-44b9-98d0-accb2a97cbf2
+	a owl:Thing ;
+	.
+
+kb:Thing-8cd09fc8-df48-4b2a-9a91-2dd20c2f419e
+	a owl:Thing ;
+	.
+
+kb:Thing-9c1b9d56-2d8f-4e39-83f5-8beb965c200f
+	a owl:Thing ;
+	.
+
+kb:Thing-a45376c3-8af6-4a86-9adc-18382146c5d1
+	a owl:Thing ;
+	.
+
+kb:Thing-a94d1b87-25d6-4785-90e7-e93fc3a9a5e8
+	a owl:Thing ;
+	.
+
+kb:ThreeDimensionalSpatialRegion-854b00e5-957a-409b-9d96-e8d8d19ff938
+	a obo:BFO_0000028 ;
 	.
 
 kb:TimeBoundThing-b1fd892f-f190-4e15-a928-6c949867c59d
@@ -7138,6 +8681,14 @@ kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696
 	rdfs:seeAlso <https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management> ;
 	uco-core:hasFacet kb:SoftwareFacet-c0a75e42-9ca7-4133-9838-881b67304923 ;
 	uco-core:name "Disk Management" ;
+	.
+
+kb:TwoDimensionalContinuantFiatBoundary-75f6994e-9174-4871-a931-5a4db0eecad9
+	a obo:BFO_0000146 ;
+	.
+
+kb:TwoDimensionalSpatialRegion-99363511-fdbd-45ec-bdab-80853114817a
+	a obo:BFO_0000009 ;
 	.
 
 kb:URL-05e18d67-0d0d-4522-8c73-c4fc73a37585
@@ -8370,6 +9921,19 @@ kb:Usage-ff17a5b0-fe8b-5375-a00a-496ae6eae779
 	prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
 	.
 
+kb:Vehicle-c7e910e8-4bed-473e-ad74-3df3eb63cbcc
+	a drafting:Vehicle ;
+	gufo:standsInQualifiedAttribution
+		kb:QualityValueAttributionSituation-3ec99074-3cd1-4d24-a2c0-2339850ab9d2 ,
+		kb:QualityValueAttributionSituation-872b7dd1-b49a-4278-bfdf-df507493d63f
+		;
+	.
+
+kb:Velocity-62bc6232-b570-45d7-b382-d4e0a36fceb9
+	a drafting:Velocity ;
+	gufo:inheresIn kb:Vehicle-c7e910e8-4bed-473e-ad74-3df3eb63cbcc ;
+	.
+
 kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8
 	a uco-observable:Volume ;
 	uco-core:hasFacet kb:volume-facet-87beebe0-20fc-4ab3-a8f5-9b06529ef271 ;
@@ -8378,6 +9942,14 @@ kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8
 kb:WindowsRegistryKey-684af874-4c95-4be9-9c58-3eda29b94443
 	a uco-observable:WindowsRegistryKey ;
 	uco-core:hasFacet kb:windows-registry-key-facet-840333f7-e6b8-415e-b08e-8b33cc7dcc90 ;
+	.
+
+kb:ZeroDimensionalSpatialRegion-31a7b272-d929-4926-ac91-5f1feea26bae
+	a obo:BFO_0000018 ;
+	.
+
+kb:ZeroDimensionalTemporalRegion-b0d91a58-dc64-4dc0-9b3a-ed6a54da84d7
+	a obo:BFO_0000148 ;
 	.
 
 kb:a83adacb-ceaf-4b4b-b078-7c12dce990b9
@@ -20972,6 +22544,10 @@ kb:organization-a177a5d6-118c-419f-bca3-03af8000d121
 	uco-core:name "ACME" ;
 	.
 
+kb:organization-a97a0863-9361-4144-8b71-367ecf42a1ed
+	a uco-identity:Organization ;
+	.
+
 kb:organization-att-d60ffcec-4d89-48a1-b264-9cd4bc700a70
 	a uco-identity:Organization ;
 	uco-core:name "AT&T" ;
@@ -21385,6 +22961,10 @@ kb:pelopia-d4b29a40-998b-4660-b67e-2ebb9683893d
 kb:person-38cb4243-bc7e-48a4-91b0-9d296b8f862a
 	a uco-identity:Person ;
 	uco-core:name "Harald" ;
+	.
+
+kb:person-5c65118c-f8f6-484b-b77b-ee35917980e0
+	a uco-identity:Person ;
 	.
 
 kb:person-82684209-0ee5-45d9-b873-125d2ca63919
@@ -25465,6 +27045,10 @@ kb:volume-facet-87beebe0-20fc-4ab3-a8f5-9b06529ef271
 	uco-observable:volumeID "34 A2 74 12" ;
 	.
 
+kb:web-page-058600ae-a8a1-4c0f-acdc-70113687531a
+	a uco-observable:WebPage ;
+	.
+
 kb:whatsapp-868abc08-8c21-11e9-934e-0c4de9c21b53
 	a
 		uco-observable:Application ,
@@ -26256,6 +27840,18 @@ ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c
 		uco-observable:WindowsProcess
 		;
 	uco-core:description "Browser process" ;
+	.
+
+time:Instant-15a735b3-b9ef-4eb7-947d-a0deb8cc8ec7
+	a time:Instant ;
+	.
+
+time:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a
+	a time:Instant ;
+	.
+
+time:TemporalEntity-c379e54b-540a-4c60-b709-3689f5a273c1
+	a time:TemporalEntity ;
 	.
 
 wd:Q162345

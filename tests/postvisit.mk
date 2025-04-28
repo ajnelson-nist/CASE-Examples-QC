@@ -42,6 +42,16 @@ used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)
 
 kb_ttls := \
   $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-BFO/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-FOAF/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-GeoSPARQL/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-gufo/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-Time/dependencies/CDO-Shapes-Time/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-Time/tests/exemplars.ttl \
   CASE-Examples/examples/illustrations/kb.ttl \
   casework.github.io/examples/kb.ttl
 
