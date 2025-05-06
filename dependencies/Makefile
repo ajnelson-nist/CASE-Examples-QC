@@ -49,6 +49,10 @@ CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl: \
 	touch -c $@
 	test -r $@
 
+CASE-Corpora/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl: \
+  CASE-Corpora/dependencies/dependencies.ttl
+	test -r $@
+
 CASE-Corpora/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl: \
   CASE-Corpora/dependencies/dependencies.ttl
 	test -r $@
@@ -76,6 +80,7 @@ clean:
 
 imports-transitive.ttl: \
   CASE-Corpora/catalog/shared.ttl \
+  CASE-Corpora/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl \
   CASE-Corpora/dependencies/dependencies.ttl \
   CASE-Corpora/ontology/case-corpora.ttl \
   CASE-Corpora/shapes/shapes.ttl \
