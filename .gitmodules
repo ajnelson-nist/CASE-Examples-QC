@@ -18,6 +18,10 @@
 	path = dependencies/UCO-Profile-GeoSPARQL
 	url = https://github.com/ucoProject/UCO-Profile-GeoSPARQL.git
 	branch = main
+[submodule "dependencies/UCO-Profile-PROV-O"]
+	path = dependencies/UCO-Profile-PROV-O
+	url = https://github.com/ucoProject/UCO-Profile-PROV-O.git
+	branch = main
 [submodule "dependencies/UCO-Profile-Time"]
 	path = dependencies/UCO-Profile-Time
 	url = https://github.com/ucoProject/UCO-Profile-Time.git

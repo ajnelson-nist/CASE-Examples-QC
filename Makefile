@@ -110,6 +110,16 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/UCO-Profile-GeoSPARQL \
 	  .git_submodule_init.done.log
+	# UCO-Profile-PROV-O
+	test -r dependencies/UCO-Profile-PROV-O/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/UCO-Profile-PROV-O
+	@test -r dependencies/UCO-Profile-PROV-O/README.md \
+	  || (echo "ERROR:Makefile:UCO-Profile-PROV-O submodule README.md file not found, even though UCO-Profile-PROV-O submodule initialized." >&2 ; exit 2)
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-PROV-O \
+	  .git_submodule_init.done.log
 	# UCO-Profile-Time
 	test -r dependencies/UCO-Profile-Time/README.md \
 	  || git submodule update \

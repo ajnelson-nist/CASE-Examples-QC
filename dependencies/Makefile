@@ -49,10 +49,6 @@ CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl: \
 	touch -c $@
 	test -r $@
 
-CASE-Corpora/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl: \
-  CASE-Corpora/dependencies/dependencies.ttl
-	test -r $@
-
 CASE-Corpora/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl: \
   CASE-Corpora/dependencies/dependencies.ttl
 	test -r $@
@@ -80,7 +76,6 @@ clean:
 
 imports-transitive.ttl: \
   CASE-Corpora/catalog/shared.ttl \
-  CASE-Corpora/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl \
   CASE-Corpora/dependencies/dependencies.ttl \
   CASE-Corpora/ontology/case-corpora.ttl \
   CASE-Corpora/shapes/shapes.ttl \
@@ -98,6 +93,9 @@ imports-transitive.ttl: \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl \
   UCO-Profile-GeoSPARQL/ontology/uco-geo.ttl \
   UCO-Profile-GeoSPARQL/shapes/sh-uco-geo.ttl \
+  UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
+  UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl \
+  UCO-Profile-PROV-O/ontology/uco-prov-o.ttl \
   UCO-Profile-Time/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
   UCO-Profile-Time/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
   UCO-Profile-Time/ontology/uco-time.ttl \
