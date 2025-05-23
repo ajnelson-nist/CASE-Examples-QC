@@ -6223,8 +6223,35 @@ kb:IndependentContinuant-fde381ef-f922-40e1-b878-071b809b48dd
 	obo:BFO_0000210 kb:SpatialRegion-86e7de31-c892-4429-9834-507b28d79211 ;
 	.
 
+kb:Instant-0180e20a-3fc3-48db-a5bf-2b53246638e8
+	a time:Instant ;
+	.
+
+kb:Instant-02f01c68-8888-4d25-b353-16f95a9b696b
+	a time:Instant ;
+	time:after kb:Instant-0180e20a-3fc3-48db-a5bf-2b53246638e8 ;
+	.
+
+kb:Instant-128fc0de-1d57-440a-b85a-5cdef1df44d2
+	a time:Instant ;
+	.
+
+kb:Instant-130657a0-3221-4ad1-b34a-f41b4a429749
+	a time:Instant ;
+	time:after kb:Instant-128fc0de-1d57-440a-b85a-5cdef1df44d2 ;
+	.
+
 kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047
 	a time:Instant ;
+	.
+
+kb:Instant-25b30b38-af0f-4f87-8936-537e52ec06b1
+	a time:Instant ;
+	.
+
+kb:Instant-264e96c9-aa82-48c4-b0f7-34e87b61fbd0
+	a time:Instant ;
+	time:after kb:Instant-25b30b38-af0f-4f87-8936-537e52ec06b1 ;
 	.
 
 kb:Instant-2918592a-9d87-4b30-acbc-521a19f97fcd
@@ -6232,11 +6259,33 @@ kb:Instant-2918592a-9d87-4b30-acbc-521a19f97fcd
 	time:inXSDDateTimeStamp "2023-11-22T15:30:00Z"^^xsd:dateTimeStamp ;
 	.
 
+kb:Instant-38a01481-2a69-4e4e-9ce2-6a55643ed373
+	a time:Instant ;
+	.
+
+kb:Instant-3aea3fe6-b1da-4019-a576-02d4b5765a0d
+	a time:Instant ;
+	time:after kb:Instant-38a01481-2a69-4e4e-9ce2-6a55643ed373 ;
+	.
+
+kb:Instant-435e90ab-ad14-4104-bd22-c96844136683
+	a time:Instant ;
+	.
+
+kb:Instant-450226bc-bf74-4287-abc1-ed1e1d7652d5
+	a time:Instant ;
+	time:after kb:Instant-435e90ab-ad14-4104-bd22-c96844136683 ;
+	.
+
 kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b
 	a time:Instant ;
 	rdfs:label "T1" ;
 	rdfs:comment "The instant that is the end of E." ;
 	time:inXSDDateTimeStamp "2021-02-03T04:05:06.7890Z"^^xsd:dateTimeStamp ;
+	.
+
+kb:Instant-8f397425-81cd-45d4-a27f-ed7b8833228a
+	a time:Instant ;
 	.
 
 kb:Instant-9a688ff3-df05-4151-b68d-c056f1bde072
@@ -6255,6 +6304,10 @@ kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b
 	rdfs:label "T1" ;
 	rdfs:comment "The instant that is the end of E." ;
 	ex:hasTimestamp "2021-02-03T04:05:06.789000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Instant-acd2ab02-7468-4ae8-8ef3-f03c109852bd
+	a time:Instant ;
 	.
 
 kb:Instant-c306e8e7-30b1-4dda-b039-fda00d20b2b0
@@ -6278,11 +6331,48 @@ kb:Instant-fe358785-e77f-436a-bb03-157286c7e476
 	time:inXSDDate "2020-01-01"^^xsd:date ;
 	.
 
+kb:Interval-119f05f1-8049-4556-86c4-c7cabcfa7fbf
+	a time:Interval ;
+	rdfs:comment "This Interval can be entailed as a ProperInterval from having, in asserted order, an instant beginning it and inside it."@en ;
+	time:hasBeginning kb:Instant-128fc0de-1d57-440a-b85a-5cdef1df44d2 ;
+	time:inside kb:Instant-130657a0-3221-4ad1-b34a-f41b4a429749 ;
+	.
+
+kb:Interval-2377e0a2-a983-44d6-b5f8-a2a4538d6819
+	a time:Interval ;
+	rdfs:comment "This Interval can be entailed as a ProperInterval from having, in asserted order, an instant beginning it and ending it."@en ;
+	time:hasBeginning kb:Instant-25b30b38-af0f-4f87-8936-537e52ec06b1 ;
+	time:hasEnd kb:Instant-264e96c9-aa82-48c4-b0f7-34e87b61fbd0 ;
+	.
+
+kb:Interval-3137182b-f4a2-46aa-983b-092aeb0aa56e
+	a time:Interval ;
+	rdfs:comment "This Interval can be entailed as an Instant from having the same instant as beginning and end."@en ;
+	time:hasBeginning kb:Instant-acd2ab02-7468-4ae8-8ef3-f03c109852bd ;
+	time:hasEnd kb:Instant-acd2ab02-7468-4ae8-8ef3-f03c109852bd ;
+	.
+
 kb:Interval-336d4db4-727e-4694-8bf0-5902c6ae504f
 	a time:Interval ;
 	time:hasBeginning kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047 ;
 	time:hasEnd kb:Instant-c9ae3fce-ddcb-416b-971b-559c2f5bee95 ;
 	time:inside kb:Instant-2918592a-9d87-4b30-acbc-521a19f97fcd ;
+	.
+
+kb:Interval-33e90e08-7045-4369-88cd-68e96b96967c
+	a time:Interval ;
+	rdfs:comment "This Interval can be entailed as a ProperInterval from having, in asserted order, different instants inside it."@en ;
+	time:inside
+		kb:Instant-38a01481-2a69-4e4e-9ce2-6a55643ed373 ,
+		kb:Instant-3aea3fe6-b1da-4019-a576-02d4b5765a0d
+		;
+	.
+
+kb:Interval-422c1878-dd0b-42b7-8975-42b28106a917
+	a time:Interval ;
+	rdfs:comment "This Interval can be entailed as a ProperInterval from having, in asserted order, an instant inside it and ending it."@en ;
+	time:hasEnd kb:Instant-450226bc-bf74-4287-abc1-ed1e1d7652d5 ;
+	time:inside kb:Instant-435e90ab-ad14-4104-bd22-c96844136683 ;
 	.
 
 kb:Interval-9940bc62-e795-4923-bc2e-a83197211b6b
@@ -8519,9 +8609,23 @@ kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0
 		;
 	.
 
+kb:TemporalEntity-00947113-902d-4550-9c2c-f6175b31ef19
+	a time:Interval ;
+	rdfs:comment "This TemporalEntity can be entailed as a ProperInterval from having, in asserted order, an instant beginning it and ending it."@en ;
+	time:hasBeginning kb:Instant-0180e20a-3fc3-48db-a5bf-2b53246638e8 ;
+	time:hasEnd kb:Instant-02f01c68-8888-4d25-b353-16f95a9b696b ;
+	.
+
 kb:TemporalEntity-87790b29-70f9-4093-ba98-f0f8f159190e
 	a time:TemporalEntity ;
 	time:hasBeginning time:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a ;
+	.
+
+kb:TemporalEntity-906144d4-4663-4eb0-84f0-cdb780cef154
+	a time:TemporalEntity ;
+	rdfs:comment "This TemporalEntity can be entailed as an Instant and (0-duration) Interval from having the same instant as beginning and end."@en ;
+	time:hasBeginning kb:Instant-8f397425-81cd-45d4-a27f-ed7b8833228a ;
+	time:hasEnd kb:Instant-8f397425-81cd-45d4-a27f-ed7b8833228a ;
 	.
 
 kb:TemporalEntity-a872dbc9-78ff-46e0-b6ed-64a59d436598
