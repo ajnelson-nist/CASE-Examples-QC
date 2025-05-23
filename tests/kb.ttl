@@ -6299,6 +6299,10 @@ kb:Instant-9c248bb3-ea05-4ef0-9ac7-b68a99d5c07a
 	time:inXSDDateTimeStamp "2020-01-02T03:04:05.6789Z"^^xsd:dateTimeStamp ;
 	.
 
+kb:Instant-9c8a3c04-11ee-46a7-b320-8c5abe28b5cc
+	a drafting:Instant ;
+	.
+
 kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b
 	a ex:Instant ;
 	rdfs:label "T1" ;
