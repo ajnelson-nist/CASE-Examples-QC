@@ -153,7 +153,6 @@ kb-prov-time.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# TODO - After release of CASE 1.4.0, use --allow-infos instead of --allow-warnings.
 kb_validation-develop.ttl: \
   $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop.ttl \
   deactivate_uuid_suggestion.ttl \
@@ -161,7 +160,7 @@ kb_validation-develop.ttl: \
 	rm -f __$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-warnings \
+	    --allow-infos \
 	    --built-version none \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop.ttl \
 	    --ontology-graph deactivate_uuid_suggestion.ttl \
@@ -179,7 +178,6 @@ kb_validation-develop.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# TODO - After release of CASE 1.4.0, use --allow-infos instead of --allow-warnings.
 kb_validation-develop-2.0.0.ttl: \
   $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
   deactivate_uuid_suggestion.ttl \
@@ -187,7 +185,7 @@ kb_validation-develop-2.0.0.ttl: \
 	rm -f __$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-warnings \
+	    --allow-infos \
 	    --built-version none \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl \
 	    --ontology-graph deactivate_uuid_suggestion.ttl \

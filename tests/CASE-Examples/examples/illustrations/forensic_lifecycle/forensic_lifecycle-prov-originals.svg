@@ -9,59 +9,57 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 265.5)">
 <title>PROV&#45;O render</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-265.5 801.67,-265.5 801.67,4 -4,4"/>
-<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a -->
-<g id="node1" class="node">
-<title>_0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a</title>
-<g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/forensic_action&#45;e482197e&#45;50d4&#45;4ce6&#45;8240&#45;9ada303e65c0">
-<polygon fill="#9fb1fc" stroke="#0000ff" points="745.62,-178.25 308.12,-178.25 308.12,-120.75 745.62,-120.75 745.62,-178.25"/>
-<text text-anchor="middle" x="526.88" y="-160.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:forensic_action&#45;e482197e&#45;50d4&#45;4ce6&#45;8240&#45;9ada303e65c0</text>
-<text text-anchor="middle" x="526.88" y="-144.45" font-family="Times,serif" font-size="14.00">[2010&#45;01&#45;15T17:59:43.250000+00:00, 2010&#45;01&#45;15T19:59:43.250000+00:00]</text>
-<text text-anchor="middle" x="526.88" y="-127.95" font-family="Times,serif" font-size="14.00">seized</text>
-</a>
-</g>
-</g>
 <!-- _0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da -->
-<g id="node2" class="node">
+<g id="node1" class="node">
 <title>_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da</title>
-<g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/investigator&#45;ae05a88b&#45;780c&#45;45c9&#45;897b&#45;6fdf84b055a2">
+<g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/investigator&#45;ae05a88b&#45;780c&#45;45c9&#45;897b&#45;6fdf84b055a2">
 <polygon fill="#fed37f" stroke="black" points="776.42,-249.06 478.88,-261.5 181.33,-249.06 181.61,-228.94 776.14,-228.94 776.42,-249.06"/>
 <text text-anchor="middle" x="478.88" y="-238.45" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigator&#45;ae05a88b&#45;780c&#45;45c9&#45;897b&#45;6fdf84b055a2</text>
 </a>
 </g>
 </g>
-<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da -->
-<g id="edge1" class="edge">
-<title>_0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da</title>
-<path fill="none" stroke="#fed37f" d="M512.21,-178.6C505.52,-191.44 497.67,-206.47 491.28,-218.73"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="488.31,-216.84 486.79,-227.33 494.52,-220.08 488.31,-216.84"/>
-<text text-anchor="middle" x="543" y="-198" font-family="Times,serif" font-size="10.00">wasAssociatedWith</text>
+<!-- _ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05 -->
+<g id="node2" class="node">
+<title>_ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05</title>
+<g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/provenance_record&#45;6c0fda21&#45;5670&#45;4e4c&#45;9d37&#45;ce848a44aefb">
+<polygon fill="#cdc673" stroke="#808080" points="560,-73.5 557,-77.5 536,-77.5 533,-73.5 169.75,-73.5 169.75,0 560,0 560,-73.5"/>
+<text text-anchor="middle" x="364.88" y="-56.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance_record&#45;6c0fda21&#45;5670&#45;4e4c&#45;9d37&#45;ce848a44aefb</text>
+<text text-anchor="middle" x="364.88" y="-39.7" font-family="Times,serif" font-size="14.00">Exhibit &#45; ACME&#45;676553402357</text>
+<text text-anchor="middle" x="364.88" y="-7.2" font-family="Times,serif" font-size="14.00">Android Smartphone</text>
+</a>
+</g>
+</g>
+<!-- _ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da -->
+<g id="edge4" class="edge">
+<title>_ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da</title>
+<path fill="none" stroke="#fed37f" d="M277.11,-73.81C258.26,-85.85 240.75,-101.3 229.88,-120.75 217.4,-143.06 222.92,-153.66 229.88,-178.25 234.03,-192.94 235.15,-199.07 247.88,-207.5 259.93,-215.48 283.18,-221.73 310.46,-226.59"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="309.59,-230 320.03,-228.21 310.75,-223.09 309.59,-230"/>
+<text text-anchor="middle" x="264.38" y="-145.62" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
 </g>
 <!-- _357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
-<g id="node4" class="node">
+<g id="node3" class="node">
 <title>_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
-<g id="a_node4"><a xlink:title="ID &#45; http://www.w3.org/ns/prov#EmptyCollection">
+<g id="a_node3"><a xlink:title="ID &#45; http://www.w3.org/ns/prov#EmptyCollection">
 <polygon fill="#cdc673" stroke="#808080" points="163.75,-261.5 160.75,-265.5 139.75,-265.5 136.75,-261.5 0,-261.5 0,-225.5 163.75,-225.5 163.75,-261.5"/>
 <text text-anchor="middle" x="81.88" y="-238.45" font-family="Times,serif" font-size="14.00">ID &#45; prov:EmptyCollection</text>
 </a>
 </g>
 </g>
-<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
-<g id="edge2" class="edge">
-<title>_0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
-<path fill="none" stroke="#8b0000" d="M390.34,-178.73C320.56,-193.15 237.46,-210.33 175.1,-223.23"/>
-<polygon fill="#8b0000" stroke="#8b0000" points="174.67,-219.74 165.58,-225.19 176.08,-226.6 174.67,-219.74"/>
-<text text-anchor="middle" x="313.75" y="-198" font-family="Times,serif" font-size="10.00" fill="red">used</text>
+<!-- _ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
+<g id="edge5" class="edge">
+<title>_ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
+<path fill="none" stroke="black" d="M227.86,-73.9C199.73,-85.67 171.82,-100.98 149.12,-120.75 120.13,-146.01 101.19,-186.96 91.01,-214.3"/>
+<polygon fill="black" stroke="black" points="87.73,-213.08 87.68,-223.67 94.32,-215.42 87.73,-213.08"/>
+<text text-anchor="middle" x="184" y="-145.62" font-family="Times,serif" font-size="10.00">wasDerivedFrom</text>
 </g>
-<!-- _aeff8c2b37cec9a71e7270f53fc0643b6353bcfe4dc845c0e8dc28c6daef9913 -->
-<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_aeff8c2b37cec9a71e7270f53fc0643b6353bcfe4dc845c0e8dc28c6daef9913 -->
-<!-- _ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05 -->
-<g id="node3" class="node">
-<title>_ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05</title>
-<g id="a_node3"><a xlink:title="ID &#45; http://example.org/kb/provenance_record&#45;6c0fda21&#45;5670&#45;4e4c&#45;9d37&#45;ce848a44aefb">
-<polygon fill="#cdc673" stroke="#808080" points="560,-73.5 557,-77.5 536,-77.5 533,-73.5 169.75,-73.5 169.75,0 560,0 560,-73.5"/>
-<text text-anchor="middle" x="364.88" y="-56.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance_record&#45;6c0fda21&#45;5670&#45;4e4c&#45;9d37&#45;ce848a44aefb</text>
-<text text-anchor="middle" x="364.88" y="-39.7" font-family="Times,serif" font-size="14.00">Exhibit &#45; ACME&#45;676553402357</text>
-<text text-anchor="middle" x="364.88" y="-7.2" font-family="Times,serif" font-size="14.00">Android Smartphone</text>
+<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a -->
+<g id="node4" class="node">
+<title>_0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a</title>
+<g id="a_node4"><a xlink:title="ID &#45; http://example.org/kb/forensic_action&#45;e482197e&#45;50d4&#45;4ce6&#45;8240&#45;9ada303e65c0">
+<polygon fill="#9fb1fc" stroke="#0000ff" points="745.62,-178.25 308.12,-178.25 308.12,-120.75 745.62,-120.75 745.62,-178.25"/>
+<text text-anchor="middle" x="526.88" y="-160.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:forensic_action&#45;e482197e&#45;50d4&#45;4ce6&#45;8240&#45;9ada303e65c0</text>
+<text text-anchor="middle" x="526.88" y="-144.45" font-family="Times,serif" font-size="14.00">[2010&#45;01&#45;15T17:59:43.250000+00:00, 2010&#45;01&#45;15T19:59:43.250000+00:00]</text>
+<text text-anchor="middle" x="526.88" y="-127.95" font-family="Times,serif" font-size="14.00">seized</text>
 </a>
 </g>
 </g>
@@ -72,22 +70,24 @@
 <polygon fill="darkgreen" stroke="darkgreen" points="474.09,-116.65 484.32,-119.41 478.04,-110.87 474.09,-116.65"/>
 <text text-anchor="middle" x="490.45" y="-93.25" font-family="Times,serif" font-size="10.00" fill="darkgreen">wasGeneratedBy</text>
 </g>
-<!-- _ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da -->
-<g id="edge4" class="edge">
-<title>_ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da</title>
-<path fill="none" stroke="#fed37f" d="M277.11,-73.81C258.26,-85.85 240.75,-101.3 229.88,-120.75 217.4,-143.06 222.92,-153.66 229.88,-178.25 234.03,-192.94 235.15,-199.07 247.88,-207.5 259.93,-215.48 283.18,-221.73 310.46,-226.59"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="309.59,-230 320.03,-228.21 310.75,-223.09 309.59,-230"/>
-<text text-anchor="middle" x="264.38" y="-145.62" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
-</g>
-<!-- _ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
-<g id="edge5" class="edge">
-<title>_ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
-<path fill="none" stroke="black" d="M227.86,-73.9C199.73,-85.67 171.82,-100.98 149.12,-120.75 120.13,-146.01 101.19,-186.96 91.01,-214.3"/>
-<polygon fill="black" stroke="black" points="87.73,-213.08 87.68,-223.67 94.32,-215.42 87.73,-213.08"/>
-<text text-anchor="middle" x="184" y="-145.62" font-family="Times,serif" font-size="10.00">wasDerivedFrom</text>
-</g>
 <!-- _ab198741c7800308080540a1950c04adb4504a925381d6b238682398de3a9f29 -->
 <!-- _ee22af04c2511dae54f553a26f3c6705bf7d4c5466b8b49ba9cb4e13601bdf05&#45;&gt;_ab198741c7800308080540a1950c04adb4504a925381d6b238682398de3a9f29 -->
+<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da -->
+<g id="edge1" class="edge">
+<title>_0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_0797acdf5bd6e51819e6cac9825daa4480f0f45f21c525308a254c91435180da</title>
+<path fill="none" stroke="#fed37f" d="M512.21,-178.6C505.52,-191.44 497.67,-206.47 491.28,-218.73"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="488.31,-216.84 486.79,-227.33 494.52,-220.08 488.31,-216.84"/>
+<text text-anchor="middle" x="543" y="-198" font-family="Times,serif" font-size="10.00">wasAssociatedWith</text>
+</g>
+<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
+<g id="edge2" class="edge">
+<title>_0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
+<path fill="none" stroke="#8b0000" d="M390.34,-178.73C320.56,-193.15 237.46,-210.33 175.1,-223.23"/>
+<polygon fill="#8b0000" stroke="#8b0000" points="174.67,-219.74 165.58,-225.19 176.08,-226.6 174.67,-219.74"/>
+<text text-anchor="middle" x="313.75" y="-198" font-family="Times,serif" font-size="10.00" fill="red">used</text>
+</g>
+<!-- _aeff8c2b37cec9a71e7270f53fc0643b6353bcfe4dc845c0e8dc28c6daef9913 -->
+<!-- _0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a&#45;&gt;_aeff8c2b37cec9a71e7270f53fc0643b6353bcfe4dc845c0e8dc28c6daef9913 -->
 <!-- _5b2e312265f6575b69958d50ff370d471f1abede657f5a0b06ca7cb71ee4d1af -->
 <!-- _5b2e312265f6575b69958d50ff370d471f1abede657f5a0b06ca7cb71ee4d1af&#45;&gt;_0729463b909eb204a10e386129d7d4d5179a33834a3d37319a677648c541c45a -->
 <!-- _5b2e312265f6575b69958d50ff370d471f1abede657f5a0b06ca7cb71ee4d1af&#45;&gt;_ab198741c7800308080540a1950c04adb4504a925381d6b238682398de3a9f29 -->
