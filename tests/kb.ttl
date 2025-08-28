@@ -6240,6 +6240,14 @@ kb:Instant-130657a0-3221-4ad1-b34a-f41b4a429749
 	time:after kb:Instant-128fc0de-1d57-440a-b85a-5cdef1df44d2 ;
 	.
 
+kb:Instant-15a735b3-b9ef-4eb7-947d-a0deb8cc8ec7
+	a time:Instant ;
+	.
+
+kb:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a
+	a time:Instant ;
+	.
+
 kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047
 	a time:Instant ;
 	.
@@ -7290,9 +7298,19 @@ kb:ProcessBoundary-e809c85a-5d1c-4d64-a13d-c6087ad9e27c
 	a obo:BFO_0000035 ;
 	.
 
+kb:ProperInterval-09f2112a-ce6c-4d75-bc85-aa740ceeffde
+	a time:ProperInterval ;
+	time:intervalBefore kb:ProperInterval-b0d5e848-ca0b-448b-8369-d2f70240d11d ;
+	.
+
 kb:ProperInterval-1374ad9e-9c65-4369-a656-7cf7b223c816
 	a time:ProperInterval ;
 	time:intervalDuring kb:ProperInterval-ec8303f4-2862-41b7-b6ee-b6f3f6e8251e ;
+	.
+
+kb:ProperInterval-54ecf10c-76b5-4d49-a9db-c635c121d63b
+	a time:ProperInterval ;
+	time:intervalAfter kb:ProperInterval-9c776316-8044-461d-b813-b23c5147e053 ;
 	.
 
 kb:ProperInterval-6224434f-df82-40e8-a78a-4faacfa6df1c
@@ -7314,6 +7332,14 @@ kb:ProperInterval-89561820-12d5-4fa9-8972-90b6877d2d92
 	.
 
 kb:ProperInterval-995ed778-ee4e-436b-84de-d374f37238a1
+	a time:ProperInterval ;
+	.
+
+kb:ProperInterval-9c776316-8044-461d-b813-b23c5147e053
+	a time:ProperInterval ;
+	.
+
+kb:ProperInterval-b0d5e848-ca0b-448b-8369-d2f70240d11d
 	a time:ProperInterval ;
 	.
 
@@ -8621,7 +8647,7 @@ kb:TemporalEntity-00947113-902d-4550-9c2c-f6175b31ef19
 
 kb:TemporalEntity-87790b29-70f9-4093-ba98-f0f8f159190e
 	a time:TemporalEntity ;
-	time:hasBeginning time:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a ;
+	time:hasBeginning kb:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a ;
 	.
 
 kb:TemporalEntity-906144d4-4663-4eb0-84f0-cdb780cef154
@@ -8633,7 +8659,11 @@ kb:TemporalEntity-906144d4-4663-4eb0-84f0-cdb780cef154
 
 kb:TemporalEntity-a872dbc9-78ff-46e0-b6ed-64a59d436598
 	a time:TemporalEntity ;
-	time:hasEnd time:Instant-15a735b3-b9ef-4eb7-947d-a0deb8cc8ec7 ;
+	time:hasEnd kb:Instant-15a735b3-b9ef-4eb7-947d-a0deb8cc8ec7 ;
+	.
+
+kb:TemporalEntity-c379e54b-540a-4c60-b709-3689f5a273c1
+	a time:TemporalEntity ;
 	.
 
 kb:TemporalInstant-080014e3-e491-4103-add7-4d3e3883ad82
@@ -8720,7 +8750,7 @@ kb:Thing-5290d266-e7be-4082-afb3-c6e3bfc9ab46
 
 kb:Thing-6e734b5d-21fc-4604-91b3-015da5aeac76
 	a owl:Thing ;
-	time:hasTime time:TemporalEntity-c379e54b-540a-4c60-b709-3689f5a273c1 ;
+	time:hasTime kb:TemporalEntity-c379e54b-540a-4c60-b709-3689f5a273c1 ;
 	.
 
 kb:Thing-70c5c4a0-6933-4a15-8131-a0444538385e
@@ -27953,18 +27983,6 @@ ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c
 		uco-observable:WindowsProcess
 		;
 	uco-core:description "Browser process" ;
-	.
-
-time:Instant-15a735b3-b9ef-4eb7-947d-a0deb8cc8ec7
-	a time:Instant ;
-	.
-
-time:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a
-	a time:Instant ;
-	.
-
-time:TemporalEntity-c379e54b-540a-4c60-b709-3689f5a273c1
-	a time:TemporalEntity ;
 	.
 
 wd:Q162345
