@@ -1484,6 +1484,11 @@ kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa
 	a uco-observable:Device ;
 	.
 
+kb:ConcreteIndividual-44ed202f-162e-44a6-ac48-c4e6bbbaa0ab
+	a gufo:Event ;
+	gufo:hasBeginPoint kb:Instant-c0f8bb25-7fd6-4328-b8d7-617a887c5f3c ;
+	.
+
 kb:Configuration-2afbfbb1-b4d6-4ad5-9691-ff09b9f6eebe
 	a uco-configuration:Configuration ;
 	uco-configuration:configurationEntry
@@ -6318,6 +6323,10 @@ kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b
 	.
 
 kb:Instant-acd2ab02-7468-4ae8-8ef3-f03c109852bd
+	a time:Instant ;
+	.
+
+kb:Instant-c0f8bb25-7fd6-4328-b8d7-617a887c5f3c
 	a time:Instant ;
 	.
 
