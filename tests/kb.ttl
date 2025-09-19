@@ -33,6 +33,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh-gufo: <http://example.org/shapes/sh-gufo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -1474,6 +1475,19 @@ kb:ComparativeRelationship-20cf44b4-026f-4249-a2c3-408642012c0c
 		owl:ObjectProperty ,
 		gufo:ComparativeRelationshipType
 		;
+	rdfs:seeAlso sh-gufo:ComparativeRelationshipType-shape ;
+	.
+
+kb:ComparativeRelationshipType-e8a29bec-3a1c-4d1d-ae2b-10545a631d8f
+	a
+		owl:ObjectProperty ,
+		gufo:ComparativeRelationshipType
+		;
+	gufo:isDerivedFrom kb:EndurantType-20337de1-bb9e-4f06-b3f5-25df52ee6c65 ;
+	rdfs:seeAlso
+		sh-gufo:isDerivedFrom-ComparativeRelationshipType-subjects-shape ,
+		sh-gufo:isDerivedFrom-subjects-shape
+		;
 	.
 
 kb:Computer-533FA61A-BE79-469E-A05F-1A341848B925
@@ -1487,6 +1501,7 @@ kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa
 kb:ConcreteIndividual-44ed202f-162e-44a6-ac48-c4e6bbbaa0ab
 	a gufo:Event ;
 	gufo:hasBeginPoint kb:Instant-c0f8bb25-7fd6-4328-b8d7-617a887c5f3c ;
+	rdfs:seeAlso sh-gufo:hasBeginPoint-subjects-shape ;
 	.
 
 kb:Configuration-2afbfbb1-b4d6-4ad5-9691-ff09b9f6eebe
@@ -4221,6 +4236,27 @@ kb:End-d1d333d7-fe44-5b9d-8fff-34b593a6e748
 		;
 	.
 
+kb:EndurantType-20337de1-bb9e-4f06-b3f5-25df52ee6c65
+	a
+		gufo:Kind ,
+		owl:Class
+		;
+	rdfs:subClassOf gufo:Quality ;
+	rdfs:seeAlso sh-gufo:isDerivedFrom-ComparativeRelationshipType-subjects-shape ;
+	.
+
+kb:EndurantType-959b6cff-b5a4-4168-be1f-d66d0c8033d6
+	a
+		gufo:Kind ,
+		owl:Class
+		;
+	rdfs:subClassOf gufo:Relator ;
+	rdfs:seeAlso
+		sh-gufo:isDerivedFrom-MaterialRelationshipType-subjects-shape ,
+		sh-gufo:isDerivedFrom-objects-shape
+		;
+	.
+
 kb:Entity-52d479e6-4b3e-4a21-a60a-29b08397a315
 	a obo:BFO_0000001 ;
 	rdfs:label "T" ;
@@ -6227,6 +6263,16 @@ kb:IndependentContinuant-fde381ef-f922-40e1-b878-071b809b48dd
 	obo:BFO_0000210 kb:SpatialRegion-86e7de31-c892-4429-9834-507b28d79211 ;
 	.
 
+kb:Individual-52f7eec8-c6a6-40dc-805f-ce5b593401ca
+	a kb:EndurantType-959b6cff-b5a4-4168-be1f-d66d0c8033d6 ;
+	rdfs:seeAlso sh-gufo:isDerivedFrom-MaterialRelationshipType-subjects-shape ;
+	.
+
+kb:Individual-7f8779da-b496-46d8-8b71-8a44619fc5ee
+	a kb:EndurantType-20337de1-bb9e-4f06-b3f5-25df52ee6c65 ;
+	rdfs:seeAlso sh-gufo:isDerivedFrom-ComparativeRelationshipType-subjects-shape ;
+	.
+
 kb:Instant-0180e20a-3fc3-48db-a5bf-2b53246638e8
 	a time:Instant ;
 	.
@@ -6328,6 +6374,7 @@ kb:Instant-acd2ab02-7468-4ae8-8ef3-f03c109852bd
 
 kb:Instant-c0f8bb25-7fd6-4328-b8d7-617a887c5f3c
 	a time:Instant ;
+	rdfs:seeAlso sh-gufo:hasBeginPoint-objects-shape ;
 	.
 
 kb:Instant-c306e8e7-30b1-4dda-b039-fda00d20b2b0
@@ -6717,6 +6764,19 @@ kb:MaterialRelationship-95952b20-2c19-47e6-b567-b3998e7b3553
 		owl:ObjectProperty ,
 		gufo:MaterialRelationshipType
 		;
+	rdfs:seeAlso sh-gufo:MaterialRelationshipType-shape ;
+	.
+
+kb:MaterialRelationshipType-2133b940-8a06-4856-bf46-684592243af4
+	a
+		owl:ObjectProperty ,
+		gufo:MaterialRelationshipType
+		;
+	gufo:isDerivedFrom kb:EndurantType-959b6cff-b5a4-4168-be1f-d66d0c8033d6 ;
+	rdfs:seeAlso
+		sh-gufo:isDerivedFrom-MaterialRelationshipType-subjects-shape ,
+		sh-gufo:isDerivedFrom-subjects-shape
+		;
 	.
 
 kb:Object-a56f08dd-8e36-4c73-845d-8dd873b113ba
@@ -6733,6 +6793,7 @@ kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc
 
 kb:Object-cd1aeb20-f037-476e-a2ae-45be3c79c64d
 	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:Object-shape ;
 	.
 
 kb:ObjectAggregate-6bf39b10-1673-4c2f-b013-daaae6dfa9df
@@ -7550,6 +7611,7 @@ kb:QualityType-3a0ff32d-9743-46e4-bdcd-e86777f98551
 		owl:Class
 		;
 	rdfs:subClassOf gufo:Quality ;
+	rdfs:seeAlso sh-gufo:concernsQualityType-objects-shape ;
 	.
 
 kb:QualityValueAttributionSituation-3ec99074-3cd1-4d24-a2c0-2339850ab9d2
@@ -7571,6 +7633,7 @@ kb:QualityValueAttributionSituation-872b7dd1-b49a-4278-bfdf-df507493d63f
 kb:QualityValueAttributionSituation-d760ff9f-8b16-4628-9236-fbe77b372e27
 	a gufo:QualityValueAttributionSituation ;
 	gufo:concernsQualityType kb:QualityType-3a0ff32d-9743-46e4-bdcd-e86777f98551 ;
+	rdfs:seeAlso sh-gufo:QualityValueAttributionSituation-shape ;
 	.
 
 kb:RasterPicture1-b67308c0-c31b-41a6-805a-10ec526ec8bc
