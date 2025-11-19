@@ -26,45 +26,51 @@ all: \
   imports-transitive.ttl
 
 CASE-Corpora/dependencies/CASE-develop.ttl: \
-  CASE-Corpora/dependencies/dependencies.ttl
+  CASE-Corpora/shapes/shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
 
 CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl: \
-  CASE-Corpora/dependencies/dependencies.ttl
+  CASE-Corpora/shapes/shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
 
 CASE-Corpora/dependencies/CASE-unstable.ttl: \
-  CASE-Corpora/dependencies/dependencies.ttl
+  CASE-Corpora/shapes/shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
 
 CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl: \
-  CASE-Corpora/dependencies/dependencies.ttl
+  CASE-Corpora/shapes/shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
 
 CASE-Corpora/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl: \
-  CASE-Corpora/dependencies/dependencies.ttl
+  CASE-Corpora/shapes/shapes.ttl
 	test -r $@
 
-CASE-Corpora/dependencies/dependencies.ttl: \
+CASE-Corpora/ontology/dependencies.ttl: \
   CASE-Corpora/.gitmodules
 	$(MAKE) \
 	  --directory CASE-Corpora \
-	  all-dependencies
+	  all-ontology
 	test -r $@
 
-CASE-Corpora/shapes/shapes.ttl: \
-  CASE-Corpora/dependencies/dependencies.ttl
+CASE-Corpora/shapes/dependencies.ttl: \
+  CASE-Corpora/ontology/dependencies.ttl
 	$(MAKE) \
 	  --directory CASE-Corpora \
 	  all-shapes
+	test -r $@
+
+CASE-Corpora/shapes/shapes.ttl: \
+  CASE-Corpora/shapes/dependencies.ttl
+	@#Guarantee timestamp order.
+	touch -c $@
 	test -r $@
 
 check: \
@@ -76,8 +82,9 @@ clean:
 
 imports-transitive.ttl: \
   CASE-Corpora/catalog/shared.ttl \
-  CASE-Corpora/dependencies/dependencies.ttl \
   CASE-Corpora/ontology/case-corpora.ttl \
+  CASE-Corpora/ontology/dependencies.ttl \
+  CASE-Corpora/shapes/dependencies.ttl \
   CASE-Corpora/shapes/shapes.ttl \
   CASE-Corpora/taxonomy/devices/drafting.ttl \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
