@@ -34,6 +34,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh-gufo: <http://example.org/shapes/sh-gufo/> .
+@prefix sh-time: <http://example.org/shapes/sh-time/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -8717,9 +8718,57 @@ kb:TemporalEntity-00947113-902d-4550-9c2c-f6175b31ef19
 	time:hasEnd kb:Instant-02f01c68-8888-4d25-b353-16f95a9b696b ;
 	.
 
+kb:TemporalEntity-17179034-999d-4381-9eee-befcf25284d6
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalFinishedBy-subjects-shape ;
+	time:intervalFinishedBy kb:TemporalEntity-a24ddc06-18c1-4433-93ac-bfa3dc539ff1 ;
+	.
+
+kb:TemporalEntity-178cbe95-81ea-4c71-bf3d-7b12c50df027
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalFinishes-subjects-shape ;
+	time:intervalFinishes kb:TemporalEntity-bd69ca65-d75c-4834-99e6-ee27376c885f ;
+	.
+
+kb:TemporalEntity-58be1beb-abf1-472f-83f1-3cffb1d713b1
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalMeets-subjects-shape ;
+	time:intervalMeets kb:TemporalEntity-d2cbdb91-c0fb-4cca-a343-36b3fa12bdab ;
+	.
+
+kb:TemporalEntity-7044bf74-e2c2-4147-9e2e-03db7cb32783
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalMetBy-subjects-shape ;
+	time:intervalMetBy kb:TemporalEntity-d52761c6-a6d3-4460-aa94-fcc58904d66a ;
+	.
+
+kb:TemporalEntity-80a84bb3-29e4-4b93-93c1-9039c2bc57ad
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalOverlappedBy-subjects-shape ;
+	time:intervalOverlappedBy kb:TemporalEntity-dc54515d-15be-47ce-9dd1-bce47b00c589 ;
+	.
+
+kb:TemporalEntity-81ed6b8d-a5de-4b10-95a1-3429676d2613
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalOverlaps-subjects-shape ;
+	time:intervalOverlaps kb:TemporalEntity-dd665e5d-cf2e-45d2-900c-c86e01db67a6 ;
+	.
+
 kb:TemporalEntity-87790b29-70f9-4093-ba98-f0f8f159190e
 	a time:TemporalEntity ;
 	time:hasBeginning kb:Instant-1cbbe067-f904-4b5f-a3de-e3c79fb86f0a ;
+	.
+
+kb:TemporalEntity-8a024967-59d1-4a80-a1fe-e49651e38b8f
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalStartedBy-subjects-shape ;
+	time:intervalStartedBy kb:TemporalEntity-de91e867-1b88-4605-bc6f-572f992ed95a ;
+	.
+
+kb:TemporalEntity-8b43aa8e-55cf-40db-85b8-b0c6817a79d9
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalStarts-subjects-shape ;
+	time:intervalStarts kb:TemporalEntity-e3b7c74a-b16a-47d5-a44f-647bc7c4a8bd ;
 	.
 
 kb:TemporalEntity-906144d4-4663-4eb0-84f0-cdb780cef154
@@ -8729,13 +8778,53 @@ kb:TemporalEntity-906144d4-4663-4eb0-84f0-cdb780cef154
 	time:hasEnd kb:Instant-8f397425-81cd-45d4-a27f-ed7b8833228a ;
 	.
 
+kb:TemporalEntity-a24ddc06-18c1-4433-93ac-bfa3dc539ff1
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalFinishedBy-subjects-intervalFinishedBy-shape ;
+	.
+
 kb:TemporalEntity-a872dbc9-78ff-46e0-b6ed-64a59d436598
 	a time:TemporalEntity ;
 	time:hasEnd kb:Instant-15a735b3-b9ef-4eb7-947d-a0deb8cc8ec7 ;
 	.
 
+kb:TemporalEntity-bd69ca65-d75c-4834-99e6-ee27376c885f
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalFinishes-subjects-intervalFinishes-shape ;
+	.
+
 kb:TemporalEntity-c379e54b-540a-4c60-b709-3689f5a273c1
 	a time:TemporalEntity ;
+	.
+
+kb:TemporalEntity-d2cbdb91-c0fb-4cca-a343-36b3fa12bdab
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalMeets-subjects-intervalMeets-shape ;
+	.
+
+kb:TemporalEntity-d52761c6-a6d3-4460-aa94-fcc58904d66a
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalMetBy-subjects-intervalMetBy-shape ;
+	.
+
+kb:TemporalEntity-dc54515d-15be-47ce-9dd1-bce47b00c589
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalOverlappedBy-subjects-intervalOverlappedBy-shape ;
+	.
+
+kb:TemporalEntity-dd665e5d-cf2e-45d2-900c-c86e01db67a6
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalOverlaps-subjects-intervalOverlaps-shape ;
+	.
+
+kb:TemporalEntity-de91e867-1b88-4605-bc6f-572f992ed95a
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalStartedBy-subjects-intervalStartedBy-shape ;
+	.
+
+kb:TemporalEntity-e3b7c74a-b16a-47d5-a44f-647bc7c4a8bd
+	a time:ProperInterval ;
+	rdfs:seeAlso sh-time:intervalStarts-subjects-intervalStarts-shape ;
 	.
 
 kb:TemporalInstant-080014e3-e491-4103-add7-4d3e3883ad82
