@@ -71,18 +71,12 @@ def main() -> None:
             # Concept appears in multiple namespaces.  Skip, as sed would make erroneous assignments.
             continue
         prefix = [x for x in prefixes][0]
-        print(
-            """\
+        print("""\
 s/"@type": "%s"/"@type": "%s:%s"/\
-"""
-            % (concept, prefix, concept)
-        )
-        print(
-            """\
+""" % (concept, prefix, concept))
+        print("""\
 s/"%s": /"%s:%s": /\
-"""
-            % (concept, prefix, concept)
-        )
+""" % (concept, prefix, concept))
 
 
 if __name__ == "__main__":

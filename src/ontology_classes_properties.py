@@ -50,8 +50,7 @@ def graph_file_to_vocabset(
             filename, format="json-ld" if filename.endswith("json") else "turtle"
         )
 
-    query = rdflib.plugins.sparql.processor.prepareQuery(
-        """\
+    query = rdflib.plugins.sparql.processor.prepareQuery("""\
 SELECT ?s
 WHERE {
   { ?s a <http://www.w3.org/2002/07/owl#Class> . }
@@ -59,8 +58,7 @@ WHERE {
   { ?s a <http://www.w3.org/2002/07/owl#DatatypeProperty> . }
   UNION
   { ?s a <http://www.w3.org/2002/07/owl#ObjectProperty> . }
-}"""
-    )
+}""")
     for result_no, result in enumerate(graph.query(query)):
         # Skip anonymous classes (such as might be used in OWL complement definitions).
         assert isinstance(result, ResultRow)

@@ -54,8 +54,7 @@ def graph_file_to_vocabset(
             filename, format="json-ld" if filename.endswith("json") else "turtle"
         )
 
-        query = rdflib.plugins.sparql.processor.prepareQuery(
-            """\
+        query = rdflib.plugins.sparql.processor.prepareQuery("""\
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT ?s
 WHERE {
@@ -64,8 +63,7 @@ WHERE {
   { ?x owl:ontologyIRI ?s }
   UNION
   { ?y owl:versionIRI ?s }
-}"""
-        )
+}""")
         for result_no, result in enumerate(graph.query(query)):
             assert isinstance(result, ResultRow)
             assert isinstance(result[0], URIRef)

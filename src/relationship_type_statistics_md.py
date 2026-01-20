@@ -131,8 +131,7 @@ WHERE {
         )
         counter[key] += 1
 
-    print(
-        """\
+    print("""\
 <!--
 GENERATED FILE
 
@@ -167,8 +166,7 @@ kb:IPAddress-fe8f8e4e-8851-4b8a-8a1b-1ba3421b967a
 `Resolves_To` | `uco-observable:ObservableRelationship` | `True` | <ul><li>`uco-observable:DomainName`</li></ul> | <ul><li>`uco-observable:IPv6Address`</li></ul> | <ul></ul>
 
 Each of the type columns is a sorted list of all of the pre-inference types associated with the relationship's source, target, or any `Facet` attached directly to the relationship.
-"""
-    )
+""")
     print(
         "Count | `uco-core:kindOfRelationship` | `rdf:type`s of Relationship object | `uco-core:isDirectional` | `rdf:type`s of `uco-core:source` | `rdf:type`s of `uco-core:target` | `uco-core:Facet`s"
     )

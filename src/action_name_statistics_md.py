@@ -147,8 +147,7 @@ WHERE {
         )
         counter[key] += 1
 
-    print(
-        """\
+    print("""\
 <!--
 GENERATED FILE
 
@@ -201,8 +200,7 @@ kb:URL-b1743bf6-0d8e-4a39-bc94-c31b07bb527f
 `Download` | <ul><li>`case-investigation:InvestigativeAction`</li><li>`uco-observable:ObservableAction`</li></ul> | <ul><li>`case-investigation:ProvenanceRecord`</li><li>`uco-observable:URL`</li></ul> | <ul><li>`case-investigation:ProvenanceRecord`</li><li>`uco-observable:File`</li></ul> | <ul></ul> | <ul></ul> | <ul><li>`uco-identity:Person`</li></ul> | <ul></ul> | <ul></ul>
 
 Each of the type columns is a sorted list of all of the pre-inference types associated with the action and its related objects and attached `Facet`s.  (Note that some types were included in the input data that may have been inferred from [`case-prov`](https://github.com/casework/CASE-Implementation-PROV-O) review, particularly pretaining to `prov:` and `time:` prefixed concepts.  Because those types are mechanically added as part of ongoing data maintenance, they have been stripped from this table.)
-"""
-    )
+""")
     print(
         "Count | `uco-core:name` | `rdf:type`s of Action object | `rdf:type`s of `uco-action:object`| `rdf:type`s of `uco-action:result`| `rdf:type`s of `uco-action:environment`   | `rdf:type`s of `uco-action:instrument` | `rdf:type`s of `uco-action:performer` | `rdf:type`s of `uco-action:location` | `uco-core:Facet`s"
     )
