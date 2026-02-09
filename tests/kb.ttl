@@ -57,6 +57,7 @@
 <http://example.org/kb>
 	a owl:Ontology ;
 	rdfs:comment
+		"Individuals that are instantiated to test properties have two type indications.  One is the type asserted with rdf:type.  The other is a class indicated in the individual IRI, preceding the UUID portion.  The class indication in the IRI is the class required by the domain or range of the property the individual is demonstrating.  The reason the rdf:type assertion may differ is that a domain or range may only tie to a class that is defined as a disjoint union, i.e., it indicates exactly one of its direct subclasses would be expected to also be asserted.  These test cases enforce the selection by using sh:xone to review occurrences of owl:disjointUnionOf.  Selections, where made, are merely one option and not necessarily fully enumerated across all of the available options."@en ,
 		"This knowledge base instantiates each of the mapped classes and properties, so SHACL shapes can perform a review for inconsistencies in the mapping between UCO and the mapped ontology."@en ,
 		"This knowledge base instantiates each of the shape-reviewed classes and properties, so SHACL shapes can be exercised for the reviewed ontology."@en
 		;
@@ -152,6 +153,14 @@ kb:9b82c2bc-10f7-47b2-81a8-443a9f458440
 kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a
 	a uco-observable:CapturedTelecommunicationsInformation ;
 	uco-core:hasFacet kb:captured-telecommunications-information-facet-efa35d55-1d2d-4e47-ae38-97ccad1945be ;
+	.
+
+kb:AbstractIndividualType-73fdd434-b356-4b08-8ad6-e112a8727e61
+	a
+		gufo:AbstractIndividualType ,
+		owl:Class
+		;
+	rdfs:seeAlso sh-gufo:hasAssociatedQualityValueType-objects-shape ;
 	.
 
 kb:Action-13c91d40-9ca0-4558-81a1-4f7db888c371
@@ -435,6 +444,32 @@ kb:ArchiveFileFacet-020a38b1-f370-4117-86b8-3aed63114f91
 kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b
 	a uco-observable:ArchiveFileFacet ;
 	uco-observable:archiveType "ZIP" ;
+	.
+
+kb:Aspect-1635039c-e6ed-4c79-9f79-301b087b96b3
+	a gufo:ExtrinsicMode ;
+	rdfs:seeAlso sh-gufo:isAspectProperPartOf-objects-shape ;
+	.
+
+kb:Aspect-1ccbc309-4595-4d75-9e13-f399bf3172a4
+	a gufo:IntrinsicMode ;
+	gufo:isAspectProperPartOf kb:Aspect-1635039c-e6ed-4c79-9f79-301b087b96b3 ;
+	rdfs:seeAlso sh-gufo:isAspectProperPartOf-subjects-shape ;
+	.
+
+kb:Aspect-bc59cd69-923b-47f8-b078-4e18af5b7f18
+	a gufo:ExtrinsicMode ;
+	gufo:manifestedIn kb:Event-c159d623-d76f-4705-b75e-7b0281e679dc ;
+	rdfs:seeAlso sh-gufo:manifestedIn-subjects-shape ;
+	.
+
+kb:Aspect-c6c0dc61-2ced-498d-821c-443761c87de0
+	a gufo:ExtrinsicMode ;
+	gufo:inheresIn kb:ConcreteIndividual-1c404c3c-ecf3-4946-8130-e40548bef69f ;
+	rdfs:seeAlso
+		sh-gufo:ExtrinsicMode-shape ,
+		sh-gufo:inheresIn-subjects-shape
+		;
 	.
 
 kb:Association-0355d256-987f-5e53-a66b-ad591161a0e1
@@ -1176,6 +1211,22 @@ kb:Camera-1c9a2999-b34c-459b-b983-113c7b9e71df
 	rdfs:comment "A digital, non-phone camera."@en ;
 	.
 
+kb:Collection-3717f8c6-f7d0-4ec6-bc9c-50fa8c129a55
+	a gufo:FixedCollection ;
+	gufo:isSubCollectionOf kb:Collection-58e31ee2-488a-4d2d-b808-fbf8f8093988 ;
+	rdfs:seeAlso sh-gufo:isSubCollectionOf-subjects-shape ;
+	.
+
+kb:Collection-58e31ee2-488a-4d2d-b808-fbf8f8093988
+	a gufo:FixedCollection ;
+	rdfs:seeAlso sh-gufo:isSubCollectionOf-objects-shape ;
+	.
+
+kb:Collection-e710b93d-b229-43c6-8522-c608d3462d2f
+	a gufo:FixedCollection ;
+	rdfs:seeAlso sh-gufo:isCollectionMemberOf-objects-shape ;
+	.
+
 kb:Communication-01153274-2671-5291-a0c0-a7315dd57239
 	a prov:Communication ;
 	prov:activity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
@@ -1485,10 +1536,7 @@ kb:ComparativeRelationshipType-e8a29bec-3a1c-4d1d-ae2b-10545a631d8f
 		gufo:ComparativeRelationshipType
 		;
 	gufo:isDerivedFrom kb:EndurantType-20337de1-bb9e-4f06-b3f5-25df52ee6c65 ;
-	rdfs:seeAlso
-		sh-gufo:isDerivedFrom-ComparativeRelationshipType-subjects-shape ,
-		sh-gufo:isDerivedFrom-subjects-shape
-		;
+	rdfs:seeAlso sh-gufo:isDerivedFrom-ComparativeRelationshipType-subjects-shape ;
 	.
 
 kb:Computer-533FA61A-BE79-469E-A05F-1A341848B925
@@ -1499,10 +1547,79 @@ kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa
 	a uco-observable:Device ;
 	.
 
+kb:ConcreteIndividual-1c404c3c-ecf3-4946-8130-e40548bef69f
+	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:inheresIn-objects-shape ;
+	.
+
 kb:ConcreteIndividual-44ed202f-162e-44a6-ac48-c4e6bbbaa0ab
 	a gufo:Event ;
 	gufo:hasBeginPoint kb:Instant-c0f8bb25-7fd6-4328-b8d7-617a887c5f3c ;
 	rdfs:seeAlso sh-gufo:hasBeginPoint-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-460d44e6-d2b5-4701-af75-f32f62bff341
+	a gufo:Event ;
+	gufo:hasEndPointInXSDDateTimeStamp "2020-01-02T03:04:56Z"^^xsd:dateTimeStamp ;
+	rdfs:seeAlso sh-gufo:hasEndPointInXSDDateTimeStamp-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-4bf64e40-b037-4d50-9074-677e37e53091
+	a gufo:Object ;
+	gufo:hasReifiedQualityValue kb:QualityValue-10d2fa1c-8fe6-4e0a-a59f-b6c4b33918ce ;
+	rdfs:seeAlso sh-gufo:hasReifiedQualityValue-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-4d7e602c-15a2-47ce-aef7-6a3e345fa1f0
+	a gufo:Event ;
+	gufo:hasQualityValue "" ;
+	rdfs:seeAlso sh-gufo:hasQualityValue-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-52a8f394-74d0-4f3b-b26e-202fdb8bbba9
+	a gufo:Object ;
+	gufo:hasBeginPointInXSDDateTimeStamp "2020-01-02T03:04:56Z"^^xsd:dateTimeStamp ;
+	rdfs:seeAlso sh-gufo:hasBeginPointInXSDDateTimeStamp-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-53666515-6220-4cfc-ab4a-920847cd7c3d
+	a gufo:Object ;
+	gufo:hasEndPoint kb:Instant-2dce59b8-5539-4ed6-abf3-e0fcc3483b69 ;
+	rdfs:seeAlso sh-gufo:hasEndPoint-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-76ed2aad-58df-4c50-87d3-6de022f3bf81
+	a gufo:Object ;
+	gufo:historicallyDependsOn kb:ConcreteIndividual-edbd4dce-2bd2-4790-8974-d07ac48625a4 ;
+	rdfs:seeAlso sh-gufo:historicallyDependsOn-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-a1f49b38-b33d-4c03-a0a4-e11cd321a3aa
+	a gufo:Event ;
+	gufo:hasEndPointInXSDDate "2000-01-01"^^xsd:date ;
+	rdfs:seeAlso sh-gufo:hasEndPointInXSDDate-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-e35fa5a9-538d-4e23-b944-e2d6a6a1d2d0
+	a gufo:Event ;
+	gufo:constitutes kb:ConcreteIndividual-fff9dfa7-e37a-4c2b-b9ef-9ef7ae584119 ;
+	rdfs:seeAlso sh-gufo:constitutes-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-ea7de1d6-43b3-420d-90bb-55f0b867643b
+	a gufo:Event ;
+	gufo:hasBeginPointInXSDDate "2000-01-01"^^xsd:date ;
+	rdfs:seeAlso sh-gufo:hasBeginPointInXSDDate-subjects-shape ;
+	.
+
+kb:ConcreteIndividual-edbd4dce-2bd2-4790-8974-d07ac48625a4
+	a gufo:Event ;
+	rdfs:seeAlso sh-gufo:historicallyDependsOn-objects-shape ;
+	.
+
+kb:ConcreteIndividual-fff9dfa7-e37a-4c2b-b9ef-9ef7ae584119
+	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:constitutes-objects-shape ;
 	.
 
 kb:Configuration-2afbfbb1-b4d6-4ad5-9691-ff09b9f6eebe
@@ -4237,6 +4354,82 @@ kb:End-d1d333d7-fe44-5b9d-8fff-34b593a6e748
 		;
 	.
 
+kb:Endurant-11b7d0cf-3a5e-40da-a79c-a6b9c243ee28
+	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:concernsConstitutedEndurant-subjects-shape ;
+	.
+
+kb:Endurant-11ff0009-4e31-4bb8-816a-a72f6d7394c8
+	a gufo:Object ;
+	gufo:standsInQualifiedInstantiation kb:TemporaryInstantiationSituation-d50f30d2-d042-4003-9b81-5878e348bbc6 ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedInstantiation-subjects-shape ;
+	.
+
+kb:Endurant-2617295a-5922-4d06-90ce-83845c2914af
+	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:externallyDependsOn-objects-shape ;
+	.
+
+kb:Endurant-29775539-5fe1-4755-b228-841aab508e27
+	a gufo:Object ;
+	gufo:standsInQualifiedConstitution kb:TemporaryConstitutionSituation-932e7a34-1d58-4e8b-8265-9f8f62bb0c34 ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedConstitution-subjects-shape ;
+	.
+
+kb:Endurant-30842dd2-146e-4720-81eb-ff8f655058a5
+	a gufo:Object ;
+	gufo:standsInQualifiedAttribution kb:QualityValueAttributionSituation-71781915-ac36-4264-83f4-3a89df7de700 ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedAttribution-subjects-shape ;
+	.
+
+kb:Endurant-370e7a1c-7bfd-475b-83e9-d046b26978d7
+	a gufo:Object ;
+	gufo:wasCreatedIn kb:Event-be5f6859-6485-4410-9578-bd07b25bff89 ;
+	rdfs:seeAlso sh-gufo:wasCreatedIn-subjects-shape ;
+	.
+
+kb:Endurant-4053ed7d-05c9-44ce-869f-2745d84a40ce
+	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:concernsTemporaryWhole-objects-shape ;
+	.
+
+kb:Endurant-6640ba7b-fd7b-43ff-9334-81d9895372dc
+	a gufo:Object ;
+	gufo:wasTerminatedIn kb:Event-a9888561-5dcc-4c22-bec5-0a584839729d ;
+	rdfs:seeAlso sh-gufo:wasTerminatedIn-subjects-shape ;
+	.
+
+kb:Endurant-7ac20c26-1f62-40c1-a6e0-0e96fb088e9b
+	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:concernsRelatedEndurant-objects-shape ;
+	.
+
+kb:Endurant-a6c542b6-0831-4ff2-a5e3-325c43075417
+	a gufo:Object ;
+	rdfs:seeAlso sh-gufo:mediates-objects-shape ;
+	.
+
+kb:Endurant-c38ea234-5d65-40d2-9ce6-9ca9d070a3e6
+	a gufo:Object ;
+	gufo:standsInQualifiedRelationship kb:TemporaryRelationshipSituation-29301400-6b45-4176-b570-f52c28cd2789 ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedRelationship-subjects-shape ;
+	.
+
+kb:Endurant-de7e6949-a40f-45fa-bdb2-390bbdf0f1a6
+	a gufo:Object ;
+	gufo:standsInQualifiedParthood kb:TemporaryParthoodSituation-bdfd62c0-4188-4cc2-a823-2664b8478fe1 ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedParthood-subjects-shape ;
+	.
+
+kb:EndurantType-1e1f2313-7cbb-47ae-bdd0-bc4a4a5a654e
+	a
+		gufo:Category ,
+		owl:Class
+		;
+	gufo:hasAssociatedQualityValueType kb:AbstractIndividualType-73fdd434-b356-4b08-8ad6-e112a8727e61 ;
+	rdfs:seeAlso sh-gufo:hasAssociatedQualityValueType-subjects-shape ;
+	.
+
 kb:EndurantType-20337de1-bb9e-4f06-b3f5-25df52ee6c65
 	a
 		gufo:Kind ,
@@ -4298,6 +4491,11 @@ kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444
 	time:after kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e ;
 	.
 
+kb:Event-1adfd366-767b-408b-a78e-1bc914fe926c
+	a gufo:Event ;
+	rdfs:seeAlso sh-gufo:isEventProperPartOf-objects-shape ;
+	.
+
 kb:Event-26aaae20-6d00-445a-b102-d080753986d2
 	a
 		time:Instant ,
@@ -4305,6 +4503,11 @@ kb:Event-26aaae20-6d00-445a-b102-d080753986d2
 		uco-core:Event
 		;
 	time:after kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444 ;
+	.
+
+kb:Event-26cf76ef-1d05-4706-a1fb-15b05592cb20
+	a gufo:Event ;
+	rdfs:seeAlso sh-gufo:participatedIn-objects-shape ;
 	.
 
 kb:Event-36ca992e-47e5-43a5-b344-71465c222a05
@@ -4330,6 +4533,12 @@ kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c
 	time:after kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779 ;
 	.
 
+kb:Event-63e2066b-16a2-4d14-85c1-c38def20f6ff
+	a gufo:Event ;
+	gufo:broughtAbout kb:Situation-7405a4b4-022f-4189-aa77-2152d2ddeadb ;
+	rdfs:seeAlso sh-gufo:broughtAbout-subjects-shape ;
+	.
+
 kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348
 	a
 		time:Instant ,
@@ -4338,6 +4547,41 @@ kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348
 		uco-core:Event
 		;
 	rdfs:comment "The precise timestamp of this file deletion event was not recorded, but it is known to have occurred.  This event invalidates (ends) a Relationship FIRST.TXT had with its file system, leaving FIRST.TXT in a marked-unallocated state apparent from a superseding Relationship." ;
+	.
+
+kb:Event-9efcc624-51c3-48db-a1c2-a1da083e9724
+	a gufo:Event ;
+	rdfs:seeAlso sh-gufo:contributedToTrigger-objects-shape ;
+	.
+
+kb:Event-a9888561-5dcc-4c22-bec5-0a584839729d
+	a gufo:Event ;
+	rdfs:seeAlso sh-gufo:wasTerminatedIn-objects-shape ;
+	.
+
+kb:Event-be5f6859-6485-4410-9578-bd07b25bff89
+	a gufo:Event ;
+	rdfs:seeAlso sh-gufo:wasCreatedIn-objects-shape ;
+	.
+
+kb:Event-c159d623-d76f-4705-b75e-7b0281e679dc
+	a gufo:Event ;
+	rdfs:seeAlso sh-gufo:manifestedIn-objects-shape ;
+	.
+
+kb:Event-daaf8c17-6c64-4bab-b8e5-faa5760e17fc
+	a gufo:Event ;
+	gufo:isEventProperPartOf kb:Event-1adfd366-767b-408b-a78e-1bc914fe926c ;
+	rdfs:seeAlso sh-gufo:isEventProperPartOf-subjects-shape ;
+	.
+
+kb:EventType-c29faf02-c9c9-4fd0-8c20-fedf153a9de3
+	a
+		gufo:EventType ,
+		owl:Class
+		;
+	rdfs:subClassOf gufo:Event ;
+	rdfs:seeAlso sh-gufo:EventType-shape ;
 	.
 
 kb:ExistenceInterval-03c8fef4-dac9-4f17-bc98-2ef468390daa
@@ -4356,6 +4600,12 @@ kb:ExistenceInterval-27802c47-1c75-43fa-ab4b-fc01aa6c2c92
 	rdfs:comment "The existence interval of T." ;
 	time:hasBeginning kb:Instant-9c248bb3-ea05-4ef0-9ac7-b68a99d5c07a ;
 	time:hasEnd kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b ;
+	.
+
+kb:ExtrinsicMode-01964f52-6337-4703-80d2-5903d7635901
+	a gufo:ExtrinsicMode ;
+	gufo:externallyDependsOn kb:Endurant-2617295a-5922-4d06-90ce-83845c2914af ;
+	rdfs:seeAlso sh-gufo:externallyDependsOn-subjects-shape ;
 	.
 
 kb:Feature-59e1587a-e50e-46c6-8bb7-bb882fda28c2
@@ -4598,6 +4848,11 @@ kb:FileSystemFacet-0833f401-db1c-42ce-b427-28fe4875193b
 
 kb:Function-c920c29a-034f-40b8-97e1-0eb443f44b1c
 	a obo:BFO_0000034 ;
+	.
+
+kb:FunctionalComplex-2fbb1138-4210-4d33-99fa-1ca10cdbab0e
+	a gufo:FunctionalComplex ;
+	rdfs:seeAlso sh-gufo:isComponentOf-objects-shape ;
 	.
 
 kb:Generation-0087dfe9-6144-5d89-8997-24b2e35d7dbe
@@ -6318,6 +6573,11 @@ kb:Instant-2918592a-9d87-4b30-acbc-521a19f97fcd
 	time:inXSDDateTimeStamp "2023-11-22T15:30:00Z"^^xsd:dateTimeStamp ;
 	.
 
+kb:Instant-2dce59b8-5539-4ed6-abf3-e0fcc3483b69
+	a time:Instant ;
+	rdfs:seeAlso sh-gufo:hasEndPoint-objects-shape ;
+	.
+
 kb:Instant-38a01481-2a69-4e4e-9ce2-6a55643ed373
 	a time:Instant ;
 	.
@@ -6780,6 +7040,29 @@ kb:MaterialRelationshipType-2133b940-8a06-4856-bf46-684592243af4
 		;
 	.
 
+kb:NonRigidType-0a7a7dc6-842e-4542-a360-56c4f2f13308
+	a
+		gufo:Phase ,
+		owl:Class
+		;
+	rdfs:seeAlso
+		sh-gufo:NonRigidType-shape ,
+		sh-gufo:concernsNonRigidType-objects-shape
+		;
+	.
+
+kb:Object-17709d22-ba11-415c-b1e8-304967bc4f93
+	a gufo:Object ;
+	gufo:isComponentOf kb:FunctionalComplex-2fbb1138-4210-4d33-99fa-1ca10cdbab0e ;
+	rdfs:seeAlso sh-gufo:isComponentOf-subjects-shape ;
+	.
+
+kb:Object-6497e6f6-1e15-407b-a030-777e79fe1c61
+	a gufo:Object ;
+	gufo:isCollectionMemberOf kb:Collection-e710b93d-b229-43c6-8522-c608d3462d2f ;
+	rdfs:seeAlso sh-gufo:isCollectionMemberOf-subjects-shape ;
+	.
+
 kb:Object-a56f08dd-8e36-4c73-845d-8dd873b113ba
 	a obo:BFO_0000030 ;
 	.
@@ -6795,6 +7078,12 @@ kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc
 kb:Object-cd1aeb20-f037-476e-a2ae-45be3c79c64d
 	a gufo:Object ;
 	rdfs:seeAlso sh-gufo:Object-shape ;
+	.
+
+kb:Object-fcfdcab7-ca11-46d1-bea1-231a3d76b1b4
+	a gufo:Object ;
+	gufo:participatedIn kb:Event-26cf76ef-1d05-4706-a1fb-15b05592cb20 ;
+	rdfs:seeAlso sh-gufo:participatedIn-subjects-shape ;
 	.
 
 kb:ObjectAggregate-6bf39b10-1673-4c2f-b013-daaae6dfa9df
@@ -7260,6 +7549,14 @@ kb:Person-ee7130a7-0fec-48df-8312-4da1a214bd59
 	a uco-identity:Person ;
 	.
 
+kb:PhaseMixin-03d49c52-6093-4261-94c6-8d360b5031a8
+	a
+		gufo:PhaseMixin ,
+		owl:Class
+		;
+	rdfs:seeAlso sh-gufo:PhaseMixin-shape ;
+	.
+
 kb:Process-139b0336-0af6-4bce-8e0b-08dd5c610244
 	a obo:BFO_0000015 ;
 	.
@@ -7615,12 +7912,42 @@ kb:QualityType-3a0ff32d-9743-46e4-bdcd-e86777f98551
 	rdfs:seeAlso sh-gufo:concernsQualityType-objects-shape ;
 	.
 
+kb:QualityValue-10d2fa1c-8fe6-4e0a-a59f-b6c4b33918ce
+	a gufo:QualityValue ;
+	rdfs:seeAlso sh-gufo:hasReifiedQualityValue-objects-shape ;
+	.
+
+kb:QualityValue-23e9898f-e8df-41fd-bd39-d9e824b28369
+	a gufo:QualityValue ;
+	gufo:hasValueComponent "" ;
+	rdfs:seeAlso sh-gufo:hasValueComponent-subjects-shape ;
+	.
+
+kb:QualityValue-bbbc153a-8979-4ca8-a1cc-89a53194c5c8
+	a gufo:QualityValue ;
+	rdfs:seeAlso sh-gufo:concernsReifiedQualityValue-objects-shape ;
+	.
+
+kb:QualityValueAttributionSituation-20fec4d2-6e44-49ed-94aa-799845277a8c
+	a gufo:QualityValueAttributionSituation ;
+	gufo:concernsQualityValue "" ;
+	rdfs:seeAlso
+		sh-gufo:QualityValueAttributionSituation-shape ,
+		sh-gufo:concernsQualityValue-subjects-shape
+		;
+	.
+
 kb:QualityValueAttributionSituation-3ec99074-3cd1-4d24-a2c0-2339850ab9d2
 	a gufo:QualityValueAttributionSituation ;
 	gufo:concernsQualityType drafting:Bearing ;
 	gufo:concernsQualityValue "90 degrees" ;
 	gufo:hasBeginPoint kb:Instant-24d2c5f3-d194-4db9-972a-9472c267d047 ;
 	gufo:hasEndPoint kb:Instant-c9ae3fce-ddcb-416b-971b-559c2f5bee95 ;
+	.
+
+kb:QualityValueAttributionSituation-71781915-ac36-4264-83f4-3a89df7de700
+	a gufo:QualityValueAttributionSituation ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedAttribution-objects-shape ;
 	.
 
 kb:QualityValueAttributionSituation-872b7dd1-b49a-4278-bfdf-df507493d63f
@@ -7631,10 +7958,27 @@ kb:QualityValueAttributionSituation-872b7dd1-b49a-4278-bfdf-df507493d63f
 	gufo:hasEndPoint kb:Instant-c9ae3fce-ddcb-416b-971b-559c2f5bee95 ;
 	.
 
+kb:QualityValueAttributionSituation-87d3fdff-f584-43f9-9339-974d46cc3187
+	a gufo:QualityValueAttributionSituation ;
+	gufo:concernsReifiedQualityValue kb:QualityValue-bbbc153a-8979-4ca8-a1cc-89a53194c5c8 ;
+	rdfs:seeAlso sh-gufo:concernsReifiedQualityValue-subjects-shape ;
+	.
+
 kb:QualityValueAttributionSituation-d760ff9f-8b16-4628-9236-fbe77b372e27
 	a gufo:QualityValueAttributionSituation ;
 	gufo:concernsQualityType kb:QualityType-3a0ff32d-9743-46e4-bdcd-e86777f98551 ;
 	rdfs:seeAlso sh-gufo:QualityValueAttributionSituation-shape ;
+	.
+
+kb:Quantity-2f4b9948-85a6-4592-b81b-b604d073a29c
+	a gufo:Quantity ;
+	gufo:isSubQuantityOf kb:Quantity-4f72cf14-2dd5-4680-bb9c-b92e398e2394 ;
+	rdfs:seeAlso sh-gufo:isSubQuantityOf-subjects-shape ;
+	.
+
+kb:Quantity-4f72cf14-2dd5-4680-bb9c-b92e398e2394
+	a gufo:Quantity ;
+	rdfs:seeAlso sh-gufo:isSubQuantityOf-objects-shape ;
 	.
 
 kb:RasterPicture1-b67308c0-c31b-41a6-805a-10ec526ec8bc
@@ -8031,6 +8375,20 @@ kb:Relationship-fb8026c8-4391-4372-98d7-c21cac111649
 	uco-core:target kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0 ;
 	.
 
+kb:RelationshipType-0813ed87-2f47-4a1b-a063-834b467c3d31
+	a
+		owl:ObjectProperty ,
+		gufo:RelationshipType
+		;
+	rdfs:seeAlso sh-gufo:concernsRelationshipType-objects-shape ;
+	.
+
+kb:Relator-14b55f33-20c6-4ecc-a2d0-fb5eca0d36fa
+	a gufo:Relator ;
+	gufo:mediates kb:Endurant-a6c542b6-0831-4ff2-a5e3-325c43075417 ;
+	rdfs:seeAlso sh-gufo:mediates-subjects-shape ;
+	.
+
 kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b
 	a uco-role:Role ;
 	uco-core:name "Forensic Researcher" ;
@@ -8070,6 +8428,28 @@ kb:Site-d7c3a9aa-c3a6-4214-b568-88537feaa618
 kb:Site-fdc896e0-45df-47b9-bf5d-46c8866f4b0f
 	a obo:BFO_0000029 ;
 	obo:BFO_0000183 kb:Process-38cce5b9-bbf6-4c67-9a09-3266ea007912 ;
+	.
+
+kb:Situation-3bbd50e7-7b60-41ae-8f03-ee8fb89123c3
+	a gufo:Situation ;
+	rdfs:seeAlso sh-gufo:isSituationProperPartOf-objects-shape ;
+	.
+
+kb:Situation-67908a64-9f27-4e71-8cf3-2082ba834c3c
+	a gufo:Situation ;
+	gufo:isSituationProperPartOf kb:Situation-3bbd50e7-7b60-41ae-8f03-ee8fb89123c3 ;
+	rdfs:seeAlso sh-gufo:isSituationProperPartOf-subjects-shape ;
+	.
+
+kb:Situation-7405a4b4-022f-4189-aa77-2152d2ddeadb
+	a gufo:Situation ;
+	rdfs:seeAlso sh-gufo:broughtAbout-objects-shape ;
+	.
+
+kb:Situation-7c239b29-b6bf-4eae-a0e5-7d34b8d27562
+	a gufo:Situation ;
+	gufo:contributedToTrigger kb:Event-9efcc624-51c3-48db-a1c2-a1da083e9724 ;
+	rdfs:seeAlso sh-gufo:contributedToTrigger-subjects-shape ;
 	.
 
 kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
@@ -8893,12 +9273,71 @@ kb:TemporalRegion-c6572eee-2c27-454e-bf56-45c1f6cfb4cf
 	obo:BFO_0000224 kb:TemporalInstant-deadfc20-b0f9-47cf-b07e-6603cf75c3eb ;
 	.
 
+kb:TemporaryConstitutionSituation-490fa048-fc2a-4434-8376-80579af09d88
+	a gufo:TemporaryConstitutionSituation ;
+	gufo:concernsConstitutedEndurant kb:Endurant-11b7d0cf-3a5e-40da-a79c-a6b9c243ee28 ;
+	rdfs:seeAlso
+		sh-gufo:TemporaryConstitutionSituation-shape ,
+		sh-gufo:concernsConstitutedEndurant-subjects-shape
+		;
+	.
+
+kb:TemporaryConstitutionSituation-932e7a34-1d58-4e8b-8265-9f8f62bb0c34
+	a gufo:TemporaryConstitutionSituation ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedConstitution-objects-shape ;
+	.
+
+kb:TemporaryInstantiationSituation-41702321-9550-458b-9438-f48d28d7e0c8
+	a gufo:TemporaryInstantiationSituation ;
+	gufo:concernsNonRigidType kb:NonRigidType-0a7a7dc6-842e-4542-a360-56c4f2f13308 ;
+	rdfs:seeAlso
+		sh-gufo:TemporaryInstantiationSituation-shape ,
+		sh-gufo:concernsNonRigidType-subjects-shape
+		;
+	.
+
+kb:TemporaryInstantiationSituation-d50f30d2-d042-4003-9b81-5878e348bbc6
+	a gufo:TemporaryInstantiationSituation ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedInstantiation-objects-shape ;
+	.
+
 kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8
 	a gufo:TemporaryInstantiationSituation ;
 	rdfs:comment "This is the situation where J. Doe is a student, which started to hold Sep 1 2018, and no longer held on Jun 16, 2022." ;
 	gufo:concernsNonRigidType ex:Student ;
 	gufo:hasBeginPointInXSDDateTimeStamp "2018-09-01T00:00Z"^^xsd:dateTimeStamp ;
 	gufo:hasEndPointInXSDDateTimeStamp "2022-06-16T00:00:00Z"^^xsd:dateTimeStamp ;
+	.
+
+kb:TemporaryParthoodSituation-4292a36e-659c-4644-a197-a0e84dfb2394
+	a gufo:TemporaryParthoodSituation ;
+	gufo:concernsTemporaryWhole kb:Endurant-4053ed7d-05c9-44ce-869f-2745d84a40ce ;
+	rdfs:seeAlso
+		sh-gufo:TemporaryParthoodSituation-shape ,
+		sh-gufo:concernsTemporaryWhole-subjects-shape
+		;
+	.
+
+kb:TemporaryParthoodSituation-bdfd62c0-4188-4cc2-a823-2664b8478fe1
+	a gufo:TemporaryParthoodSituation ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedParthood-objects-shape ;
+	.
+
+kb:TemporaryRelationshipSituation-29301400-6b45-4176-b570-f52c28cd2789
+	a gufo:TemporaryRelationshipSituation ;
+	rdfs:seeAlso sh-gufo:standsInQualifiedRelationship-objects-shape ;
+	.
+
+kb:TemporaryRelationshipSituation-2a64c96d-9629-4c29-9d63-e6f69cdbdabd
+	a gufo:TemporaryRelationshipSituation ;
+	gufo:concernsRelatedEndurant kb:Endurant-7ac20c26-1f62-40c1-a6e0-0e96fb088e9b ;
+	rdfs:seeAlso sh-gufo:concernsRelatedEndurant-subjects-shape ;
+	.
+
+kb:TemporaryRelationshipSituation-f874b7a3-5add-49f4-895c-9fbe42b40095
+	a gufo:TemporaryRelationshipSituation ;
+	gufo:concernsRelationshipType kb:RelationshipType-0813ed87-2f47-4a1b-a063-834b467c3d31 ;
+	rdfs:seeAlso sh-gufo:concernsRelationshipType-subjects-shape ;
 	.
 
 kb:Thing-3e09d460-5076-4076-a583-821fe1b0dff4
@@ -8987,6 +9426,23 @@ kb:TwoDimensionalContinuantFiatBoundary-75f6994e-9174-4871-a931-5a4db0eecad9
 
 kb:TwoDimensionalSpatialRegion-99363511-fdbd-45ec-bdab-80853114817a
 	a obo:BFO_0000009 ;
+	.
+
+kb:Type-15690ddc-002a-48e6-8e2f-e0fafaf5bb3a
+	a
+		gufo:Type ,
+		owl:Class
+		;
+	gufo:partitions kb:Type-41a60dc5-2768-4706-b52d-d4cc78e4800f ;
+	rdfs:seeAlso sh-gufo:partitions-subjects-shape ;
+	.
+
+kb:Type-41a60dc5-2768-4706-b52d-d4cc78e4800f
+	a
+		gufo:Type ,
+		owl:Class
+		;
+	rdfs:seeAlso sh-gufo:partitions-objects-shape ;
 	.
 
 kb:URL-05e18d67-0d0d-4522-8c73-c4fc73a37585
