@@ -8,7 +8,7 @@ Practices implemented in this repository are not necessarily practices agreed to
 ## Output generated: ontology coverage
 
 Running just `make` will generate ontology-concept lists:
-* [Used ontontology concepts](tests/used_concepts.txt) - This is a list of ontological concepts used in any of the [CASE-Examples](https://github.com/casework/CASE-Examples/tree/master/examples) illustrations or [website examples](https://github.com/casework/casework.github.io/tree/master/examples).  They may or may not be in the current CASE release (and associated UCO release).
+* [Used ontology concepts](tests/used_concepts.txt) - This is a list of ontological concepts used in any of the [CASE-Examples](https://github.com/casework/CASE-Examples/tree/master/examples) illustrations or [website examples](https://github.com/casework/casework.github.io/tree/master/examples).  They may or may not be in the current CASE release (and associated UCO release).
 * [Used `kindOfRelationship` values](tests/used_kindOfRelationships.tsv) - This is a list of the `kindOfRelationship` values used, whether they are in a vocabulary in the current CASE release (and associated UCO release) or not.
 * [Undefined concepts](tests/undefined_concepts.txt) - This is the list of used concepts as above, except all ontology concepts in the current CASE release (and associated UCO release) are removed.
   - Similarly, there is a list of [undefined `kindofRelationship` values](tests/undefined_kindOfRelationships.tsv).
