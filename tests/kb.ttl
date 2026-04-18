@@ -6,6 +6,7 @@
 # imports: http://example.org/shapes/case-corpora-local
 # imports: http://example.org/shapes/sh-bfo
 # imports: http://example.org/shapes/sh-geo
+# imports: http://example.org/shapes/sh-org
 # imports: http://example.org/shapes/sh-time
 # imports: http://purl.org/nemo/gufo#/1.0.0
 # imports: http://xmlns.com/foaf/0.1/
@@ -28,12 +29,14 @@
 @prefix ns1: <http://example.org/local#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix orcid: <https://orcid.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh-gufo: <http://example.org/shapes/sh-gufo/> .
+@prefix sh-org: <http://example.org/shapes/org/> .
 @prefix sh-time: <http://example.org/shapes/sh-time/> .
 @prefix sh-uco-gufo: <http://example.org/shapes/sh-uco-gufo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -71,6 +74,7 @@
 		<http://example.org/shapes/case-corpora-local> ,
 		<http://example.org/shapes/sh-bfo> ,
 		<http://example.org/shapes/sh-geo> ,
+		<http://example.org/shapes/sh-org> ,
 		<http://example.org/shapes/sh-time> ,
 		<http://purl.org/nemo/gufo#/1.0.0> ,
 		<http://xmlns.com/foaf/0.1/>
@@ -1210,6 +1214,11 @@ kb:Bundle-feb83c4b-9d88-41ac-b8d8-82d317b40a53
 kb:Camera-1c9a2999-b34c-459b-b983-113c7b9e71df
 	a uco-observable:Device ;
 	rdfs:comment "A digital, non-phone camera."@en ;
+	.
+
+kb:ChangeEvent-1a6c6f6b-3307-4ca5-a994-9b0a401ceec1
+	a org:ChangeEvent ;
+	rdfs:seeAlso sh-org:ChangeEvent-disjointWith-Organization-shape ;
 	.
 
 kb:Collection-3717f8c6-f7d0-4ec6-bc9c-50fa8c129a55
@@ -7046,6 +7055,11 @@ kb:MaterialRelationshipType-2133b940-8a06-4856-bf46-684592243af4
 		;
 	.
 
+kb:Membership-1d9fdc4a-edfb-48bd-8c4e-dcf57f5eb3fd
+	a org:Membership ;
+	rdfs:seeAlso sh-org:Membership-disjointWith-Organization-shape ;
+	.
+
 kb:NonRigidType-0a7a7dc6-842e-4542-a360-56c4f2f13308
 	a
 		gufo:Phase ,
@@ -7320,6 +7334,14 @@ kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623
 
 kb:Organization-16d1f813-a501-42f0-97b1-d41b20595d06
 	a foaf:Organization ;
+	.
+
+kb:Organization-38a41943-9b82-403a-af95-bc410130d54e
+	a org:Organization ;
+	rdfs:seeAlso
+		sh-org:Organization-disjointWith-Site-shape ,
+		sh-org:Organization-shape
+		;
 	.
 
 kb:Organization-3b542161-47e1-40cd-a1b1-e1b9d07af81f
