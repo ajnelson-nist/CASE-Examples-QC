@@ -42,6 +42,7 @@ used_kindOfRelationships_dependencies      := $(foreach exdir,$(exdirs),$(exdir)
 
 kb_ttls := \
   $(top_srcdir)/dependencies/CASE-Corpora/catalog/kb-all.ttl \
+  $(top_srcdir)/dependencies/CASE-Corpora/dependencies/CDO-Shapes-ORG/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/UCO-Profile-BFO/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/tests/exemplars.ttl \

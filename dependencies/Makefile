@@ -26,25 +26,25 @@ all: \
   imports-transitive.ttl
 
 CASE-Corpora/dependencies/CASE-develop.ttl: \
-  CASE-Corpora/shapes/shapes.ttl
+  CASE-Corpora/shapes/generated-shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
 
 CASE-Corpora/dependencies/CASE-develop-2.0.0.ttl: \
-  CASE-Corpora/shapes/shapes.ttl
+  CASE-Corpora/shapes/generated-shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
 
 CASE-Corpora/dependencies/CASE-unstable.ttl: \
-  CASE-Corpora/shapes/shapes.ttl
+  CASE-Corpora/shapes/generated-shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
 
 CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl: \
-  CASE-Corpora/shapes/shapes.ttl
+  CASE-Corpora/shapes/generated-shapes.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
@@ -53,22 +53,22 @@ CASE-Corpora/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl: \
   CASE-Corpora/shapes/shapes.ttl
 	test -r $@
 
-CASE-Corpora/ontology/dependencies.ttl: \
+CASE-Corpora/ontology/generated-dependencies.ttl: \
   CASE-Corpora/.gitmodules
 	$(MAKE) \
 	  --directory CASE-Corpora \
 	  all-ontology
 	test -r $@
 
-CASE-Corpora/shapes/dependencies.ttl: \
-  CASE-Corpora/ontology/dependencies.ttl
+CASE-Corpora/shapes/generated-dependencies.ttl: \
+  CASE-Corpora/ontology/generated-dependencies.ttl
 	$(MAKE) \
 	  --directory CASE-Corpora \
 	  all-shapes
 	test -r $@
 
-CASE-Corpora/shapes/shapes.ttl: \
-  CASE-Corpora/shapes/dependencies.ttl
+CASE-Corpora/shapes/generated-shapes.ttl: \
+  CASE-Corpora/shapes/generated-dependencies.ttl
 	@#Guarantee timestamp order.
 	touch -c $@
 	test -r $@
@@ -83,9 +83,9 @@ clean:
 imports-transitive.ttl: \
   CASE-Corpora/catalog/shared.ttl \
   CASE-Corpora/ontology/case-corpora.ttl \
-  CASE-Corpora/ontology/dependencies.ttl \
-  CASE-Corpora/shapes/dependencies.ttl \
-  CASE-Corpora/shapes/shapes.ttl \
+  CASE-Corpora/ontology/generated-dependencies.ttl \
+  CASE-Corpora/shapes/generated-dependencies.ttl \
+  CASE-Corpora/shapes/generated-shapes.ttl \
   CASE-Corpora/taxonomy/devices/drafting.ttl \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
   CASE-Examples/examples/illustrations/partitions/drafting.ttl \
@@ -93,18 +93,12 @@ imports-transitive.ttl: \
   UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/dependencies/BFO.ttl \
   UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl \
   UCO-Profile-BFO/ontology/uco-bfo.ttl \
-  UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/dependencies/foaf.ttl \
-  UCO-Profile-FOAF/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/geo.ttl \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl \
   UCO-Profile-GeoSPARQL/ontology/uco-geo.ttl \
   UCO-Profile-GeoSPARQL/shapes/sh-uco-geo.ttl \
-  UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
-  UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl \
   UCO-Profile-PROV-O/ontology/uco-prov-o.ttl \
-  UCO-Profile-Time/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
-  UCO-Profile-Time/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
   UCO-Profile-Time/ontology/uco-time.ttl \
   UCO-Profile-Time/shapes/sh-uco-time.ttl \
   UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/gufo.ttl \
