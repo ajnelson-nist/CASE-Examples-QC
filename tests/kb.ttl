@@ -160,6 +160,15 @@ kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a
 	uco-core:hasFacet kb:captured-telecommunications-information-facet-efa35d55-1d2d-4e47-ae38-97ccad1945be ;
 	.
 
+kb:AbstractIndividualType-658cf3ca-f7fb-41d7-a1a3-3d13811a119c
+	a
+		drafting:AbstractIndividualType ,
+		owl:Class
+		;
+	rdfs:subClassOf uco-core:UcoInherentCharacterizationThing ;
+	rdfs:seeAlso sh-uco-gufo:AbstractIndividualType-shape ;
+	.
+
 kb:AbstractIndividualType-73fdd434-b356-4b08-8ad6-e112a8727e61
 	a
 		gufo:AbstractIndividualType ,
