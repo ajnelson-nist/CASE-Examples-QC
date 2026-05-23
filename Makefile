@@ -72,6 +72,9 @@ all: \
 	  || git submodule update --init dependencies/CASE-Corpora
 	@test -r dependencies/CASE-Corpora/README.md \
 	  || (echo "ERROR:Makefile:CASE-Corpora submodule README.md file not found, even though CASE-Corpora submodule initialized." >&2 ; exit 2)
+	# CDO-Shapes-SKOS
+	cd dependencies/CASE-Corpora \
+	  && git submodule update --init dependencies/CDO-Shapes-SKOS
 	# CASE-Examples
 	test -r dependencies/CASE-Examples/README.md \
 	  || (git submodule init dependencies/CASE-Examples && git submodule update dependencies/CASE-Examples)
