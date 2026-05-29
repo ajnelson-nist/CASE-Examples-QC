@@ -94,14 +94,15 @@ imports-transitive.ttl: \
   UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl \
   UCO-Profile-BFO/ontology/uco-bfo.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
-  UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/geo.ttl \
+  UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-geo.ttl \
+  UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-validator.ttl \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl \
   UCO-Profile-GeoSPARQL/ontology/uco-geo.ttl \
   UCO-Profile-GeoSPARQL/shapes/sh-uco-geo.ttl \
   UCO-Profile-PROV-O/ontology/uco-prov-o.ttl \
   UCO-Profile-Time/ontology/uco-time.ttl \
   UCO-Profile-Time/shapes/sh-uco-time.ttl \
-  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/gufo.ttl \
+  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/formatted-gufo.ttl \
   UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl \
   UCO-Profile-gufo/ontology/uco-gufo.ttl
 	source $(top_srcdir)/venv/bin/activate \
