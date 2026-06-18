@@ -90,7 +90,7 @@ imports-transitive.ttl: \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
   CASE-Examples/examples/illustrations/partitions/drafting.ttl \
   CASE-Examples/examples/illustrations/spear_phishing/drafting.ttl \
-  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/dependencies/BFO.ttl \
+  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/dependencies/formatted-BFO.ttl \
   UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl \
   UCO-Profile-BFO/ontology/uco-bfo.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
