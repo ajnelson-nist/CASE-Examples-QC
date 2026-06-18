@@ -36,6 +36,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-gufo: <http://example.org/shapes/sh-gufo/> .
 @prefix sh-org: <http://example.org/shapes/org/> .
 @prefix sh-skos: <http://example.org/shapes/skos/> .
@@ -81,6 +82,10 @@
 		<http://example.org/shapes/sh-time> ,
 		<http://purl.org/nemo/gufo#/1.0.0> ,
 		<http://xmlns.com/foaf/0.1/>
+		;
+	sh:shapesGraph
+		<http://example.org/shapes/sh-foaf> ,
+		<http://example.org/shapes/sh-uco-foaf>
 		;
 	.
 
