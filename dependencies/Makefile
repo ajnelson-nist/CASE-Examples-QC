@@ -90,9 +90,17 @@ imports-transitive.ttl: \
   CASE-Examples/examples/illustrations/file/drafting.ttl \
   CASE-Examples/examples/illustrations/partitions/drafting.ttl \
   CASE-Examples/examples/illustrations/spear_phishing/drafting.ttl \
-  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/dependencies/formatted-BFO.ttl \
-  UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl \
-  UCO-Profile-BFO/ontology/uco-bfo.ttl \
+  CASE-Profile-BFO/dependencies/UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/dependencies/formatted-BFO.ttl \
+  CASE-Profile-BFO/dependencies/UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl \
+  CASE-Profile-BFO/dependencies/UCO-Profile-BFO/ontology/uco-bfo.ttl \
+  CASE-Profile-BFO/ontology/case-bfo.ttl \
+  CASE-Profile-BFO/shapes/sh-case-bfo.ttl \
+  CASE-Profile-gufo/dependencies/UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/formatted-gufo.ttl \
+  CASE-Profile-gufo/dependencies/UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl \
+  CASE-Profile-gufo/dependencies/UCO-Profile-gufo/ontology/uco-gufo.ttl \
+  CASE-Profile-gufo/dependencies/UCO-Profile-gufo/shapes/sh-uco-gufo.ttl \
+  CASE-Profile-gufo/ontology/case-gufo.ttl \
+  CASE-Profile-gufo/shapes/sh-case-gufo.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-geo.ttl \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-validator.ttl \
@@ -101,10 +109,7 @@ imports-transitive.ttl: \
   UCO-Profile-GeoSPARQL/shapes/sh-uco-geo.ttl \
   UCO-Profile-PROV-O/ontology/uco-prov-o.ttl \
   UCO-Profile-Time/ontology/uco-time.ttl \
-  UCO-Profile-Time/shapes/sh-uco-time.ttl \
-  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/formatted-gufo.ttl \
-  UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl \
-  UCO-Profile-gufo/ontology/uco-gufo.ttl
+  UCO-Profile-Time/shapes/sh-uco-time.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \

@@ -6,9 +6,13 @@
 	path = dependencies/CASE-Examples
 	url = https://github.com/casework/CASE-Examples.git
 	branch = master
-[submodule "dependencies/UCO-Profile-BFO"]
-	path = dependencies/UCO-Profile-BFO
-	url = https://github.com/ucoProject/UCO-Profile-BFO.git
+[submodule "dependencies/CASE-Profile-BFO"]
+	path = dependencies/CASE-Profile-BFO
+	url = https://github.com/casework/CASE-Profile-BFO.git
+	branch = main
+[submodule "dependencies/CASE-Profile-gufo"]
+	path = dependencies/CASE-Profile-gufo
+	url = https://github.com/casework/CASE-Profile-gufo.git
 	branch = main
 [submodule "dependencies/UCO-Profile-FOAF"]
 	path = dependencies/UCO-Profile-FOAF
@@ -25,10 +29,6 @@
 [submodule "dependencies/UCO-Profile-Time"]
 	path = dependencies/UCO-Profile-Time
 	url = https://github.com/ucoProject/UCO-Profile-Time.git
-	branch = main
-[submodule "dependencies/UCO-Profile-gufo"]
-	path = dependencies/UCO-Profile-gufo
-	url = https://github.com/ucoProject/UCO-Profile-gufo.git
 	branch = main
 [submodule "dependencies/casework.github.io"]
 	path = dependencies/casework.github.io
