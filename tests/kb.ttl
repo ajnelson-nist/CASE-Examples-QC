@@ -1,14 +1,16 @@
+# imports: http://example.org/ontology/case-bfo
+# imports: http://example.org/ontology/case-gufo
 # imports: http://example.org/ontology/uco-bfo
 # imports: http://example.org/ontology/uco-foaf
 # imports: http://example.org/ontology/uco-geo
 # imports: http://example.org/ontology/uco-gufo
 # imports: http://example.org/ontology/uco-time
 # imports: http://example.org/shapes/case-corpora-local
-# imports: http://example.org/shapes/sh-bfo
 # imports: http://example.org/shapes/sh-geo
 # imports: http://example.org/shapes/sh-org
 # imports: http://example.org/shapes/sh-skos-conventional
 # imports: http://example.org/shapes/sh-time
+# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl
 # imports: http://purl.org/nemo/gufo#/1.0.0
 # imports: http://xmlns.com/foaf/0.1/
 
@@ -65,27 +67,36 @@
 	a owl:Ontology ;
 	rdfs:comment
 		"Individuals that are instantiated to test properties have two type indications.  One is the type asserted with rdf:type.  The other is a class indicated in the individual IRI, preceding the UUID portion.  The class indication in the IRI is the class required by the domain or range of the property the individual is demonstrating.  The reason the rdf:type assertion may differ is that a domain or range may only tie to a class that is defined as a disjoint union, i.e., it indicates exactly one of its direct subclasses would be expected to also be asserted.  These test cases enforce the selection by using sh:xone to review occurrences of owl:disjointUnionOf.  Selections, where made, are merely one option and not necessarily fully enumerated across all of the available options."@en ,
+		"This knowledge base instantiates each of the mapped classes and properties, so SHACL shapes can perform a review for inconsistencies in the mapping between CASE and the mapped ontology."@en ,
 		"This knowledge base instantiates each of the mapped classes and properties, so SHACL shapes can perform a review for inconsistencies in the mapping between UCO and the mapped ontology."@en ,
 		"This knowledge base instantiates each of the shape-reviewed classes and properties, so SHACL shapes can be exercised for the reviewed ontology."@en
 		;
 	owl:imports
+		<http://example.org/ontology/case-bfo> ,
+		<http://example.org/ontology/case-gufo> ,
 		<http://example.org/ontology/uco-bfo> ,
 		<http://example.org/ontology/uco-foaf> ,
 		<http://example.org/ontology/uco-geo> ,
 		<http://example.org/ontology/uco-gufo> ,
 		<http://example.org/ontology/uco-time> ,
 		<http://example.org/shapes/case-corpora-local> ,
-		<http://example.org/shapes/sh-bfo> ,
 		<http://example.org/shapes/sh-geo> ,
 		<http://example.org/shapes/sh-org> ,
 		<http://example.org/shapes/sh-skos-conventional> ,
 		<http://example.org/shapes/sh-time> ,
+		<http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl> ,
 		<http://purl.org/nemo/gufo#/1.0.0> ,
 		<http://xmlns.com/foaf/0.1/>
 		;
 	sh:shapesGraph
+		<http://example.org/shapes/sh-bfo> ,
+		<http://example.org/shapes/sh-case-bfo> ,
+		<http://example.org/shapes/sh-case-gufo> ,
 		<http://example.org/shapes/sh-foaf> ,
-		<http://example.org/shapes/sh-uco-foaf>
+		<http://example.org/shapes/sh-gufo> ,
+		<http://example.org/shapes/sh-uco-bfo> ,
+		<http://example.org/shapes/sh-uco-foaf> ,
+		<http://example.org/shapes/sh-uco-gufo>
 		;
 	.
 
@@ -10028,6 +10039,10 @@ kb:URLFacet-f3eaccd1-cfc9-501d-9d0d-c8e6650df007
 kb:URLFacet-ffa0ef89-82df-5109-9f85-ce07ccdcd9e5
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.zip" ;
+	.
+
+kb:UcoObject-24cf6699-3cb6-47fa-9f62-c972b0971752
+	a uco-core:UcoObject ;
 	.
 
 kb:UcoType-0abcbac0-cbbb-46a6-9cb0-a17d3b8d705b
