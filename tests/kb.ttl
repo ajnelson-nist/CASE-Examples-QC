@@ -9,9 +9,9 @@
 # imports: http://example.org/shapes/sh-geo
 # imports: http://example.org/shapes/sh-org
 # imports: http://example.org/shapes/sh-skos-conventional
-# imports: http://example.org/shapes/sh-time
 # imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl
 # imports: http://purl.org/nemo/gufo#/1.0.0
+# imports: http://www.w3.org/2006/time#2016
 # imports: http://xmlns.com/foaf/0.1/
 
 @prefix : <http://example.org/ontology/local#> .
@@ -83,9 +83,9 @@
 		<http://example.org/shapes/sh-geo> ,
 		<http://example.org/shapes/sh-org> ,
 		<http://example.org/shapes/sh-skos-conventional> ,
-		<http://example.org/shapes/sh-time> ,
 		<http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl> ,
 		<http://purl.org/nemo/gufo#/1.0.0> ,
+		time:2016 ,
 		<http://xmlns.com/foaf/0.1/>
 		;
 	sh:shapesGraph
@@ -94,9 +94,11 @@
 		<http://example.org/shapes/sh-case-gufo> ,
 		<http://example.org/shapes/sh-foaf> ,
 		<http://example.org/shapes/sh-gufo> ,
+		<http://example.org/shapes/sh-time-editors-draft> ,
 		<http://example.org/shapes/sh-uco-bfo> ,
 		<http://example.org/shapes/sh-uco-foaf> ,
-		<http://example.org/shapes/sh-uco-gufo>
+		<http://example.org/shapes/sh-uco-gufo> ,
+		<http://example.org/shapes/sh-uco-time>
 		;
 	.
 
