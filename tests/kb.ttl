@@ -1250,6 +1250,14 @@ kb:Camera-1c9a2999-b34c-459b-b983-113c7b9e71df
 	rdfs:comment "A digital, non-phone camera."@en ;
 	.
 
+kb:Capability-18c6abb5-07c7-4f5b-98f5-ed65fc5a31a2
+	a drafting:GenericCapability ;
+	.
+
+kb:Capability-2b0c4325-9eac-490c-8168-8737f18e16b0
+	a drafting:SpecificCapability ;
+	.
+
 kb:Capability-43ebd04e-fe00-4167-9592-40bb86d37b81
 	a drafting:Capability ;
 	.
@@ -4967,6 +4975,10 @@ kb:Function-c920c29a-034f-40b8-97e1-0eb443f44b1c
 	a obo:BFO_0000034 ;
 	.
 
+kb:Function-eeaab25f-e441-42e0-bcf1-a62e112ed987
+	a obo:BFO_0000034 ;
+	.
+
 kb:FunctionalComplex-2fbb1138-4210-4d33-99fa-1ca10cdbab0e
 	a gufo:FunctionalComplex ;
 	rdfs:seeAlso sh-gufo:isComponentOf-objects-shape ;
@@ -5802,6 +5814,10 @@ kb:Generation-ff707067-a681-586b-8674-20c7044f9dba
 		kb:Usage-7e06f356-22b0-5614-95fb-d80dc867f306
 		;
 	prov:activity kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
+	.
+
+kb:GenericCapability-65fa9dd3-501c-45f6-ac44-0a26100d5bb8
+	a drafting:GenericCapability ;
 	.
 
 kb:GenericallyDependentContinuant-0fac3951-dd55-401c-bd42-91310deaa2b6
@@ -8617,6 +8633,10 @@ kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
 		;
 	.
 
+kb:SoftwareCapability-0076c9df-2949-471b-9b43-3e0708eb1f63
+	a drafting:SoftwareCapability ;
+	.
+
 kb:SoftwareCapability-4ae3ef26-dc80-44c2-a840-095d637c6df1
 	a drafting:SoftwareCapability ;
 	.
@@ -8922,6 +8942,10 @@ kb:SpatiotemporalRegion-e6c6f486-8284-40c2-923c-01e7f27a2ee1
 
 kb:SpatiotemporalRegion-f48abbfe-07a4-47d6-b99d-fc11d144a99d
 	a obo:BFO_0000011 ;
+	.
+
+kb:SpecificCapability-8288433f-dbbe-4287-97c3-59f58cf7fa6e
+	a drafting:SpecificCapability ;
 	.
 
 kb:SpecificallyDependentContinuant-015a5018-10fb-4256-8fee-018733d6162f
