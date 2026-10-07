@@ -6,11 +6,11 @@
 # imports: http://example.org/ontology/uco-gufo
 # imports: http://example.org/ontology/uco-time
 # imports: http://example.org/shapes/case-corpora-local
-# imports: http://example.org/shapes/sh-geo
 # imports: http://example.org/shapes/sh-org
-# imports: http://example.org/shapes/sh-skos-conventional
 # imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl
 # imports: http://purl.org/nemo/gufo#/1.0.0
+# imports: http://www.opengis.net/ont/geosparql/1.1
+# imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/2006/time#2016
 # imports: http://xmlns.com/foaf/0.1/
 
@@ -28,6 +28,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix gufoshapes: <https://w3id.org/nemo/gufoshapes#> .
 @prefix kb: <http://example.org/kb/> .
 @prefix ns1: <http://example.org/local#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -41,7 +42,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-gufo: <http://example.org/shapes/sh-gufo/> .
 @prefix sh-org: <http://example.org/shapes/org/> .
-@prefix sh-skos: <http://example.org/shapes/skos/> .
+@prefix sh-skos: <https://shapes.cyberdomainontology.org/shapes/sh-skos/> .
 @prefix sh-time: <http://example.org/shapes/sh-time/> .
 @prefix sh-uco-gufo: <http://example.org/shapes/sh-uco-gufo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -80,11 +81,11 @@
 		<http://example.org/ontology/uco-gufo> ,
 		<http://example.org/ontology/uco-time> ,
 		<http://example.org/shapes/case-corpora-local> ,
-		<http://example.org/shapes/sh-geo> ,
 		<http://example.org/shapes/sh-org> ,
-		<http://example.org/shapes/sh-skos-conventional> ,
 		<http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl> ,
 		<http://purl.org/nemo/gufo#/1.0.0> ,
+		<http://www.opengis.net/ont/geosparql/1.1> ,
+		<http://www.w3.org/2004/02/skos/core> ,
 		time:2016 ,
 		<http://xmlns.com/foaf/0.1/>
 		;
@@ -93,12 +94,15 @@
 		<http://example.org/shapes/sh-case-bfo> ,
 		<http://example.org/shapes/sh-case-gufo> ,
 		<http://example.org/shapes/sh-foaf> ,
+		<http://example.org/shapes/sh-geo> ,
 		<http://example.org/shapes/sh-gufo> ,
 		<http://example.org/shapes/sh-time-editors-draft> ,
 		<http://example.org/shapes/sh-uco-bfo> ,
 		<http://example.org/shapes/sh-uco-foaf> ,
+		<http://example.org/shapes/sh-uco-geo> ,
 		<http://example.org/shapes/sh-uco-gufo> ,
-		<http://example.org/shapes/sh-uco-time>
+		<http://example.org/shapes/sh-uco-time> ,
+		<https://shapes.cyberdomainontology.org/shapes/sh-skos-conventional/0.1.0>
 		;
 	.
 
@@ -1244,6 +1248,10 @@ kb:Bundle-feb83c4b-9d88-41ac-b8d8-82d317b40a53
 kb:Camera-1c9a2999-b34c-459b-b983-113c7b9e71df
 	a uco-observable:Device ;
 	rdfs:comment "A digital, non-phone camera."@en ;
+	.
+
+kb:Capability-43ebd04e-fe00-4167-9592-40bb86d37b81
+	a drafting:Capability ;
 	.
 
 kb:ChangeEvent-1a6c6f6b-3307-4ca5-a994-9b0a401ceec1
@@ -7047,6 +7055,14 @@ kb:InvestigativeAction-e55a3d16-a516-4ebe-bba2-cf7aa9a6b8ba
 	uco-core:name "disk image" ;
 	.
 
+kb:Kind-7e52ce03-a1ce-4dd5-bb4a-987973db8f62
+	a
+		gufo:Kind ,
+		owl:Class
+		;
+	rdfs:seeAlso gufoshapes:BaseSortalShape ;
+	.
+
 kb:Location-776426f4-b39e-4a7e-aceb-59fe69a0ca0f
 	a uco-location:Location ;
 	.
@@ -7164,6 +7180,7 @@ kb:NonRigidType-0a7a7dc6-842e-4542-a360-56c4f2f13308
 		gufo:Phase ,
 		owl:Class
 		;
+	rdfs:subClassOf kb:Kind-7e52ce03-a1ce-4dd5-bb4a-987973db8f62 ;
 	rdfs:seeAlso
 		sh-gufo:NonRigidType-shape ,
 		sh-gufo:concernsNonRigidType-objects-shape
@@ -8598,6 +8615,10 @@ kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b
 		uco-observable:File ,
 		uco-observable:Software
 		;
+	.
+
+kb:SoftwareCapability-4ae3ef26-dc80-44c2-a840-095d637c6df1
+	a drafting:SoftwareCapability ;
 	.
 
 kb:SoftwareFacet-247fe7a7-8434-4fca-8f9b-ac7e136f6ca5
