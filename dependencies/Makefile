@@ -102,8 +102,8 @@ imports-transitive.ttl: \
   CASE-Profile-gufo/ontology/case-gufo.ttl \
   CASE-Profile-gufo/shapes/sh-case-gufo.ttl \
   UCO-Profile-FOAF/ontology/uco-foaf.ttl \
+  UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-geo-validator.ttl \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-geo.ttl \
-  UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-validator.ttl \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl \
   UCO-Profile-GeoSPARQL/ontology/uco-geo.ttl \
   UCO-Profile-GeoSPARQL/shapes/sh-uco-geo.ttl \
