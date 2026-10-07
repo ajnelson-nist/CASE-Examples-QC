@@ -9284,21 +9284,10 @@ kb:TRS-201dda5e-3b04-49d6-94fe-17093795e97c
 
 kb:Technique-65f288f9-8ff0-417c-8459-c27dd5ce3866
 	a
-		drafting:Technique ,
-		owl:Class
+		owl:Class ,
+		uco-action:Technique
 		;
 	rdfs:subClassOf uco-action:Action ;
-	rdfs:seeAlso sh-uco-gufo:Technique-shape ;
-	.
-
-kb:Technique-7658ecca-bec7-4d67-baa9-49aeb83dd45b
-	a
-		drafting:Technique ,
-		owl:Class
-		;
-	rdfs:subClassOf uco-action:Action ;
-	drafting:techniqueID "" ;
-	rdfs:seeAlso sh-uco-gufo:techniqueID-subjects-shape ;
 	.
 
 kb:TemporalDuration-64997297-424c-4283-b38f-59b87afc5926
@@ -10090,15 +10079,6 @@ kb:URLFacet-ffa0ef89-82df-5109-9f85-ce07ccdcd9e5
 
 kb:UcoObject-24cf6699-3cb6-47fa-9f62-c972b0971752
 	a uco-core:UcoObject ;
-	.
-
-kb:UcoType-0abcbac0-cbbb-46a6-9cb0-a17d3b8d705b
-	a
-		drafting:UcoType ,
-		owl:Class
-		;
-	rdfs:subClassOf uco-core:UcoThing ;
-	rdfs:seeAlso sh-uco-gufo:UcoType-shape ;
 	.
 
 kb:Usage-01217faf-a095-578d-bed8-c0411bf20ca7
