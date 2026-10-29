@@ -25,6 +25,15 @@ all: \
   CASE-Corpora/dependencies/CASE-unstable-2.0.0.ttl \
   imports-transitive.ttl
 
+.PHONY: \
+  check-supply-chain \
+  check-supply-chain-CASE-Profile-BFO \
+  check-supply-chain-CASE-Profile-gufo \
+  check-supply-chain-UCO-Profile-FOAF \
+  check-supply-chain-UCO-Profile-GeoSPARQL \
+  check-supply-chain-UCO-Profile-PROV-O \
+  check-supply-chain-UCO-Profile-Time
+
 CASE-Corpora/dependencies/CASE-develop.ttl: \
   CASE-Corpora/shapes/generated-shapes.ttl
 	@#Guarantee timestamp order.
@@ -75,6 +84,62 @@ CASE-Corpora/shapes/generated-shapes.ttl: \
 
 check: \
   all
+
+check-supply-chain: \
+  check-supply-chain-CASE-Profile-BFO \
+  check-supply-chain-CASE-Profile-gufo \
+  check-supply-chain-UCO-Profile-FOAF \
+  check-supply-chain-UCO-Profile-GeoSPARQL \
+  check-supply-chain-UCO-Profile-PROV-O \
+  check-supply-chain-UCO-Profile-Time
+
+check-supply-chain-CASE-Profile-BFO:
+	$(MAKE) \
+	  --directory CASE-Profile-BFO \
+	  check-supply-chain-dependencies
+	$(MAKE) \
+	  --directory CASE-Profile-BFO \
+	  check-supply-chain
+
+check-supply-chain-CASE-Profile-gufo:
+	$(MAKE) \
+	  --directory CASE-Profile-gufo \
+	  check-supply-chain-dependencies
+	$(MAKE) \
+	  --directory CASE-Profile-gufo \
+	  check-supply-chain
+
+check-supply-chain-UCO-Profile-FOAF:
+	$(MAKE) \
+	  --directory UCO-Profile-FOAF \
+	  check-supply-chain-dependencies
+	$(MAKE) \
+	  --directory UCO-Profile-FOAF \
+	  check-supply-chain
+
+check-supply-chain-UCO-Profile-GeoSPARQL:
+	$(MAKE) \
+	  --directory UCO-Profile-GeoSPARQL \
+	  check-supply-chain-dependencies
+	$(MAKE) \
+	  --directory UCO-Profile-GeoSPARQL \
+	  check-supply-chain
+
+check-supply-chain-UCO-Profile-PROV-O:
+	$(MAKE) \
+	  --directory UCO-Profile-PROV-O \
+	  check-supply-chain-dependencies
+	$(MAKE) \
+	  --directory UCO-Profile-PROV-O \
+	  check-supply-chain
+
+check-supply-chain-UCO-Profile-Time:
+	$(MAKE) \
+	  --directory UCO-Profile-Time \
+	  check-supply-chain-dependencies
+	$(MAKE) \
+	  --directory UCO-Profile-Time \
+	  check-supply-chain
 
 clean:
 	@rm -f \

@@ -60,6 +60,7 @@ all: \
   all-tests \
   check-mypy \
   check-supply-chain \
+  check-supply-chain-dependencies \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules \
   check-tests \
@@ -231,6 +232,18 @@ check-supply-chain: \
   check-mypy \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules
+
+# This recursive Make recipe intentionally deactivates parallel job
+# execution due to interactions with $(top_srcdir)/.git/ while reviewing
+# submodules.
+# This target is intentionally not a dependency of check-supply-chain,
+# considering recursive review an opt-in action.
+check-supply-chain-dependencies: \
+  check-supply-chain-submodules
+	$(MAKE) \
+	  --directory dependencies \
+	  --jobs 1 \
+	  check-supply-chain
 
 # Update pre-commit configuration and use the updated config file to
 # review code.  Only have Make exit if 'pre-commit run' modifies files.
