@@ -11,6 +11,606 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-055ad0f6-ac79-426a-9ff4-916d91408abb> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-055ad0f6-ac79-426a-9ff4-916d91408abb> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-259084ee-1443-413a-be5e-19258700c938> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-259084ee-1443-413a-be5e-19258700c938> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-3208838f-ca7b-4f3b-bd9f-218bb284dba6> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-3208838f-ca7b-4f3b-bd9f-218bb284dba6> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-3866ba0c-d3a5-4abe-ba66-38364b1bcc60> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-3866ba0c-d3a5-4abe-ba66-38364b1bcc60> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-3a6e56f3-82bf-4845-a3e3-db2629aefcc5> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-3a6e56f3-82bf-4845-a3e3-db2629aefcc5> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-3f0811bf-e8f3-486a-8e13-c80eadba535b> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-3f0811bf-e8f3-486a-8e13-c80eadba535b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-423a095c-a035-45d6-83b5-b2e9b285e0c1> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-423a095c-a035-45d6-83b5-b2e9b285e0c1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-43b7bf02-c671-4118-92de-f11c803f4ee4> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-43b7bf02-c671-4118-92de-f11c803f4ee4> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-6854f134-b36e-49b3-a1ce-c40a3186cb2d> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-6854f134-b36e-49b3-a1ce-c40a3186cb2d> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-70570b7c-fb1d-4aa4-93ca-4362511c04a4> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-70570b7c-fb1d-4aa4-93ca-4362511c04a4> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-78726a45-1b8e-4ff9-bb85-a589794c19a2> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-78726a45-1b8e-4ff9-bb85-a589794c19a2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-78d0e682-85c9-4a98-a2bd-c9a9711f4c6e> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-78d0e682-85c9-4a98-a2bd-c9a9711f4c6e> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-892328a0-623f-4205-85fb-2a609a64c1d8> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-892328a0-623f-4205-85fb-2a609a64c1d8> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-982eadb7-6fc0-4b45-b4c3-e265443fda2e> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-982eadb7-6fc0-4b45-b4c3-e265443fda2e> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-b468d52a-fb50-4487-88fb-75684f1a8ed3> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-b468d52a-fb50-4487-88fb-75684f1a8ed3> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-c07999ab-2fda-407f-a56b-f9cb629a3d32> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-c07999ab-2fda-407f-a56b-f9cb629a3d32> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-c1f47707-71b8-465f-ad93-88ad513a6097> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-c1f47707-71b8-465f-ad93-88ad513a6097> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-c764f492-7f26-4169-8d2f-e7e178988c7a> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-c764f492-7f26-4169-8d2f-e7e178988c7a> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-c8886e5d-9222-4376-870b-27fd07f2afd3> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-c8886e5d-9222-4376-870b-27fd07f2afd3> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-d726cd73-b3f9-4b98-8b80-54e2d57852cc> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-d726cd73-b3f9-4b98-8b80-54e2d57852cc> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-e6c4261d-cc3b-4e37-9e23-00581db63cb0> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-e6c4261d-cc3b-4e37-9e23-00581db63cb0> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-ede98f6c-f7a8-4536-87ff-ec56d4ff5e41> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-ede98f6c-f7a8-4536-87ff-ec56d4ff5e41> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-efe0303d-4894-48db-9386-25de485d0ebf> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-efe0303d-4894-48db-9386-25de485d0ebf> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-fdd6bfe5-9e6c-46c9-8a19-c4fb2cc6886c> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-fdd6bfe5-9e6c-46c9-8a19-c4fb2cc6886c> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Activity-fe9bb476-30f2-4529-913b-f4b4bc05e7d6> ;
+			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-communication-shape ;
+			sh:value <http://example.org/kb/Activity-fe9bb476-30f2-4529-913b-f4b4bc05e7d6> ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B> ;
 			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
 			sh:resultSeverity sh:Warning ;
@@ -55,6 +655,28 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Collection-c446e934-bd1b-4415-9aa0-a315215b6fcd> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Collection-c446e934-bd1b-4415-9aa0-a315215b6fcd> ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1> ;
 			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
 			sh:resultSeverity sh:Warning ;
@@ -74,6 +696,622 @@
 			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
 			sh:sourceShape case-prov:chain-of-derivation-shape ;
 			sh:value <http://example.org/kb/Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-0c4f2cd1-0fee-4255-ab57-35d737c8eab7> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-0c4f2cd1-0fee-4255-ab57-35d737c8eab7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-2bab1b00-d279-4558-83bf-2c5f6e74afd6> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-2bab1b00-d279-4558-83bf-2c5f6e74afd6> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-40e0e42c-f0c5-443f-99a5-76e2aeda6e6a> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-40e0e42c-f0c5-443f-99a5-76e2aeda6e6a> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-431b574e-43a3-46c9-b57c-097e75692c3c> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-431b574e-43a3-46c9-b57c-097e75692c3c> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-472918e7-30c3-476a-8bdd-ffff3b74fe66> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-472918e7-30c3-476a-8bdd-ffff3b74fe66> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-4ab95072-98c8-414b-93a7-5a3d7ce8c70a> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-4ab95072-98c8-414b-93a7-5a3d7ce8c70a> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-5783a28e-28b9-4c95-a53f-9a3ec5618afc> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-5783a28e-28b9-4c95-a53f-9a3ec5618afc> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-59e8d749-a708-4572-a77d-a243c5da0b08> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-59e8d749-a708-4572-a77d-a243c5da0b08> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-64668442-c9bc-4d8d-a99a-3ec3579648e2> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-64668442-c9bc-4d8d-a99a-3ec3579648e2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-6afcf87b-0cfe-4c41-a48e-69b88c419277> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-6afcf87b-0cfe-4c41-a48e-69b88c419277> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-6d214b7a-a23e-4557-bd30-9967c29248ba> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-6d214b7a-a23e-4557-bd30-9967c29248ba> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-745cc019-a274-4ddd-971d-ec71de6a73bf> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-745cc019-a274-4ddd-971d-ec71de6a73bf> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-7672323d-4b1f-4bb1-96bc-e569d3bcdaf9> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-7672323d-4b1f-4bb1-96bc-e569d3bcdaf9> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-80e065c3-d2eb-44e3-8766-74c175b92253> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-80e065c3-d2eb-44e3-8766-74c175b92253> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-931da65d-356e-4206-9be5-e051b268e4a6> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-931da65d-356e-4206-9be5-e051b268e4a6> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-9d0fb4a7-3188-4f65-add5-e020fba7e1d2> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-9d0fb4a7-3188-4f65-add5-e020fba7e1d2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-a2d4e498-411a-4bb2-9afb-745cdc994b01> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-a2d4e498-411a-4bb2-9afb-745cdc994b01> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-a644ab7a-af35-4d41-a499-15b6c0cc7149> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-a644ab7a-af35-4d41-a499-15b6c0cc7149> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-b03af4c5-a534-445c-a5f3-95a19dfba668> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-b03af4c5-a534-445c-a5f3-95a19dfba668> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-b03e9e8b-c532-4196-9a2e-d03ca4d0b410> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-b03e9e8b-c532-4196-9a2e-d03ca4d0b410> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-c373f9c2-2b89-4d2f-a15d-d32cb8eb0b7d> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-c373f9c2-2b89-4d2f-a15d-d32cb8eb0b7d> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-cc8fd573-5a5f-46f3-98a4-267c74c7237c> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-cc8fd573-5a5f-46f3-98a4-267c74c7237c> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-d17a5554-cbaa-401a-88e6-d20dde65f18b> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-d17a5554-cbaa-401a-88e6-d20dde65f18b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-dd0ff55f-9d3c-4015-b615-1af278b9416d> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-dd0ff55f-9d3c-4015-b615-1af278b9416d> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-ebab84f1-c588-4322-a2df-299c83e3ca1d> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-ebab84f1-c588-4322-a2df-299c83e3ca1d> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-edbe2219-ebfe-43ad-9cc0-66e9a93754c3> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-edbe2219-ebfe-43ad-9cc0-66e9a93754c3> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-f79f45be-2688-4f4f-8685-b0bb8bebc99e> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-f79f45be-2688-4f4f-8685-b0bb8bebc99e> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Entity-fcb4ebbb-0e0c-4fc8-b9b9-e49b40aa9a67> ;
+			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraint [
+				a sh:SparqlConstraint ;
+				sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+				sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape case-prov:chain-of-derivation-shape ;
+			sh:value <http://example.org/kb/Entity-fcb4ebbb-0e0c-4fc8-b9b9-e49b40aa9a67> ;
 		] ,
 		[
 			a sh:ValidationResult ;

@@ -13,6 +13,24 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-255ebfa4-b036-4ced-a683-f4dd69479082> ;
+			sh:resultMessage "An InvestigativeAction should have a ProvenanceRecord among its results.  This will be a requirement in CASE 2.0.0."@en ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:message "An InvestigativeAction should have a ProvenanceRecord among its results.  This will be a requirement in CASE 2.0.0."@en ;
+				sh:path action:result ;
+				sh:qualifiedMinCount "1"^^xsd:integer ;
+				sh:qualifiedValueShape [
+					a sh:NodeShape ;
+					sh:class investigation:ProvenanceRecord ;
+				] ;
+				sh:severity sh:Warning ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/account-facet-265c4daa-b473-43d3-a186-77ff2da9ac70> ;
 			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
 			sh:resultPath observable:accountType ;
