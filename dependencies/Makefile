@@ -28,10 +28,10 @@ all: \
 .PHONY: \
   check-supply-chain \
   check-supply-chain-CASE-Profile-BFO \
+  check-supply-chain-CASE-Profile-PROV-O \
   check-supply-chain-CASE-Profile-gufo \
   check-supply-chain-UCO-Profile-FOAF \
   check-supply-chain-UCO-Profile-GeoSPARQL \
-  check-supply-chain-UCO-Profile-PROV-O \
   check-supply-chain-UCO-Profile-Time
 
 CASE-Corpora/dependencies/CASE-develop.ttl: \
@@ -87,10 +87,10 @@ check: \
 
 check-supply-chain: \
   check-supply-chain-CASE-Profile-BFO \
+  check-supply-chain-CASE-Profile-PROV-O \
   check-supply-chain-CASE-Profile-gufo \
   check-supply-chain-UCO-Profile-FOAF \
   check-supply-chain-UCO-Profile-GeoSPARQL \
-  check-supply-chain-UCO-Profile-PROV-O \
   check-supply-chain-UCO-Profile-Time
 
 check-supply-chain-CASE-Profile-BFO:
@@ -99,6 +99,14 @@ check-supply-chain-CASE-Profile-BFO:
 	  check-supply-chain-dependencies
 	$(MAKE) \
 	  --directory CASE-Profile-BFO \
+	  check-supply-chain
+
+check-supply-chain-CASE-Profile-PROV-O:
+	$(MAKE) \
+	  --directory CASE-Profile-PROV-O \
+	  check-supply-chain-dependencies
+	$(MAKE) \
+	  --directory CASE-Profile-PROV-O \
 	  check-supply-chain
 
 check-supply-chain-CASE-Profile-gufo:
@@ -123,14 +131,6 @@ check-supply-chain-UCO-Profile-GeoSPARQL:
 	  check-supply-chain-dependencies
 	$(MAKE) \
 	  --directory UCO-Profile-GeoSPARQL \
-	  check-supply-chain
-
-check-supply-chain-UCO-Profile-PROV-O:
-	$(MAKE) \
-	  --directory UCO-Profile-PROV-O \
-	  check-supply-chain-dependencies
-	$(MAKE) \
-	  --directory UCO-Profile-PROV-O \
 	  check-supply-chain
 
 check-supply-chain-UCO-Profile-Time:
@@ -160,6 +160,12 @@ imports-transitive.ttl: \
   CASE-Profile-BFO/dependencies/UCO-Profile-BFO/ontology/uco-bfo.ttl \
   CASE-Profile-BFO/ontology/case-bfo.ttl \
   CASE-Profile-BFO/shapes/sh-case-bfo.ttl \
+  CASE-Profile-PROV-O/ontology/case-prov-o.ttl \
+  CASE-Profile-PROV-O/shapes/sh-case-prov-o.ttl \
+  CASE-Profile-PROV-O/dependencies/UCO-Profile-PROV-O/ontology/uco-prov-o.ttl \
+  CASE-Profile-PROV-O/dependencies/UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
+  CASE-Profile-PROV-O/dependencies/UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
+  CASE-Profile-PROV-O/dependencies/UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl \
   CASE-Profile-gufo/dependencies/UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/dependencies/formatted-gufo.ttl \
   CASE-Profile-gufo/dependencies/UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl \
   CASE-Profile-gufo/dependencies/UCO-Profile-gufo/ontology/uco-gufo.ttl \
@@ -172,7 +178,6 @@ imports-transitive.ttl: \
   UCO-Profile-GeoSPARQL/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl \
   UCO-Profile-GeoSPARQL/ontology/uco-geo.ttl \
   UCO-Profile-GeoSPARQL/shapes/sh-uco-geo.ttl \
-  UCO-Profile-PROV-O/ontology/uco-prov-o.ttl \
   UCO-Profile-Time/ontology/uco-time.ttl \
   UCO-Profile-Time/shapes/sh-uco-time.ttl
 	source $(top_srcdir)/venv/bin/activate \

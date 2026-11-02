@@ -47,6 +47,9 @@ kb_ttls := \
   $(top_srcdir)/dependencies/CASE-Profile-BFO/dependencies/UCO-Profile-BFO/dependencies/CDO-Shapes-BFO/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/CASE-Profile-BFO/dependencies/UCO-Profile-BFO/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/CASE-Profile-BFO/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/CASE-Profile-PROV-O/dependencies/UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/CASE-Profile-PROV-O/dependencies/UCO-Profile-PROV-O/tests/exemplars.ttl \
+  $(top_srcdir)/dependencies/CASE-Profile-PROV-O/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/CASE-Profile-gufo/dependencies/UCO-Profile-gufo/dependencies/CDO-Shapes-gufo/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/CASE-Profile-gufo/dependencies/UCO-Profile-gufo/tests/exemplars.ttl \
   $(top_srcdir)/dependencies/CASE-Profile-gufo/tests/exemplars.ttl \
